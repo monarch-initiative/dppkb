@@ -6,6 +6,9 @@ Disease Pathophysiology Knowledge Base FOR DEMO PURPOSES
 
 [https://monarch-initiative.github.io/dppkb](https://monarch-initiative.github.io/dppkb)
 
+Click on "Diseases" to browse the "Knowledge Base". You will see a highly generic
+rendering of auto-generated disease entries.
+
 ## What is this?
 
 This is an experiment in using CurateGPT for de-novo human-driven Knowledge Base cuation.
