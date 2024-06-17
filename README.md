@@ -54,6 +54,10 @@ less need for manual tweaking, RAG will be good enough.
 
 Also recall we can enhance in future steps
 
+NOTE: This step does not use the pubmed directly. We are relying on the fact that the LLM has already ingested
+and compressed all the literature and can do a pretty good first-pass job at re-exporting that in any
+format we like. It doesn't have to be perfect though, subsequent steps are designed to refine this.
+
 ### Adding evidence
 
 `make tmp/with-evidence.yaml`
