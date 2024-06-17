@@ -1,0 +1,2223 @@
+{
+  "name": "dppkb",
+  "description": "Disease Pathophysiology Knowledge Base Schema",
+  "id": "https://w3id.org/dppkb",
+  "imports": [
+    "linkml:types"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "prefixes": [
+    {
+      "prefix_prefix": "linkml",
+      "prefix_reference": "https://w3id.org/linkml/"
+    },
+    {
+      "prefix_prefix": "dppkb",
+      "prefix_reference": "https://w3id.org/dppkb"
+    },
+    {
+      "prefix_prefix": "HP",
+      "prefix_reference": "http://purl.obolibrary.org/obo/HP_"
+    },
+    {
+      "prefix_prefix": "GO",
+      "prefix_reference": "http://purl.obolibrary.org/obo/GO_"
+    },
+    {
+      "prefix_prefix": "OBI",
+      "prefix_reference": "http://purl.obolibrary.org/obo/OBI_"
+    },
+    {
+      "prefix_prefix": "CHEBI",
+      "prefix_reference": "http://purl.obolibrary.org/obo/CHEBI_"
+    },
+    {
+      "prefix_prefix": "UBERON",
+      "prefix_reference": "http://purl.obolibrary.org/obo/UBERON_"
+    },
+    {
+      "prefix_prefix": "CL",
+      "prefix_reference": "http://purl.obolibrary.org/obo/CL_"
+    },
+    {
+      "prefix_prefix": "MONDO",
+      "prefix_reference": "http://purl.obolibrary.org/obo/MONDO_"
+    },
+    {
+      "prefix_prefix": "PMID",
+      "prefix_reference": "http://www.ncbi.nlm.nih.gov/pubmed/"
+    }
+  ],
+  "default_prefix": "dppkb",
+  "default_range": "string",
+  "types": [
+    {
+      "name": "PMID",
+      "definition_uri": "https://w3id.org/dppkbPMID",
+      "from_schema": "https://w3id.org/dppkb",
+      "typeof": "string",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "FrequencyQuantity",
+      "definition_uri": "https://w3id.org/dppkbFrequencyQuantity",
+      "from_schema": "https://w3id.org/dppkb",
+      "typeof": "string",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "string",
+      "definition_uri": "https://w3id.org/linkml/String",
+      "description": "A character string",
+      "notes": [
+        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Text"
+      ],
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "integer",
+      "definition_uri": "https://w3id.org/linkml/Integer",
+      "description": "An integer",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Integer"
+      ],
+      "base": "int",
+      "uri": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "boolean",
+      "definition_uri": "https://w3id.org/linkml/Boolean",
+      "description": "A binary (true or false) value",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Boolean"
+      ],
+      "base": "Bool",
+      "uri": "http://www.w3.org/2001/XMLSchema#boolean",
+      "repr": "bool",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "float",
+      "definition_uri": "https://w3id.org/linkml/Float",
+      "description": "A real number that conforms to the xsd:float specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#float",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "double",
+      "definition_uri": "https://w3id.org/linkml/Double",
+      "description": "A real number that conforms to the xsd:double specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#double",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "decimal",
+      "definition_uri": "https://w3id.org/linkml/Decimal",
+      "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "broad_mappings": [
+        "schema:Number"
+      ],
+      "base": "Decimal",
+      "uri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "time",
+      "definition_uri": "https://w3id.org/linkml/Time",
+      "description": "A time object represents a (local) time of day, independent of any particular day",
+      "notes": [
+        "URI is dateTime because OWL reasoners do not work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Time"
+      ],
+      "base": "XSDTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#time",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date",
+      "definition_uri": "https://w3id.org/linkml/Date",
+      "description": "a date (year, month and day) in an idealized calendar",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Date"
+      ],
+      "base": "XSDDate",
+      "uri": "http://www.w3.org/2001/XMLSchema#date",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "datetime",
+      "definition_uri": "https://w3id.org/linkml/Datetime",
+      "description": "The combination of a date and time",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:DateTime"
+      ],
+      "base": "XSDDateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date_or_datetime",
+      "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
+      "description": "Either a date or a datetime",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "https://w3id.org/linkml/DateOrDatetime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uriorcurie",
+      "definition_uri": "https://w3id.org/linkml/Uriorcurie",
+      "description": "a URI or a CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "curie",
+      "definition_uri": "https://w3id.org/linkml/Curie",
+      "conforms_to": "https://www.w3.org/TR/curie/",
+      "description": "a compact URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"."
+      ],
+      "comments": [
+        "in RDF serializations this MUST be expanded to a URI",
+        "in non-RDF serializations MAY be serialized as the compact representation"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Curie",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uri",
+      "definition_uri": "https://w3id.org/linkml/Uri",
+      "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
+      "description": "a complete URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"."
+      ],
+      "comments": [
+        "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:URL"
+      ],
+      "base": "URI",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "ncname",
+      "definition_uri": "https://w3id.org/linkml/Ncname",
+      "description": "Prefix part of CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NCName",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "objectidentifier",
+      "definition_uri": "https://w3id.org/linkml/Objectidentifier",
+      "description": "A URI or CURIE that represents an object in the model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"."
+      ],
+      "comments": [
+        "Used for inheritance and type checking"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "ElementIdentifier",
+      "uri": "http://www.w3.org/ns/shex#iri",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "nodeidentifier",
+      "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
+      "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NodeIdentifier",
+      "uri": "http://www.w3.org/ns/shex#nonLiteral",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpointer",
+      "definition_uri": "https://w3id.org/linkml/Jsonpointer",
+      "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
+      "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpath",
+      "definition_uri": "https://w3id.org/linkml/Jsonpath",
+      "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
+      "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "sparqlpath",
+      "definition_uri": "https://w3id.org/linkml/Sparqlpath",
+      "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
+      "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    }
+  ],
+  "enums": [
+    {
+      "name": "EvidenceItemSupportEnum",
+      "definition_uri": "https://w3id.org/dppkbEvidenceItemSupportEnum",
+      "description": "The level of support for an evidence item",
+      "from_schema": "https://w3id.org/dppkb",
+      "permissible_values": [
+        {
+          "text": "WRONG_STATEMENT",
+          "description": "WRONG_STATEMENT"
+        },
+        {
+          "text": "SUPPORT",
+          "description": "SUPPORT"
+        },
+        {
+          "text": "REFUTE",
+          "description": "REFUTE"
+        },
+        {
+          "text": "NO_EVIDENCE",
+          "description": "NO_EVIDENCE"
+        },
+        {
+          "text": "PARTIAL",
+          "description": "PARTIAL"
+        }
+      ]
+    },
+    {
+      "name": "FrequencyEnum",
+      "definition_uri": "https://w3id.org/dppkbFrequencyEnum",
+      "description": "The frequency of an event or phenomenon",
+      "from_schema": "https://w3id.org/dppkb",
+      "permissible_values": [
+        {
+          "text": "FREQUENT",
+          "description": "Common",
+          "meaning": "HP:0040282"
+        },
+        {
+          "text": "OCCASIONAL",
+          "description": "Occasional"
+        },
+        {
+          "text": "VERY_FREQUENT",
+          "description": "High",
+          "meaning": "HP:0040281"
+        },
+        {
+          "text": "VERY_RARE",
+          "description": "Rare",
+          "meaning": "HP:0040284"
+        },
+        {
+          "text": "OBLIGATE",
+          "description": "Obligate",
+          "meaning": "HP:0040280"
+        }
+      ]
+    },
+    {
+      "name": "AssayTerm",
+      "definition_uri": "https://w3id.org/dppkbAssayTerm",
+      "description": "A term representing an assay",
+      "from_schema": "https://w3id.org/dppkb",
+      "reachable_from": {
+        "source_nodes": [
+          "OBI:0000070"
+        ],
+        "relationship_types": [
+          "rdfs:subClassOf"
+        ]
+      }
+    },
+    {
+      "name": "CellularComponentTerm",
+      "definition_uri": "https://w3id.org/dppkbCellularComponentTerm",
+      "description": "A term representing a cellular component",
+      "from_schema": "https://w3id.org/dppkb",
+      "reachable_from": {
+        "source_nodes": [
+          "GO:0005575"
+        ],
+        "relationship_types": [
+          "rdfs:subClassOf"
+        ]
+      }
+    },
+    {
+      "name": "BiologicalProcessTerm",
+      "definition_uri": "https://w3id.org/dppkbBiologicalProcessTerm",
+      "description": "A term representing a biological process or pathway",
+      "from_schema": "https://w3id.org/dppkb",
+      "reachable_from": {
+        "source_nodes": [
+          "GO:0008150"
+        ],
+        "relationship_types": [
+          "rdfs:subClassOf"
+        ]
+      }
+    },
+    {
+      "name": "ChemicalEntityTerm",
+      "definition_uri": "https://w3id.org/dppkbChemicalEntityTerm",
+      "description": "A term representing a chemical entity",
+      "from_schema": "https://w3id.org/dppkb",
+      "reachable_from": {
+        "source_nodes": [
+          "CHEBI:24431"
+        ],
+        "relationship_types": [
+          "rdfs:subClassOf"
+        ]
+      }
+    },
+    {
+      "name": "PhenotypeTerm",
+      "definition_uri": "https://w3id.org/dppkbPhenotypeTerm",
+      "description": "A term representing a phenotype",
+      "from_schema": "https://w3id.org/dppkb",
+      "reachable_from": {
+        "source_nodes": [
+          "HP:0000118"
+        ],
+        "relationship_types": [
+          "rdfs:subClassOf"
+        ]
+      }
+    },
+    {
+      "name": "AnatomicalEntityTerm",
+      "definition_uri": "https://w3id.org/dppkbAnatomicalEntityTerm",
+      "description": "A term representing an anatomical entity",
+      "from_schema": "https://w3id.org/dppkb",
+      "reachable_from": {
+        "source_nodes": [
+          "UBERON:0001062"
+        ],
+        "relationship_types": [
+          "rdfs:subClassOf"
+        ]
+      }
+    },
+    {
+      "name": "GeographyTerm",
+      "definition_uri": "https://w3id.org/dppkbGeographyTerm",
+      "description": "A place or location",
+      "from_schema": "https://w3id.org/dppkb"
+    },
+    {
+      "name": "PhaseTerm",
+      "definition_uri": "https://w3id.org/dppkbPhaseTerm",
+      "description": "A phase or stage",
+      "from_schema": "https://w3id.org/dppkb"
+    },
+    {
+      "name": "TriggerTerm",
+      "definition_uri": "https://w3id.org/dppkbTriggerTerm",
+      "description": "A trigger",
+      "from_schema": "https://w3id.org/dppkb"
+    },
+    {
+      "name": "GeneTerm",
+      "definition_uri": "https://w3id.org/dppkbGeneTerm",
+      "description": "A gene",
+      "from_schema": "https://w3id.org/dppkb"
+    },
+    {
+      "name": "CellTypeTerm",
+      "definition_uri": "https://w3id.org/dppkbCellTypeTerm",
+      "description": "A cell type",
+      "from_schema": "https://w3id.org/dppkb",
+      "reachable_from": {
+        "source_nodes": [
+          "CL:0000000"
+        ],
+        "relationship_types": [
+          "rdfs:subClassOf"
+        ]
+      }
+    },
+    {
+      "name": "DiseaseTerm",
+      "definition_uri": "https://w3id.org/dppkbDiseaseTerm",
+      "description": "A disease or medical condition",
+      "from_schema": "https://w3id.org/dppkb",
+      "reachable_from": {
+        "source_nodes": [
+          "MONDO:0000001"
+        ],
+        "relationship_types": [
+          "rdfs:subClassOf"
+        ]
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "name",
+      "definition_uri": "https://w3id.org/dppkbname",
+      "examples": [
+        {
+          "value": "Adolescent Nephronophthisis",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbname",
+      "identifier": true,
+      "owner": "Mechanism",
+      "domain_of": [
+        "Subtype",
+        "Pathophysiology",
+        "Phenotype",
+        "Biochemical",
+        "Genetic",
+        "Environmental",
+        "Disease",
+        "Treatment",
+        "InfectiousAgent",
+        "Transmission",
+        "Assay",
+        "Diagnosis",
+        "Inheritance",
+        "Variant",
+        "Mechanism"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "description",
+      "definition_uri": "https://w3id.org/dppkbdescription",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbdescription",
+      "owner": "Mechanism",
+      "domain_of": [
+        "Subtype",
+        "Pathophysiology",
+        "Environmental",
+        "Disease",
+        "Treatment",
+        "InfectiousAgent",
+        "Transmission",
+        "Assay",
+        "Inheritance",
+        "Variant",
+        "Mechanism"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "evidence",
+      "definition_uri": "https://w3id.org/dppkbevidence",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbevidence",
+      "multivalued": true,
+      "owner": "Inheritance",
+      "domain_of": [
+        "Subtype",
+        "Prevalence",
+        "ProgressionInfo",
+        "Pathophysiology",
+        "Phenotype",
+        "Biochemical",
+        "Genetic",
+        "Environmental",
+        "Treatment",
+        "InfectiousAgent",
+        "Transmission",
+        "Diagnosis",
+        "Inheritance"
+      ],
+      "range": "EvidenceItem",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "review_notes",
+      "definition_uri": "https://w3id.org/dppkbreview_notes",
+      "examples": [
+        {
+          "value": "Added an additional clinically relevant subtype.",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbreview_notes",
+      "owner": "Treatment",
+      "domain_of": [
+        "Subtype",
+        "ProgressionInfo",
+        "Phenotype",
+        "Genetic",
+        "Environmental",
+        "Treatment"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "geography",
+      "definition_uri": "https://w3id.org/dppkbgeography",
+      "examples": [
+        {
+          "value": "['Philippines']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbgeography",
+      "multivalued": true,
+      "owner": "Subtype",
+      "domain_of": [
+        "Subtype"
+      ],
+      "range": "GeographyTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "locations",
+      "definition_uri": "https://w3id.org/dppkblocations",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkblocations",
+      "multivalued": true,
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Subtype",
+        "Pathophysiology"
+      ],
+      "range": "AnatomicalEntityTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "reference",
+      "definition_uri": "https://w3id.org/dppkbreference",
+      "examples": [
+        {
+          "value": "PMID:35533128",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbreference",
+      "owner": "EvidenceItem",
+      "domain_of": [
+        "EvidenceItem"
+      ],
+      "range": "PMID",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "supports",
+      "definition_uri": "https://w3id.org/dppkbsupports",
+      "examples": [
+        {
+          "value": "SUPPORT",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbsupports",
+      "owner": "EvidenceItem",
+      "domain_of": [
+        "EvidenceItem"
+      ],
+      "range": "EvidenceItemSupportEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "snippet",
+      "definition_uri": "https://w3id.org/dppkbsnippet",
+      "examples": [
+        {
+          "value": "At the moment there is no healing therapy, so early kidney transplant is a fundamental tool to improve prognosis.",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbsnippet",
+      "owner": "EvidenceItem",
+      "domain_of": [
+        "EvidenceItem"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "explanation",
+      "definition_uri": "https://w3id.org/dppkbexplanation",
+      "examples": [
+        {
+          "value": "There is no curative treatment for nephronophthisis, indicating that supportive care, including symptomatic treatment and monitoring, is currently applied to manage associated complications.",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbexplanation",
+      "owner": "EvidenceItem",
+      "domain_of": [
+        "EvidenceItem"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "subtype",
+      "definition_uri": "https://w3id.org/dppkbsubtype",
+      "examples": [
+        {
+          "value": "Eyelid Myoclonia with Absences",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbsubtype",
+      "owner": "Genetic",
+      "domain_of": [
+        "Prevalence",
+        "ProgressionInfo",
+        "Phenotype",
+        "Biochemical",
+        "Genetic"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "population",
+      "definition_uri": "https://w3id.org/dppkbpopulation",
+      "examples": [
+        {
+          "value": "Global",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbpopulation",
+      "owner": "Prevalence",
+      "domain_of": [
+        "Prevalence"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "percentage",
+      "definition_uri": "https://w3id.org/dppkbpercentage",
+      "examples": [
+        {
+          "value": "0.1",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbpercentage",
+      "owner": "Prevalence",
+      "domain_of": [
+        "Prevalence"
+      ],
+      "range": "Any",
+      "inlined": true,
+      "any_of": [
+        {
+          "range": "float",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "integer",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "description": "for ranges",
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "phase",
+      "definition_uri": "https://w3id.org/dppkbphase",
+      "examples": [
+        {
+          "value": "Active TB",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbphase",
+      "owner": "ProgressionInfo",
+      "domain_of": [
+        "ProgressionInfo"
+      ],
+      "range": "PhaseTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "age_range",
+      "definition_uri": "https://w3id.org/dppkbage_range",
+      "examples": [
+        {
+          "value": "Childhood-Adolescence",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbage_range",
+      "owner": "ProgressionInfo",
+      "domain_of": [
+        "ProgressionInfo"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "incubation_days",
+      "definition_uri": "https://w3id.org/dppkbincubation_days",
+      "examples": [
+        {
+          "value": "3-14",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbincubation_days",
+      "owner": "ProgressionInfo",
+      "domain_of": [
+        "ProgressionInfo"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "incubation_years",
+      "definition_uri": "https://w3id.org/dppkbincubation_years",
+      "examples": [
+        {
+          "value": "2-15",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbincubation_years",
+      "owner": "ProgressionInfo",
+      "domain_of": [
+        "ProgressionInfo"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "notes",
+      "definition_uri": "https://w3id.org/dppkbnotes",
+      "examples": [
+        {
+          "value": "Contagious stage where symptoms appear and the bacteria can be spread to others.",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbnotes",
+      "owner": "Diagnosis",
+      "domain_of": [
+        "ProgressionInfo",
+        "Phenotype",
+        "Biochemical",
+        "Environmental",
+        "Disease",
+        "Treatment",
+        "Transmission",
+        "Diagnosis"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "duration_days",
+      "definition_uri": "https://w3id.org/dppkbduration_days",
+      "examples": [
+        {
+          "value": "2-5",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbduration_days",
+      "owner": "ProgressionInfo",
+      "domain_of": [
+        "ProgressionInfo"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "duration",
+      "definition_uri": "https://w3id.org/dppkbduration",
+      "examples": [
+        {
+          "value": "Variable",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbduration",
+      "owner": "ProgressionInfo",
+      "domain_of": [
+        "ProgressionInfo"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cell_types",
+      "definition_uri": "https://w3id.org/dppkbcell_types",
+      "examples": [
+        {
+          "value": "['Macrophage', 'T Cell']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbcell_types",
+      "multivalued": true,
+      "owner": "Biochemical",
+      "domain_of": [
+        "Pathophysiology",
+        "Biochemical"
+      ],
+      "range": "CellTypeTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "biological_processes",
+      "definition_uri": "https://w3id.org/dppkbbiological_processes",
+      "examples": [
+        {
+          "value": "['TNF-alpha Production', 'IL-1beta Production', 'IL-6 Production', 'IL-8 Production', 'IFN-gamma Production']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbbiological_processes",
+      "multivalued": true,
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "BiologicalProcessTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "examples",
+      "definition_uri": "https://w3id.org/dppkbexamples",
+      "examples": [
+        {
+          "value": "['Kaposi Sarcoma']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbexamples",
+      "multivalued": true,
+      "owner": "Environmental",
+      "domain_of": [
+        "Pathophysiology",
+        "Environmental"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "role",
+      "definition_uri": "https://w3id.org/dppkbrole",
+      "examples": [
+        {
+          "value": "Primary",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbrole",
+      "owner": "Treatment",
+      "domain_of": [
+        "Pathophysiology",
+        "Treatment"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "consequence",
+      "definition_uri": "https://w3id.org/dppkbconsequence",
+      "examples": [
+        {
+          "value": "Leads to abnormal sexual development and bone maturation.",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbconsequence",
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "gene",
+      "definition_uri": "https://w3id.org/dppkbgene",
+      "examples": [
+        {
+          "value": "MEFV",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbgene",
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "GeneTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "pathways",
+      "definition_uri": "https://w3id.org/dppkbpathways",
+      "examples": [
+        {
+          "value": "['Wnt Pathway', 'Hedgehog Pathway']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbpathways",
+      "multivalued": true,
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "BiologicalProcessTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "downstream",
+      "definition_uri": "https://w3id.org/dppkbdownstream",
+      "examples": [
+        {
+          "value": "['Tissue Damage']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbdownstream",
+      "multivalued": true,
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "genes",
+      "definition_uri": "https://w3id.org/dppkbgenes",
+      "examples": [
+        {
+          "value": "['HLA-DQ2', 'HLA-DQ8', 'INS']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbgenes",
+      "multivalued": true,
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "GeneTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "subtypes",
+      "definition_uri": "https://w3id.org/dppkbsubtypes",
+      "examples": [
+        {
+          "value": "['DENV-1', 'DENV-2', 'DENV-3', 'DENV-4']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbsubtypes",
+      "multivalued": true,
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "has_subtypes",
+      "definition_uri": "https://w3id.org/dppkbhas_subtypes",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbhas_subtypes",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Subtype",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cellular_components",
+      "definition_uri": "https://w3id.org/dppkbcellular_components",
+      "examples": [
+        {
+          "value": "['Peroxisome']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbcellular_components",
+      "multivalued": true,
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "CellularComponentTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "chemical_entities",
+      "definition_uri": "https://w3id.org/dppkbchemical_entities",
+      "examples": [
+        {
+          "value": "['Plasmalogen']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbchemical_entities",
+      "multivalued": true,
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "ChemicalEntityTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "triggers",
+      "definition_uri": "https://w3id.org/dppkbtriggers",
+      "examples": [
+        {
+          "value": "['Viral Infections', 'Early Dietary Factors']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbtriggers",
+      "multivalued": true,
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "TriggerTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "assays",
+      "definition_uri": "https://w3id.org/dppkbassays",
+      "examples": [
+        {
+          "value": "['Elevated Blood Glucose', 'Elevated Hemoglobin A1c (HbA1c)']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbassays",
+      "multivalued": true,
+      "owner": "Biochemical",
+      "domain_of": [
+        "Pathophysiology",
+        "Biochemical"
+      ],
+      "range": "AssayTerm",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "mechanisms",
+      "definition_uri": "https://w3id.org/dppkbmechanisms",
+      "examples": [
+        {
+          "value": "['Thrombocytopenia', 'Platelet Dysfunction', 'Disseminated Intravascular Coagulation (DIC)']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbmechanisms",
+      "multivalued": true,
+      "owner": "Pathophysiology",
+      "domain_of": [
+        "Pathophysiology"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "category",
+      "definition_uri": "https://w3id.org/dppkbcategory",
+      "examples": [
+        {
+          "value": "Hematologic",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbcategory",
+      "owner": "Disease",
+      "domain_of": [
+        "Phenotype",
+        "Disease"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "frequency",
+      "definition_uri": "https://w3id.org/dppkbfrequency",
+      "examples": [
+        {
+          "value": "Occasional",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbfrequency",
+      "owner": "Genetic",
+      "domain_of": [
+        "Phenotype",
+        "Biochemical",
+        "Genetic"
+      ],
+      "range": "Any",
+      "inlined": true,
+      "any_of": [
+        {
+          "range": "FrequencyEnum",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "FrequencyQuantity",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "diagnostic",
+      "definition_uri": "https://w3id.org/dppkbdiagnostic",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbdiagnostic",
+      "owner": "Phenotype",
+      "domain_of": [
+        "Phenotype"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sequelae",
+      "definition_uri": "https://w3id.org/dppkbsequelae",
+      "examples": [
+        {
+          "value": "['Diabetic Ketoacidosis', 'Chronic Complications (Retinopathy, Neuropathy)']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbsequelae",
+      "multivalued": true,
+      "owner": "Phenotype",
+      "domain_of": [
+        "Phenotype"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "context",
+      "definition_uri": "https://w3id.org/dppkbcontext",
+      "examples": [
+        {
+          "value": "Pregnancy",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbcontext",
+      "owner": "Treatment",
+      "domain_of": [
+        "Phenotype",
+        "Biochemical",
+        "Treatment"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "severity",
+      "definition_uri": "https://w3id.org/dppkbseverity",
+      "examples": [
+        {
+          "value": "Severe",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbseverity",
+      "owner": "Phenotype",
+      "domain_of": [
+        "Phenotype"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "presence",
+      "definition_uri": "https://w3id.org/dppkbpresence",
+      "examples": [
+        {
+          "value": "Positive",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbpresence",
+      "owner": "Diagnosis",
+      "domain_of": [
+        "Biochemical",
+        "Genetic",
+        "Environmental",
+        "Diagnosis"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "specificity",
+      "definition_uri": "https://w3id.org/dppkbspecificity",
+      "examples": [
+        {
+          "value": "High",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbspecificity",
+      "owner": "Biochemical",
+      "domain_of": [
+        "Biochemical"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "synonyms",
+      "definition_uri": "https://w3id.org/dppkbsynonyms",
+      "examples": [
+        {
+          "value": "['CYFRA 21-1']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbsynonyms",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Biochemical",
+        "Environmental",
+        "Disease"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "association",
+      "definition_uri": "https://w3id.org/dppkbassociation",
+      "examples": [
+        {
+          "value": "Susceptibility",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbassociation",
+      "owner": "Genetic",
+      "domain_of": [
+        "Genetic"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "inheritance",
+      "definition_uri": "https://w3id.org/dppkbinheritance",
+      "examples": [
+        {
+          "value": "Autosomal Dominant",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbinheritance",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Genetic",
+        "Disease"
+      ],
+      "range": "Inheritance",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "variants",
+      "definition_uri": "https://w3id.org/dppkbvariants",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbvariants",
+      "multivalued": true,
+      "owner": "Genetic",
+      "domain_of": [
+        "Genetic"
+      ],
+      "range": "Variant",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "features",
+      "definition_uri": "https://w3id.org/dppkbfeatures",
+      "examples": [
+        {
+          "value": "DNA virus from the Orthopoxvirus genus",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbfeatures",
+      "owner": "Genetic",
+      "domain_of": [
+        "Genetic"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "chemicals",
+      "definition_uri": "https://w3id.org/dppkbchemicals",
+      "examples": [
+        {
+          "value": "['Phenol']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbchemicals",
+      "multivalued": true,
+      "owner": "Environmental",
+      "domain_of": [
+        "Environmental"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "effect",
+      "definition_uri": "https://w3id.org/dppkbeffect",
+      "examples": [
+        {
+          "value": "Potential trigger for flare-ups",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbeffect",
+      "owner": "Transmission",
+      "domain_of": [
+        "Environmental",
+        "Transmission"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "parents",
+      "definition_uri": "https://w3id.org/dppkbparents",
+      "examples": [
+        {
+          "value": "['Bacterial Infection']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbparents",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "prevalence",
+      "definition_uri": "https://w3id.org/dppkbprevalence",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbprevalence",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Prevalence",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "progression",
+      "definition_uri": "https://w3id.org/dppkbprogression",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbprogression",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "ProgressionInfo",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "pathophysiology",
+      "definition_uri": "https://w3id.org/dppkbpathophysiology",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbpathophysiology",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Pathophysiology",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "phenotypes",
+      "definition_uri": "https://w3id.org/dppkbphenotypes",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbphenotypes",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Phenotype",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "biochemical",
+      "definition_uri": "https://w3id.org/dppkbbiochemical",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbbiochemical",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Biochemical",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "genetic",
+      "definition_uri": "https://w3id.org/dppkbgenetic",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbgenetic",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Genetic",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "environmental",
+      "definition_uri": "https://w3id.org/dppkbenvironmental",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbenvironmental",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Environmental",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "treatments",
+      "definition_uri": "https://w3id.org/dppkbtreatments",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbtreatments",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Treatment",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "categories",
+      "definition_uri": "https://w3id.org/dppkbcategories",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbcategories",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "infectious_agent",
+      "definition_uri": "https://w3id.org/dppkbinfectious_agent",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbinfectious_agent",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "InfectiousAgent",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "transmission",
+      "definition_uri": "https://w3id.org/dppkbtransmission",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbtransmission",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Transmission",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "diagnosis",
+      "definition_uri": "https://w3id.org/dppkbdiagnosis",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbdiagnosis",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Diagnosis",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "treatment",
+      "definition_uri": "https://w3id.org/dppkbtreatment",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbtreatment",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "Treatment",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "mechanism",
+      "definition_uri": "https://w3id.org/dppkbmechanism",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbmechanism",
+      "multivalued": true,
+      "owner": "Treatment",
+      "domain_of": [
+        "Treatment"
+      ],
+      "range": "Mechanism",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "results",
+      "definition_uri": "https://w3id.org/dppkbresults",
+      "examples": [
+        {
+          "value": "Identifies MEFV mutations",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbresults",
+      "owner": "Diagnosis",
+      "domain_of": [
+        "Diagnosis"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "markers",
+      "definition_uri": "https://w3id.org/dppkbmarkers",
+      "examples": [
+        {
+          "value": "CRP, ESR, SAA",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbmarkers",
+      "owner": "Diagnosis",
+      "domain_of": [
+        "Diagnosis"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "diseases",
+      "definition_uri": "https://w3id.org/dppkbdiseases",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkbdiseases",
+      "multivalued": true,
+      "owner": "DiseaseCollection",
+      "domain_of": [
+        "DiseaseCollection"
+      ],
+      "range": "Disease",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    }
+  ],
+  "classes": [
+    {
+      "name": "Any",
+      "definition_uri": "https://w3id.org/dppkbAny",
+      "from_schema": "https://w3id.org/dppkb",
+      "mappings": [
+        "linkml:Any"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/linkml/Any",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Subtype",
+      "definition_uri": "https://w3id.org/dppkbSubtype",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "description",
+        "evidence",
+        "review_notes",
+        "locations",
+        "geography"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbSubtype",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "EvidenceItem",
+      "definition_uri": "https://w3id.org/dppkbEvidenceItem",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "reference",
+        "supports",
+        "snippet",
+        "explanation"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbEvidenceItem",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Prevalence",
+      "definition_uri": "https://w3id.org/dppkbPrevalence",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "subtype",
+        "population",
+        "percentage",
+        "evidence"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbPrevalence",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ProgressionInfo",
+      "definition_uri": "https://w3id.org/dppkbProgressionInfo",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "phase",
+        "subtype",
+        "age_range",
+        "evidence",
+        "incubation_days",
+        "review_notes",
+        "incubation_years",
+        "notes",
+        "duration_days",
+        "duration"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbProgressionInfo",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Pathophysiology",
+      "definition_uri": "https://w3id.org/dppkbPathophysiology",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "description",
+        "cell_types",
+        "evidence",
+        "biological_processes",
+        "locations",
+        "examples",
+        "role",
+        "consequence",
+        "gene",
+        "pathways",
+        "downstream",
+        "genes",
+        "subtypes",
+        "cellular_components",
+        "chemical_entities",
+        "triggers",
+        "assays",
+        "mechanisms"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbPathophysiology",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Phenotype",
+      "definition_uri": "https://w3id.org/dppkbPhenotype",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "category",
+        "name",
+        "frequency",
+        "diagnostic",
+        "sequelae",
+        "evidence",
+        "context",
+        "review_notes",
+        "severity",
+        "notes",
+        "subtype"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbPhenotype",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Biochemical",
+      "definition_uri": "https://w3id.org/dppkbBiochemical",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "presence",
+        "evidence",
+        "specificity",
+        "frequency",
+        "notes",
+        "context",
+        "subtype",
+        "cell_types",
+        "assays",
+        "synonyms"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbBiochemical",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Genetic",
+      "definition_uri": "https://w3id.org/dppkbGenetic",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "presence",
+        "evidence",
+        "association",
+        "review_notes",
+        "subtype",
+        "frequency",
+        "inheritance",
+        "variants",
+        "features"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbGenetic",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Environmental",
+      "definition_uri": "https://w3id.org/dppkbEnvironmental",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "presence",
+        "evidence",
+        "notes",
+        "description",
+        "chemicals",
+        "synonyms",
+        "effect",
+        "examples",
+        "review_notes"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbEnvironmental",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Disease",
+      "definition_uri": "https://w3id.org/dppkbDisease",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "description",
+        "category",
+        "parents",
+        "has_subtypes",
+        "prevalence",
+        "progression",
+        "pathophysiology",
+        "phenotypes",
+        "biochemical",
+        "genetic",
+        "environmental",
+        "treatments",
+        "categories",
+        "infectious_agent",
+        "transmission",
+        "diagnosis",
+        "synonyms",
+        "treatment",
+        "inheritance",
+        "notes"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbDisease",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Treatment",
+      "definition_uri": "https://w3id.org/dppkbTreatment",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "description",
+        "evidence",
+        "context",
+        "review_notes",
+        "role",
+        "notes",
+        "mechanism"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbTreatment",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "InfectiousAgent",
+      "definition_uri": "https://w3id.org/dppkbInfectiousAgent",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "evidence",
+        "description"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbInfectiousAgent",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Transmission",
+      "definition_uri": "https://w3id.org/dppkbTransmission",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "description",
+        "evidence",
+        "notes",
+        "effect"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbTransmission",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Assay",
+      "definition_uri": "https://w3id.org/dppkbAssay",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "description"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbAssay",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Diagnosis",
+      "definition_uri": "https://w3id.org/dppkbDiagnosis",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "presence",
+        "evidence",
+        "notes",
+        "results",
+        "markers"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbDiagnosis",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Inheritance",
+      "definition_uri": "https://w3id.org/dppkbInheritance",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "evidence",
+        "description"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbInheritance",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Variant",
+      "definition_uri": "https://w3id.org/dppkbVariant",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "description"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbVariant",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Mechanism",
+      "definition_uri": "https://w3id.org/dppkbMechanism",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "description"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbMechanism",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DiseaseCollection",
+      "definition_uri": "https://w3id.org/dppkbDiseaseCollection",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "diseases"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkbDiseaseCollection",
+      "tree_root": true,
+      "@type": "ClassDefinition"
+    }
+  ],
+  "metamodel_version": "1.7.0",
+  "source_file": "dppkb.yaml",
+  "source_file_date": "2024-06-17T11:33:33",
+  "source_file_size": 13316,
+  "generation_date": "2024-06-17T12:23:06",
+  "@type": "SchemaDefinition",
+  "@context": [
+    "project/jsonld/dppkb.context.jsonld",
+    "https://w3id.org/linkml/types.context.jsonld",
+    {
+      "@base": "https://w3id.org/dppkb"
+    }
+  ]
+}

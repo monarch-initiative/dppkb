@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "dppkb"
+version = "0.1.0"
+description = "Disease Pathophysiology Knowledge Base"
+authors = ["My Name <my-name@my-org.org>"]
+license = "BSD-3"
+readme = "README.md"
+include = ["README.md", "src/dppkb/schema", "project"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+linkml-runtime = "^1.1.24"
+linkml-renderer = "^0.3.0"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+style = "pep440"
+
+[tool.poetry.dev-dependencies]
+linkml = "^1.3.5"
+mkdocs-material = "^8.2.8"
+mkdocs-mermaid2-plugin = "^1.1.1"
+schemasheets = "^0.1.14"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.poetry.extras]
+docs = ["linkml", "mkdocs-material"]

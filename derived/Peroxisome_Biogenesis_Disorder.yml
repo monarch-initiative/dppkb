@@ -1,0 +1,88 @@
+---
+name: Peroxisome Biogenesis Disorder
+category: Genetic
+parents:
+  - Inborn Error of Metabolism
+  - Peroxisomal Disorder
+prevalence:
+  - population: Global
+    percentage: Very Rare
+inheritance:
+  - name: Autosomal recessive
+pathophysiology:
+  - name: Peroxisome Biogenesis Defect
+    description: Mutations in PEX genes disrupt the assembly and function of peroxisomes, leading to impaired metabolic processes.
+    cellular_components:
+      - Peroxisome
+  - name: Accumulation of Toxic Metabolites
+    description: The inability to break down very long-chain fatty acids (VLCFAs) and other compounds leads to their accumulation in tissues.
+    chemical_entities:
+      - VLCFAs
+      - Bile Acid Intermediates
+      - Phytanic Acid
+  - name: Deficiency of Essential Compounds
+    description: Impaired synthesis of plasmalogens and other essential compounds disrupts normal cellular functions.
+    chemical_entities:
+      - Plasmalogen
+  - name: Neurological Dysfunction
+    locations:
+      - central nervous system
+    description: Accumulation of toxic metabolites and deficiency of essential compounds lead to demyelination, neuronal migration defects, and neurodegeneration.
+  - name: Hepatic Dysfunction
+    locations:
+      - liver
+    description: Accumulation of bile acid intermediates and VLCFAs, along with oxidative stress, cause hepatomegaly, fibrosis, and liver failure.
+  - name: Skeletal Abnormalities
+    locations:
+      - bones
+      - cartilage
+    description: Plasmalogen deficiency disrupts normal bone formation, leading to rhizomelic shortening of limbs and chondrodysplasia punctata.
+  - name: Multisystem Involvement
+    description: The pervasive nature of peroxisomal dysfunction affects multiple organ systems, resulting in a wide range of clinical manifestations.
+phenotypes:
+  - category: Neurologic
+    name: Hypotonia
+    frequency: VERY_FREQUENT
+  - category: Neurologic
+    name: Developmental Delay
+    frequency: VERY_FREQUENT
+  - category: Hepatobiliary
+    name: Hepatomegaly
+    frequency: FREQUENT
+  - category: Visual
+    name: Retinopathy
+    frequency: FREQUENT
+  - category: Auditory
+    name: Hearing Loss
+    frequency: FREQUENT
+  - category: Craniofacial
+    name: Craniofacial Dysmorphism
+    frequency: OCCASIONAL
+biochemical:
+  - name: Very Long Chain Fatty Acids (VLCFA)
+    presence: Elevated
+    context: Diagnostic marker
+  - name: Plasmalogens
+    presence: Decreased
+    context: Diagnostic marker
+  - name: Bile Acid Intermediates
+    presence: Elevated
+    context: Diagnostic marker
+genetic:
+  - name: PEX1
+    association: Pathogenic Variants
+  - name: PEX6
+    association: Pathogenic Variants
+  - name: Other PEX Genes
+    association: Pathogenic Variants
+environmental:
+  - name: Not Applicable
+treatments:
+  - name: Symptomatic Management
+    description: Supportive care addressing specific symptoms such as physical therapy for hypotonia and seizure management.
+  - name: Nutritional Support
+    description: Specialized diet and supplements to manage biochemical abnormalities.
+  - name: Liver Transplant
+    description: Considered in severe cases with significant liver dysfunction.
+  - name: Genetic Counseling
+    description: Providing information and support to families regarding inheritance and implications.

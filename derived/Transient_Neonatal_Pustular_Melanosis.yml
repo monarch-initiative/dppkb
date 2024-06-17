@@ -1,0 +1,164 @@
+---
+name: Transient Neonatal Pustular Melanosis
+category: Skin Disorder
+parents:
+  - Neonatal Condition
+prevalence:
+  - population: Newborns
+    percentage: Rare
+    evidence:
+      - reference: PMID:22037857
+        supports: SUPPORT
+        snippet: ' ...one case each of transient neonatal pustular melanosis... (2.3% each) were enrolled in this study...'
+        explanation: The literature indicates that transient neonatal pustular melanosis is quite rare with only one case identified out of a cohort, supporting the statement that it has a rare prevalence in newborns.
+progression:
+  - phase: Onset
+    age_range: Birth
+    evidence:
+      - reference: PMID:22884507
+        supports: SUPPORT
+        snippet: Transient neonatal pustular melanosis is a skin condition commonly seen in newborns.
+        explanation: The article mentions that Transient Neonatal Pustular Melanosis (TNPM) is observed in newborns, supporting the statement regarding its onset at birth.
+      - reference: PMID:33609325
+        supports: SUPPORT
+        snippet: In this study, newborns born between 2018 and 2019 were evaluated prospectively. Along with demographic findings, temporary neonatal skin manifestations, congenital spots, benign neonatal pustulosis, congenital anomalies and other lesions were statistically evaluated.
+        explanation: The reference specifies the evaluation of neonatal skin manifestations in newborns, including Transient Neonatal Pustular Melanosis, thus supporting the statement about its onset phase at birth.
+      - reference: PMID:11422167
+        supports: SUPPORT
+        snippet: It must be distinguished from other causes of a pustular eruption in neonates, including infection and erythema toxicum neonatorum, and rare disorders such as transient neonatal pustular melanosis...
+        explanation: The article includes transient neonatal pustular melanosis in the differential diagnosis of pustular eruptions in neonates, indicating its occurrence from birth.
+  - phase: Resolution
+    age_range: Weeks
+    evidence:
+      - reference: PMID:22884507
+        supports: NO_EVIDENCE
+        snippet: Transient neonatal pustular melanosis.
+        explanation: The reference title mentions the condition transient neonatal pustular melanosis, but it does not provide any specific information about its progression, age range, or resolution phase.
+      - reference: PMID:37340913
+        supports: NO_EVIDENCE
+        snippet: A Neonate With a Rash.
+        explanation: Though discussing various neonatal conditions involving rashes, the abstract does not mention specific details about transient neonatal pustular melanosis or its progression and resolution age range.
+      - reference: PMID:29974501
+        supports: NO_EVIDENCE
+        snippet: Management of afebrile neonates with pustules and vesicles in a pediatric emergency department.
+        explanation: The study mentions vesicles and pustules in afebrile neonates but doesn't provide information specifically about transient neonatal pustular melanosis and its progression or resolution phase.
+      - reference: PMID:31553864
+        supports: NO_EVIDENCE
+        snippet: A neonatal pustule:Langerhans cell histiocytosis.
+        explanation: Discusses Langerhans cell histiocytosis and its presentation in neonates, but does not cover transient neonatal pustular melanosis.
+      - reference: PMID:11422167
+        supports: NO_EVIDENCE
+        snippet: Neonatal eosinophilic pustular folliculitis.
+        explanation: Mentions eosinophilic pustular folliculitis and compares it to other pustular neonatal conditions, including transient neonatal pustular melanosis, but does not provide details on the progression, age range, or resolution phase of transient neonatal pustular melanosis.
+pathophysiology:
+  - name: Melanocyte Activation
+    description: An unknown trigger, possibly related to the transition from intrauterine to extrauterine life, leads to the activation of melanocytes in the skin.
+    cell_types:
+      - Melanocyte
+    downstream:
+      - Melanin Accumulation
+  - name: Melanin Accumulation
+    locations:
+      - Epidermis
+    description: Activated melanocytes produce and release excessive amounts of melanin, which accumulates in the superficial layers of the skin.
+    downstream:
+      - Pustule Formation
+  - name: Pustule Formation
+    locations:
+      - Epidermis
+    description: The accumulation of melanin in the epidermis leads to the formation of small, superficial pustules that are characteristically present at birth or develop within the first few days of life.
+    downstream:
+      - Hyper pigmentation
+      - Desquamation
+  - name: Hyper pigmentation
+    locations:
+      - Skin
+    description: As the pustules resolve, they may leave behind areas of hyper pigmentation or dark spots on the skin, representing the sites of melanin accumulation.
+  - name: Desquamation
+    locations:
+      - Skin
+    description: In some cases, the resolution of pustules may be followed by a period of superficial skin peeling or desquamation.
+  - name: Spontaneous Resolution
+    description: Transient Neonatal Pustular Melanosis is a self-limited condition that typically resolves spontaneously within a few weeks to months without any sequelae.
+  - name: Benign Course
+    description: Despite the presence of pustules and skin changes, Transient Neonatal Pustular Melanosis is a benign condition that does not affect the overall health of the neonate.
+phenotypes:
+  - category: Dermatologic
+    name: Pustules
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    evidence:
+      - reference: PMID:7091064
+        supports: SUPPORT
+        snippet: Transient neonatal pustular melanosis.
+        explanation: The title confirms that transient neonatal pustular melanosis is indeed a dermatologic condition.
+      - reference: PMID:12113648
+        supports: SUPPORT
+        snippet: Generalized pustular eruptions in neonates include erythema toxicum neonatorum and transient neonatal pustular melanosis, both of which are non-infectious.
+        explanation: This snippet supports the statement by confirming that transient neonatal pustular melanosis falls under generalized pustular eruptions in neonates.
+      - reference: PMID:27192509
+        supports: SUPPORT
+        snippet: The majority of neonatal skin pustules is not infectious, comprising the benign neonatal pustulosis. The most common ones are erythema toxicum neonatorum, the transient neonatal pustular melanosis and the benign cephalic pustulosis.
+        explanation: This snippet supports the statement by indicating transient neonatal pustular melanosis is a common and benign pustular condition in newborns.
+      - reference: PMID:511427
+        supports: SUPPORT
+        snippet: Transient neonatal pustular melanosis.
+        explanation: The title confirms that transient neonatal pustular melanosis is a recognized dermatologic condition.
+      - reference: PMID:28543629
+        supports: SUPPORT
+        snippet: Erythema toxicum neonatorum (ETN) and transient neonatal pustular melanosis (TNPM) are benign pustular skin conditions that are relatively common in newborns.
+        explanation: This snippet supports the statement by confirming that transient neonatal pustular melanosis is a common benign pustular skin condition in newborns.
+  - category: Dermatologic
+    name: Hyperpigmented Macules
+    frequency: VERY_FREQUENT
+    evidence:
+      - reference: PMID:511427
+        supports: PARTIAL
+        snippet: A Mexican-American boy presented at birth with an extensive eruption consisting of 0.5 to 1.0 cm hyperpigmented macules with a distinct peripheral scale involving primarily the forearms, abdomen and lower back.
+        explanation: The reference supports the presence of hyperpigmented macules as a phenotype of transient neonatal pustular melanosis. However, it does not provide support for the frequency being 'High'.
+      - reference: PMID:22884507
+        supports: PARTIAL
+        snippet: Transient neonatal pustular melanosis.
+        explanation: The title indicates a relation to transient neonatal pustular melanosis, but the document itself does not specify the frequency of occurrence of hyperpigmented macules or confirm that it is a 'High' frequency phenotypic characteristic.
+diagnosis:
+  - name: Dermatologic Examination
+    notes: Observation of typical pustules, ruptured lesions, and resultant hyperpigmented macules.
+    evidence:
+      - reference: PMID:24318488
+        supports: SUPPORT
+        snippet: The clinical aspect and time of onset are generally sufficient to make the correct diagnosis. Nevertheless, peculiar clinical presentations may require additional work-up to rule out life-threatening conditions, and dermatological consultation and histological examination are required for the final diagnosis.
+        explanation: The literature mentions that clinical recognition through observation of typical skin changes can be sufficient for diagnosis, suggesting that a dermatological examination is key in diagnosing Transient Neonatal Pustular Melanosis.
+      - reference: PMID:33397568
+        supports: SUPPORT
+        snippet: An accurate diagnosis is primarily based on the distinct morphologic features of the pustules and the characteristic hyperpigmented macules left behind.
+        explanation: This supports the value of dermatologic examination in diagnosing Transient Neonatal Pustular Melanosis by observing the specific morphologic features.
+  - name: Skin Smear
+    notes: May reveal neutrophils and absence of microorganisms.
+    evidence:
+      - reference: PMID:511427
+        supports: SUPPORT
+        snippet: Gram stains of the pustules showed numerous neutrophils but no bacteria.
+        explanation: The use of skin smears in diagnosing transient neonatal pustular melanosis is supported as it reveals neutrophils and an absence of bacteria.
+      - reference: PMID:9144701
+        supports: SUPPORT
+        snippet: The Tzanck smear is a very easy, rapid, and sensitive test for detection of a herpetic infection (multinucleated giant cells) as well as noninfectious pustular eruptions (eosinophils, neutrophils). Therefore the Tzanck smear should be the first test performed.
+        explanation: The statement is supported as the use of skin smears to detect neutrophils in noninfectious pustular eruptions is recommended.
+treatments:
+  - name: None Required
+    description: Condition is self-limiting and resolves without treatment.
+    evidence:
+      - reference: PMID:7091064
+        supports: SUPPORT
+        snippet: Transient neonatal pustular melanosis.
+        explanation: The literature specifically covers transient neonatal pustular melanosis, implying it is self-limiting and does not require treatment.
+      - reference: PMID:27192509
+        supports: SUPPORT
+        snippet: However, the majority of neonatal skin pustules is not infectious, comprising the benign neonatal pustulosis. Benign neonatal pustuloses are a group of clinical disease characterized by pustular eruptions in which a contagious agent is not responsible for its etiology. The most common ones are erythema toxicum neonatorum, the transient neonatal pustular melanosis and the benign cephalic pustulosis. These dermatoses are usually benign, asymptomatic and self-limited.
+environmental:
+  - name: Not Applicable
+    evidence:
+      - reference: PMID:7091064
+        supports: NO_EVIDENCE
+        snippet: No environmental factors are mentioned in relation to Transient Neonatal Pustular Melanosis in the provided literature.
+        explanation: The provided literature does not discuss environmental causes or factors related to the condition.
+notes: No known environmental factors are associated with this condition.

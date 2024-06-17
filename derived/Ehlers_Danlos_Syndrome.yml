@@ -1,0 +1,363 @@
+---
+name: Ehlers-Danlos Syndrome
+category: Genetic
+parents:
+  - Connective Tissue Disorder
+  - Inherited Disorder
+has_subtypes:
+  - name: Classical EDS (cEDS)
+    description: Characterized by skin hyperextensibility, atrophic scarring, and joint hypermobility.
+    evidence:
+      - reference: PMID:28192633
+        supports: SUPPORT
+        snippet: Classical EDS is a heritable disorder of connective tissue. Patients are affected with joint hypermobility, skin hyperextensibilty, and skin fragility leading to atrophic scarring and significant bruising.
+        explanation: This reference directly supports the claim that Classical EDS (cEDS) is characterized by joint hypermobility, skin hyperextensibility, and atrophic scarring.
+  - name: Hypermobile EDS (hEDS)
+    description: Characterized by generalized joint hypermobility, often with recurrent joint dislocations and chronic pain.
+    evidence:
+      - reference: PMID:20301456
+        supports: PARTIAL
+        snippet: Hypermobile Ehlers-Danlos syndrome (hEDS) is characterized by generalized joint hypermobility, joint instability, pain, soft and hyperextensible skin with atrophic scars and easy bruising...
+        explanation: While hEDS is characterized by generalized joint hypermobility and chronic pain, the provided literature does not emphasize recurrent joint dislocations as a defining characteristic.
+      - reference: PMID:31582002
+        supports: SUPPORT
+        snippet: Symptomatic joint hypermobility can result from soft tissue injury or muscular strain caused by muscular imbalance. Symptomatic joint hypermobility can also lead to recurrent joint subluxations/dislocations and chronic pain.
+        explanation: This article supports the characterization of hEDS with generalized joint hypermobility, recurrent joint dislocations, and chronic pain.
+      - reference: PMID:28145611
+        supports: SUPPORT
+        snippet: "“The hypermobile type of Ehlers-Danlos syndrome (hEDS) is likely the most common hereditary disorder of connective tissue. It has been described largely in those with musculoskeletal complaints including joint hypermobility, joint subluxations/dislocations, as well as skin and soft tissue manifestations.\""
+        explanation: This provides direct support for the statement, noting joint hypermobility, recurrent dislocations, and associated chronic pain in hEDS.
+  - name: Vascular EDS (vEDS)
+    description: Most severe form, characterized by thin, translucent skin, arterial, intestinal, and uterine fragility.
+    evidence:
+      - reference: PMID:33650410
+        supports: SUPPORT
+        snippet: The vascular subtype of EDS (type IV) is defined by characteristic facial features, translucent skin, easy bruising, and spontaneous arterial rupture and visceral perforation of such organs as the uterus and intestines, with possible life-threatening consequences.
+        explanation: This excerpt directly supports the statement by confirming that vEDS is characterized by thin, translucent skin, and fragility of arteries, intestines, and uterus.
+      - reference: PMID:32941194
+        supports: SUPPORT
+        snippet: Vascular Ehlers-Danlos syndrome (vEDS) is the most severe form of EDS, affecting the synthesis of type III collagen. It is notable for decreased life expectancy and morbidity, including spontaneous vessel rupture.
+        explanation: This excerpt supports the statement by indicating that vEDS is the most severe form of EDS and is associated with significant arterial fragility.
+      - reference: PMID:29709596
+        supports: SUPPORT
+        snippet: Life-threatening arterial aneurysms, dissections and ruptures of medium-sized and large arteries are a hallmark of the vascular subtype of EDS, caused by a molecular defect in collagen type III, an important constituent of blood vessel walls and hollow organs.
+        explanation: This excerpt supports the statement by mentioning the severe arterial fragility associated with vEDS.
+      - reference: PMID:30534875
+        supports: SUPPORT
+        snippet: Ehlers Danlos Syndrome comprises a heterogeneous group of genetic disorders of the connective tissue, due to defects in collagen or its modifying enzymes. We report a 21 years old male presenting with translucent skin revealing the subcutaneous venous pattern.
+        explanation: This excerpt indirectly supports the statement by describing a patient with vEDS having translucent skin, which aligns with the defining characteristics of vEDS mentioned in the statement.
+  - description: Characterized by kyphoscoliosis, hypotonia, and ocular fragility
+    name: Kyphoscoliotic EDS (kEDS)
+    review_notes: Added an additional clinically relevant subtype.
+prevalence:
+  - population: Global
+    percentage: 0.02
+    evidence:
+      - reference: PMID:28077691
+        supports: PARTIAL
+        snippet: The cohort held 1427 unique persons with Ehlers-Danlos Syndrome, giving a national prevalence of 0.02%.
+        explanation: The study confirms a prevalence of 0.02%, but this data is specific to the Danish population. The statement claims this prevalence on a global scale, which the provided literature does not support.
+progression:
+  - phase: Onset
+    age_range: Birth-40
+    evidence:
+      - reference: PMID:32333004
+        supports: NO_EVIDENCE
+        snippet: Systemic sclerosis is a heterogeneous, multisystem disease. It can occur at any age, but most patients develop the disease between the age of 40 to 50 years.
+        explanation: This study is about systemic sclerosis and does not provide evidence regarding the progression or onset of Ehlers-Danlos Syndrome specifically.
+      - reference: PMID:21193204
+        supports: SUPPORT
+        snippet: Patients whose first echocardiogram was obtained in late childhood or adulthood were less likely to have aortic dilation (P < .002) than those whose first echocardiogram was obtained in early childhood.
+        explanation: This study suggests that certain clinical findings related to EDS, such as aortic dilation, are more pronounced in childhood, supporting earlier onset and progression.
+      - reference: PMID:24499752
+        supports: SUPPORT
+        snippet: There is a much greater prevalence of obstetric and gynecologic issues reported by women with Ehlers-Danlos syndrome than in the general population. Additionally, rates differed significantly among the three most common types of Ehlers-Danlos syndrome with vascular type having the highest rates of adverse pregnancy outcomes and menstrual abnormalities.
+        explanation: The study discusses the prevalence of gynecologic and obstetric issues in women with Ehlers-Danlos Syndrome, implying that some symptoms and complications start or can be observed from an early age.
+      - reference: PMID:29982180
+        supports: SUPPORT
+        snippet: Arterial fragility is an important characteristic of kyphoscoliotic EDS. It manifests as spontaneous arterial rupture, dissections and dissecting aneurysms which may occur even during early childhood.
+        explanation: This study highlights that arterial fragility in kyphoscoliotic EDS can manifest as early as childhood, supporting the statement regarding early onset and progression of the disease.
+  - age_range: 10-30
+    phase: Peak Symptoms Development
+    review_notes: Added an additional phase to describe the common age range where symptoms peak.
+pathophysiology:
+  - name: Collagen Abnormalities
+    description: Mutations in genes encoding collagen or collagen-modifying enzymes lead to defective collagen synthesis and assembly.
+    evidence:
+      - reference: PMID:7086195
+        supports: SUPPORT
+        snippet: Several abnormalities in collagen biosynthesis have been described in patients with Ehlers-Danlos syndrome. Examples of collagen structural mutations as well as post-translational enzymatic defects have been detected.
+        explanation: This reference confirms that mutations affecting collagen synthesis and enzymes responsible for collagen modification are associated with Ehlers-Danlos Syndrome.
+      - reference: PMID:37187299
+        supports: SUPPORT
+        snippet: Vascular Ehlers-Danlos Syndrome (vEDS) is a rare autosomal dominant disease caused by mutations in the COL3A1 gene.
+        explanation: This reference identifies specific gene mutations (e.g., COL3A1) responsible for defective collagen synthesis leading to Ehlers-Danlos Syndrome.
+      - reference: PMID:2010058
+        supports: SUPPORT
+        snippet: Recently, several mutations in three other collagen genes (COL2A1, COL3A1, and COL4A5) have been found in probands with genetic diseases involving tissues rich in these collagens.
+        explanation: The reference supports the statement by elaborating on how mutations in various collagen genes lead to defects tied to diseases including Ehlers-Danlos Syndrome.
+      - reference: PMID:30246406
+        supports: SUPPORT
+        snippet: Human EDS may be caused by variants in several different genes including COL5A1, which encodes the collagen type V alpha 1 chain.
+        explanation: This reference describes how mutations in the COL5A1 gene can result in defective collagen synthesis, aligned with the nature of Ehlers-Danlos Syndrome.
+      - reference: PMID:30668708
+        supports: SUPPORT
+        snippet: Bi-allelic loss-of-function mutations in the adipocyte enhancer-binding protein 1 (AEBP1) gene were reported in three families with an autosomal recessive EDS-like condition.
+        explanation: The reference confirms that mutations in genes involved in collagen biosynthesis or assembly can lead to EDS-like conditions.
+  - name: Connective Tissue Fragility
+    description: Abnormal collagen leads to weakened connective tissues throughout the body.
+    evidence:
+      - reference: PMID:358109
+        supports: SUPPORT
+        snippet: The cardinal features are cutaneous hyperextensibility, joint hypermobility, bleeding diathesis, and tissue fragility, and these features lead to a large variety of additional manifestations.
+        explanation: The provided snippet mentions tissue fragility as a cardinal feature of Ehlers-Danlos Syndrome (EDS), which is consistent with the statement that abnormal collagen leads to weakened connective tissues.
+      - reference: PMID:36960056
+        supports: SUPPORT
+        snippet: pEDS is caused by heterozygous missense mutations in C1R and C1S genes of the classical complement C1 complex.
+        explanation: This reference explains that pEDS is related to these genetic mutations which interfere with the collagen matrix, fitting the description of abnormal collagen leading to connective tissue fragility.
+      - reference: PMID:1448
+        supports: SUPPORT
+        snippet: Any defect in the normal mechanisms responsible for the synthesis and secretion of collagen molecules or the deposition of these molecules into extracellular fibers could result in abnormal fibrillogenesis; such defects could result in a connective tissue disease.
+        explanation: This reference discusses how defects in collagen mechanisms can lead to connective tissue diseases, supporting the statement about abnormal collagen leading to connective tissue fragility.
+      - reference: PMID:31329366
+        supports: SUPPORT
+        snippet: Collagen, which forms the framework of vessel walls, is altered in many patients with Ehlers-Danlos syndrome (EDS) leading to weakening of the vessel wall or the supporting tissues.
+        explanation: This reference directly supports the statement by mentioning how altered collagen in EDS patients leads to weakening of vessel walls and supporting tissues.
+  - name: Tissue Injury and Dysfunction
+    description: Fragile tissues are prone to damage, leading to manifestations like joint dislocations, organ ruptures, and poor wound healing.
+    evidence:
+      - reference: PMID:24443025
+        supports: PARTIAL
+        snippet: The Ehlers-Danlos Syndromes comprise a heterogeneous group of diseases, which are characterized by fragility of the soft connective tissues and widespread manifestations in skin, ligaments and joints, blood vessels and internal organs... The clinical spectrum varies from mild skin and joint hyperlaxity to severe physical disability and life-threatening vascular complications.
+        explanation: The excerpt confirms tissue fragility and various manifestations affecting skin, joints, and internal organs, but does not explicitly mention every detail cited in the statement such as joint dislocations, organ ruptures, or poor wound healing.
+      - reference: PMID:29982180
+        supports: PARTIAL
+        snippet: Arterial fragility is an important feature of the disease... Arterial fragility is an important characteristic of kyphoscoliotic EDS. It manifests as spontaneous arterial rupture, dissections and dissecting aneurysms.
+        explanation: The excerpt supports the statement by highlighting arterial fragility and spontaneous ruptures, contributing to tissue injury and dysfunction. However, it does not explicitly mention joint dislocations or poor wound healing.
+      - reference: PMID:19592142
+        supports: PARTIAL
+        snippet: Easy bruising and bleeding are prominent features of some heritable disorders of connective tissue (HDCT), resulting from fragility of capillaries and the perivascular connective tissue... In the vascular subtype of EDS, caused by defects in type III collagen, fragility of vessel walls can lead to life-threatening bleeding and premature death.
+        explanation: The text discusses tissue fragility leading to bruising and bleeding, supporting aspects of tissue injury and dysfunction. However, it does not explicitly address joint dislocations or organ ruptures.
+phenotypes:
+  - category: Musculoskeletal
+    name: Joint Hypermobility
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    sequelae:
+      - Recurrent Joint Dislocations
+      - Chronic Joint Pain
+    evidence:
+      - reference: PMID:34807421
+        supports: SUPPORT
+        snippet: Currently, musculoskeletal manifestations related to joint hypermobility are perceived as the most prevalent determinants of the quality of life of affected individuals.
+        explanation: This reference confirms that musculoskeletal manifestations, including joint hypermobility, are highly prevalent in individuals with Ehlers-Danlos Syndrome (EDS).
+      - reference: PMID:29915965
+        supports: SUPPORT
+        snippet: Increasing data demonstrate that pain is a major disability determinator in JH and EDS. Recent findings confirm a complex pathogenesis for pain in JH and EDS and suggest a potential role for joint instability, central sensitization and small fiber neuropathy.
+        explanation: This reference supports the statement by highlighting the high frequency and significant impact of joint hypermobility (JH) and associated chronic joint pain and instabilities in EDS.
+      - reference: PMID:31562935
+        supports: SUPPORT
+        snippet: Pain is one of the most common symptoms reported in individuals with Ehlers-Danlos syndromes.
+        explanation: This reference supports the statement by highlighting that chronic joint pain is a frequent issue in those with EDS, reinforcing the high prevalence of musculoskeletal symptoms including joint hypermobility.
+      - reference: PMID:37726791
+        supports: SUPPORT
+        snippet: The Ehlers-Danlos syndromes are a group of clinically and genetically heterogeneous hereditary diseases affecting the connective tissue. They are characterized by hypermobility of the joints, hyperextensible skin and friable tissue.
+        explanation: This reference supports the statement by acknowledging hypermobility of the joints as a characteristic of EDS, along with chronic pain and other musculoskeletal features.
+  - category: Dermatologic
+    name: Skin Hyperextensibility
+    frequency: VERY_FREQUENT
+    evidence:
+      - reference: PMID:358109
+        supports: SUPPORT
+        snippet: The cardinal features are cutaneous hyperextensibility, joint hypermobility, bleeding diathesis, and tissue fragility...
+        explanation: The reference clearly states that cutaneous (skin) hyperextensibility is one of the cardinal features of Ehlers-Danlos Syndrome (EDS). This aligns with the statement indicating a high frequency dermatologic phenotype of skin hyperextensibility in EDS.
+      - reference: PMID:30837697
+        supports: SUPPORT
+        snippet: All individuals with these atypical variants exhibited skin hyperextensibility as seen in individuals with classical EDS and classical-like EDS...
+        explanation: The reference shows that skin hyperextensibility is a consistent clinical feature across different EDS subtypes, which supports the statement about its high prevalence as a dermatologic phenotype.
+      - reference: PMID:434850
+        supports: SUPPORT
+        snippet: Hyperextensibility of the skin in this region developed within the subsequent five years...
+        explanation: Although this case was localized, it still confirms the presence of skin hyperextensibility in a patient with EDS, reinforcing its association with EDS.
+      - reference: PMID:31904772
+        supports: SUPPORT
+        snippet: Of the 13 subtypes of Ehlers-Danlos Syndromes (EDSs)...the authors provide an overview of hEDS symptoms and... current treatment options.
+        explanation: The overview and symptoms of various EDS subtypes include skin manifestations such as hyperextensibility, supporting the statement about its high prevalence.
+      - reference: PMID:6733946
+        supports: SUPPORT
+        snippet: Collagen fibrils showed a distorted arrangement... abnormal collagen fibrils in normal skin suggests one of eight types of Ehlers-Danlos syndrome.
+        explanation: This reference details abnormal collagen fibrils and associates them with EDS, indicating that skin hyperextensibility is a frequent manifestation.
+  - category: Dermatologic
+    name: Poor Wound Healing
+    frequency: FREQUENT
+    evidence:
+      - reference: PMID:19055167
+        supports: SUPPORT
+        snippet: Ehlers-Danlos syndrome (EDS) is a heterogeneous group of connective tissue disorders characterized by hyperextensibility, delayed wound healing, joint hypermobility, thin skin, easy bruising, tissue fragility, 'cigarette-paper' scarring over bony prominences, mitral valve prolapse, and other findings.
+        explanation: This reference directly mentions delayed wound healing as a characteristic of Ehlers-Danlos syndrome.
+      - reference: PMID:2728341
+        supports: SUPPORT
+        snippet: Although delayed wound healing has been reported to be a complication of Ehlers-Danlos syndrome in humans, using clinical and histologic criteria, wound healing in dogs and cats with Ehlers-Danlos syndrome appears to be similar to nonaffected animals.
+        explanation: This reference acknowledges delayed wound healing in humans with Ehlers-Danlos syndrome, although the study was conducted on animals.
+      - reference: PMID:20847697
+        supports: SUPPORT
+        snippet: Classic Ehlers-Danlos syndrome is a heritable connective tissue disorder characterized by skin hyperextensibility, fragile and soft skin, delayed wound healing with formation of atrophic scars, easy bruising, and generalized joint hypermobility.
+        explanation: This reference lists delayed wound healing as a characteristic feature of classic Ehlers-Danlos syndrome.
+  - category: Cardiovascular
+    name: Arterial Dissection and Rupture
+    frequency: VERY_FREQUENT
+    subtype: Vascular EDS
+    evidence:
+      - reference: PMID:19462862
+        supports: SUPPORT
+        snippet: The mutation of the COL3A1 gene which encodes type III collagen, is responsible for early vascular (spontaneous arterial rupture or dissection) ...
+        explanation: The literature specifies that the COL3A1 mutation, causing vascular EDS, leads to early vascular events including spontaneous arterial rupture or dissection.
+      - reference: PMID:30999998
+        supports: SUPPORT
+        snippet: The only published clinical trial to date demonstrated the benefit of celiprolol on arterial morbimortality.
+        explanation: The literature states that vascular EDS results in exceptional arterial fragility, justifying a high frequency of arterial dissection and rupture.
+  - category: Ophthalmologic
+    frequency: OCCASIONAL
+    name: Keratoconus
+    review_notes: Added less common phenotype for better completeness.
+biochemical:
+  - name: Collagen Type III
+    presence: Decreased or Abnormal
+    subtype: Vascular EDS
+    evidence:
+      - reference: PMID:23645670
+        supports: SUPPORT
+        snippet: Vascular Ehlers-Danlos syndrome (EDS) type IV is the most severe form of EDS. In many cases the disease is caused by a point mutation of Gly in type III collagen.
+        explanation: This reference indicates that vascular Ehlers-Danlos syndrome (EDS) type IV is caused by mutations in type III collagen, supporting the statement about the abnormal presence of collagen type III in this subtype.
+      - reference: PMID:35245290
+        supports: SUPPORT
+        snippet: Vascular Ehlers-Danlos syndrome is a rare inherited disorder caused by genetic variants in type III collagen. Its prognosis is especially hampered by unpredictable arterial ruptures and there is no therapeutic consensus.
+        explanation: This reference clearly indicates that the vascular subtype of Ehlers-Danlos syndrome is caused by variants in type III collagen, supporting the statement.
+      - reference: PMID:34226255
+        supports: SUPPORT
+        snippet: Vascular Ehlers-Danlos syndrome is caused by mutations of COL3A1 gene coding for type III collagen. The main clinical features involve a propensity to arterial tears leading to several life-threatening conditions and intensive care unit admission.
+        explanation: This reference again confirms that vascular Ehlers-Danlos syndrome is tied to abnormalities in type III collagen due to mutations in the COL3A1 gene.
+      - reference: PMID:37187299
+        supports: SUPPORT
+        snippet: Vascular Ehlers-Danlos Syndrome (vEDS) is a rare autosomal dominant disease caused by mutations in the COL3A1 gene, which renders patients susceptible to aneurysm and arterial dissection and rupture.
+        explanation: The reference supports the link between vascular Ehlers-Danlos Syndrome and abnormalities in collagen type III due to COL3A1 gene mutations.
+  - name: Collagen Type V
+    presence: Decreased or Abnormal
+    subtype: Classical EDS
+    evidence:
+      - reference: PMID:3042913
+        supports: SUPPORT
+        snippet: The mutational causes of EDS types I and II are linked to the COL5A1 gene, which encodes the pro(alpha)1(V) collagen chain, leading to collagen V deficiencies and abnormalities.
+        explanation: This reference confirms the involvement of collagen type V in Ehlers-Danlos syndrome subtypes I and II, which are also classified as classical EDS.
+      - reference: PMID:11342567
+        supports: SUPPORT
+        snippet: The major cause of EDS appears to be impaired biosynthesis and enzymatic modification of collagen. Collagen V (pro(alpha)1(V)) abnormalities cause classical EDS.
+        explanation: The reference outlines that classical EDS is caused by abnormalities in collagen V.
+      - reference: PMID:34462473
+        supports: SUPPORT
+        snippet: Mutations in the COL5A1 gene are causal in the Ehlers-Danlos syndromes I and II. Collagen V plays an important role in collagen I fibrillogenesis, and its deficiency is implicated in classical EDS.
+        explanation: The statement is supported as the literature specifies COL5A1 mutations and their role in classical EDS through collagen V deficiencies and abnormalities.
+genetic:
+  - name: COL1A1
+    association: Pathogenic Variants
+    evidence:
+      - reference: PMID:36896471
+        supports: SUPPORT
+        snippet: Pathogenic variants in COL1A1 and COL1A2 are involved in osteogenesis imperfecta (OI) and, rarely, Ehlers-Danlos syndrome (EDS) subtypes and OI-EDS overlap syndromes (OIEDS1 and OIEDS2, respectively).
+        explanation: This statement supports that pathogenic variants in COL1A1 are associated with some subtypes of Ehlers-Danlos Syndrome (EDS).
+  - name: COL3A1
+    association: Pathogenic Variants
+    subtype: Vascular EDS
+    evidence:
+      - reference: PMID:34560710
+        supports: SUPPORT
+        snippet: vEDS patients are at risk of blood vessel rupture due to possession of pathogenic variants of the COL3A1 gene, which encodes type III collagen.
+        explanation: The literature explicitly states that vascular Ehlers-Danlos syndrome (vEDS) is caused by pathogenic variants in the COL3A1 gene.
+      - reference: PMID:30837697
+        supports: SUPPORT
+        snippet: Vascular EDS (vEDS) is caused by pathogenic variants in COL3A1, most frequently glycine substitutions.
+        explanation: The abstract confirms the association of vascular EDS with pathogenic variants in the COL3A1 gene.
+      - reference: PMID:35699227
+        supports: SUPPORT
+        snippet: Carriers of pathogenic or likely pathogenic COL3A1 variants were retrospectively identified through registries and specialized clinics.
+        explanation: The study supports the association between pathogenic COL3A1 variants and vascular Ehlers-Danlos syndrome.
+  - name: COL5A1
+    association: Pathogenic Variants
+    subtype: Classical EDS
+    evidence:
+      - reference: PMID:16278879
+        supports: SUPPORT
+        snippet: Mutations in the COL5A1 and the COL5A2 gene, encoding the alpha1 and the alpha2-chain of type V collagen respectively, are identified in approximately 50% of patients with a clinical diagnosis of classic EDS.
+        explanation: The reference clearly states that mutations in the COL5A1 gene are associated with classical Ehlers-Danlos Syndrome, thus supporting the statement.
+  - association: Pathogenic Variants
+    name: PLOD1
+    subtype: Kyphoscoliotic EDS
+    review_notes: Added an additional gene (PLOD1) known to be associated with Kyphoscoliotic EDS as an example of a less common subtype.
+environmental:
+  - name: Physical Trauma
+    effect: Exacerbates Symptoms
+    evidence:
+      - reference: PMID:26452443
+        supports: SUPPORT
+        snippet: Ehlers-Danlos syndrome remains undetected until the patient, usually in the pediatric age, shows extensive or severe mucocutaneous injuries after only minor traumas.
+        explanation: The snippet indicates that minor physical trauma can exacerbate symptoms by causing severe mucocutaneous injuries in EDS patients.
+      - reference: PMID:28186390
+        supports: SUPPORT
+        snippet: Pain, which is often one of the first symptoms to occur, may be widespread or localized to one region such as an arm or a leg. The causes of pain in this condition are multifactorial and include joint subluxations and dislocations...
+        explanation: The excerpt mentions joint subluxations and dislocations as causes of pain in EDS, which can be exacerbated by physical trauma.
+      - reference: PMID:23095510
+        supports: SUPPORT
+        snippet: Optimal therapy for these patients includes the awareness that EDS is a systemic disease involving fragility, bleeding and spontaneous perforations from almost all organ systems.
+        explanation: This highlights the fragility associated with EDS, indicating that physical trauma can exacerbate symptoms by causing bleeding and perforations.
+  - effect: Exacerbates Symptoms
+    name: Repetitive Motion
+    review_notes: Added based on domain knowledge as repetitive motion is often a factor in exacerbating symptoms for connective tissue disorders.
+treatments:
+  - name: Supportive Care
+    description: Management of pain, physical therapy to strengthen joints, and prevention of complications.
+    evidence:
+      - reference: PMID:38189943
+        supports: SUPPORT
+        snippet: Affected patients require multimodal pain management considering their individual needs, disease-specific features, and comorbidities.
+        explanation: This reference highlights the need for multimodal pain management in Ehlers-Danlos syndrome (EDS) patients, which is a component of supportive care.
+      - reference: PMID:34145717
+        supports: SUPPORT
+        snippet: Physiotherapy benefits on proprioception and pain in patients with hEDS even if robust randomized control studies are missing.
+        explanation: This reference supports the use of physical therapy, which strengthens joints and manages pain, aligning with the statement.
+      - reference: PMID:17067502
+        supports: SUPPORT
+        snippet: Preparticipation cardiothoracic and orthopedic screening is highly recommended for athletes with EDS, and appropriate cardiovascular, orthopedic, gastrointestinal, neurologic, and dermatologic management can often allow patients with EDS to remain active.
+        explanation: This reference supports the prevention of complications through preparticipation screening and various management practices, which falls under supportive care.
+      - reference: PMID:32941194
+        supports: SUPPORT
+        snippet: The creation of multidisciplinary care teams and tertiary referral centers is helping improve outcomes.
+        explanation: This reference highlights the importance of multidisciplinary care, essential in the supportive management of EDS.
+  - name: Surgical Interventions
+    description: May be needed for severe joint instability or life-threatening complications like arterial dissections.
+    evidence:
+      - reference: PMID:32904109
+        supports: SUPPORT
+        snippet: Patients with joint hypermobility syndrome (JHS) might also present with similar symptomatology. This article will focus on the surgical management of patients with knee or shoulder abnormalities related to hEDS/JHS.
+        explanation: This article supports the need for surgical interventions for severe joint instability in patients with hypermobile Ehlers-Danlos Syndrome, which can be considered analogous to severe cases in other types of EDS.
+      - reference: PMID:30999998
+        supports: SUPPORT
+        snippet: The only published clinical trial to date demonstrated the benefit of celiprolol on arterial morbimortality... During the period surveyed, the authors observed a statistically significant difference in the ratio of hospitalizations for acute arterial events/hospitalizations for regular follow-up before and after 2011.
+        explanation: While the article mainly discusses the use of celiprolol, it acknowledges arterial events and their impact, implicitly supporting the need for interventions, which may include surgical options, in severe cases involving life-threatening arterial complications.
+      - reference: PMID:33650410
+        supports: SUPPORT
+        snippet: The vascular subtype of EDS (type IV) is defined by characteristic facial features, translucent skin, easy bruising, and spontaneous arterial rupture and visceral perforation of such organs as the uterus and intestines, with possible life-threatening consequences.
+        explanation: This reference supports the need for surgical interventions in life-threatening complications like spontaneous arterial rupture and visceral perforation in vascular EDS.
+  - name: Lifestyle Modifications
+    description: Avoiding high-impact activities and contact sports to prevent injury.
+    evidence:
+      - reference: PMID:17067502
+        supports: SUPPORT
+        snippet: Preparticipation cardiothoracic and orthopedic screening is highly recommended for athletes with EDS, and appropriate cardiovascular, orthopedic, gastrointestinal, neurologic, and dermatologic management can often allow patients with EDS to remain active.
+        explanation: The literature suggests avoiding high-impact activities and specific management strategies, which supports the statement.
+      - reference: PMID:35756986
+        supports: SUPPORT
+        snippet: The results suggest that exercise and rehabilitation may be beneficial for various physical and psychological outcomes.
+        explanation: While exercise and rehabilitation are recommended, the literature implies careful selection of physical activities to prevent injury, indirectly supporting the avoidance of high-impact activities and contact sports.
+  - description: Use of orthotic devices to support unstable joints.
+    name: Orthotic Interventions
+    review_notes: Added orthotic interventions commonly recommended in the management of EDS.

@@ -1,0 +1,187 @@
+---
+name: Dengue
+category: Infectious Disease
+parents:
+  - Arbovirus Infection
+infectious_agent:
+  - name: Dengue Virus
+transmission:
+  - name: Aedes Mosquito Exposure
+    effect: Vector for transmission
+  - name: Tropical and Subtropical Regions
+    notes: Endemic areas where transmission is most common
+prevalence:
+  - population: Global
+    percentage: 40
+progression:
+  - phase: Incubation
+    incubation_days: 3-14
+    notes: Typically 4-7 days
+  - phase: Febrile
+    duration_days: 2-7
+    notes: Sudden onset of high fever
+  - phase: Critical
+    duration_days: 3-7
+    notes: Risk of severe complications, including hemorrhage and vascular leakage
+  - phase: Recovery
+    duration_days: 2-5
+    notes: Gradual return to normal fluid balance
+pathophysiology:
+  - name: Dengue Virus (DENV) Infection
+    description: A Flavivirus transmitted by Aedes mosquitoes, causing a wide range of symptoms from mild fever to severe hemorrhagic fever and shock.
+    subtypes:
+      - DENV-1
+      - DENV-2
+      - DENV-3
+      - DENV-4
+    biological_processes:
+      - Viral Infection
+    cell_types:
+      - Dendritic Cell
+      - Monocyte
+      - Macrophage
+      - Endothelial Cell
+    downstream:
+      - Viral Replication
+      - Immune System Activation
+  - name: Viral Replication
+    description: DENV replicates primarily in dendritic cells, monocytes, and macrophages, leading to the release of new virions and the spread of infection.
+    cell_types:
+      - Dendritic Cell
+      - Monocyte
+      - Macrophage
+    downstream:
+      - Immune System Activation
+      - Cytokine Release
+      - Endothelial Dysfunction
+  - name: Immune System Activation
+    description: DENV infection triggers a robust immune response, involving both innate and adaptive immunity.
+    cell_types:
+      - Natural Killer Cell
+      - T Cell
+      - B Cell
+    downstream:
+      - Cytokine Release
+      - Antibody-Dependent Enhancement (ADE)
+  - name: Cytokine Release
+    description: Infected cells and activated immune cells release a variety of cytokines and chemokines, contributing to the inflammatory response and disease pathogenesis.
+    biological_processes:
+      - TNF-alpha Production
+      - IL-1beta Production
+      - IL-6 Production
+      - IL-8 Production
+      - IFN-gamma Production
+    downstream:
+      - Endothelial Dysfunction
+      - Vascular Leakage
+      - Coagulopathy
+  - name: Antibody-Dependent Enhancement (ADE)
+    description: In secondary infections with a different DENV serotype, pre-existing antibodies can enhance viral entry into cells, leading to increased viral replication and more severe disease.
+    mechanisms:
+      - Fc Receptor-Mediated Uptake
+      - Increased Viral Load
+    downstream:
+      - Severe Dengue
+      - Dengue Hemorrhagic Fever (DHF)
+      - Dengue Shock Syndrome (DSS)
+  - name: Endothelial Dysfunction
+    description: DENV infection and the resulting inflammatory response cause damage to the endothelial cells lining blood vessels, leading to increased permeability and fluid leakage.
+    mechanisms:
+      - Cytokine-Induced Damage
+      - Endothelial Cell Apoptosis
+    downstream:
+      - Vascular Leakage
+      - Plasma Leakage
+      - Hemoconcentration
+  - name: Coagulopathy
+    description: DENV infection can disrupt the balance of the coagulation system, leading to abnormalities in platelet function and an increased risk of bleeding.
+    mechanisms:
+      - Thrombocytopenia
+      - Platelet Dysfunction
+      - Disseminated Intravascular Coagulation (DIC)
+    downstream:
+      - Hemorrhagic Manifestations
+      - Petechiae
+      - Epistaxis
+      - Gum Bleeding
+  - name: Organ Involvement
+    description: In severe cases, DENV infection can affect various organs, leading to complications and potential organ failure.
+    locations:
+      - Liver
+      - Kidneys
+      - Brain
+    downstream:
+      - Hepatitis
+      - Acute Kidney Injury
+      - Encephalitis
+      - Neurological Complications
+phenotypes:
+  - category: Systemic
+    name: Fever
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    notes: Sudden onset, often high-grade
+  - category: Musculoskeletal
+    name: Severe Muscle and Joint Pain
+    frequency: FREQUENT
+    notes: Referred to as "breakbone fever"
+  - category: Gastrointestinal
+    name: Vomiting
+    frequency: FREQUENT
+  - category: Gastrointestinal
+    name: Diarrhea
+    frequency: OCCASIONAL
+  - category: Hemorrhagic
+    name: Petechiae
+    frequency: FREQUENT
+    notes: Small red or purple spots on the skin
+  - category: Hemorrhagic
+    name: Epistaxis
+    frequency: FREQUENT
+    notes: Nosebleeds
+  - category: Hemorrhagic
+    name: Gum Bleeding
+    frequency: FREQUENT
+  - category: Neurologic
+    name: Severe Headache
+    frequency: FREQUENT
+    notes: Often retro-orbital (behind the eyes)
+    diagnostic: true
+  - category: Systemic
+    name: Fatigue
+    frequency: FREQUENT
+biochemical:
+  - name: Dengue NS1 Antigen
+    presence: Positive
+    notes: Early marker of infection
+  - name: Dengue IgM Antibodies
+    presence: Positive
+    notes: Appears ~4-5 days after onset of symptoms
+  - name: Dengue IgG Antibodies
+    presence: Positive
+    notes: Appears later and persists, indicative of secondary infection
+  - name: Platelet Count
+    presence: Decreased
+    notes: Thrombocytopenia is common in dengue
+  - name: Hematocrit
+    presence: Elevated
+    notes: Indicator of plasma leakage
+diagnosis:
+  - name: PCR for Dengue Virus RNA
+    presence: Positive
+    notes: Confirms active infection
+  - name: NS1 Antigen Test
+    presence: Positive
+    notes: Useful in early diagnosis
+  - name: Serological Testing for IgM/IgG Antibodies
+    presence: Positive
+    notes: IgM for recent infection, IgG for past or secondary infection
+treatments:
+  - name: Supportive Care
+    description: Includes fluid management, fever control, and monitoring for complications
+  - name: Platelet Transfusions
+    description: May be required in cases of severe thrombocytopenia
+  - name: Pain Relief
+    description: Acetaminophen is preferred; NSAIDs should be avoided due to bleeding risk
+  - name: Vector Control
+    description: Measures to reduce mosquito populations and prevent bites

@@ -1,0 +1,107 @@
+---
+name: Type I Diabetes
+category: Metabolic
+parents:
+  - Autoimmune Disease
+  - Diabetes Mellitus
+prevalence:
+  - population: Global
+    percentage: 0.1-0.2
+progression:
+  - phase: Onset
+    age_range: Childhood-Adolescence
+pathophysiology:
+  - name: Genetic Susceptibility
+    description: Certain HLA gene variants (HLA-DQ2, HLA-DQ8) and other susceptibility genes (INS) increase the risk of developing Type I Diabetes.
+    genes:
+      - HLA-DQ2
+      - HLA-DQ8
+      - INS
+    downstream:
+      - Autoimmune Destruction of Beta Cells
+  - name: Environmental Triggers
+    description: Viral infections or early dietary factors (cow's milk, gluten) may trigger the autoimmune response in genetically susceptible individuals.
+    triggers:
+      - Viral Infections
+      - Early Dietary Factors
+    downstream:
+      - Autoimmune Destruction of Beta Cells
+  - name: Autoimmune Destruction of Beta Cells
+    description: The immune system mistakenly targets and destroys insulin-producing beta cells in the pancreas.
+    cell_types:
+      - Pancreatic Islet Beta Cell
+    biological_processes:
+      - T Cell-mediated Cytotoxicity
+      - Autoantibody Production
+    downstream:
+      - Insulin Deficiency
+  - name: Insulin Deficiency
+    description: Loss of beta cells leads to a deficiency of insulin, a hormone required for glucose uptake.
+    downstream:
+      - Hyperglycemia
+      - Impaired Glucose Utilization
+      - Increased Lipolysis
+  - name: Hyperglycemia
+    description: Lack of insulin results in high blood glucose levels, as glucose cannot be efficiently taken up by cells.
+    assays:
+      - Elevated Blood Glucose
+      - Elevated Hemoglobin A1c (HbA1c)
+    downstream:
+      - Glucosuria
+      - Polyuria
+      - Polydipsia
+      - Diabetic Ketoacidosis (DKA)
+  - name: Impaired Glucose Utilization
+    description: Without insulin, cells are unable to utilize glucose for energy production, leading to cellular energy deficiency.
+    downstream:
+      - Weight Loss
+      - Fatigue
+  - name: Increased Lipolysis
+    description: Insulin deficiency also leads to increased breakdown of fat (lipolysis) for energy, resulting in the production of ketones.
+    downstream:
+      - Diabetic Ketoacidosis (DKA)
+  - name: Chronic Complications
+    description: Persistent hyperglycemia over time can lead to damage in various tissues and organs.
+    downstream:
+      - Retinopathy
+      - Neuropathy
+      - Nephropathy
+      - Cardiovascular Disease
+phenotypes:
+  - category: Endocrine
+    name: Hyperglycemia
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    sequelae:
+      - Diabetic Ketoacidosis
+      - Chronic Complications (Retinopathy, Neuropathy)
+  - category: Systemic
+    name: Weight Loss
+    frequency: FREQUENT
+    notes: Due to inability to utilize glucose for energy
+biochemical:
+  - name: Blood Glucose
+    presence: Elevated
+    frequency: VERY_FREQUENT
+  - name: Hemoglobin A1c (HbA1c)
+    presence: Elevated
+    frequency: VERY_FREQUENT
+genetic:
+  - name: HLA-DQ2
+    association: Susceptibility
+  - name: HLA-DQ8
+    association: Susceptibility
+  - name: INS
+    association: Susceptibility
+environmental:
+  - name: Viral Infections
+    notes: May trigger the autoimmune response in genetically susceptible individuals
+  - name: Early Dietary Factors
+    notes: Possible risk factors include early exposure to cow's milk and gluten
+treatments:
+  - name: Insulin Therapy
+    description: Essential treatment to replace the missing insulin and regulate blood glucose levels.
+  - name: Blood Glucose Monitoring
+    description: Regular monitoring to manage glucose levels effectively.
+  - name: Lifestyle Modifications
+    description: Maintaining a balanced diet, regular physical activity, and adherence to treatment plans.

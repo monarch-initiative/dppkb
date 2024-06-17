@@ -1,0 +1,604 @@
+id: https://w3id.org/dppkb
+name: dppkb
+description: Disease Pathophysiology Knowledge Base Schema
+imports:
+  - linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  dppkb: https://w3id.org/dppkb/
+  HP: http://purl.obolibrary.org/obo/HP_
+  GO: http://purl.obolibrary.org/obo/GO_
+  OBI: http://purl.obolibrary.org/obo/OBI_
+  CHEBI: http://purl.obolibrary.org/obo/CHEBI_
+  UBERON: http://purl.obolibrary.org/obo/UBERON_
+  CL: http://purl.obolibrary.org/obo/CL_
+  MONDO: http://purl.obolibrary.org/obo/MONDO_
+  PMID: http://www.ncbi.nlm.nih.gov/pubmed/
+default_prefix: dppkb
+types:
+  PMID:
+    typeof: string
+  FrequencyQuantity:
+    typeof: string
+enums:
+  EvidenceItemSupportEnum:
+    description: The level of support for an evidence item
+    permissible_values:
+      WRONG_STATEMENT:
+        description: WRONG_STATEMENT
+      SUPPORT:
+        description: SUPPORT
+      REFUTE:
+        description: REFUTE
+      NO_EVIDENCE:
+        description: NO_EVIDENCE
+      PARTIAL:
+        description: PARTIAL
+  FrequencyEnum:
+    description: The frequency of an event or phenomenon
+    permissible_values:
+      FREQUENT:
+        description: Common
+        meaning: HP:0040282 ## Frequent
+      OCCASIONAL:
+        description: Occasional
+      VERY_FREQUENT:
+        description: High
+        meaning: HP:0040281 ## Very Frequent
+      VERY_RARE:
+        description: Rare
+        meaning: HP:0040284 ## Very rare
+      OBLIGATE:
+        description: Obligate
+        meaning: HP:0040280 ## Obligate
+  AssayTerm:
+    description: A term representing an assay
+    reachable_from:
+      source_nodes:
+        - OBI:0000070  ## assay
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+  CellularComponentTerm:
+    description: A term representing a cellular component
+    reachable_from:
+      source_nodes:
+        - GO:0005575  ## cellular_component
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+  BiologicalProcessTerm:
+    description: A term representing a biological process or pathway
+    reachable_from:
+      source_nodes:
+        - GO:0008150  ## biological_process
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+  ChemicalEntityTerm:
+    description: A term representing a chemical entity
+    reachable_from:
+      source_nodes:
+        - CHEBI:24431  ## chemical entity
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+  PhenotypeTerm:
+    description: A term representing a phenotype
+    reachable_from:
+      source_nodes:
+        - HP:0000118  ## phenotypic abnormality
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+  AnatomicalEntityTerm:
+    description: A term representing an anatomical entity
+    reachable_from:
+      source_nodes:
+        - UBERON:0001062  ## anatomical entity
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+  GeographyTerm:
+    description: A place or location
+  PhaseTerm:
+    description: A phase or stage
+  TriggerTerm:
+    description: A trigger
+  GeneTerm:
+    description: A gene
+  CellTypeTerm:
+    description: A cell type
+    reachable_from:
+      source_nodes:
+        - CL:0000000  ## cell
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+  DiseaseTerm:
+    description: A disease or medical condition
+    reachable_from:
+      source_nodes:
+        - MONDO:0000001  ## disease
+      is_direct: false
+      relationship_types:
+        - rdfs:subClassOf
+slots:
+  name:
+    examples:
+      - value: Adolescent Nephronophthisis
+    identifier: true
+    range: string
+  description:
+    range: string
+  evidence:
+    multivalued: true
+    range: EvidenceItem
+    inlined_as_list: true
+  review_notes:
+    examples:
+      - value: Added an additional clinically relevant subtype.
+    range: string
+  geography:
+    examples:
+      - value: '[''Philippines'']'
+    multivalued: true
+    range: GeographyTerm
+  locations:
+    multivalued: true
+    range: AnatomicalEntityTerm
+  reference:
+    examples:
+      - value: PMID:35533128
+    range: PMID
+  supports:
+    examples:
+      - value: SUPPORT
+    range: EvidenceItemSupportEnum
+  snippet:
+    examples:
+      - value: At the moment there is no healing therapy, so early kidney transplant is a fundamental tool to improve prognosis.
+    range: string
+  explanation:
+    examples:
+      - value: There is no curative treatment for nephronophthisis, indicating that supportive care, including symptomatic treatment and monitoring, is currently applied to manage associated complications.
+    range: string
+  subtype:
+    examples:
+      - value: Eyelid Myoclonia with Absences
+    range: string
+  population:
+    examples:
+      - value: Global
+    range: string
+  percentage:
+    examples:
+      - value: '0.1'
+    range: Any
+    any_of:
+      - range: float
+      - range: integer
+      - range: string
+        description: for ranges
+  phase:
+    examples:
+      - value: Active TB
+    range: PhaseTerm
+  age_range:
+    examples:
+      - value: Childhood-Adolescence
+    range: string
+  incubation_days:
+    examples:
+      - value: 3-14
+    range: string
+  incubation_years:
+    examples:
+      - value: 2-15
+    range: string
+  notes:
+    examples:
+      - value: Contagious stage where symptoms appear and the bacteria can be spread to others.
+    range: string
+  duration_days:
+    examples:
+      - value: 2-5
+    range: string
+  duration:
+    examples:
+      - value: Variable
+    range: string
+  cell_types:
+    examples:
+      - value: '[''Macrophage'', ''T Cell'']'
+    multivalued: true
+    range: CellTypeTerm
+  biological_processes:
+    examples:
+      - value: '[''TNF-alpha Production'', ''IL-1beta Production'', ''IL-6 Production'', ''IL-8 Production'', ''IFN-gamma Production'']'
+    multivalued: true
+    range: BiologicalProcessTerm
+  examples:
+    examples:
+      - value: '[''Kaposi Sarcoma'']'
+    range: string
+    multivalued: true
+  role:
+    examples:
+      - value: Primary
+    range: string
+  consequence:
+    examples:
+      - value: Leads to abnormal sexual development and bone maturation.
+    range: string
+  gene:
+    examples:
+      - value: MEFV
+    range: GeneTerm
+  pathways:
+    examples:
+      - value: '[''Wnt Pathway'', ''Hedgehog Pathway'']'
+    multivalued: true
+    range: BiologicalProcessTerm
+  downstream:
+    examples:
+      - value: '[''Tissue Damage'']'
+    multivalued: true
+    range: string
+  genes:
+    examples:
+      - value: '[''HLA-DQ2'', ''HLA-DQ8'', ''INS'']'
+    multivalued: true
+    range: GeneTerm
+  subtypes:
+    examples:
+      - value: '[''DENV-1'', ''DENV-2'', ''DENV-3'', ''DENV-4'']'
+    multivalued: true
+    range: string
+  has_subtypes:
+    multivalued: true
+    inlined_as_list: true
+    range: Subtype
+  cellular_components:
+    examples:
+      - value: '[''Peroxisome'']'
+    multivalued: true
+    range: CellularComponentTerm
+  chemical_entities:
+    examples:
+      - value: '[''Plasmalogen'']'
+    multivalued: true
+    range: ChemicalEntityTerm
+  triggers:
+    examples:
+      - value: '[''Viral Infections'', ''Early Dietary Factors'']'
+    multivalued: true
+    range: TriggerTerm
+  assays:
+    examples:
+      - value: '[''Elevated Blood Glucose'', ''Elevated Hemoglobin A1c (HbA1c)'']'
+    multivalued: true
+    range: AssayTerm
+  mechanisms:
+    examples:
+      - value: '[''Thrombocytopenia'', ''Platelet Dysfunction'', ''Disseminated Intravascular Coagulation (DIC)'']'
+    multivalued: true
+    range: string
+  category:
+    examples:
+      - value: Hematologic
+    range: string
+  frequency:
+    examples:
+      - value: Occasional
+    range: Any
+    any_of:
+      - range: FrequencyEnum
+      - range: FrequencyQuantity
+  diagnostic:
+    range: boolean
+  sequelae:
+    examples:
+      - value: '[''Diabetic Ketoacidosis'', ''Chronic Complications (Retinopathy, Neuropathy)'']'
+    multivalued: true
+    range: string
+  context:
+    examples:
+      - value: Pregnancy
+    range: string
+  severity:
+    examples:
+      - value: Severe
+    range: string
+  presence:
+    examples:
+      - value: Positive
+    range: string
+  specificity:
+    examples:
+      - value: High
+    range: string
+  synonyms:
+    examples:
+      - value: '[''CYFRA 21-1'']'
+    range: string
+    multivalued: true
+  association:
+    examples:
+      - value: Susceptibility
+    range: string
+  inheritance:
+    examples:
+      - value: Autosomal Dominant
+    range: Inheritance
+    multivalued: true
+    inlined_as_list: true
+  variants:
+    multivalued: true
+    inlined_as_list: true
+    range: Variant
+  features:
+    examples:
+      - value: DNA virus from the Orthopoxvirus genus
+    range: string
+  chemicals:
+    examples:
+      - value: '[''Phenol'']'
+    range: string
+    multivalued: true
+  effect:
+    examples:
+      - value: Potential trigger for flare-ups
+    range: string
+  parents:
+    examples:
+      - value: '[''Bacterial Infection'']'
+    multivalued: true
+    range: string
+  prevalence:
+    multivalued: true
+    inlined_as_list: true
+    range: Prevalence
+  progression:
+    multivalued: true
+    inlined_as_list: true
+    range: ProgressionInfo
+  pathophysiology:
+    multivalued: true
+    inlined_as_list: true
+    range: Pathophysiology
+  phenotypes:
+    multivalued: true
+    inlined_as_list: true
+    range: Phenotype
+  biochemical:
+    multivalued: true
+    inlined_as_list: true
+    range: Biochemical
+  genetic:
+    multivalued: true
+    inlined_as_list: true
+    range: Genetic
+  environmental:
+    multivalued: true
+    inlined_as_list: true
+    range: Environmental
+  treatments:
+    multivalued: true
+    inlined_as_list: true
+    range: Treatment
+  categories:
+    multivalued: true
+    range: string
+  infectious_agent:
+    range: InfectiousAgent
+    multivalued: true
+    inlined_as_list: true
+  transmission:
+    multivalued: true
+    inlined_as_list: true
+    range: Transmission
+  diagnosis:
+    multivalued: true
+    inlined_as_list: true
+    range: Diagnosis
+  treatment:
+    multivalued: true
+    inlined_as_list: true
+    range: Treatment
+  mechanism:
+    multivalued: true
+    inlined_as_list: true
+    range: Mechanism
+  results:
+    examples:
+      - value: Identifies MEFV mutations
+    range: string
+  markers:
+    examples:
+      - value: CRP, ESR, SAA
+    range: string
+  diseases:
+    multivalued: true
+    range: Disease
+    inlined_as_list: true
+classes:
+  Any:
+    class_uri: linkml:Any
+  Subtype:
+    slots:
+      - name
+      - description
+      - evidence
+      - review_notes
+      - locations
+      - geography
+  EvidenceItem:
+    slots:
+      - reference
+      - supports
+      - snippet
+      - explanation
+  Prevalence:
+    slots:
+      - subtype
+      - population
+      - percentage
+      - evidence
+  ProgressionInfo:
+    slots:
+      - phase
+      - subtype
+      - age_range
+      - evidence
+      - incubation_days
+      - review_notes
+      - incubation_years
+      - notes
+      - duration_days
+      - duration
+  Pathophysiology:
+    slots:
+      - name
+      - description
+      - cell_types
+      - evidence
+      - biological_processes
+      - locations
+      - examples
+      - role
+      - consequence
+      - gene
+      - pathways
+      - downstream
+      - genes
+      - subtypes
+      - cellular_components
+      - chemical_entities
+      - triggers
+      - assays
+      - mechanisms
+  Phenotype:
+    slots:
+      - category
+      - name
+      - frequency
+      - diagnostic
+      - sequelae
+      - evidence
+      - context
+      - review_notes
+      - severity
+      - notes
+      - subtype
+  Biochemical:
+    slots:
+      - name
+      - presence
+      - evidence
+      - specificity
+      - frequency
+      - notes
+      - context
+      - subtype
+      - cell_types
+      - assays
+      - synonyms
+  Genetic:
+    slots:
+      - name
+      - presence
+      - evidence
+      - association
+      - review_notes
+      - subtype
+      - frequency
+      - inheritance
+      - variants
+      - features
+  Environmental:
+    slots:
+      - name
+      - presence
+      - evidence
+      - notes
+      - description
+      - chemicals
+      - synonyms
+      - effect
+      - examples
+      - review_notes
+  Disease:
+    slots:
+      - name
+      - description
+      - category
+      - parents
+      - has_subtypes
+      - prevalence
+      - progression
+      - pathophysiology
+      - phenotypes
+      - biochemical
+      - genetic
+      - environmental
+      - treatments
+      - categories
+      - infectious_agent
+      - transmission
+      - diagnosis
+      - synonyms
+      - treatment
+      - inheritance
+      - notes
+  Treatment:
+    slots:
+      - name
+      - description
+      - evidence
+      - context
+      - review_notes
+      - role
+      - notes
+      - mechanism
+  InfectiousAgent:
+    slots:
+      - name
+      - evidence
+      - description
+  Transmission:
+    slots:
+      - name
+      - description
+      - evidence
+      - notes
+      - effect
+  Assay:
+    slots:
+      - name
+      - description
+  Diagnosis:
+    slots:
+      - name
+      - presence
+      - evidence
+      - notes
+      - results
+      - markers
+  Inheritance:
+    slots:
+      - name
+      - evidence
+      - description
+  Variant:
+    slots:
+      - name
+      - description
+  Mechanism:
+    slots:
+      - name
+      - description
+  DiseaseCollection:
+    slots:
+      - diseases
+    tree_root: true

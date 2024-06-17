@@ -1,0 +1,219 @@
+# metamodel_version: 1.7.0
+type Any
+  {
+  }
+
+type Assay
+  {
+    name: String!
+    description: String
+  }
+
+type Biochemical
+  {
+    name: String!
+    presence: String
+    evidence: [EvidenceItem]
+    specificity: String
+    frequency: Any
+    notes: String
+    context: String
+    subtype: String
+    cellTypes: [CellTypeTerm]
+    assays: [AssayTerm]
+    synonyms: [String]
+  }
+
+type Diagnosis
+  {
+    name: String!
+    presence: String
+    evidence: [EvidenceItem]
+    notes: String
+    results: String
+    markers: String
+  }
+
+type Disease
+  {
+    name: String!
+    description: String
+    category: String
+    parents: [String]
+    hasSubtypes: [Subtype]
+    prevalence: [Prevalence]
+    progression: [ProgressionInfo]
+    pathophysiology: [Pathophysiology]
+    phenotypes: [Phenotype]
+    biochemical: [Biochemical]
+    genetic: [Genetic]
+    environmental: [Environmental]
+    treatments: [Treatment]
+    categories: [String]
+    infectiousAgent: [InfectiousAgent]
+    transmission: [Transmission]
+    diagnosis: [Diagnosis]
+    synonyms: [String]
+    treatment: [Treatment]
+    inheritance: [Inheritance]
+    notes: String
+  }
+
+type DiseaseCollection
+  {
+    diseases: [Disease]
+  }
+
+type Environmental
+  {
+    name: String!
+    presence: String
+    evidence: [EvidenceItem]
+    notes: String
+    description: String
+    chemicals: [String]
+    synonyms: [String]
+    effect: String
+    examples: [String]
+    reviewNotes: String
+  }
+
+type EvidenceItem
+  {
+    reference: PMID
+    supports: EvidenceItemSupportEnum
+    snippet: String
+    explanation: String
+  }
+
+type Genetic
+  {
+    name: String!
+    presence: String
+    evidence: [EvidenceItem]
+    association: String
+    reviewNotes: String
+    subtype: String
+    frequency: Any
+    inheritance: [Inheritance]
+    variants: [Variant]
+    features: String
+  }
+
+type InfectiousAgent
+  {
+    name: String!
+    evidence: [EvidenceItem]
+    description: String
+  }
+
+type Inheritance
+  {
+    name: String!
+    evidence: [EvidenceItem]
+    description: String
+  }
+
+type Mechanism
+  {
+    name: String!
+    description: String
+  }
+
+type Pathophysiology
+  {
+    name: String!
+    description: String
+    cellTypes: [CellTypeTerm]
+    evidence: [EvidenceItem]
+    biologicalProcesses: [BiologicalProcessTerm]
+    locations: [AnatomicalEntityTerm]
+    examples: [String]
+    role: String
+    consequence: String
+    gene: GeneTerm
+    pathways: [BiologicalProcessTerm]
+    downstream: [String]
+    genes: [GeneTerm]
+    subtypes: [String]
+    cellularComponents: [CellularComponentTerm]
+    chemicalEntities: [ChemicalEntityTerm]
+    triggers: [TriggerTerm]
+    assays: [AssayTerm]
+    mechanisms: [String]
+  }
+
+type Phenotype
+  {
+    category: String
+    name: String!
+    frequency: Any
+    diagnostic: Boolean
+    sequelae: [String]
+    evidence: [EvidenceItem]
+    context: String
+    reviewNotes: String
+    severity: String
+    notes: String
+    subtype: String
+  }
+
+type Prevalence
+  {
+    subtype: String
+    population: String
+    percentage: Any
+    evidence: [EvidenceItem]
+  }
+
+type ProgressionInfo
+  {
+    phase: PhaseTerm
+    subtype: String
+    ageRange: String
+    evidence: [EvidenceItem]
+    incubationDays: String
+    reviewNotes: String
+    incubationYears: String
+    notes: String
+    durationDays: String
+    duration: String
+  }
+
+type Subtype
+  {
+    name: String!
+    description: String
+    evidence: [EvidenceItem]
+    reviewNotes: String
+    locations: [AnatomicalEntityTerm]
+    geography: [GeographyTerm]
+  }
+
+type Transmission
+  {
+    name: String!
+    description: String
+    evidence: [EvidenceItem]
+    notes: String
+    effect: String
+  }
+
+type Treatment
+  {
+    name: String!
+    description: String
+    evidence: [EvidenceItem]
+    context: String
+    reviewNotes: String
+    role: String
+    notes: String
+    mechanism: [Mechanism]
+  }
+
+type Variant
+  {
+    name: String!
+    description: String
+  }
+

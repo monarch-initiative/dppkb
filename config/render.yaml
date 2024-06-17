@@ -1,0 +1,12 @@
+rules:
+  - render_as: description_list
+    applies_to_slots:
+      - subtypes
+      - pathophysiology
+      - prevalence
+      - progression
+      - phenotypes
+      - environmental
+      - treatments
+      - diagnosis
+      - genetic

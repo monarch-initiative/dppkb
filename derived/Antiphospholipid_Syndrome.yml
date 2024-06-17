@@ -1,0 +1,406 @@
+---
+name: Antiphospholipid Syndrome
+description: A systemic autoimmune disorder characterized by the presence of antiphospholipid antibodies that increase the risk of blood clots and other complications.
+category: Complex
+parents:
+  - Autoimmune Disease
+has_subtypes:
+  - name: Primary APS
+    description: occurs in the absence of any other related disease
+  - name: Secondary APS
+    description: occurs with other autoimmune diseases, such as systemic lupus erythematosus
+  - name: Asymptomatic APS
+    description: individuals with antiphospholipid antibodies but no clinical symptoms
+prevalence:
+  - subtype: Primary APS
+    population: Global
+    percentage: 0.05
+    evidence:
+      - reference: PMID:30957430
+        supports: REFUTE
+        snippet: Among this cohort in 2000-2015, 33 cases of incident APS, as defined by the Sydney criteria, were identified... The estimated prevalence of APS was 50 (95% CI 42-58) per 100,000 population, and was similar in both sexes.
+        explanation: The prevalence of APS is reported as 50 per 100,000 population, which translates to 0.05%. However, this value is for all types of APS, not exclusively primary APS.
+      - reference: PMID:31951187
+        supports: SUPPORT
+        snippet: 28.4% of patients had primary while, 71.6% of patients had secondary APS.
+        explanation: The study notes that 28.4% of the cohort had primary APS, reaffirming the overall distribution of APS cases. Although it does not directly state the global prevalence per 100,000, it supports the distinction between primary and secondary APS.
+progression:
+  - phase: Onset
+    subtype: Primary APS
+    age_range: 20-50
+    evidence:
+      - reference: PMID:34634966
+        supports: PARTIAL
+        snippet: 'We subdivided patients into two groups: youth- (15-24 years) and adult-onset (over 24 years) and compared them regarding demographic characteristics, criteria and non-criteria manifestations, cardiovascular risk factors, and aPL status.'
+        explanation: The reference supports that primary APS can indeed onset within the specified age range of 20-50, but it does not provide sufficient evidence to conclude that progression specifically occurs within this exact range.
+      - reference: PMID:30957430
+        supports: PARTIAL
+        snippet: The annual incidence of APS in adults ages >/=18 years was 2.1 (95% confidence interval [95% CI] 1.4-2.8) per 100,000 population.
+        explanation: This reference indicates that APS can onset in adults, which may include the age range 20-50, but does not specifically address the progression of primary APS within this age range.
+      - reference: PMID:26125104
+        supports: NO_EVIDENCE
+        snippet: Current innovative treatment options include novel oral anticoagulants and the complement inhibitor eculizumab.
+        explanation: While discussing treatment options for APS, this reference does not address the specific age range of 20-50 or the progression of primary APS.
+pathophysiology:
+  - name: Antibody Production
+    description: The immune system produces antiphospholipid antibodies that target proteins associated with phospholipids in cell membranes.
+    cell_types:
+      - B cell
+      - T cell
+    evidence:
+      - reference: PMID:29867951
+        supports: SUPPORT
+        snippet: The primary anti-phospholipid syndrome (APS) is characterized by the production of antibodies that bind the phospholipid-binding protein beta2 glycoprotein I (beta2GPI) or that directly recognize negatively charged membrane phospholipids.
+        explanation: This reference supports the statement by describing how the immune system produces antibodies that target phospholipid-associated proteins in cell membranes, a process involving the participation of both B cells and other immune cells.
+      - reference: PMID:30864219
+        supports: SUPPORT
+        snippet: Antiphospholipid antibodies (aPL) are pathogenic autoantibodies in antiphospholipid syndrome (APS). ... In PAPS and SLE/APS patients, Th2, Th17, and plasmablasts were increased while regulatory T, memory B, and regulatory B cells were decreased compared to healthy controls.
+        explanation: This reference supports the statement by noting the involvement of T and B cells in the production of antiphospholipid antibodies, which are pathogenic in APS.
+      - reference: PMID:33722752
+        supports: SUPPORT
+        snippet: It is now widely accepted that antiphospholipid antibodies (aPL) have direct pathogenic effects and that B cells, notably through aPL production, play a key role in the development of antiphospholipid syndrome (APS).
+        explanation: This reference further strengthens the support by indicating B cells' key role in the production of antiphospholipid antibodies in APS.
+      - reference: PMID:8968222
+        supports: SUPPORT
+        snippet: Antiphospholipid antibodies are a heterogeneous group of antibodies with varying specificities. ... There are numerous potential links between antiphospholipid antibodies and coagulation disorders, including interaction of antiphospholipid antibodies and a cofactor, beta 2-glycoprotein I.
+        explanation: This reference supports the involvement of immune-produced antiphospholipid antibodies in APS and their interaction with cell membrane proteins.
+      - reference: PMID:22055541
+        supports: SUPPORT
+        snippet: Diverse experimental evidence exists implicating the activation of various different cell surface receptors and intracellular pathways by antiphospholipid antibodies (aPL).
+        explanation: This reference discusses the cellular mechanisms activated by antiphospholipid antibodies, supporting the role of B and T cells in APS.
+  - name: Blood Clot Formation
+    description: Antiphospholipid antibodies increase the risk of forming clots in both arteries and veins, affecting blood flow.
+    evidence:
+      - reference: PMID:22100379
+        supports: SUPPORT
+        snippet: Antiphospholipid antibodies are a heterogeneous group of circulating autoantibodies associated with a risk of thrombosis.
+        explanation: This reference highlights the association of antiphospholipid antibodies with thrombosis risk, supporting the statement that they increase the risk of forming clots.
+      - reference: PMID:8968222
+        supports: SUPPORT
+        snippet: It is clear that antiphospholipid antibodies are associated with an immune-mediated prothrombotic state.
+        explanation: This reference explains that antiphospholipid antibodies are linked to a prothrombotic state, indicating an increased risk of clots in both arteries and veins.
+      - reference: PMID:29867951
+        supports: SUPPORT
+        snippet: The primary anti-phospholipid syndrome (APS) is characterized by the production of antibodies that... may contribute to arterial or venous thrombosis.
+        explanation: This reference supports the statement by elaborating on the role of antibodies in arterial and venous thrombosis.
+      - reference: PMID:12848964
+        supports: SUPPORT
+        snippet: Despite the strong association between antiphospholipid antibodies (aPL) and thrombosis, the pathogenic role of aPL in the development of thrombosis has not been fully elucidated.
+        explanation: Although it acknowledges the mechanisms are not fully understood, it confirms the strong association between antiphospholipid antibodies and thrombosis.
+      - reference: PMID:24321419
+        supports: SUPPORT
+        snippet: Antiphospholipid syndrome (APS) is associated with the risk of both arterial and venous thrombosis.
+        explanation: This directly supports the statement by indicating that APS is associated with both arterial and venous thrombosis.
+  - name: Impaired Blood Flow
+    description: Blood clots obstruct normal blood flow, leading to complications depending on the clot's location in the body.
+    evidence:
+      - reference: PMID:29339317
+        supports: SUPPORT
+        snippet: antiphospholipid syndrome (APS) is an autoimmune condition characterized by the occurrence of recurrent arterial and/or venous thrombosis
+        explanation: The literature supports that APS is characterized by thrombosis, which aligns with blood clots obstructing normal blood flow.
+      - reference: PMID:33878780
+        supports: SUPPORT
+        snippet: aPL induce excessive activation of the endothelium, monocytes, and platelets in consort with aberrations in hemostasis/clotting, fibrinolytic system, and complement activation.
+        explanation: The mechanism by which antiphospholipid antibodies induce thrombosis directly aligns with the provided statement.
+      - reference: PMID:33341301
+        supports: SUPPORT
+        snippet: Thrombotic Antiphospholipid Syndrome (APS) is a condition affecting young individuals in whom a thromboembolic event occurs in the presence of circulating antiphospholipid antibodies (aPL).
+        explanation: The thromboembolic events described are consistent with blood clots obstructing normal blood flow.
+      - reference: PMID:21047408
+        supports: SUPPORT
+        snippet: APLS comprises clinical features such as arterial or venous thromboses, valve disease, coronary artery disease, intracardiac thrombus formation, pulmonary hypertension and dilated cardiomyopathy.
+        explanation: Various cardiovascular complications consistent with blood clots obstructing blood flow are described.
+  - name: Organ Damage
+    locations:
+      - brain
+      - kidneys
+      - lungs
+    description: Clots in vital organs can impair function and cause significant damage.
+    evidence:
+      - reference: PMID:22247356
+        supports: SUPPORT
+        snippet: After a mean followup of 7.55 years, 29% of patients experienced organ damage and 5 died... Neurologic damage is the most common cause of morbidity.
+        explanation: The study details the incidence of organ damage in patients with APS, supporting the statement that clots in vital organs can impair function and cause significant damage.
+      - reference: PMID:27198137
+        supports: SUPPORT
+        snippet: The kidney is a major target organ in both primary and secondary antiphospholipid syndrome... APSN is a vascular nephropathy characterized by small vessel vaso-occlusive lesions.
+        explanation: This reference supports the statement by explaining APS-induced damage in the kidneys through vascular blockage.
+      - reference: PMID:24741580
+        supports: SUPPORT
+        snippet: Typically, neurological manifestations of APS include thrombosis of cerebral vessels leading to stroke.
+        explanation: This reference provides evidence of brain damage caused by APS-induced clots, corroborating the statement.
+      - reference: PMID:36575066
+        supports: SUPPORT
+        snippet: Venous thromboembolism belongs to the most frequent clinical manifestation of this syndrome... we summarised basic pathophysiological mechanisms of venous thrombosis and lung embolism development.
+        explanation: This reference supports the statement by discussing lung damage caused by clots in patients with APS.
+      - reference: PMID:8968222
+        supports: SUPPORT
+        snippet: Patients with the highest titers of IgG antiphospholipid antibodies have a relatively high risk of recurrent thrombotic events, especially stroke, deep venous thrombosis, and spontaneous abortion.
+        explanation: The mention of recurrent thrombotic events leading to stroke helps substantiate the role of APS in causing significant organ damage, especially in the brain.
+  - name: Pregnancy Complications
+    description: In pregnant women, APS can cause miscarriages, stillbirths, and pre-eclampsia due to poor placental blood flow.
+    evidence:
+      - reference: PMID:19665761
+        supports: SUPPORT
+        snippet: Women with antiphospholipid syndrome (APS) and antiphospholipid antibodies (aPL) are at high risk for recurrent spontaneous miscarriage and late pregnancy complications, such as preeclampsia and preterm labor.
+        explanation: The literature mentions APS causing recurrent miscarriage and late pregnancy complications including preeclampsia.
+      - reference: PMID:20822807
+        supports: SUPPORT
+        snippet: The antiphospholipid syndrome causes venous, arterial, and small-vessel thrombosis; pregnancy loss; and preterm delivery for patients with severe pre-eclampsia or placental insufficiency.
+        explanation: The article explicitly states that APS causes pregnancy loss and preterm delivery related to severe pre-eclampsia or placental insufficiency.
+      - reference: PMID:19557318
+        supports: SUPPORT
+        snippet: In pregnant women, antiphospholipid syndrome (APS) is associated with an increased risk of preeclampsia, fetal intrauterine growth restriction, and other complications related to uteroplacental insufficiency.
+        explanation: This reference directly supports the statement by associating APS with preeclampsia and placental blood flow issues leading to complications.
+      - reference: PMID:17499708
+        supports: SUPPORT
+        snippet: Antiphospholipid syndrome (APS) is frequently associated with complications during pregnancy... prematurity, intrauterine growth retardation, pregnancy-induced hypertensive disorders, and pulmonary hypertension can complicate pregnancy as well.
+        explanation: The reference lists various pregnancy complications associated with APS, such as prematurity and hypertensive disorders.
+      - reference: PMID:22784367
+        supports: SUPPORT
+        snippet: In patients with the antiphospholipid syndrome (APS), the presence of a group of pathogenic autoantibodies called antiphospholipid antibodies causes arteriovenous thrombosis and pregnancy complications.
+        explanation: The literature points out that antiphospholipid antibodies cause pregnancy complications in APS, supporting the mechanisms described in the statement.
+  - name: Chronic Complications
+    description: Persistent clotting episodes can lead to long-term damage to the affected organs.
+    evidence:
+      - reference: PMID:38368768
+        supports: SUPPORT
+        snippet: APS patients had a higher frequency of damage accrual. Microangiopathy and non-criteria manifestations were independent risk factors for damage accrual.
+        explanation: The study found that APS patients had a higher frequency of organ damage, supporting the statement that persistent clotting episodes can lead to long-term damage.
+      - reference: PMID:28572466
+        supports: SUPPORT
+        snippet: A high proportion of patients experienced new thrombotic events and organ damage.
+        explanation: This study also confirms that patients with APS often experience organ damage due to thromboses, supporting the statement.
+      - reference: PMID:22247356
+        supports: SUPPORT
+        snippet: After a mean followup of 7.55 years, 29% of patients experienced organ damage and 5 died.
+        explanation: This study describes morbidity, organ damage, and mortality in APS patients, confirming the association between persistent clotting episodes and long-term organ damage.
+phenotypes:
+  - category: Thrombosis
+    name: Deep Vein Thrombosis
+    frequency: FREQUENT
+    diagnostic: true
+    sequelae:
+      - Pulmonary Embolism
+      - Stroke
+    evidence:
+      - reference: PMID:36575066
+        supports: SUPPORT
+        snippet: Venous thromboembolism belongs to the most frequent clinical manifestation of this syndrome.
+        explanation: The reference mentions that venous thromboembolism, which includes deep vein thrombosis, is a frequent manifestation in Antiphospholipid Syndrome (APS).
+      - reference: PMID:11534260
+        supports: SUPPORT
+        snippet: The most common thrombotic events associated with ACLAs are deep vein thrombosis and pulmonary embolus (type I syndrome), coronary or peripheral artery thrombosis (type II syndrome), or cerebrovascular/retinal vessel thrombosis (type III syndrome).
+        explanation: The statement is supported, mentioning deep vein thrombosis, pulmonary embolism, and stroke as common thrombotic events in APS.
+      - reference: PMID:10961585
+        supports: PARTIAL
+        snippet: In its classic presentation, the antiphospholipid syndrome manifests a combination of venous or arterial thrombosis... The manifestations often include a moderate thrombocytopenia and, less commonly, hemolysis.
+        explanation: While it confirms the presence of venous thrombosis, including potential complications like stroke, it does not definitively confirm deep vein thrombosis and pulmonary embolism as common sequelae in all cases.
+      - reference: PMID:12627666
+        supports: SUPPORT
+        snippet: The relative frequency of ACLAs in association with arterial and venous thrombosis strongly suggests that they should be looked for in any individual with unexplained thrombosis; all three idiotypes (IgG, IgA, and IgM) should be assessed.
+        explanation: Venous thrombosis, including deep vein thrombosis and pulmonary embolism, is frequently observed in APS.
+  - category: Pregnancy-Related
+    name: Preterm Birth
+    context: Pregnancy
+    evidence:
+      - reference: PMID:26815583
+        supports: SUPPORT
+        snippet: Antiphospholipid syndrome (APS) is the association of antiphospholipid antibodies with thromboses and/or obstetric morbidity. Obstetric morbidity includes recurrent first trimester loss, stillbirth, intrauterine death, preeclampsia, premature birth and fetal growth restriction.
+        explanation: The reference lists premature birth (preterm birth) as a form of obstetric morbidity associated with APS, supporting its categorization as a pregnancy-related phenotype.
+      - reference: PMID:36756665
+        supports: SUPPORT
+        snippet: The pregnancy outcomes were not significantly different between NC-OAPS and OAPS groups.
+        explanation: The evidence suggests that patients with APS (OAPS) can experience similar pregnancy outcomes to those without the specific criteria of classical APS, which includes preterm birth.
+      - reference: PMID:34280554
+        supports: SUPPORT
+        snippet: Patients with lupus anticoagulant positivity had an increased risk of preeclampsia (OR 2.10, p = 0.02, I(2) = 48%), SGA (OR 1.78, p < 0.01, I(2) = 0%) and preterm birth (OR 3.56, p = 0.01, I(2) = 48%).
+        explanation: The meta-analysis found that APS patients, especially those with lupus anticoagulant positivity, have an increased risk of preterm birth, supporting the statement that APS phenotypes include pregnancy-related complications such as preterm birth.
+  - category: Hematologic
+    name: Thrombocytopenia
+    evidence:
+      - reference: PMID:8952756
+        supports: SUPPORT
+        snippet: a variable degree of thrombocytopenia occurs in approximately 20-40% of the patients with APS
+        explanation: Thrombocytopenia is a hematologic phenotype observed in APS patients.
+      - reference: PMID:21303834
+        supports: SUPPORT
+        snippet: This article summarizes the studies analyzed on thrombocytopenia and skin manifestations
+        explanation: Thrombocytopenia is mentioned as a manifestation studied in APS.
+      - reference: PMID:12217242
+        supports: SUPPORT
+        snippet: Antiphospholipid antibody syndrome has been associated with [...] thrombocytopenia
+        explanation: Thrombocytopenia is listed among the associated conditions of APS.
+      - reference: PMID:20848817
+        supports: SUPPORT
+        snippet: The manifestations often include a moderate thrombocytopenia
+        explanation: Moderate thrombocytopenia is identified as a feature of APS.
+      - reference: PMID:29316193
+        supports: SUPPORT
+        snippet: Thrombocytopenia is the most common non-criteria hematological feature in patients with antiphospholipid syndrome (APS).
+        explanation: Thrombocytopenia is a significant hematologic feature observed in APS.
+  - category: Cardiovascular
+    name: Cardiac Valve Disease
+    evidence:
+      - reference: PMID:17916990
+        supports: SUPPORT
+        snippet: Valvular involvement is the most common manifestation with a prevalence of 82% detected by transesophageal echocardiography. Symmetrical, nodular thickening of the mitral and/or aortic valves is characteristic.
+        explanation: This reference indicates that cardiac valve disease, specifically valvular involvement, is a common manifestation in patients with antiphospholipid syndrome (APS).
+      - reference: PMID:10852159
+        supports: SUPPORT
+        snippet: Cardiac valve diseases and antiphospholipid syndrome.
+        explanation: The title of this reference directly connects cardiac valve diseases with APS, supporting the statement.
+      - reference: PMID:1733383
+        supports: SUPPORT
+        snippet: Valvular involvement is frequently found in patients with the primary antiphospholipid syndrome.
+        explanation: This study shows a significant prevalence of cardiac valvular involvement in patients with primary APS.
+      - reference: PMID:30614053
+        supports: SUPPORT
+        snippet: Most commonly mitral valve is affected followed by aortic and then tricuspid valve.
+        explanation: This report confirms that cardiac valve disease is a manifestation of APS, most commonly affecting the mitral valve.
+      - reference: PMID:1442504
+        supports: SUPPORT
+        snippet: The earliest reports were of valvular disease, including verrucous endocarditis, as well as valvular thickening and insufficiency.
+        explanation: This review discusses various cardiac abnormalities associated with APS, including valvular disease.
+biochemical:
+  - name: Antiphospholipid Antibodies
+    presence: Positive
+    evidence:
+      - reference: PMID:36032074
+        supports: SUPPORT
+        snippet: Classification criteria for antiphospholipid syndrome (APS) require that antiphospholipid antibody (aPL) positivity is confirmed after at least 12 weeks.
+        explanation: This indicates that antiphospholipid antibodies are a critical component in the biochemical diagnosis of antiphospholipid syndrome.
+      - reference: PMID:26307097
+        supports: SUPPORT
+        snippet: According to current guidelines, 3 tests (lupus anticoagulant, anticardiolipin, and anti beta2-glycoprotein I antibodies) are officially recommended to assess the presence of antiphospholipid antibodies.
+        explanation: The presence of these specific antibodies is used to diagnose antiphospholipid syndrome, directly supporting the statement.
+      - reference: PMID:12638897
+        supports: SUPPORT
+        snippet: Antiphospholipid antibodies are the hallmark of the antiphospholipid syndrome which is characterized by thrombosis.
+        explanation: This confirms that antiphospholipid antibodies are a key biochemical marker for diagnosing antiphospholipid syndrome.
+  - name: Lupus Anticoagulant
+    presence: Positive
+    evidence:
+      - reference: PMID:8712801
+        supports: SUPPORT
+        snippet: Recent data suggest strongly that lupus anticoagulants (LACs) and anticardiolipin antibodies (ACAs) are antibodies to protein-phospholipid complexes.
+        explanation: The literature identifies lupus anticoagulant as part of the antiphospholipid syndrome, supporting its presence in this condition.
+      - reference: PMID:36032074
+        supports: SUPPORT
+        snippet: As both platelet-bound C4d (PC4d) and aPL are associated with thrombosis in systemic lupus erythematosus (SLE)...
+        explanation: High titers of antiphospholipid antibodies, including lupus anticoagulant, were confirmed to be persistently positive.
+      - reference: PMID:20848817
+        supports: SUPPORT
+        snippet: The 2006 International Consensus Statement on an Update of the Classification Criteria for Definite Antiphospholipid Syndrome has increased the time between the two laboratory studies required for diagnosis from 6 to 12 weeks. Antibody to beta2 glycoprotein 1 has been included as a criterion.
+        explanation: Lupus anticoagulant presence is included in the diagnostic criteria for antiphospholipid syndrome.
+      - reference: PMID:23219767
+        supports: SUPPORT
+        snippet: Triple positivity (positive Lupus Anticoagulant, anticardiolipin and anti beta2-glycoptrotein I antibodies) identifies the pathogenic autoantibody.
+        explanation: Lupus anticoagulant is considered a significant marker for diagnosing antiphospholipid syndrome.
+      - reference: PMID:34738808
+        supports: SUPPORT
+        snippet: Multiple studies have firmly established the presence of lupus anticoagulant as a strong indicator of antiphospholipid syndrome.
+        explanation: Lupus anticoagulant is one of the antibodies routinely tested for diagnosing Antiphospholipid Syndrome.
+  - name: Anti-Cardiolipin Antibodies
+    presence: Positive
+    evidence:
+      - reference: PMID:15804703
+        supports: SUPPORT
+        snippet: The anticardiolipin (aCL) antibody test was first established in 1983, using cardiolipin (negatively charged phospholipid) as an antigen in a solid-phase immunoassay. It was first applied to the study of systemic lupus erythematosus patients, and was found associated with thromboses and recurrent pregnancy losses. The wide use of this test was determinant in the definition of the 'aCL or antiphospholipid syndrome' (APS).
+        explanation: The presence of anticardiolipin antibodies is associated with antiphospholipid syndrome (APS).
+      - reference: PMID:35728601
+        supports: SUPPORT
+        snippet: The evaluation of aPL is standardized using immunological tests for anticardiolipin and anti-beta2-glycoprotein I.
+        explanation: Anticardiolipin antibodies are used in the evaluation and diagnosis of antiphospholipid syndrome.
+      - reference: PMID:12638897
+        supports: SUPPORT
+        snippet: Antiphospholipid antibodies are the hallmark of the antiphospholipid syndrome which is characterized by thrombosis. Human studies suggest that anti-cardiolipin and anti-beta2-glycoprotein-I antibodies are elevated in patients having coronary artery disease compared with controls.
+        explanation: The presence of anticardiolipin antibodies is a characteristic of antiphospholipid syndrome.
+      - reference: PMID:36032074
+        supports: SUPPORT
+        snippet: Classification criteria for antiphospholipid syndrome (APS) require that antiphospholipid antibody (aPL) positivity is confirmed after at least 12 weeks. We tested the hypothesis that aPL at high titers remain positive while low titers fluctuate over time. [...] Anti-cardiolipin (aCL) and anti-beta2 glycoprotein-1 antibodies (aB2GP1) were measured by chemiluminescence or ELiA fluorescence enzyme immunoassay.
+        explanation: High titers of anticardiolipin antibodies are persistently positive in APS, confirming their association with the syndrome.
+      - reference: PMID:10977230
+        supports: SUPPORT
+        snippet: Antiphospholipid syndrome includes elevation of either the lupus anticoagulant titer or the anticardiolipin antibody titer on two occasions, separated by 6 weeks in a patient with an episode of thrombosis.
+        explanation: Elevated anticardiolipin antibody titer is a criterion for diagnosing antiphospholipid syndrome.
+  - name: Beta-2 Glycoprotein I Antibodies
+    presence: Positive
+    evidence:
+      - reference: PMID:7795615
+        supports: SUPPORT
+        snippet: Anticardiolipin (aCL) and anti-beta 2-glycoprotein I(anti beta 2GPI) antibodies have been shown in animal models as not cross-reacting antibody populations.
+        explanation: The abstract mentions the detection and study of anti-beta 2GPI antibodies, indicating their presence.
+      - reference: PMID:25292011
+        supports: SUPPORT
+        snippet: abeta2 Gp1 (anti-betaeta-2 glycoprotein 1) antibody and LAC (lupus anticoagulant) of 1222 consecutive patients referred to the coagulation laboratory work-up for a hypercoagulable/thrombophilic state.
+        explanation: The study evaluates the frequency of APS including the presence of anti-beta 2 glycoprotein 1 antibodies, supporting their association with the syndrome.
+      - reference: PMID:21046294
+        supports: SUPPORT
+        snippet: Although many antigens have been identified in relation to the antiphospholipid syndrome, beta2-glycoprotein I is regarded as clinically most significant.
+        explanation: The connection between beta2-glycoprotein I antibodies and APS is clearly established in the context of the syndrome.
+      - reference: PMID:28347805
+        supports: SUPPORT
+        snippet: beta2-glycoprotein I is a phospholipid-binding glycoprotein, and its antibodies have been reported to correlate strongly with thrombotic risk and play a putative role in the pathogenesis of APS.
+        explanation: The involvement of beta2-glycoprotein I antibodies in APS and their role in pathogenesis is discussed in detail.
+  - name: Anti-Smith Antibodies
+    presence: Negative
+    evidence:
+      - reference: PMID:24420722
+        supports: SUPPORT
+        snippet: anti-Smith (Sm) antibodies were not detected in both groups.
+        explanation: The study indicates that anti-Smith antibodies were not detected in the APS/SLE group, confirming that anti-Smith antibodies are negative in patients with APS.
+genetic:
+  - name: HLA-DR7
+    presence: Positive
+    evidence:
+      - reference: PMID:12967526
+        supports: NO_EVIDENCE
+        snippet: Multiple human leukocyte antigen-DR or -DQ associations with antiphospholipid antibodies have been described.
+        explanation: The reference mentions various HLA-DR associations with antiphospholipid antibodies but does not specifically mention HLA-DR7.
+      - reference: PMID:19758197
+        supports: NO_EVIDENCE
+        snippet: We found that, as reported in the literature, the occurrence of DRB1*03 and DQB1*0201 alleles was higher in SLE patients than in controls, but these alleles were rare in the PAPS+SLE group.
+        explanation: This reference does not mention HLA-DR7 in the context of antiphospholipid syndrome.
+      - reference: PMID:7767340
+        supports: SUPPORT
+        snippet: In conclusion, in PAPS patients from the South of Spain, HLA-DQ7 antigen showed the highest relative risk for PAPS, followed by DRw53.
+        explanation: Although HLA-DR7 is not specifically mentioned, this study discusses HLA-DR associations and could support the association indirectly. However, the mention of HLA-DR7 is more explicitly connected to diabetic retinopathy rather than APS.
+      - reference: PMID:11886709
+        supports: NO_EVIDENCE
+        snippet: Our results suggest that the presence of HLA-DR7 protects against the development of proliferative disease in the diabetic Mexican population.
+        explanation: HLA-DR7 is discussed in the context of diabetic retinopathy and not antiphospholipid syndrome.
+  - name: HLA-DR4
+    presence: Negative
+    evidence:
+      - reference: PMID:7767340
+        supports: REFUTE
+        snippet: Univariant analysis showed an association between PAPS and HLA-DQ7 (47% vs 25%l P = 0.3), DR4 (32% vs 16%; P = 0.08) and DQ3 (63% vs 39%; P = 0.04).
+        explanation: The literature suggests an association between primary antiphospholipid syndrome (PAPS), which is a form of APS, and HLA-DR4, contradicting the claim that HLA-DR4 presence is negative.
+      - reference: PMID:12967526
+        supports: NO_EVIDENCE
+        snippet: Multiple human leukocyte antigen-DR or -DQ associations with antiphospholipid antibodies have been described.
+        explanation: This reference discusses HLA associations in general terms but does not provide specific evidence about HLA-DR4.
+environmental:
+  - name: Smoking
+    presence: Positive
+    evidence:
+      - reference: PMID:27377297
+        supports: PARTIAL
+        snippet: A connection between cigarette smoking and anti-phospholipid antibodies (aPL) was first reported in the late 1980s. Systemic lupus erythematosus patients with aPL are more likely to be smokers than those without aPL. These patients have a particularly high frequency of vascular events.
+        explanation: The literature indicates there is some association between smoking and the presence of antiphospholipid antibodies, particularly in patients with systemic lupus erythematosus. However, it notes that the association has not been systematically examined and the connection is complicated by other factors. Therefore, it does not fully support a direct connection between smoking and antiphospholipid syndrome as an environmental factor.
+  - name: Infection
+    presence: Positive
+    evidence:
+      - reference: PMID:17531174
+        supports: PARTIAL
+        snippet: An association between infections and antiphospholipid antibodies (aPL) has been reported in several epidemiologic and experimental studies. Infection-induced aPL have been traditionally regarded as transient and were generally not associated with clinical features of antiphospholipid syndrome.
+        explanation: The statement is partially supported because while there is an association between infections and antiphospholipid antibodies, infection-induced aPL are traditionally regarded as transient and not generally associated with the clinical features of antiphospholipid syndrome.
+      - reference: PMID:30301564
+        supports: NO_EVIDENCE
+        snippet: An association between infections and heart valve involvement in antiphospholipid syndrome was not discussed.
+        explanation: This reference does not provide evidence regarding the association between environmental infections and Antiphospholipid Syndrome.
+      - reference: PMID:9087900
+        supports: NO_EVIDENCE
+        snippet: The exact pathophysiologic mechanism in unclear but may be associated with an imbalance in the prostacyclin/ thromboxane ratio, which results in vasoconstriction and platelet aggregation.
+        explanation: This reference discusses antiphospholipid syndrome in the context of pregnancy loss and does not provide evidence regarding infections as an environmental factor.

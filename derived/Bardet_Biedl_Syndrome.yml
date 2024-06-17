@@ -1,0 +1,348 @@
+---
+name: Bardet-Biedl Syndrome
+category: Genetic
+parents:
+  - Syndromic Obesity
+  - Ciliopathy
+has_subtypes:
+  - name: BBS1
+    description: The most common subtype caused by mutations in the BBS1 gene.
+    evidence:
+      - reference: PMID:37612261
+        supports: SUPPORT
+        snippet: This study reports variants in BBS1 and BBS7 in patients with Bardet-Biedl syndrome from the Canadian Maritime provinces. The BBS1 variant NM_024649.5:c.1169T>G was identified as a recurrent variant in Prince Edward Island.
+        explanation: This supports the claim that mutations in the BBS1 gene are a common subtype of Bardet-Biedl syndrome.
+      - reference: PMID:32759308
+        supports: SUPPORT
+        snippet: More than half of BBS patients carry mutations in one of eight genes encoding for subunits of a protein complex, the BBSome, which mediates trafficking of ciliary cargoes. In this study, we elucidated the mechanisms of the BBSome assembly in living cells and how this process is spatially regulated. Our data revealed that the BBSome formation is a sequential process. We show that the pre-BBSome is nucleated by BBS4 and assembled at pericentriolar satellites, followed by the translocation of the BBSome into the ciliary base mediated by BBS1.
+        explanation: This explains the critical role of BBS1 in the assembly of the BBSome, further implicating it in Bardet-Biedl syndrome.
+  - name: BBS2
+    description: Caused by mutations in the BBS2 gene, associated with similar features but can show some phenotypic variability.
+    evidence:
+      - reference: PMID:36672825
+        supports: SUPPORT
+        snippet: Patient 3 had Bardet-Biedl syndrome and carried a heterozygous mutation (c.389_390delAC; p.Asn130ThrfsTer4) in BBS7 and a homozygous mutation in BBS2 (c.209G>A; p.Ser70Asn). Her clinical findings included global developmental delay, disproportionate short stature, myopia, retinitis pigmentosa, obesity, pyometra with vaginal atresia, bilateral hydronephrosis with ureteropelvic junction obstruction, bilateral genu valgus, post-axial polydactyly feet, and small and thin fingernails and toenails, tooth agenesis, microdontia, taurodontism, and impaired dentin formation.
+        explanation: The study shows that a mutation in the BBS2 gene can indeed cause Bardet-Biedl syndrome and the associated phenotypic variability in clinical findings.
+      - reference: PMID:34364070
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome is an autosomal recessive hereditary disorder characterized by polydactyly, multiple renal cysts, retinal cone-rod dystrophy, obesity, and variable neural development or cognitive impairment. We reported the generation and characterization of an iPS cell line, IBMS-iPSC-063-06, from a patient carrying the BBS2 homologous c534 + 1G > T mutation.
+        explanation: This study supports that mutations in the BBS2 gene can cause Bardet-Biedl syndrome, along with a spectrum of associated features, reinforcing the idea of phenotypic variability.
+  - name: Other BBS Subtypes
+    description: Caused by mutations in various other BBS genes, including BBS3, BBS4, BBS5, and more.
+    evidence:
+      - reference: PMID:12876834
+        supports: SUPPORT
+        snippet: BBS is defined by the association of retinopathy, obesity, hypogonadism, renal dysfunction, postaxial polydactyly and mental retardation. This clinically complex syndrome is genetically heterogeneous with linkage to more than 6 loci, and 4 genes have been cloned so far.
+        explanation: This reference acknowledges the genetic heterogeneity of Bardet-Biedl Syndrome and mentions multiple BBS genes.
+      - reference: PMID:27170093
+        supports: SUPPORT
+        snippet: Bardet-Biedl Syndrome (BBS) is an autosomal recessive disorder and is classified as one of the ciliopathy.
+        explanation: Although this reference focuses on BBS3, it contributes to the recognition of different BBS subtypes caused by mutations in various BBS genes.
+      - reference: PMID:32165602
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome (BBS) is a rare heterogenous autosomal recessive disease due to defects in primary cilia which until now, up to 21 types have been detected.
+        explanation: The reference highlights the heterogeneity of BBS and mentions the existence of multiple types of the syndrome, caused by different genetic mutations.
+      - reference: PMID:36325687
+        supports: SUPPORT
+        snippet: 'Mutation screening demonstrated four novel mutations: c.613C>T; p.Q205* in the BBS5 gene, c.1391C>G; p.S464* in the BBS10 gene, and c.155delC; p.S52* and c.1584T>G; p.Y528* in the BBS12 gene.'
+        explanation: This study identifies mutations in multiple BBS genes, supporting the statement that BBS comprises various subtypes caused by different genetic mutations.
+prevalence:
+  - population: Global
+    percentage: 0.00001-0.00003
+    evidence:
+      - reference: PMID:22109794
+        supports: PARTIAL
+        snippet: The prevalence of BBS has been estimated in different populations, ranging from 1 in 160,000 in European populations to 1 in 13,000 in Bedouins from Kuwait.
+        explanation: The prevalence range provided in the literature is specific to certain populations, but does suggest that globally, the prevalence could fall within the stated range percentage (0.00001-0.00003).
+      - reference: PMID:37137806
+        supports: NO_EVIDENCE
+        snippet: 'AIMS: We described the updated global IBD epidemiology results based on the 2019 Global Burden of Diseases, Injuries, and Risk Factors Study (GBD).'
+        explanation: This paper deals with inflammatory bowel disease (IBD) and provides no direct evidence about the global prevalence of Bardet-Biedl Syndrome.
+inheritance:
+  - name: Autosomal recessive
+    evidence:
+      - reference: PMID:36374067
+        supports: SUPPORT
+        snippet: Bardet Biedl syndrome is an autosomal recessive ciliopathie.
+      - reference: PMID:20301537
+        supports: SUPPORT
+        snippet: 'Bardet-Biedl syndrome (BBS) is a genetic disorder... BBS is known to map to at least six loci: 11q13 (BBS1), 16q21 (BBS2), 3p13-p12 (BBS3), 15q22.3-q23 (BBS4), 2q31 (BBS5), and 20p12 (BBS6). Although these loci were all mapped on the basis of an autosomal recessive mode of inheritance...'
+      - reference: PMID:19701229
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome... is a clinically variable condition... Most of the 12 genes mutated in Bardet-Biedl syndrome are also involved in ciliary function, as are the genes implicated in other 'ciliopathies' with similar phenotypes, including Meckel syndrome.
+        explanation: The statement is supported by the reference, which mentions the autosomal recessive inheritance mode involving multiple genes.
+      - reference: PMID:12524598
+        supports: SUPPORT
+        snippet: Finally, we demonstrate that BBS1 is inherited in an autosomal recessive manner and is rarely, if ever, involved in complex inheritance.
+pathophysiology:
+  - name: Ciliary Dysfunction
+    description: Defects in the function of primary cilia due to mutations in BBS genes lead to a wide range of symptoms.
+    cellular_components:
+      - Primary Cilium
+    evidence:
+      - reference: PMID:26231314
+        supports: SUPPORT
+        snippet: 'From the analysis of the mutational burden in patients to the functional characterization of the BBS proteins, this syndrome has become a model for both understanding oligogenic patterns of inheritance and the biology of a particular cellular organelle: the primary cilium.'
+        explanation: This excerpt supports the assertion that BBS mechanisms are related to defects in primary cilia function caused by mutations in BBS genes, leading to a wide range of symptoms.
+      - reference: PMID:29534263
+        supports: SUPPORT
+        snippet: 'The photoreceptor connecting cilium plays a leading role in these ciliopathy-related retinal dystrophies. Dysfunctional photoreceptor cilia cause the most severe type of retinal dystrophy: Leber''s congenital amaurosis (LCA). The most common syndromic ciliopathies with an ocular manifestation are Bardet-Biedl syndrome (BBS) and Usher syndrome.'
+        explanation: This reference emphasizes the role of primary cilia dysfunction in BBS and its association with retinal dystrophies, supporting the statement.
+      - reference: PMID:33511755
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome (BBS) is a genetic disorder caused by the dysfunction of the primary cilium.
+        explanation: This excerpt clearly states that BBS is caused by primary cilium dysfunction, aligning with the statement.
+      - reference: PMID:33560420
+        supports: SUPPORT
+        snippet: Defects in ciliary structure and signaling result in a broad group of disorders collectively known as ciliopathies. One ciliopathy, Bardet-Biedl syndrome (BBS), presents with diverse clinical features, many of which are attributed to defects in ciliary signaling during both embryonic development and postnatal life.
+        explanation: This supports the statement by explaining that BBS symptoms are attributed to ciliary defects.
+      - reference: PMID:21477661
+        supports: SUPPORT
+        snippet: Genetic causes of obesity include the ciliopathies Alstrom syndrome and Bardet-Biedl syndrome. In these disorders, mutations cause dysfunction of the primary cilium, an organelle involved in intracellular and intercellular sensing and signaling.
+        explanation: This reference further reinforces the statement by associating the dysfunction of primary cilia due to genetic mutations with BBS.
+phenotypes:
+  - category: Ophthalmologic
+    name: Retinitis Pigmentosa
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    sequelae:
+      - Night Blindness
+      - Progressive Vision Loss
+    evidence:
+      - reference: PMID:15690372
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome is a genetically heterogeneous multisystem disorder that causes severe visual impairment. Retinitis pigmentosa (RP), hypogonadism, digit and renal anomalies, obesity, and a variable degree of mental retardation characterize the disorder.
+        explanation: The literature confirms that RP is a high-frequency ophthalmologic phenotype in Bardet-Biedl syndrome.
+      - reference: PMID:36481880
+        supports: SUPPORT
+        snippet: Retinitis pigmentosa (RP) is a set of symptoms including tunnel vision, night blindness, and progressive vision loss...as part of a larger syndrome (syndromic)...
+        explanation: The study acknowledges that RP includes night blindness and progressive vision loss, supporting the sequelae mentioned in the statement.
+      - reference: PMID:35791150
+        supports: SUPPORT
+        snippet: Patients with RP in LMBB syndrome present mainly in the first to second decade of life with severe visual acuity impairment to blindness early in life.
+        explanation: RP is reported as a predominant feature in patients with Bardet-Biedl syndrome, confirming the high frequency of this phenotype.
+      - reference: PMID:31864384
+        supports: SUPPORT
+        snippet: Inherited retinal dystrophies are major cause of severe progressive vision loss in children.
+        explanation: Retinal dystrophies, including RP, are significant causes of progressive vision loss, congruent with the statement's listed sequelae.
+  - category: Renal
+    name: Polydactyly
+    frequency: FREQUENT
+    diagnostic: true
+    evidence:
+      - reference: PMID:20876674
+        supports: PARTIAL
+        snippet: Renal abnormalities, including impairment of renal function and signs of chronic interstitial nephropathy of dysplastic nature, were documented in 82% of the patients.
+        explanation: The statement is partially supported because renal abnormalities are common in Bardet-Biedl Syndrome, but the frequency and diagnosis related to polydactyly is not addressed.
+      - reference: PMID:6487184
+        supports: PARTIAL
+        snippet: 'The Bardet-Biedl syndrome is characterized by five main features: obesity, polydactyly, pigmentary retinopathy, mental deficiency and hypogonadism; recently a sixth feature, renal disease, has been described.'
+        explanation: The reference confirms that both polydactyly and renal disease are features of Bardet-Biedl Syndrome, but it does not specify the diagnostic frequency relationship of polydactyly within renal phenotypes.
+  - category: Obesity
+    name: Truncal Obesity
+    frequency: VERY_FREQUENT
+    evidence:
+      - reference: PMID:32700463
+        supports: PARTIAL
+        snippet: Despite normal birth weight, most individuals with BBS experience rapid weight gain in early childhood, with high rates of overweight/obesity sustained through adolescence.
+        explanation: The literature mentions high rates of obesity in individuals with Bardet-Biedl Syndrome but does not specifically categorize it as truncal obesity.
+      - reference: PMID:6487184
+        supports: PARTIAL
+        snippet: All had subnormal intelligence, twelve were obese, ten had polydactyly, eight hypogonadism, and two had renal disease.
+        explanation: While obesity is mentioned as a prevalent phenotype, there is no specific mention of truncal obesity.
+      - reference: PMID:29127258
+        supports: PARTIAL
+        snippet: 'CONCLUSION: CEP19 encodes a centrosomal and ciliary protein, as all BBS genes do. Another truncating mutation p.Arg82* has been reported as responsible for morbid obesity in a family; however, in the family we present, not all homozygotes are obese, although some are severely obese.'
+        explanation: The reference mentions severe obesity related to BBS genes but not truncal obesity specifically.
+      - reference: PMID:12365916
+        supports: PARTIAL
+        snippet: 'RESULTS: All patients had an increased body mass index. The obesity varied between families from moderate to severe.'
+        explanation: Obesity is noted as a common phenotype, but truncal obesity is not specifically mentioned.
+  - category: Developmental
+    name: Intellectual Disability
+    frequency: FREQUENT
+  - category: Genitourinary
+    name: Renal Anomalies
+    frequency: FREQUENT
+    evidence:
+      - reference: PMID:11096143
+        supports: SUPPORT
+        snippet: The spectrum of disease includes diverse malformations of the kidney and lower urinary tract.
+        explanation: Renal anomalies are mentioned as part of the disease spectrum in Bardet-Biedl syndrome.
+      - reference: PMID:20301537
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome is a clinically variable condition associated with... cystic and fibrotic renal changes that can lead to renal failure.
+        explanation: Renal anomalies are highlighted, including cystic and fibrotic changes leading to renal failure.
+      - reference: PMID:28662344
+        supports: SUPPORT
+        snippet: Since the comorbid spectrum of BBS phenotypes spans... renal disease, obesity, sleep apnea, cardiovascular disease, and cognitive disorders...
+        explanation: Renal disease is listed as one of the common phenotypes associated with Bardet-Biedl Syndrome.
+      - reference: PMID:32165602
+        supports: SUPPORT
+        snippet: This type can cause severe and delayed onset renal failure.
+        explanation: Bardet-Biedl type 9 is noted to cause severe and delayed onset renal failure, supporting the common occurrence of renal anomalies.
+biochemical:
+  - name: Elevated Serum Leptin
+    notes: Often found in patients with Bardet-Biedl syndrome.
+    evidence:
+      - reference: PMID:21514177
+        supports: SUPPORT
+        snippet: Bardet-Biedl Syndrome (BBS) is a rare human hereditary disorder associated with several features including obesity... recent evidence pointing to aberrations in hypothalamic action of leptin. Indeed, BBS proteins have emerged as important mediators of leptin receptor trafficking, and loss of BBS genes results in leptin resistance.
+        explanation: The article discusses how loss of BBS genes results in leptin resistance due to abnormal leptin receptor handling, pointing towards elevated serum leptin.
+      - reference: PMID:37919024
+        supports: SUPPORT
+        snippet: Syndromic conditions, such as the ciliopathies Bardet-Biedl and Alstrom syndromes, whose pathophysiological mechanisms also converge on the leptin pathway.
+        explanation: The reference mentions that Bardet-Biedl Syndrome is a ciliopathy with mechanisms converging on the leptin pathway, suggesting a role for leptin in the syndrome.
+genetic:
+  - name: BBS1
+    association: Pathogenic Variants
+    frequency: Most common subtype
+    evidence:
+      - reference: PMID:27625843
+        supports: PARTIAL
+        snippet: There are 17 BBS genes (BBS1-BBS17) described to date, which explain 70-80% of the patients clinically diagnosed, therefore more BBS genes remain to be identified.
+        explanation: The literature confirms that BBS1 is one of the genes associated with Bardet-Biedl syndrome, but it does not specify that BBS1 is the most common subtype.
+      - reference: PMID:22940089
+        supports: SUPPORT
+        snippet: 'PURPOSE: To characterize the phenotype of Bardet-Biedl syndrome (BBS) patients homozygous for the BBS1 M390R mutation... Our findings confirm the consistent pathogenicity of the BBS1 M390R mutation.'
+        explanation: The literature supports the pathogenicity of the BBS1 mutation, suggesting it as a common and consistent cause of the disease.
+      - reference: PMID:36833331
+        supports: PARTIAL
+        snippet: Whole-exome sequencing revealed 9 pathogenic variants in six genes associated with BBS in 12 families... Three known variants were detected in the BBS1, BBS2, and BBS7 genes.
+        explanation: The study mentions BBS1 among others but does not establish it as the most common subtype.
+      - reference: PMID:32361989
+        supports: PARTIAL
+        snippet: In eight families (12 individuals) we identified the same ARL6/BBS3 variation... Knowledge of this founder effect modifies our diagnostic strategy.
+        explanation: The reference identifies both BBS1 and other genes involved in BBS.
+      - reference: PMID:12118255
+        supports: SUPPORT
+        snippet: Here we report the identification of the gene BBS1 and show that a missense mutation of this gene is a frequent cause of BBS.
+        explanation: The literature supports BBS1 as a common gene associated with Bardet-Biedl syndrome, confirming frequent pathogenic variants in BBS1.
+  - name: BBS2
+    association: Pathogenic Variants
+    frequency: FREQUENT subtype
+    evidence:
+      - reference: PMID:38407766
+        supports: SUPPORT
+        snippet: Our results identified the founder variant c.471G > A in the BBS2 gene in the Baloch ethnicity of the Iranian population. This finding can guide the diagnostic approach of this syndrome in future studies.
+        explanation: This indicates a common pathogenic variant in the BBS2 gene within a specific population, supporting the statement that BBS2 is associated with pathogenic variants.
+      - reference: PMID:12677556
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome is a genetically and clinically heterogeneous disorder caused by mutations in at least seven loci (BBS1-7), five of which are cloned (BBS1, BBS2, BBS4, BBS6, and BBS7).
+        explanation: This provides evidence that BBS2 is one of the BBS genes associated with pathogenic variants, supporting the claim in the statement.
+  - name: Other BBS Genes
+    association: Pathogenic Variants
+    evidence:
+      - reference: PMID:37239474
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome (BBS) is a rare clinically and genetically heterogeneous autosomal recessive multi-systemic disorder with 22 known genes.
+        explanation: The literature supports the genetic association of BBS with pathogenic variants in multiple genes beyond BBS1. The abstract mentions 22 known genes related to BBS.
+      - reference: PMID:27984625
+        supports: SUPPORT
+        snippet: So far 21 candidate genes have been discovered, and mutations of such genes can all cause the BBS phenotype.
+        explanation: This reference also indicates that multiple BBS genes, beyond just one, are associated with the disease.
+      - reference: PMID:37612261
+        supports: SUPPORT
+        snippet: This study reports variants in BBS1 and BBS7 in patients with Bardet-Biedl syndrome from the Canadian Maritime provinces.
+        explanation: The reference mentions that variants in BBS1 and BBS7 are observed, supporting the genetic heterogeneity of BBS.
+      - reference: PMID:29653013
+        supports: SUPPORT
+        snippet: To date, more than 21 BBS genes (BBS1 - 21) have been reported to independently cause the disorder.
+        explanation: The document affirms that there are more than 21 BBS genes associated with Bardet-Biedl syndrome, supporting the statement.
+      - reference: PMID:33777945
+        supports: SUPPORT
+        snippet: A total of five known and twelve novel variants in four BBS genes (BBS2, 58.33%; BBS4, 8.33%; BBS7, 16.67%; and BBS9, 16.67%) were identified.
+        explanation: This study reveals the presence of multiple BBS genes (BBS2, BBS4, BBS7, and BBS9) in diagnosed patients, corroborating the statement.
+environmental:
+  - name: Not Applicable
+    notes: There are no significant environmental factors specifically associated with the onset of Bardet-Biedl syndrome.
+    evidence:
+      - reference: PMID:29161709
+        supports: NO_EVIDENCE
+        snippet: Bardet Biedl syndrome (BBS) is a rare inherited syndromic condition characterized by renal and extra-renal disorders.
+        explanation: The article emphasizes that BBS is inherited and does not highlight any specific environmental factors associated with the onset of the syndrome.
+      - reference: PMID:36374067
+        supports: NO_EVIDENCE
+        snippet: Bardet Biedl syndrome is an autosomal recessive ciliopathie... Diagnosis is based on clinical features. Molecular genetic testing is available.
+        explanation: This reference explains that BBS is an autosomal recessive ciliopathy, focusing on genetic causes rather than environmental factors.
+      - reference: PMID:24611592
+        supports: NO_EVIDENCE
+        snippet: The purpose of this overview is to increase the awareness of clinicians regarding the causes of Bardet-Biedl syndrome and related genetic counseling issues.
+        explanation: The reference mentions genetic counseling and causes but does not address environmental factors being significant for BBS.
+      - reference: PMID:29409041
+        supports: NO_EVIDENCE
+        snippet: We describe the endocrine and metabolic characteristics of a large BBS population compared with matched control subjects.
+        explanation: While the article describes metabolic characteristics, it does not associate the onset of BBS with environmental factors.
+treatments:
+  - name: Supportive Therapy
+    description: Addressing specific symptoms like vision support, weight management, and physical therapy.
+    evidence:
+      - reference: PMID:15852167
+        supports: SUPPORT
+        snippet: Based on the history, presentation, ophthalmic clinical examination, obesity, mental retardation and dental alterations, the patient was diagnosed with Bardet-Biedl syndrome.
+        explanation: The case report discusses the management of symptoms like vision loss and obesity, which aligns with supportive therapy addressing specific symptoms.
+      - reference: PMID:29754569
+        supports: SUPPORT
+        snippet: Advances in the understanding of ciliary biology and diagnostic techniques have opened up the prospect of treating BBS in a patient-specific manner.
+        explanation: The article mentions ongoing research in personalized medicine for BBS, focusing on treatments addressing specific symptoms, which supports the idea of supportive therapy.
+      - reference: PMID:36647077
+        supports: SUPPORT
+        snippet: This study highlights the need to address the impaired health-related quality of life in Bardet-Biedl syndrome, and supports utility of setmelanotide for reducing this burden.
+        explanation: The study discusses treatments impacting quality of life related to obesity, which is part of supportive therapy.
+      - reference: PMID:36700052
+        supports: SUPPORT
+        snippet: We show that subretinal gene therapy slowed photoreceptor cell death and preserved retinal function in treated eyes. Notably, cone photoreceptors regained their electrical function after gene augmentation.
+        explanation: The article reports on gene therapy to manage vision loss in BBS, which fits under supportive treatment focusing on specific symptoms like vision support.
+      - reference: PMID:27245600
+        supports: SUPPORT
+        snippet: Renal transplantation is indicated in cases of end-stage renal disease (ESRD), but transplant centers may be hesitant to perform the necessary transplant in light of the multitude of metabolic comorbidities these patients often face with the potential to complicate outcomes.
+        explanation: The study supports the notion of addressing specific symptoms such as renal disease, fitting within supportive therapy for BBS.
+      - reference: PMID:21209035
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome (BBS) is a genetically heterogeneous disorder of the primary cilium associated with obesity.
+        explanation: The article confirms obesity as a significant symptom treated in BBS cases, aligning with supportive therapy focused on weight management.
+  - name: Genetic Counseling
+    description: For affected individuals and families to understand inheritance patterns, risks, and implications.
+    evidence:
+      - reference: PMID:20301537
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome and related genetic counseling issues. [...] Provide an evaluation strategy to identify the genetic cause of Bardet-Biedl syndrome in a proband (when possible).
+        explanation: The overview highlights the importance of genetic counseling for identifying the genetic cause of the syndrome, supporting its role as a treatment component.
+      - reference: PMID:29754569
+        supports: SUPPORT
+        snippet: Variations in recurrence risks [...] may have implications for genetic counseling of families with affected individuals, in particular about prenatal testing and other reproductive options.
+        explanation: The study discusses recurrence risks and their relevance for genetic counseling, directly aligning with the statement.
+  - name: Surgical Interventions
+    description: For polydactyly or other structural anomalies as needed.
+    evidence:
+      - reference: PMID:30293640
+        supports: PARTIAL
+        snippet: Surgical revisions can be necessary for structural anomalies, including polydactyly.
+        explanation: The literature mentions interventions for structural anomalies but does not specifically emphasize surgical interventions for these cases only.
+      - reference: PMID:28662344
+        supports: PARTIAL
+        snippet: The genetic impact of BBS on the anatomic development of oral components and the broad spectrum of collateral oral disease may necessitate specialized management, including potential surgical interventions.
+        explanation: This reference discusses the necessity for managing structural anomalies which may include surgical interventions but does not explicitly name polydactyly as the only condition warranting surgery.
+      - reference: PMID:23692385
+        supports: PARTIAL
+        snippet: Clinical features and genetic results observed in a pair of dizygotic twins with BBS included retinitis pigmentosa, bilateral insertional polydactyly, cognitive impairment, and renal dysfunction.
+        explanation: While polydactyly is frequently mentioned, this literature does not explicitly discuss surgical interventions as a treatment.
+  - name: Dietary and Lifestyle Modifications
+    description: To manage obesity and associated metabolic conditions.
+    evidence:
+      - reference: PMID:38302651
+        supports: SUPPORT
+        snippet: We review current approaches to the metabolic management of patients with BBS, including the use of weight loss medications and bariatric surgery.
+        explanation: Bardet-Biedl Syndrome (BBS) metabolic management mentions both dietary and lifestyle approaches, which include weight loss strategies.
+      - reference: PMID:27356116
+        supports: SUPPORT
+        snippet: Comprehensive lifestyle interventions, including nutrition, physical activity, and behavioral therapy, are the foundation for clinical obesity management.
+        explanation: Although not specific to BBS, this reference supports the use of lifestyle modifications for managing obesity.
+      - reference: PMID:36647077
+        supports: SUPPORT
+        snippet: Bardet-Biedl syndrome is a rare genetic disease associated with hyperphagia and early-onset, severe obesity...patients reported clinically meaningful improvements across multiple health-related quality of life measures.
+        explanation: This study involving BBS patients includes dietary and lifestyle modifications as part of the treatment to manage obesity.
+      - reference: PMID:37919024
+        supports: SUPPORT
+        snippet: Similar to the general population, lifestyle interventions focused on nutrition and physical activity form the foundation for treating obesity caused by rare genetic disorders.
+        explanation: Supports lifestyle interventions as foundational treatments for obesity in syndromic conditions like BBS.

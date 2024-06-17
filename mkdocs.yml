@@ -1,0 +1,59 @@
+---
+site_name: "dppkb"
+theme:
+  name: material
+  # palette:
+  #  scheme: slate
+  #  primary: cyan
+  features:
+    - content.tabs.link
+plugins:
+  - search
+  - mermaid2
+  - mermaid2:
+      version: 10.9.0
+nav:
+  # - Home: home.md
+  - Index: index.md
+  - About: about.md
+  - KB: data.html
+  - Disease:
+    - Acquired_Immunodeficiency_Syndrome: kb/Acquired_Immunodeficiency_Syndrome.html
+    - Antiphospholipid_Syndrome: kb/Antiphospholipid_Syndrome.html
+    - Aromatase_Deficiency: kb/Aromatase_Deficiency.html
+    - Asthma: kb/Asthma.html
+    - Bardet_Biedl_Syndrome: kb/Bardet_Biedl_Syndrome.html
+    - Crohn_Disease: kb/Crohn_Disease.html
+    - Dengue: kb/Dengue.html
+    - Dengue: kb/Dengue.html.old
+    - Ebola_Virus_Disease_EVD_: kb/Ebola_Virus_Disease_EVD_.html
+    - Ehlers_Danlos_Syndrome: kb/Ehlers_Danlos_Syndrome.html
+    - Ehlers_Danlos_Syndrome_COL5A1_related: kb/Ehlers_Danlos_Syndrome_COL5A1_related.html
+    - Familial_Mediterranean_Fever: kb/Familial_Mediterranean_Fever.html
+    - Glucose_6_Phosphate_Dehydrogenase_G6PD_Deficiency: kb/Glucose_6_Phosphate_Dehydrogenase_G6PD_Deficiency.html
+    - Hirschsprung_Disease: kb/Hirschsprung_Disease.html
+    - Hypertensive_Heart_Disease: kb/Hypertensive_Heart_Disease.html
+    - Hypertrophic_Cardiomyopathy: kb/Hypertrophic_Cardiomyopathy.html
+    - Jeavons_Syndrome: kb/Jeavons_Syndrome.html
+    - Klinefelter_Syndrome: kb/Klinefelter_Syndrome.html
+    - Lynch_Syndrome: kb/Lynch_Syndrome.html
+    - Monkeypox: kb/Monkeypox.html
+    - Nephronophthisis: kb/Nephronophthisis.html
+    - Non_Small_Cell_Lung_Cancer: kb/Non_Small_Cell_Lung_Cancer.html
+    - Peroxisome_Biogenesis_Disorder: kb/Peroxisome_Biogenesis_Disorder.html
+    - Pick_Disease: kb/Pick_Disease.html
+    - Rheumatoid_Arthritis: kb/Rheumatoid_Arthritis.html
+    - Systemic_Lupus_Erythematosus: kb/Systemic_Lupus_Erythematosus.html
+    - Transient_Neonatal_Pustular_Melanosis: kb/Transient_Neonatal_Pustular_Melanosis.html
+    - Tuberculosis: kb/Tuberculosis.html
+    - Type_I_Diabetes: kb/Type_I_Diabetes.html
+    - Vitiligo: kb/Vitiligo.html
+site_url: https://monarch-initiative.github.io/dppkb
+repo_url: https://github.com/monarch-initiative/dppkb
+
+# Uncomment this block to enable use of Google Analytics.
+# Replace the property value with your own ID.
+# extra:
+#   analytics:
+#     provider: google
+#     property: G-XXXXXXXXXX

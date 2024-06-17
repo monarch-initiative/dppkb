@@ -1,0 +1,931 @@
+{
+    "$defs": {
+        "AnatomicalEntityTerm": {
+            "description": "A term representing an anatomical entity",
+            "title": "AnatomicalEntityTerm",
+            "type": "string"
+        },
+        "Any": {
+            "additionalProperties": true,
+            "description": "",
+            "title": "Any",
+            "type": [
+                "null",
+                "boolean",
+                "object",
+                "number",
+                "string"
+            ]
+        },
+        "Assay": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Assay",
+            "type": "object"
+        },
+        "AssayTerm": {
+            "description": "A term representing an assay",
+            "title": "AssayTerm",
+            "type": "string"
+        },
+        "Biochemical": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "assays": {
+                    "items": {
+                        "$ref": "#/$defs/AssayTerm"
+                    },
+                    "type": "array"
+                },
+                "cell_types": {
+                    "items": {
+                        "$ref": "#/$defs/CellTypeTerm"
+                    },
+                    "type": "array"
+                },
+                "context": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "frequency": {
+                    "$ref": "#/$defs/Any",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/FrequencyEnum"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "name": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "presence": {
+                    "type": "string"
+                },
+                "specificity": {
+                    "type": "string"
+                },
+                "subtype": {
+                    "type": "string"
+                },
+                "synonyms": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Biochemical",
+            "type": "object"
+        },
+        "BiologicalProcessTerm": {
+            "description": "A term representing a biological process or pathway",
+            "title": "BiologicalProcessTerm",
+            "type": "string"
+        },
+        "CellTypeTerm": {
+            "description": "A cell type",
+            "title": "CellTypeTerm",
+            "type": "string"
+        },
+        "CellularComponentTerm": {
+            "description": "A term representing a cellular component",
+            "title": "CellularComponentTerm",
+            "type": "string"
+        },
+        "ChemicalEntityTerm": {
+            "description": "A term representing a chemical entity",
+            "title": "ChemicalEntityTerm",
+            "type": "string"
+        },
+        "Diagnosis": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "markers": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "presence": {
+                    "type": "string"
+                },
+                "results": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Diagnosis",
+            "type": "object"
+        },
+        "Disease": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "biochemical": {
+                    "items": {
+                        "$ref": "#/$defs/Biochemical"
+                    },
+                    "type": "array"
+                },
+                "categories": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "diagnosis": {
+                    "items": {
+                        "$ref": "#/$defs/Diagnosis"
+                    },
+                    "type": "array"
+                },
+                "environmental": {
+                    "items": {
+                        "$ref": "#/$defs/Environmental"
+                    },
+                    "type": "array"
+                },
+                "genetic": {
+                    "items": {
+                        "$ref": "#/$defs/Genetic"
+                    },
+                    "type": "array"
+                },
+                "has_subtypes": {
+                    "items": {
+                        "$ref": "#/$defs/Subtype"
+                    },
+                    "type": "array"
+                },
+                "infectious_agent": {
+                    "items": {
+                        "$ref": "#/$defs/InfectiousAgent"
+                    },
+                    "type": "array"
+                },
+                "inheritance": {
+                    "items": {
+                        "$ref": "#/$defs/Inheritance"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "parents": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "pathophysiology": {
+                    "items": {
+                        "$ref": "#/$defs/Pathophysiology"
+                    },
+                    "type": "array"
+                },
+                "phenotypes": {
+                    "items": {
+                        "$ref": "#/$defs/Phenotype"
+                    },
+                    "type": "array"
+                },
+                "prevalence": {
+                    "items": {
+                        "$ref": "#/$defs/Prevalence"
+                    },
+                    "type": "array"
+                },
+                "progression": {
+                    "items": {
+                        "$ref": "#/$defs/ProgressionInfo"
+                    },
+                    "type": "array"
+                },
+                "synonyms": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "transmission": {
+                    "items": {
+                        "$ref": "#/$defs/Transmission"
+                    },
+                    "type": "array"
+                },
+                "treatment": {
+                    "items": {
+                        "$ref": "#/$defs/Treatment"
+                    },
+                    "type": "array"
+                },
+                "treatments": {
+                    "items": {
+                        "$ref": "#/$defs/Treatment"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Disease",
+            "type": "object"
+        },
+        "DiseaseCollection": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "diseases": {
+                    "items": {
+                        "$ref": "#/$defs/Disease"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "DiseaseCollection",
+            "type": "object"
+        },
+        "DiseaseTerm": {
+            "description": "A disease or medical condition",
+            "title": "DiseaseTerm",
+            "type": "string"
+        },
+        "Environmental": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "chemicals": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "effect": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "examples": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "presence": {
+                    "type": "string"
+                },
+                "review_notes": {
+                    "type": "string"
+                },
+                "synonyms": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Environmental",
+            "type": "object"
+        },
+        "EvidenceItem": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "explanation": {
+                    "type": "string"
+                },
+                "reference": {
+                    "type": "string"
+                },
+                "snippet": {
+                    "type": "string"
+                },
+                "supports": {
+                    "$ref": "#/$defs/EvidenceItemSupportEnum"
+                }
+            },
+            "title": "EvidenceItem",
+            "type": "object"
+        },
+        "EvidenceItemSupportEnum": {
+            "description": "The level of support for an evidence item",
+            "enum": [
+                "WRONG_STATEMENT",
+                "SUPPORT",
+                "REFUTE",
+                "NO_EVIDENCE",
+                "PARTIAL"
+            ],
+            "title": "EvidenceItemSupportEnum",
+            "type": "string"
+        },
+        "FrequencyEnum": {
+            "description": "The frequency of an event or phenomenon",
+            "enum": [
+                "FREQUENT",
+                "OCCASIONAL",
+                "VERY_FREQUENT",
+                "VERY_RARE",
+                "OBLIGATE"
+            ],
+            "title": "FrequencyEnum",
+            "type": "string"
+        },
+        "GeneTerm": {
+            "description": "A gene",
+            "title": "GeneTerm",
+            "type": "string"
+        },
+        "Genetic": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "association": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "features": {
+                    "type": "string"
+                },
+                "frequency": {
+                    "$ref": "#/$defs/Any",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/FrequencyEnum"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "inheritance": {
+                    "items": {
+                        "$ref": "#/$defs/Inheritance"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "presence": {
+                    "type": "string"
+                },
+                "review_notes": {
+                    "type": "string"
+                },
+                "subtype": {
+                    "type": "string"
+                },
+                "variants": {
+                    "items": {
+                        "$ref": "#/$defs/Variant"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Genetic",
+            "type": "object"
+        },
+        "GeographyTerm": {
+            "description": "A place or location",
+            "title": "GeographyTerm",
+            "type": "string"
+        },
+        "InfectiousAgent": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "InfectiousAgent",
+            "type": "object"
+        },
+        "Inheritance": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Inheritance",
+            "type": "object"
+        },
+        "Mechanism": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Mechanism",
+            "type": "object"
+        },
+        "Pathophysiology": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "assays": {
+                    "items": {
+                        "$ref": "#/$defs/AssayTerm"
+                    },
+                    "type": "array"
+                },
+                "biological_processes": {
+                    "items": {
+                        "$ref": "#/$defs/BiologicalProcessTerm"
+                    },
+                    "type": "array"
+                },
+                "cell_types": {
+                    "items": {
+                        "$ref": "#/$defs/CellTypeTerm"
+                    },
+                    "type": "array"
+                },
+                "cellular_components": {
+                    "items": {
+                        "$ref": "#/$defs/CellularComponentTerm"
+                    },
+                    "type": "array"
+                },
+                "chemical_entities": {
+                    "items": {
+                        "$ref": "#/$defs/ChemicalEntityTerm"
+                    },
+                    "type": "array"
+                },
+                "consequence": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "downstream": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "examples": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "gene": {
+                    "$ref": "#/$defs/GeneTerm"
+                },
+                "genes": {
+                    "items": {
+                        "$ref": "#/$defs/GeneTerm"
+                    },
+                    "type": "array"
+                },
+                "locations": {
+                    "items": {
+                        "$ref": "#/$defs/AnatomicalEntityTerm"
+                    },
+                    "type": "array"
+                },
+                "mechanisms": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "pathways": {
+                    "items": {
+                        "$ref": "#/$defs/BiologicalProcessTerm"
+                    },
+                    "type": "array"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "subtypes": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "triggers": {
+                    "items": {
+                        "$ref": "#/$defs/TriggerTerm"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Pathophysiology",
+            "type": "object"
+        },
+        "PhaseTerm": {
+            "description": "A phase or stage",
+            "title": "PhaseTerm",
+            "type": "string"
+        },
+        "Phenotype": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "category": {
+                    "type": "string"
+                },
+                "context": {
+                    "type": "string"
+                },
+                "diagnostic": {
+                    "type": "boolean"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "frequency": {
+                    "$ref": "#/$defs/Any",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/FrequencyEnum"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "name": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "review_notes": {
+                    "type": "string"
+                },
+                "sequelae": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "severity": {
+                    "type": "string"
+                },
+                "subtype": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Phenotype",
+            "type": "object"
+        },
+        "PhenotypeTerm": {
+            "description": "A term representing a phenotype",
+            "title": "PhenotypeTerm",
+            "type": "string"
+        },
+        "Prevalence": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "percentage": {
+                    "$ref": "#/$defs/Any",
+                    "anyOf": [
+                        {
+                            "type": "number"
+                        },
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "description": "for ranges",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "population": {
+                    "type": "string"
+                },
+                "subtype": {
+                    "type": "string"
+                }
+            },
+            "title": "Prevalence",
+            "type": "object"
+        },
+        "ProgressionInfo": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "age_range": {
+                    "type": "string"
+                },
+                "duration": {
+                    "type": "string"
+                },
+                "duration_days": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "incubation_days": {
+                    "type": "string"
+                },
+                "incubation_years": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "phase": {
+                    "$ref": "#/$defs/PhaseTerm"
+                },
+                "review_notes": {
+                    "type": "string"
+                },
+                "subtype": {
+                    "type": "string"
+                }
+            },
+            "title": "ProgressionInfo",
+            "type": "object"
+        },
+        "Subtype": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "geography": {
+                    "items": {
+                        "$ref": "#/$defs/GeographyTerm"
+                    },
+                    "type": "array"
+                },
+                "locations": {
+                    "items": {
+                        "$ref": "#/$defs/AnatomicalEntityTerm"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "review_notes": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Subtype",
+            "type": "object"
+        },
+        "Transmission": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "effect": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Transmission",
+            "type": "object"
+        },
+        "Treatment": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "context": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "mechanism": {
+                    "items": {
+                        "$ref": "#/$defs/Mechanism"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "review_notes": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Treatment",
+            "type": "object"
+        },
+        "TriggerTerm": {
+            "description": "A trigger",
+            "title": "TriggerTerm",
+            "type": "string"
+        },
+        "Variant": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Variant",
+            "type": "object"
+        }
+    },
+    "$id": "https://w3id.org/dppkb",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "description": "",
+    "metamodel_version": "1.7.0",
+    "properties": {
+        "diseases": {
+            "items": {
+                "$ref": "#/$defs/Disease"
+            },
+            "type": "array"
+        }
+    },
+    "title": "dppkb",
+    "type": "object",
+    "version": null
+}

@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "c81851945f83b0217a65a9190219ddf9cd4bee20",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "dppkb",
+      "__project_slug": "dppkb",
+      "github_org": "monarch-initiative",
+      "__source_path": "src/dppkb/schema/dppkb.yaml",
+      "project_description": "Disease Pathophysiology Knowledge Base",
+      "full_name": "My Name",
+      "email": "my-name@my-org.org",
+      "__author": "My Name <my-name@my-org.org>",
+      "license": "BSD-3",
+      "main_schema_class": "Disease",
+      "create_python_classes": "Yes",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}

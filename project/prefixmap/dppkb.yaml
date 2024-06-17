@@ -1,0 +1,15 @@
+{
+   "CHEBI": "http://purl.obolibrary.org/obo/CHEBI_",
+   "CL": "http://purl.obolibrary.org/obo/CL_",
+   "GO": "http://purl.obolibrary.org/obo/GO_",
+   "HP": "http://purl.obolibrary.org/obo/HP_",
+   "MONDO": "http://purl.obolibrary.org/obo/MONDO_",
+   "OBI": "http://purl.obolibrary.org/obo/OBI_",
+   "PMID": "http://www.ncbi.nlm.nih.gov/pubmed/",
+   "UBERON": "http://purl.obolibrary.org/obo/UBERON_",
+   "dppkb": "https://w3id.org/dppkb",
+   "linkml": "https://w3id.org/linkml/",
+   "Any": {
+      "@id": "linkml:Any"
+   }
+}
