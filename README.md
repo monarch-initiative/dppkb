@@ -2,6 +2,16 @@
 
 Disease Pathophysiology Knowledge Base FOR DEMO PURPOSES
 
+This repo contains a mostly automated demo KB of diseases, pathophysiology, treatments,
+etiology etc generated using DRAGON-AI/CurateGPT.
+
+The KB is created via a cycle:
+
+1. Human expert creates one or two seed entries
+2. New entries are created from latent knowledgebase of LLM
+3. Pubmed is searched for support/refute evidence on a per-assertion basis
+4. LLM acts as critic guided by human to constantly refine
+
 ## Website
 
 [https://monarch-initiative.github.io/dppkb](https://monarch-initiative.github.io/dppkb)
