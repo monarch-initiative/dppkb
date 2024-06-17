@@ -43,6 +43,9 @@ Run
 
 This should be run periodically - it makes a local ChromaDB that will be used for RAG
 
+Note: this loads a pre-processed version that has the evidence removed; we want to
+hide this when doing RAG as we want to avoid publication hallucination.
+
 ### Generate a new entity
 
 Run this:
