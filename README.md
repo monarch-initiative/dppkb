@@ -85,6 +85,12 @@ there are different ways to write YAML. Ensure the kb representation is normaliz
 
 `make normalize`
 
+### Linking to ontology term IDs
+
+Currently we use labels not IDs as these are easier for humans reviewing the YAML, and for LLMs.
+
+Grounding is expected to be trivial and highly reliable, will add a simple mappings to every entry.
+
 ### End to end automation
 
 TODO
