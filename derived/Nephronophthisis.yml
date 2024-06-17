@@ -98,12 +98,12 @@ pathophysiology:
     description: The combination of tubular dysfunction, interstitial fibrosis, and cyst formation leads to a gradual decline in renal function and eventual end-stage renal disease (ESRD).
   - name: Extrarenal Manifestations
     subtypes:
-      - "Senior-Løken syndrome"
+      - Senior-Loken syndrome
     locations:
       - Liver
       - Retina
       - Brain
-    description: "Some forms of nephronophthisis, such as Senior-Løken syndrome, may involve other organs due to the presence of primary cilia in various tissues."
+    description: "Some forms of nephronophthisis, such as Senior-Loken syndrome, may involve other organs due to the presence of primary cilia in various tissues."
   - name: Progression and Severity
     description: The age of onset and rate of progression vary depending on the specific NPHP gene mutations and the type of nephronophthisis.
 inheritance:

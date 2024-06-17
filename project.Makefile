@@ -29,6 +29,7 @@ tmp/with-evidence.yaml:
 normalized: kb/dppkb-clean.yaml
 	mv kb/dppkb-clean.yaml kb/dppkb.yaml
 
+kb-docs: derived-yaml all_html
 
 derived-yaml:
 	cd derived && yq -s '.name | sub("\\s+|[^[:alnum:]]+"; "_")' ../kb/dppkb.yaml
