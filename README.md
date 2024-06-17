@@ -118,5 +118,15 @@ See results clustered:
 
 <img width="770" alt="image" src="https://github.com/monarch-initiative/dppkb/assets/50745/10eb74f0-9861-459a-9188-2494b5b250b3">
 
+### Chat
+
+<img width="696" alt="image" src="https://github.com/monarch-initiative/dppkb/assets/50745/fca67f84-31b9-44ed-b157-4644d6a15297">
+
+results:
+
+<img width="767" alt="image" src="https://github.com/monarch-initiative/dppkb/assets/50745/c09926a6-6d58-42fa-a841-d5c0a77158e6">
+
+<img width="705" alt="image" src="https://github.com/monarch-initiative/dppkb/assets/50745/17b495ad-3dd9-4bf1-82b4-278c6e7f2e0e">
+
 
 
