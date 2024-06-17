@@ -108,3 +108,15 @@ TODO
 
 This will create a streamlit app where you can chat with the KB, visualize clusters, etc.
 
+### Clustering
+
+Ask a question:
+
+<img width="785" alt="image" src="https://github.com/monarch-initiative/dppkb/assets/50745/40fef947-3bd9-4c28-9a3f-3345c41026c2">
+
+See results clustered:
+
+<img width="770" alt="image" src="https://github.com/monarch-initiative/dppkb/assets/50745/10eb74f0-9861-459a-9188-2494b5b250b3">
+
+
+
