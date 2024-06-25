@@ -5,6 +5,47 @@
             "title": "AnatomicalEntityTerm",
             "type": "string"
         },
+        "AnimalModel": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "alleles": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "associated_phenotypes": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "background": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "genes": {
+                    "items": {
+                        "$ref": "#/$defs/GeneTerm"
+                    },
+                    "type": "array"
+                },
+                "genotype": {
+                    "type": "string"
+                },
+                "species": {
+                    "type": "string"
+                }
+            },
+            "title": "AnimalModel",
+            "type": "object"
+        },
         "Any": {
             "additionalProperties": true,
             "description": "",
@@ -159,6 +200,12 @@
             "additionalProperties": false,
             "description": "",
             "properties": {
+                "animal_models": {
+                    "items": {
+                        "$ref": "#/$defs/AnimalModel"
+                    },
+                    "type": "array"
+                },
                 "biochemical": {
                     "items": {
                         "$ref": "#/$defs/Biochemical"
@@ -258,12 +305,6 @@
                 "transmission": {
                     "items": {
                         "$ref": "#/$defs/Transmission"
-                    },
-                    "type": "array"
-                },
-                "treatment": {
-                    "items": {
-                        "$ref": "#/$defs/Treatment"
                     },
                     "type": "array"
                 },
@@ -624,6 +665,12 @@
                     },
                     "type": "array"
                 },
+                "synonyms": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "triggers": {
                     "items": {
                         "$ref": "#/$defs/TriggerTerm"
@@ -714,6 +761,9 @@
                         "$ref": "#/$defs/EvidenceItem"
                     },
                     "type": "array"
+                },
+                "notes": {
+                    "type": "string"
                 },
                 "percentage": {
                     "$ref": "#/$defs/Any",

@@ -881,6 +881,16 @@ environmental:
         supports: SUPPORT
         snippet: Systemic lupus erythematosus (SLE) is a heterogeneous, multisystem autoimmune disorder characterized by unpredictable disease flares.... suggesting that stress-related disorders alter the susceptibility to SLE.
         explanation: This reference indicates a link between stress-related disorders and the development or worsening of SLE.
+animal_models:
+  - species: Mouse
+    genes:
+      - Fas
+    genotype: MRL/lpr strain
+    alleles:
+      - FAS lpr
+    description: genetically prone to develop lupus-like symptoms and APS
+  - species: Mouse
+    background: (NZB/BlNJ x NZW/LacJ)F1/J
 ---
 name: Vitiligo
 description: An autoimmune skin disorder characterized by the loss of skin pigmentation due to the destruction of melanocytes.
@@ -1311,6 +1321,14 @@ treatments:
         supports: SUPPORT
         snippet: If vitiligo involves most of the body, it might be easier to depigment the normal remaining skin rather than to attempt repigmentation. Our review revealed that... Monobenzyl ether of hydroquinone (MBEH) is the most widely used depigmenting agent and has few side-effects.
         explanation: The reference supports the use of monobenzone (MBEH) for depigmentation in extensive vitiligo cases.
+animal_models:
+  - species: Zebrafish
+    genotype: MO1-zmiz1a/MO1-zmiz1b
+    genes:
+      - zmiz1a
+      - zmiz1b
+    associated_phenotypes:
+      - Pigmentation
 ---
 name: Asthma
 category: Complex
@@ -3317,6 +3335,18 @@ genetic:
         supports: NO_EVIDENCE
         snippet: No individual mtDNA haplogroups or superhaplogroups were significantly associated with risk of Pick disease after adjustment for multiple testing.
         explanation: The study focused on mitochondrial DNA haplogroups and their association with Pick disease risk, finding no significant association. It did not address the GRN gene or its mutations.
+animal_models:
+  - species: Mouse
+    genotype: "Tg(Thy1-MAPT*L266V*G272V)13Ema/0"
+    background: "involves: C57BL/6 * DBA/2"
+    category: Transgene Insertion
+    description: The human Tau containing three ~32 amino acid repeats bearing the L266V and G272V mutations associated with familial forms of Picks Disease is under the control of the neuronal mouse Thy1 promoter. Line 13 is a high expressing line and expresses 8 fold higher levels than line 2.
+    associated_phenotypes:
+      - Impaired Coordination
+      - Abnormal Dentate Gyrus Morphology
+      - Decreased Neocortex Volume
+      - Tau Protein Deposits
+      - Axonal Dystrophy
 environmental:
   - name: Not Applicable
     notes: Environmental factors are not primarily associated with the onset of Pick's disease.
@@ -4414,7 +4444,7 @@ environmental:
         supports: SUPPORT
         snippet: 'Human lung cancers are phenotypically more diverse and broadly constitute 2 types: small cell lung cancers and nonsmall cell lung cancers (NSCLCs)... lung cancers resulting from exposure to environmental agents.'
         explanation: The reference supports the association between environmental agents, including radon, and non-small cell lung cancer.
-treatment:
+treatments:
   - name: Surgery
     description: Lobectomy or pneumonectomy for localized disease
     evidence:
@@ -4893,7 +4923,7 @@ environmental:
         supports: SUPPORT
         snippet: Five cases of hemolytic episodes arising from the loading of trinitrotoluene (TNT) were detected. All five workers showed absolute G6PD deficiency.
         explanation: The incidence of hemolytic episodes in the context of TNT exposure further supports that environmental factors can trigger hemolysis in G6PD-deficient individuals.
-treatment:
+treatments:
   - name: Avoidance of Oxidative Stressors
     description: Identifying and avoiding triggers for acute hemolytic episodes
     evidence:
@@ -5246,6 +5276,21 @@ genetic:
     name: PLOD1
     subtype: Kyphoscoliotic EDS
     review_notes: Added an additional gene (PLOD1) known to be associated with Kyphoscoliotic EDS as an example of a less common subtype.
+animal_models:
+  - species: Mouse
+    genotype: Col5a1 knockout
+    genes:
+      - Col5a1
+    associated_phenotypes:
+      - Skin hyperextensibility
+      - Joint hypermobility
+  - species: Mouse
+    genotype: Col3a1 heterozygous
+    genes:
+      - Col3a1
+    associated_phenotypes:
+      - Vascular fragility
+      - Arterial rupture
 environmental:
   - name: Physical Trauma
     effect: Exacerbates Symptoms
@@ -7278,6 +7323,49 @@ treatments:
         supports: SUPPORT
         snippet: Similar to the general population, lifestyle interventions focused on nutrition and physical activity form the foundation for treating obesity caused by rare genetic disorders.
         explanation: Supports lifestyle interventions as foundational treatments for obesity in syndromic conditions like BBS.
+animal_models:
+  - genotype: Bbs1 M390R/M390R
+    genes:
+      - Bbs1
+    associated_phenotypes:
+      - Retinal Degeneration
+      - Obesity
+      - Polydactyly
+      - Kidney Abnormalities
+    species: Mouse
+  - genotype: Bbs4-/-
+    genes:
+      - Bbs4
+    associated_phenotypes:
+      - Retinal Degeneration
+      - Obesity
+      - Polydactyly
+      - Learning and Memory Deficits
+    species: Mouse
+  - genotype: Bbs6-/-
+    genes:
+      - Bbs6
+    associated_phenotypes:
+      - Retinal Degeneration
+      - Obesity
+      - Infertility
+    species: Mouse
+  - genotype: BBSome complex mutations
+    genes:
+      - Bbs1
+      - Bbs2
+      - Bbs4
+      - Bbs5
+      - Bbs7
+      - Bbs9
+      - Bbs18
+    associated_phenotypes:
+      - Retinal Degeneration
+      - Obesity
+      - Learning and Memory Deficits
+      - Kidney Abnormalities
+      - Polydactyly
+    species: Mouse
 ---
 name: Hypertrophic Cardiomyopathy
 synonyms:
@@ -10258,3 +10346,452 @@ treatments:
   - name: Latent TB Treatment
     description: Isoniazid or rifapentine used to prevent latent TB from becoming active.
 notes: TB is a significant global health issue, particularly in low-income and developing countries.
+---
+name: Schizophrenia
+category: Psychiatric
+parents:
+  - Psychotic Disorder
+  - Mental Health Disorder
+progression:
+  - phase: Prodromal
+    age_range: 15-25
+    notes: Subtle changes in thoughts, feelings, and behavior
+  - phase: Onset
+    age_range: 16-30
+    notes: First episode of psychosis
+  - phase: Chronic
+    notes: Long-term management of symptoms and functioning
+prevalence:
+  - population: global
+    percentage: 0.3-0.7
+    notes: "male_to_female_ratio: 1.4:1"
+pathophysiology:
+  - name: Dysregulation of Dopamine Neurotransmission
+    synonyms:
+      - Dopamine Hypothesis
+    description: Imbalance in dopamine transmission in the brain, particularly in the mesolimbic and mesocortical pathways.
+  - name: Abnormality of Glutamergic Signaling
+    synonyms:
+      - Glutamate Hypothesis
+    description: Dysfunction in glutamate neurotransmission, impacting synaptic plasticity and brain circuit function.
+  - name: Abnormality of GABAergic Signaling
+    synonyms:
+      - GABAergic Dysfunction
+phenotypes:
+  - category: Psychiatric
+    name: Hallucinations
+    frequency: FREQUENT
+    diagnostic: true
+    notes: Often auditory in nature, such as hearing voices. Can also be visual, tactile, or olfactory.
+  - category: Psychiatric
+    name: Delusions
+    frequency: FREQUENT
+    diagnostic: true
+    notes: False beliefs, often paranoid or grandiose in nature. Resistant to contradictory evidence.
+  - category: Cognitive
+    name: Disorganized Thinking
+    frequency: FREQUENT
+    diagnostic: true
+    notes: Impaired logical thought process and communication. May manifest as loose associations or incoherent speech.
+  - category: Occupational
+    name: Social Withdrawal
+    frequency: FREQUENT
+    notes: Reduction in social interactions and engagement. Can lead to isolation and difficulty maintaining relationships.
+  - category: Mood
+    name: Flat Affect
+    frequency: FREQUENT
+    notes: Reduced expression of emotions. May appear unresponsive or lacking emotional depth.
+  - category: Cognitive
+    name: Working Memory Deficits
+    frequency: COMMON
+    notes: Difficulties in short-term information storage and manipulation.
+  - category: Behavioral
+    name: Catatonia
+    frequency: OCCASIONAL
+    notes: Abnormal motor behavior, ranging from excessive movement to immobility.
+biochemical:
+  - name: Dopamine Metabolites
+    presence: Elevated
+    context: Observed in cerebrospinal fluid and postmortem brain analysis.
+  - name: Glutamate Levels
+    presence: Elevated
+    context: Observed in cerebrospinal fluid and postmortem brain analysis.
+genetic:
+  - name: DISC1
+    association: Risk Factor
+  - name: COMT
+    association: Risk Factor
+  - name: NRG1
+    association: Risk Factor
+  - name: DTNBP1
+    association: Risk Factor
+environmental:
+  - name: Prenatal Stress
+    description: Exposure to stress during fetal development may increase risk.
+  - name: Cannabis Use
+    description: Associated with increased risk and earlier onset in genetically predisposed individuals.
+treatments:
+  - name: Antipsychotic Medications
+    description: Medications such as risperidone, olanzapine, and clozapine to manage symptoms.
+    mechanism:
+      - name: dopamine D2 receptor antagonism
+        description: Primary action through dopamine D2 receptor antagonism
+  - name: Cognitive Behavioral Therapy (CBT)
+    description: Therapy aimed at changing maladaptive thought patterns and behaviors.
+  - name: Social Skills Training
+    description: Programs to enhance social interactions and functioning.
+  - name: Supportive Therapy
+    description: Ongoing support to help manage daily life and stress.
+  - name: Vocational Rehabilitation
+    description: Help with gaining and maintaining employment.
+---
+name: Melanoma_in_Congenital_Melanocytic_Nevus
+category: Skin Cancer
+parents:
+  - Congenital Melanocytic Nevus
+  - Melanoma
+prevalence:
+  - population: General Population
+    percentage: Rare
+progression:
+  - phase: Onset
+    age_range: Childhood-Adulthood
+pathophysiology:
+  - name: Genetic Mutations
+    description: Mutations in key genes such as BRAF and NRAS are commonly associated with the development of melanoma in congenital melanocytic nevi.
+    genes:
+      - BRAF
+      - NRAS
+    downstream:
+      - Uncontrolled Cell Growth
+  - name: UV Exposure
+    description: Ultraviolet (UV) radiation can damage the DNA in skin cells, contributing to mutations and the development of melanoma.
+    notes: Exacerbating Factor
+    downstream:
+      - DNA Damage
+phenotypes:
+  - category: Dermatologic
+    name: Pigmented Lesion
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    notes: Changes in size, shape, or color of the nevus
+  - category: Dermatologic
+    name: Nodules
+    frequency: FREQUENT
+    notes: Raised, firm lesions that can be a sign of melanoma
+  - category: Systemic
+    name: Lymphadenopathy
+    frequency: OCCASIONAL
+    notes: Swollen lymph nodes may indicate metastasis
+diagnosis:
+  - name: Dermatoscopic Examination
+    notes: Detailed visual examination of skin lesions
+  - name: Skin Biopsy
+    notes: Histopathological examination to confirm melanoma
+  - name: Sentinel Lymph Node Biopsy
+    notes: Determines spread to lymph nodes
+genetic:
+  - name: BRAF
+    association: Mutations
+  - name: NRAS
+    association: Mutations
+environmental:
+  - name: UV Radiation
+    description: Sunlight and tanning beds
+    effect: DNA Damage
+treatments:
+  - name: Surgical Excision
+    description: Removal of the melanoma and surrounding tissue
+  - name: Immunotherapy
+    description: Use of drugs to stimulate the immune system to target melanoma cells
+  - name: Targeted Therapy
+    description: Drugs that target specific genetic mutations in melanoma cells, such as BRAF inhibitors
+  - name: Radiation Therapy
+    description: Use of high-energy radiation to kill cancer cells or shrink tumors
+  - name: Chemotherapy
+    description: Use of drugs to kill rapidly dividing cells, including cancer cells
+notes: Early detection and treatment are critical for improving outcomes in melanoma arising in congenital melanocytic nevi.
+---
+name: Chronic_Obstructive_Pulmonary_Disease
+category: Complex
+parents:
+  - Respiratory Disease
+  - Smoking-Related Disease
+has_subtypes:
+  - name: Chronic Bronchitis
+    description: Inflammation of the bronchial tubes leading to increased mucus production and chronic cough.
+  - name: Emphysema
+    description: Damage to the alveoli resulting in shortness of breath and reduced surface area for gas exchange.
+prevalence:
+  - population: Global
+    percentage: 11.7
+progression:
+  - phase: Onset
+    notes: Typically begins in individuals over the age of 40.
+pathophysiology:
+  - name: Airflow Limitation
+    description: Obstruction of airflow due to inflammation, mucus build-up, and remodeling of the airways.
+    cell_types:
+      - Epithelial Cell
+  - name: Chronic Inflammation
+    description: Persistent irritation from inhaled substances like cigarette smoke leads to airway and alveolar inflammation.
+    cell_types:
+      - Neutrophil
+      - Macrophage
+      - T-lymphocyte
+  - name: Airway Remodeling
+    description: Structural changes in the airway due to chronic inflammation, including fibrosis and increased airway thickness.
+    cell_types:
+      - Smooth Muscle Cell
+  - name: Alveolar Destruction
+    description: Breakdown of alveolar walls, leading to reduced surface area for gas exchange and loss of lung elasticity.
+    cell_types:
+      - Alveolar Macrophage
+phenotypes:
+  - category: Respiratory
+    name: Dyspnea
+    frequency: VERY_FREQUENT
+    diagnostic: true
+  - category: Respiratory
+    name: Chronic Cough
+    frequency: VERY_FREQUENT
+    diagnostic: true
+  - category: Respiratory
+    name: Sputum Production
+    frequency: VERY_FREQUENT
+biochemical:
+  - name: Arterial Blood Gases
+    presence: Altered
+    notes: May show hypoxemia and hypercapnia.
+  - name: C-Reactive Protein (CRP)
+    presence: Elevated
+    context: General inflammation and exacerbations.
+genetic:
+  - name: Alpha-1 Antitrypsin (AAT)
+    association: Deficiency is a genetic risk factor.
+environmental:
+  - name: Smoking
+    notes: Primary risk factor for development and progression.
+  - name: Air Pollution
+    notes: Exposure to pollutants can exacerbate symptoms.
+  - name: Occupational Dust and Chemicals
+    notes: Long-term exposure increases risk.
+treatments:
+  - name: Smoking Cessation
+    description: Stopping smoking to slow disease progression and improve outcomes.
+  - name: Bronchodilators
+    description: Medications that relax muscles of the airways to improve airflow (e.g., beta-agonists, anticholinergics).
+  - name: Inhaled Corticosteroids
+    description: Reduce airway inflammation and frequency of exacerbations.
+  - name: Phosphodiesterase-4 Inhibitors
+    description: Reduce inflammation and relax airways.
+  - name: Oxygen Therapy
+    description: Long-term oxygen use for patients with severe chronic hypoxemia.
+  - name: Pulmonary Rehabilitation
+    description: Exercise training, education, and support to improve quality of life and physical conditioning.
+  - name: Lung Volume Reduction Surgery
+    description: Surgical removal of damaged lung tissue for severe emphysema.
+  - name: Lung Transplantation
+    description: Considered in end-stage COPD with severe impairment.
+---
+name: Cholera
+category: Infectious Disease
+parents:
+  - Bacterial Infection
+infectious_agent:
+  - name: Vibrio cholerae
+    description: A bacterium that causes severe diarrhea by producing a toxin that triggers excess water and electrolyte loss in the intestines.
+    has_subtypes:
+      - name: O1
+        description: Classical and El Tor biotypes
+      - name: O139
+transmission:
+  - name: Fecal-Oral Transmission
+    description: Spread through ingestion of contaminated water or food.
+  - name: Direct Contact
+    description: Can spread through direct contact with infected individuals or their bodily fluids.
+  - name: Environmental Reservoirs
+    description: Vibrio cholerae can survive in aquatic environments, potentially leading to outbreaks.
+prevalence:
+  - population: Global
+    percentage: Variable, higher in regions with poor sanitation
+  - population: South Asia (particularly Bangladesh and India)
+    percentage: Endemic
+  - population: Parts of Africa
+    percentage: Endemic
+  - population: Haiti
+    percentage: Endemic
+epidemiology:
+  - name: Basic Reproduction Number (R0)
+    description: The average number of secondary infections caused by one infected individual in a completely susceptible population.
+    minimum_value: 1
+    maximum_value: 20
+    notes: Highly variable depending on environmental and population factors. Higher in areas with poor sanitation and during initial outbreak phases.
+    factors:
+      - Population density
+      - Sanitation conditions
+      - Water quality
+      - Hygiene practices
+  - name: Effective Reproduction Number (R or Rt)
+    description: The average number of secondary cases per infectious case in a population made up of both susceptible and non-susceptible individuals.
+    notes: Changes over time as control measures are implemented and population immunity increases. Rt < 1 indicates declining epidemic.
+    factors:
+      - Proportion of susceptible individuals
+      - Control measures (e.g., improved sanitation, vaccination)
+      - Changes in behavior (e.g., increased hygiene practices)
+  - name: Serial Interval
+    description: The time between the onset of symptoms in a primary case and the onset of symptoms in secondary cases.
+    unit: days
+    minimum_value: 1
+    maximum_value: 10
+    mean_range: 3-5
+    notes: Important for estimating R and modeling the speed of epidemic spread.
+  - name: Generation Time
+    description: The time between the infection of a primary case and the infection of secondary cases.
+    unit: days
+    minimum_value: 1
+    maximum_value: 9
+    mean_range: 2-4
+    notes: Often shorter than the serial interval due to potential pre-symptomatic transmission.
+  - name: Case Fatality Rate (CFR), untreated
+    unit: percentage
+    minimum_value: 25
+    maximum_value: 50
+    notes: Varies significantly based on access to treatment and quality of care.
+  - name: Case Fatality Rate (CFR), treated
+    unit: percentage
+    maximum_value: 1
+    notes: Varies significantly based on access to treatment and quality of care.
+  - name: Infectivity Period
+    unit: days
+    minimum_value: 1
+    maximum_value: 10
+    notes: Can be longer in asymptomatic carriers. Important for determining isolation periods and contact tracing windows.
+  - name: Peak Infectivity post symptom onset
+    unit: days
+    minimum_value: 3
+    maximum_value: 5
+  - name: Incubation Period
+    unit: days
+    minimum_value: 0
+    maximum_value: 5
+    mean_range: 2-3
+    notes: Affects the timing of symptom onset and the implementation of control measures.
+  - name: Attack Rate, typical
+    description: The proportion of susceptible individuals who become ill during a specified time interval.
+    unit: percentage
+    minimum_value: 0.1
+    maximum_value: 2
+    notes: Varies widely depending on environmental conditions and population susceptibility.
+  - name: Attack Rate, severe
+    description: The proportion of susceptible individuals who become ill during a specified time interval.
+    unit: percentage
+    minimum_value: 5
+    maximum_value: 10
+    notes: Varies widely depending on environmental conditions and population susceptibility.
+  - name: Asymptomatic Ratio
+    description: The proportion of infected individuals who do not display symptoms.
+    unit: percentage
+    minimum_value: 10
+    maximum_value: 80
+    notes: Highly variable and challenging to measure accurately. Critical for understanding true disease spread and implementing control measures.
+modeling_considerations:
+  - name: Environmental Dynamics
+    description: Include water contamination levels and seasonal variations
+  - name: Population Mobility
+    description: Consider movement patterns that can spread the disease
+  - name: Intervention Impacts
+    description: Model effects of vaccination, improved sanitation, and treatment access
+  - name: Asymptomatic Carriers
+    description: Account for their role in disease transmission
+  - name: Super-spreading Events
+    description: Consider potential for rapid spread in gatherings or contaminated water sources
+  - name: Stochastic vs Deterministic Models
+    description: Choose appropriate modeling approach based on population size and heterogeneity
+  - name: Spatial Considerations
+    description: Incorporate geographical factors affecting disease spread and control measures
+  - name: Vaccination Dynamics
+    description: Model the impact of vaccination campaigns, including coverage rates and vaccine efficacy
+progression:
+  - phase: Incubation
+    duration: 2 hours to 5 days
+    notes: Period between infection and onset of symptoms. Individuals are typically not infectious during this phase.
+  - phase: Prodromal
+    duration: Hours
+    notes: Early symptoms may include mild diarrhea, abdominal discomfort, and nausea. Often overlooked or misdiagnosed.
+  - phase: Acute
+    duration: Hours to Days
+    notes: Rapid onset of severe symptoms, can be life-threatening if not treated promptly. Peak infectiousness.
+  - phase: Early Acute
+    duration: First 24-48 hours
+    notes: Rapid onset of profuse, watery diarrhea and vomiting. Highest risk of severe dehydration.
+  - phase: Late Acute
+    duration: 3-5 days
+    notes: Continued symptoms but may begin to improve with proper treatment.
+  - phase: Recovery
+    duration: Days to Weeks
+    notes: Symptoms resolve, but individuals may still shed bacteria in stool for 1-2 weeks.
+  - phase: Asymptomatic Carriage
+    duration: Days to Months
+    notes: Some individuals can carry and shed the bacteria without showing symptoms. Important for disease transmission modeling.
+pathophysiology:
+  - name: Cholera Toxin
+    description: Vibrio cholerae produces a toxin that activates adenylate cyclase in intestinal epithelial cells, leading to increased cyclic AMP (cAMP) levels.
+    cell_types:
+      - Intestinal Epithelial Cell
+    downstream:
+      - Increased cAMP
+  - name: Increased cAMP
+    description: Elevated cAMP levels cause cells to secrete large amounts of chloride ions into the intestinal lumen, followed by water and other electrolytes.
+    downstream:
+      - Profuse Watery Diarrhea
+  - name: Profuse Watery Diarrhea
+    description: Rapid loss of fluids and electrolytes through diarrhea, which can lead to severe dehydration and hypovolemic shock.
+phenotypes:
+  - category: Gastrointestinal
+    name: Profuse Watery Diarrhea
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    sequelae:
+      - Severe Dehydration
+      - Shock
+  - category: Systemic
+    name: Dehydration
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    sequelae:
+      - Sunken Eyes
+      - Low Blood Pressure
+      - Tachycardia
+  - category: Systemic
+    name: Hypovolemic Shock
+    frequency: OCCASIONAL
+    notes: Caused by severe dehydration due to fluid loss
+biochemical:
+  - name: Electrolytes
+    presence: Low Sodium, Potassium, and Bicarbonate Levels
+    context: Due to excessive loss in diarrhea
+diagnosis:
+  - name: Stool Culture
+    presence: Positive for Vibrio cholerae
+  - name: Rapid Diagnostic Test
+    presence: Positive
+    notes: Detects cholera toxin or other bacterial antigens in stool
+  - name: Darkfield Microscopy
+    notes: Can show motile Vibrio cholerae in a fresh stool sample.
+environmental:
+  - name: Contaminated Water
+    notes: Major source of infection
+  - name: Poor Sanitation
+    notes: Facilitates the spread of the bacteria
+treatments:
+  - name: Oral Rehydration Solution (ORS)
+    description: Mixture of clean water, salt, and sugar to replace lost fluids and electrolytes.
+  - name: Intravenous Rehydration
+    description: Used for severe dehydration when rapid fluid replacement is necessary.
+  - name: Antibiotics
+    description: Shorten the course of the illness and reduce the severity, examples include doxycycline, azithromycin.
+  - name: Zinc Supplementation
+    description: Recommended for children to reduce the duration and severity of diarrhea.
+  - name: Vaccination
+    description: Oral cholera vaccines can provide protection in endemic areas or during outbreaks.

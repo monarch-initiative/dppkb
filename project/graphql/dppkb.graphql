@@ -1,4 +1,16 @@
 # metamodel_version: 1.7.0
+type AnimalModel
+  {
+    species: String
+    genotype: String
+    background: String
+    genes: [GeneTerm]
+    category: String
+    alleles: [String]
+    description: String
+    associatedPhenotypes: [String]
+  }
+
 type Any
   {
   }
@@ -54,8 +66,8 @@ type Disease
     transmission: [Transmission]
     diagnosis: [Diagnosis]
     synonyms: [String]
-    treatment: [Treatment]
     inheritance: [Inheritance]
+    animalModels: [AnimalModel]
     notes: String
   }
 
@@ -130,6 +142,7 @@ type Pathophysiology
     locations: [AnatomicalEntityTerm]
     examples: [String]
     role: String
+    synonyms: [String]
     consequence: String
     gene: GeneTerm
     pathways: [BiologicalProcessTerm]
@@ -164,6 +177,7 @@ type Prevalence
     population: String
     percentage: Any
     evidence: [EvidenceItem]
+    notes: String
   }
 
 type ProgressionInfo
@@ -204,10 +218,10 @@ type Treatment
     name: String!
     description: String
     evidence: [EvidenceItem]
+    notes: String
     context: String
     reviewNotes: String
     role: String
-    notes: String
     mechanism: [Mechanism]
   }
 

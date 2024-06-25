@@ -1,5 +1,5 @@
 # Auto generated from dppkb.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-06-17T12:23:06
+# Generation date: 2024-06-25T11:12:58
 # Schema: dppkb
 #
 # id: https://w3id.org/dppkb
@@ -40,7 +40,7 @@ MONDO = CurieNamespace('MONDO', 'http://purl.obolibrary.org/obo/MONDO_')
 OBI = CurieNamespace('OBI', 'http://purl.obolibrary.org/obo/OBI_')
 PMID = CurieNamespace('PMID', 'http://www.ncbi.nlm.nih.gov/pubmed/')
 UBERON = CurieNamespace('UBERON', 'http://purl.obolibrary.org/obo/UBERON_')
-DPPKB = CurieNamespace('dppkb', 'https://w3id.org/dppkb')
+DPPKB = CurieNamespace('dppkb', 'https://w3id.org/dppkb/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
 DEFAULT_ = DPPKB
@@ -202,6 +202,7 @@ class Prevalence(YAMLRoot):
     population: Optional[str] = None
     percentage: Optional[Union[dict, Any]] = None
     evidence: Optional[Union[Union[dict, EvidenceItem], List[Union[dict, EvidenceItem]]]] = empty_list()
+    notes: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self.subtype is not None and not isinstance(self.subtype, str):
@@ -213,6 +214,9 @@ class Prevalence(YAMLRoot):
         if not isinstance(self.evidence, list):
             self.evidence = [self.evidence] if self.evidence is not None else []
         self.evidence = [v if isinstance(v, EvidenceItem) else EvidenceItem(**as_dict(v)) for v in self.evidence]
+
+        if self.notes is not None and not isinstance(self.notes, str):
+            self.notes = str(self.notes)
 
         super().__post_init__(**kwargs)
 
@@ -286,6 +290,7 @@ class Pathophysiology(YAMLRoot):
     locations: Optional[Union[Union[str, "AnatomicalEntityTerm"], List[Union[str, "AnatomicalEntityTerm"]]]] = empty_list()
     examples: Optional[Union[str, List[str]]] = empty_list()
     role: Optional[str] = None
+    synonyms: Optional[Union[str, List[str]]] = empty_list()
     consequence: Optional[str] = None
     gene: Optional[Union[str, "GeneTerm"]] = None
     pathways: Optional[Union[Union[str, "BiologicalProcessTerm"], List[Union[str, "BiologicalProcessTerm"]]]] = empty_list()
@@ -317,6 +322,10 @@ class Pathophysiology(YAMLRoot):
 
         if self.role is not None and not isinstance(self.role, str):
             self.role = str(self.role)
+
+        if not isinstance(self.synonyms, list):
+            self.synonyms = [self.synonyms] if self.synonyms is not None else []
+        self.synonyms = [v if isinstance(v, str) else str(v) for v in self.synonyms]
 
         if self.consequence is not None and not isinstance(self.consequence, str):
             self.consequence = str(self.consequence)
@@ -587,8 +596,8 @@ class Disease(YAMLRoot):
     transmission: Optional[Union[Dict[Union[str, TransmissionName], Union[dict, "Transmission"]], List[Union[dict, "Transmission"]]]] = empty_dict()
     diagnosis: Optional[Union[Dict[Union[str, DiagnosisName], Union[dict, "Diagnosis"]], List[Union[dict, "Diagnosis"]]]] = empty_dict()
     synonyms: Optional[Union[str, List[str]]] = empty_list()
-    treatment: Optional[Union[Dict[Union[str, TreatmentName], Union[dict, "Treatment"]], List[Union[dict, "Treatment"]]]] = empty_dict()
     inheritance: Optional[Union[Dict[Union[str, InheritanceName], Union[dict, "Inheritance"]], List[Union[dict, "Inheritance"]]]] = empty_dict()
+    animal_models: Optional[Union[Union[dict, "AnimalModel"], List[Union[dict, "AnimalModel"]]]] = empty_list()
     notes: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -643,12 +652,59 @@ class Disease(YAMLRoot):
             self.synonyms = [self.synonyms] if self.synonyms is not None else []
         self.synonyms = [v if isinstance(v, str) else str(v) for v in self.synonyms]
 
-        self._normalize_inlined_as_list(slot_name="treatment", slot_type=Treatment, key_name="name", keyed=True)
-
         self._normalize_inlined_as_list(slot_name="inheritance", slot_type=Inheritance, key_name="name", keyed=True)
+
+        if not isinstance(self.animal_models, list):
+            self.animal_models = [self.animal_models] if self.animal_models is not None else []
+        self.animal_models = [v if isinstance(v, AnimalModel) else AnimalModel(**as_dict(v)) for v in self.animal_models]
 
         if self.notes is not None and not isinstance(self.notes, str):
             self.notes = str(self.notes)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class AnimalModel(YAMLRoot):
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DPPKB["AnimalModel"]
+    class_class_curie: ClassVar[str] = "dppkb:AnimalModel"
+    class_name: ClassVar[str] = "AnimalModel"
+    class_model_uri: ClassVar[URIRef] = DPPKB.AnimalModel
+
+    species: Optional[str] = None
+    genotype: Optional[str] = None
+    background: Optional[str] = None
+    genes: Optional[Union[Union[str, "GeneTerm"], List[Union[str, "GeneTerm"]]]] = empty_list()
+    category: Optional[str] = None
+    alleles: Optional[Union[str, List[str]]] = empty_list()
+    description: Optional[str] = None
+    associated_phenotypes: Optional[Union[str, List[str]]] = empty_list()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self.species is not None and not isinstance(self.species, str):
+            self.species = str(self.species)
+
+        if self.genotype is not None and not isinstance(self.genotype, str):
+            self.genotype = str(self.genotype)
+
+        if self.background is not None and not isinstance(self.background, str):
+            self.background = str(self.background)
+
+        if self.category is not None and not isinstance(self.category, str):
+            self.category = str(self.category)
+
+        if not isinstance(self.alleles, list):
+            self.alleles = [self.alleles] if self.alleles is not None else []
+        self.alleles = [v if isinstance(v, str) else str(v) for v in self.alleles]
+
+        if self.description is not None and not isinstance(self.description, str):
+            self.description = str(self.description)
+
+        if not isinstance(self.associated_phenotypes, list):
+            self.associated_phenotypes = [self.associated_phenotypes] if self.associated_phenotypes is not None else []
+        self.associated_phenotypes = [v if isinstance(v, str) else str(v) for v in self.associated_phenotypes]
 
         super().__post_init__(**kwargs)
 
@@ -665,10 +721,10 @@ class Treatment(YAMLRoot):
     name: Union[str, TreatmentName] = None
     description: Optional[str] = None
     evidence: Optional[Union[Union[dict, EvidenceItem], List[Union[dict, EvidenceItem]]]] = empty_list()
+    notes: Optional[str] = None
     context: Optional[str] = None
     review_notes: Optional[str] = None
     role: Optional[str] = None
-    notes: Optional[str] = None
     mechanism: Optional[Union[Dict[Union[str, MechanismName], Union[dict, "Mechanism"]], List[Union[dict, "Mechanism"]]]] = empty_dict()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -684,6 +740,9 @@ class Treatment(YAMLRoot):
             self.evidence = [self.evidence] if self.evidence is not None else []
         self.evidence = [v if isinstance(v, EvidenceItem) else EvidenceItem(**as_dict(v)) for v in self.evidence]
 
+        if self.notes is not None and not isinstance(self.notes, str):
+            self.notes = str(self.notes)
+
         if self.context is not None and not isinstance(self.context, str):
             self.context = str(self.context)
 
@@ -692,9 +751,6 @@ class Treatment(YAMLRoot):
 
         if self.role is not None and not isinstance(self.role, str):
             self.role = str(self.role)
-
-        if self.notes is not None and not isinstance(self.notes, str):
-            self.notes = str(self.notes)
 
         self._normalize_inlined_as_list(slot_name="mechanism", slot_type=Mechanism, key_name="name", keyed=True)
 
@@ -1243,6 +1299,12 @@ slots.features = Slot(uri=DPPKB.features, name="features", curie=DPPKB.curie('fe
 slots.chemicals = Slot(uri=DPPKB.chemicals, name="chemicals", curie=DPPKB.curie('chemicals'),
                    model_uri=DPPKB.chemicals, domain=None, range=Optional[Union[str, List[str]]])
 
+slots.alleles = Slot(uri=DPPKB.alleles, name="alleles", curie=DPPKB.curie('alleles'),
+                   model_uri=DPPKB.alleles, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.species = Slot(uri=DPPKB.species, name="species", curie=DPPKB.curie('species'),
+                   model_uri=DPPKB.species, domain=None, range=Optional[str])
+
 slots.effect = Slot(uri=DPPKB.effect, name="effect", curie=DPPKB.curie('effect'),
                    model_uri=DPPKB.effect, domain=None, range=Optional[str])
 
@@ -1285,9 +1347,6 @@ slots.transmission = Slot(uri=DPPKB.transmission, name="transmission", curie=DPP
 slots.diagnosis = Slot(uri=DPPKB.diagnosis, name="diagnosis", curie=DPPKB.curie('diagnosis'),
                    model_uri=DPPKB.diagnosis, domain=None, range=Optional[Union[Dict[Union[str, DiagnosisName], Union[dict, Diagnosis]], List[Union[dict, Diagnosis]]]])
 
-slots.treatment = Slot(uri=DPPKB.treatment, name="treatment", curie=DPPKB.curie('treatment'),
-                   model_uri=DPPKB.treatment, domain=None, range=Optional[Union[Dict[Union[str, TreatmentName], Union[dict, Treatment]], List[Union[dict, Treatment]]]])
-
 slots.mechanism = Slot(uri=DPPKB.mechanism, name="mechanism", curie=DPPKB.curie('mechanism'),
                    model_uri=DPPKB.mechanism, domain=None, range=Optional[Union[Dict[Union[str, MechanismName], Union[dict, Mechanism]], List[Union[dict, Mechanism]]]])
 
@@ -1299,3 +1358,15 @@ slots.markers = Slot(uri=DPPKB.markers, name="markers", curie=DPPKB.curie('marke
 
 slots.diseases = Slot(uri=DPPKB.diseases, name="diseases", curie=DPPKB.curie('diseases'),
                    model_uri=DPPKB.diseases, domain=None, range=Optional[Union[Dict[Union[str, DiseaseName], Union[dict, Disease]], List[Union[dict, Disease]]]])
+
+slots.animal_models = Slot(uri=DPPKB.animal_models, name="animal_models", curie=DPPKB.curie('animal_models'),
+                   model_uri=DPPKB.animal_models, domain=None, range=Optional[Union[Union[dict, AnimalModel], List[Union[dict, AnimalModel]]]])
+
+slots.genotype = Slot(uri=DPPKB.genotype, name="genotype", curie=DPPKB.curie('genotype'),
+                   model_uri=DPPKB.genotype, domain=None, range=Optional[str])
+
+slots.background = Slot(uri=DPPKB.background, name="background", curie=DPPKB.curie('background'),
+                   model_uri=DPPKB.background, domain=None, range=Optional[str])
+
+slots.associated_phenotypes = Slot(uri=DPPKB.associated_phenotypes, name="associated_phenotypes", curie=DPPKB.curie('associated_phenotypes'),
+                   model_uri=DPPKB.associated_phenotypes, domain=None, range=Optional[Union[str, List[str]]])

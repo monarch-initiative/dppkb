@@ -7,7 +7,7 @@
    "OBI": "http://purl.obolibrary.org/obo/OBI_",
    "PMID": "http://www.ncbi.nlm.nih.gov/pubmed/",
    "UBERON": "http://purl.obolibrary.org/obo/UBERON_",
-   "dppkb": "https://w3id.org/dppkb",
+   "dppkb": "https://w3id.org/dppkb/",
    "linkml": "https://w3id.org/linkml/",
    "Any": {
       "@id": "linkml:Any"

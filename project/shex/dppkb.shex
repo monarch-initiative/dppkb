@@ -5,9 +5,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
 
 
-<https://w3id.org/dppkbPMID> xsd:string
+<PMID> xsd:string
 
-<https://w3id.org/dppkbFrequencyQuantity> xsd:string
+<FrequencyQuantity> xsd:string
 
 linkml:String xsd:string
 
@@ -47,245 +47,261 @@ linkml:Jsonpath xsd:string
 
 linkml:Sparqlpath xsd:string
 
-<https://w3id.org/dppkbAny> CLOSED {
-    (  $<https://w3id.org/dppkbAny_tes> rdf:type . * ;
+<AnimalModel> CLOSED {
+    (  $<AnimalModel_tes> (  <species> @linkml:String ? ;
+          <genotype> @linkml:String ? ;
+          <background> @linkml:String ? ;
+          <genes> . * ;
+          <category> @linkml:String ? ;
+          <alleles> @linkml:String * ;
+          <description> @linkml:String ? ;
+          <associated_phenotypes> @linkml:String *
+       ) ;
+       rdf:type [ <AnimalModel> ] ?
+    )
+}
+
+<Any> CLOSED {
+    (  $<Any_tes> rdf:type . * ;
        rdf:type [ linkml:Any ] ?
     )
 }
 
-<https://w3id.org/dppkbAssay> CLOSED {
-    (  $<https://w3id.org/dppkbAssay_tes> <https://w3id.org/dppkbdescription> @linkml:String ? ;
-       rdf:type [ <https://w3id.org/dppkbAssay> ]
+<Assay> CLOSED {
+    (  $<Assay_tes> <description> @linkml:String ? ;
+       rdf:type [ <Assay> ]
     )
 }
 
-<https://w3id.org/dppkbBiochemical> CLOSED {
-    (  $<https://w3id.org/dppkbBiochemical_tes> (  <https://w3id.org/dppkbpresence> @linkml:String ? ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbspecificity> @linkml:String ? ;
-          <https://w3id.org/dppkbfrequency> @<https://w3id.org/dppkbAny> ? ;
-          <https://w3id.org/dppkbnotes> @linkml:String ? ;
-          <https://w3id.org/dppkbcontext> @linkml:String ? ;
-          <https://w3id.org/dppkbsubtype> @linkml:String ? ;
-          <https://w3id.org/dppkbcell_types> . * ;
-          <https://w3id.org/dppkbassays> . * ;
-          <https://w3id.org/dppkbsynonyms> @linkml:String *
+<Biochemical> CLOSED {
+    (  $<Biochemical_tes> (  <presence> @linkml:String ? ;
+          <evidence> @<EvidenceItem> * ;
+          <specificity> @linkml:String ? ;
+          <frequency> @<Any> ? ;
+          <notes> @linkml:String ? ;
+          <context> @linkml:String ? ;
+          <subtype> @linkml:String ? ;
+          <cell_types> . * ;
+          <assays> . * ;
+          <synonyms> @linkml:String *
        ) ;
-       rdf:type [ <https://w3id.org/dppkbBiochemical> ]
+       rdf:type [ <Biochemical> ]
     )
 }
 
-<https://w3id.org/dppkbDiagnosis> CLOSED {
-    (  $<https://w3id.org/dppkbDiagnosis_tes> (  <https://w3id.org/dppkbpresence> @linkml:String ? ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbnotes> @linkml:String ? ;
-          <https://w3id.org/dppkbresults> @linkml:String ? ;
-          <https://w3id.org/dppkbmarkers> @linkml:String ?
+<Diagnosis> CLOSED {
+    (  $<Diagnosis_tes> (  <presence> @linkml:String ? ;
+          <evidence> @<EvidenceItem> * ;
+          <notes> @linkml:String ? ;
+          <results> @linkml:String ? ;
+          <markers> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbDiagnosis> ]
+       rdf:type [ <Diagnosis> ]
     )
 }
 
-<https://w3id.org/dppkbDisease> CLOSED {
-    (  $<https://w3id.org/dppkbDisease_tes> (  <https://w3id.org/dppkbdescription> @linkml:String ? ;
-          <https://w3id.org/dppkbcategory> @linkml:String ? ;
-          <https://w3id.org/dppkbparents> @linkml:String * ;
-          <https://w3id.org/dppkbhas_subtypes> @<https://w3id.org/dppkbSubtype> * ;
-          <https://w3id.org/dppkbprevalence> @<https://w3id.org/dppkbPrevalence> * ;
-          <https://w3id.org/dppkbprogression> @<https://w3id.org/dppkbProgressionInfo> * ;
-          <https://w3id.org/dppkbpathophysiology> @<https://w3id.org/dppkbPathophysiology> * ;
-          <https://w3id.org/dppkbphenotypes> @<https://w3id.org/dppkbPhenotype> * ;
-          <https://w3id.org/dppkbbiochemical> @<https://w3id.org/dppkbBiochemical> * ;
-          <https://w3id.org/dppkbgenetic> @<https://w3id.org/dppkbGenetic> * ;
-          <https://w3id.org/dppkbenvironmental> @<https://w3id.org/dppkbEnvironmental> * ;
-          <https://w3id.org/dppkbtreatments> @<https://w3id.org/dppkbTreatment> * ;
-          <https://w3id.org/dppkbcategories> @linkml:String * ;
-          <https://w3id.org/dppkbinfectious_agent> @<https://w3id.org/dppkbInfectiousAgent> * ;
-          <https://w3id.org/dppkbtransmission> @<https://w3id.org/dppkbTransmission> * ;
-          <https://w3id.org/dppkbdiagnosis> @<https://w3id.org/dppkbDiagnosis> * ;
-          <https://w3id.org/dppkbsynonyms> @linkml:String * ;
-          <https://w3id.org/dppkbtreatment> @<https://w3id.org/dppkbTreatment> * ;
-          <https://w3id.org/dppkbinheritance> @<https://w3id.org/dppkbInheritance> * ;
-          <https://w3id.org/dppkbnotes> @linkml:String ?
+<Disease> CLOSED {
+    (  $<Disease_tes> (  <description> @linkml:String ? ;
+          <category> @linkml:String ? ;
+          <parents> @linkml:String * ;
+          <has_subtypes> @<Subtype> * ;
+          <prevalence> @<Prevalence> * ;
+          <progression> @<ProgressionInfo> * ;
+          <pathophysiology> @<Pathophysiology> * ;
+          <phenotypes> @<Phenotype> * ;
+          <biochemical> @<Biochemical> * ;
+          <genetic> @<Genetic> * ;
+          <environmental> @<Environmental> * ;
+          <treatments> @<Treatment> * ;
+          <categories> @linkml:String * ;
+          <infectious_agent> @<InfectiousAgent> * ;
+          <transmission> @<Transmission> * ;
+          <diagnosis> @<Diagnosis> * ;
+          <synonyms> @linkml:String * ;
+          <inheritance> @<Inheritance> * ;
+          <animal_models> @<AnimalModel> * ;
+          <notes> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbDisease> ]
+       rdf:type [ <Disease> ]
     )
 }
 
-<https://w3id.org/dppkbDiseaseCollection> CLOSED {
-    (  $<https://w3id.org/dppkbDiseaseCollection_tes> <https://w3id.org/dppkbdiseases> @<https://w3id.org/dppkbDisease> * ;
-       rdf:type [ <https://w3id.org/dppkbDiseaseCollection> ] ?
+<DiseaseCollection> CLOSED {
+    (  $<DiseaseCollection_tes> <diseases> @<Disease> * ;
+       rdf:type [ <DiseaseCollection> ] ?
     )
 }
 
-<https://w3id.org/dppkbEnvironmental> CLOSED {
-    (  $<https://w3id.org/dppkbEnvironmental_tes> (  <https://w3id.org/dppkbpresence> @linkml:String ? ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbnotes> @linkml:String ? ;
-          <https://w3id.org/dppkbdescription> @linkml:String ? ;
-          <https://w3id.org/dppkbchemicals> @linkml:String * ;
-          <https://w3id.org/dppkbsynonyms> @linkml:String * ;
-          <https://w3id.org/dppkbeffect> @linkml:String ? ;
-          <https://w3id.org/dppkbexamples> @linkml:String * ;
-          <https://w3id.org/dppkbreview_notes> @linkml:String ?
+<Environmental> CLOSED {
+    (  $<Environmental_tes> (  <presence> @linkml:String ? ;
+          <evidence> @<EvidenceItem> * ;
+          <notes> @linkml:String ? ;
+          <description> @linkml:String ? ;
+          <chemicals> @linkml:String * ;
+          <synonyms> @linkml:String * ;
+          <effect> @linkml:String ? ;
+          <examples> @linkml:String * ;
+          <review_notes> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbEnvironmental> ]
+       rdf:type [ <Environmental> ]
     )
 }
 
-<https://w3id.org/dppkbEvidenceItem> CLOSED {
-    (  $<https://w3id.org/dppkbEvidenceItem_tes> (  <https://w3id.org/dppkbreference> @<https://w3id.org/dppkbPMID> ? ;
-          <https://w3id.org/dppkbsupports> [ <https://w3id.org/dppkbEvidenceItemSupportEnum#WRONG_STATEMENT>
-             <https://w3id.org/dppkbEvidenceItemSupportEnum#SUPPORT> <https://w3id.org/dppkbEvidenceItemSupportEnum#REFUTE>
-             <https://w3id.org/dppkbEvidenceItemSupportEnum#NO_EVIDENCE> <https://w3id.org/dppkbEvidenceItemSupportEnum#PARTIAL> ]
-          ? ;
-          <https://w3id.org/dppkbsnippet> @linkml:String ? ;
-          <https://w3id.org/dppkbexplanation> @linkml:String ?
+<EvidenceItem> CLOSED {
+    (  $<EvidenceItem_tes> (  <reference> @<PMID> ? ;
+          <supports> [ <https://w3id.org/dppkb/EvidenceItemSupportEnum#WRONG_STATEMENT>
+             <https://w3id.org/dppkb/EvidenceItemSupportEnum#SUPPORT> <https://w3id.org/dppkb/EvidenceItemSupportEnum#REFUTE>
+             <https://w3id.org/dppkb/EvidenceItemSupportEnum#NO_EVIDENCE> <https://w3id.org/dppkb/EvidenceItemSupportEnum#PARTIAL>
+             ] ? ;
+          <snippet> @linkml:String ? ;
+          <explanation> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbEvidenceItem> ] ?
+       rdf:type [ <EvidenceItem> ] ?
     )
 }
 
-<https://w3id.org/dppkbGenetic> CLOSED {
-    (  $<https://w3id.org/dppkbGenetic_tes> (  <https://w3id.org/dppkbpresence> @linkml:String ? ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbassociation> @linkml:String ? ;
-          <https://w3id.org/dppkbreview_notes> @linkml:String ? ;
-          <https://w3id.org/dppkbsubtype> @linkml:String ? ;
-          <https://w3id.org/dppkbfrequency> @<https://w3id.org/dppkbAny> ? ;
-          <https://w3id.org/dppkbinheritance> @<https://w3id.org/dppkbInheritance> * ;
-          <https://w3id.org/dppkbvariants> @<https://w3id.org/dppkbVariant> * ;
-          <https://w3id.org/dppkbfeatures> @linkml:String ?
+<Genetic> CLOSED {
+    (  $<Genetic_tes> (  <presence> @linkml:String ? ;
+          <evidence> @<EvidenceItem> * ;
+          <association> @linkml:String ? ;
+          <review_notes> @linkml:String ? ;
+          <subtype> @linkml:String ? ;
+          <frequency> @<Any> ? ;
+          <inheritance> @<Inheritance> * ;
+          <variants> @<Variant> * ;
+          <features> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbGenetic> ]
+       rdf:type [ <Genetic> ]
     )
 }
 
-<https://w3id.org/dppkbInfectiousAgent> CLOSED {
-    (  $<https://w3id.org/dppkbInfectiousAgent_tes> (  <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbdescription> @linkml:String ?
+<InfectiousAgent> CLOSED {
+    (  $<InfectiousAgent_tes> (  <evidence> @<EvidenceItem> * ;
+          <description> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbInfectiousAgent> ]
+       rdf:type [ <InfectiousAgent> ]
     )
 }
 
-<https://w3id.org/dppkbInheritance> CLOSED {
-    (  $<https://w3id.org/dppkbInheritance_tes> (  <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbdescription> @linkml:String ?
+<Inheritance> CLOSED {
+    (  $<Inheritance_tes> (  <evidence> @<EvidenceItem> * ;
+          <description> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbInheritance> ]
+       rdf:type [ <Inheritance> ]
     )
 }
 
-<https://w3id.org/dppkbMechanism> CLOSED {
-    (  $<https://w3id.org/dppkbMechanism_tes> <https://w3id.org/dppkbdescription> @linkml:String ? ;
-       rdf:type [ <https://w3id.org/dppkbMechanism> ]
+<Mechanism> CLOSED {
+    (  $<Mechanism_tes> <description> @linkml:String ? ;
+       rdf:type [ <Mechanism> ]
     )
 }
 
-<https://w3id.org/dppkbPathophysiology> CLOSED {
-    (  $<https://w3id.org/dppkbPathophysiology_tes> (  <https://w3id.org/dppkbdescription> @linkml:String ? ;
-          <https://w3id.org/dppkbcell_types> . * ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbbiological_processes> . * ;
-          <https://w3id.org/dppkblocations> . * ;
-          <https://w3id.org/dppkbexamples> @linkml:String * ;
-          <https://w3id.org/dppkbrole> @linkml:String ? ;
-          <https://w3id.org/dppkbconsequence> @linkml:String ? ;
-          <https://w3id.org/dppkbgene> . ? ;
-          <https://w3id.org/dppkbpathways> . * ;
-          <https://w3id.org/dppkbdownstream> @linkml:String * ;
-          <https://w3id.org/dppkbgenes> . * ;
-          <https://w3id.org/dppkbsubtypes> @linkml:String * ;
-          <https://w3id.org/dppkbcellular_components> . * ;
-          <https://w3id.org/dppkbchemical_entities> . * ;
-          <https://w3id.org/dppkbtriggers> . * ;
-          <https://w3id.org/dppkbassays> . * ;
-          <https://w3id.org/dppkbmechanisms> @linkml:String *
+<Pathophysiology> CLOSED {
+    (  $<Pathophysiology_tes> (  <description> @linkml:String ? ;
+          <cell_types> . * ;
+          <evidence> @<EvidenceItem> * ;
+          <biological_processes> . * ;
+          <locations> . * ;
+          <examples> @linkml:String * ;
+          <role> @linkml:String ? ;
+          <synonyms> @linkml:String * ;
+          <consequence> @linkml:String ? ;
+          <gene> . ? ;
+          <pathways> . * ;
+          <downstream> @linkml:String * ;
+          <genes> . * ;
+          <subtypes> @linkml:String * ;
+          <cellular_components> . * ;
+          <chemical_entities> . * ;
+          <triggers> . * ;
+          <assays> . * ;
+          <mechanisms> @linkml:String *
        ) ;
-       rdf:type [ <https://w3id.org/dppkbPathophysiology> ]
+       rdf:type [ <Pathophysiology> ]
     )
 }
 
-<https://w3id.org/dppkbPhenotype> CLOSED {
-    (  $<https://w3id.org/dppkbPhenotype_tes> (  <https://w3id.org/dppkbcategory> @linkml:String ? ;
-          <https://w3id.org/dppkbfrequency> @<https://w3id.org/dppkbAny> ? ;
-          <https://w3id.org/dppkbdiagnostic> @linkml:Boolean ? ;
-          <https://w3id.org/dppkbsequelae> @linkml:String * ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbcontext> @linkml:String ? ;
-          <https://w3id.org/dppkbreview_notes> @linkml:String ? ;
-          <https://w3id.org/dppkbseverity> @linkml:String ? ;
-          <https://w3id.org/dppkbnotes> @linkml:String ? ;
-          <https://w3id.org/dppkbsubtype> @linkml:String ?
+<Phenotype> CLOSED {
+    (  $<Phenotype_tes> (  <category> @linkml:String ? ;
+          <frequency> @<Any> ? ;
+          <diagnostic> @linkml:Boolean ? ;
+          <sequelae> @linkml:String * ;
+          <evidence> @<EvidenceItem> * ;
+          <context> @linkml:String ? ;
+          <review_notes> @linkml:String ? ;
+          <severity> @linkml:String ? ;
+          <notes> @linkml:String ? ;
+          <subtype> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbPhenotype> ]
+       rdf:type [ <Phenotype> ]
     )
 }
 
-<https://w3id.org/dppkbPrevalence> CLOSED {
-    (  $<https://w3id.org/dppkbPrevalence_tes> (  <https://w3id.org/dppkbsubtype> @linkml:String ? ;
-          <https://w3id.org/dppkbpopulation> @linkml:String ? ;
-          <https://w3id.org/dppkbpercentage> @<https://w3id.org/dppkbAny> ? ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> *
+<Prevalence> CLOSED {
+    (  $<Prevalence_tes> (  <subtype> @linkml:String ? ;
+          <population> @linkml:String ? ;
+          <percentage> @<Any> ? ;
+          <evidence> @<EvidenceItem> * ;
+          <notes> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbPrevalence> ] ?
+       rdf:type [ <Prevalence> ] ?
     )
 }
 
-<https://w3id.org/dppkbProgressionInfo> CLOSED {
-    (  $<https://w3id.org/dppkbProgressionInfo_tes> (  <https://w3id.org/dppkbphase> . ? ;
-          <https://w3id.org/dppkbsubtype> @linkml:String ? ;
-          <https://w3id.org/dppkbage_range> @linkml:String ? ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbincubation_days> @linkml:String ? ;
-          <https://w3id.org/dppkbreview_notes> @linkml:String ? ;
-          <https://w3id.org/dppkbincubation_years> @linkml:String ? ;
-          <https://w3id.org/dppkbnotes> @linkml:String ? ;
-          <https://w3id.org/dppkbduration_days> @linkml:String ? ;
-          <https://w3id.org/dppkbduration> @linkml:String ?
+<ProgressionInfo> CLOSED {
+    (  $<ProgressionInfo_tes> (  <phase> . ? ;
+          <subtype> @linkml:String ? ;
+          <age_range> @linkml:String ? ;
+          <evidence> @<EvidenceItem> * ;
+          <incubation_days> @linkml:String ? ;
+          <review_notes> @linkml:String ? ;
+          <incubation_years> @linkml:String ? ;
+          <notes> @linkml:String ? ;
+          <duration_days> @linkml:String ? ;
+          <duration> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbProgressionInfo> ] ?
+       rdf:type [ <ProgressionInfo> ] ?
     )
 }
 
-<https://w3id.org/dppkbSubtype> CLOSED {
-    (  $<https://w3id.org/dppkbSubtype_tes> (  <https://w3id.org/dppkbdescription> @linkml:String ? ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbreview_notes> @linkml:String ? ;
-          <https://w3id.org/dppkblocations> . * ;
-          <https://w3id.org/dppkbgeography> . *
+<Subtype> CLOSED {
+    (  $<Subtype_tes> (  <description> @linkml:String ? ;
+          <evidence> @<EvidenceItem> * ;
+          <review_notes> @linkml:String ? ;
+          <locations> . * ;
+          <geography> . *
        ) ;
-       rdf:type [ <https://w3id.org/dppkbSubtype> ]
+       rdf:type [ <Subtype> ]
     )
 }
 
-<https://w3id.org/dppkbTransmission> CLOSED {
-    (  $<https://w3id.org/dppkbTransmission_tes> (  <https://w3id.org/dppkbdescription> @linkml:String ? ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbnotes> @linkml:String ? ;
-          <https://w3id.org/dppkbeffect> @linkml:String ?
+<Transmission> CLOSED {
+    (  $<Transmission_tes> (  <description> @linkml:String ? ;
+          <evidence> @<EvidenceItem> * ;
+          <notes> @linkml:String ? ;
+          <effect> @linkml:String ?
        ) ;
-       rdf:type [ <https://w3id.org/dppkbTransmission> ]
+       rdf:type [ <Transmission> ]
     )
 }
 
-<https://w3id.org/dppkbTreatment> CLOSED {
-    (  $<https://w3id.org/dppkbTreatment_tes> (  <https://w3id.org/dppkbdescription> @linkml:String ? ;
-          <https://w3id.org/dppkbevidence> @<https://w3id.org/dppkbEvidenceItem> * ;
-          <https://w3id.org/dppkbcontext> @linkml:String ? ;
-          <https://w3id.org/dppkbreview_notes> @linkml:String ? ;
-          <https://w3id.org/dppkbrole> @linkml:String ? ;
-          <https://w3id.org/dppkbnotes> @linkml:String ? ;
-          <https://w3id.org/dppkbmechanism> @<https://w3id.org/dppkbMechanism> *
+<Treatment> CLOSED {
+    (  $<Treatment_tes> (  <description> @linkml:String ? ;
+          <evidence> @<EvidenceItem> * ;
+          <notes> @linkml:String ? ;
+          <context> @linkml:String ? ;
+          <review_notes> @linkml:String ? ;
+          <role> @linkml:String ? ;
+          <mechanism> @<Mechanism> *
        ) ;
-       rdf:type [ <https://w3id.org/dppkbTreatment> ]
+       rdf:type [ <Treatment> ]
     )
 }
 
-<https://w3id.org/dppkbVariant> CLOSED {
-    (  $<https://w3id.org/dppkbVariant_tes> <https://w3id.org/dppkbdescription> @linkml:String ? ;
-       rdf:type [ <https://w3id.org/dppkbVariant> ]
+<Variant> CLOSED {
+    (  $<Variant_tes> <description> @linkml:String ? ;
+       rdf:type [ <Variant> ]
     )
 }
 

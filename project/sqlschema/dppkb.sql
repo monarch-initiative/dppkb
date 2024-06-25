@@ -28,6 +28,7 @@
 --     * Slot: id Description: 
 --     * Slot: subtype Description: 
 --     * Slot: population Description: 
+--     * Slot: notes Description: 
 --     * Slot: Disease_name Description: Autocreated FK slot
 --     * Slot: percentage_id Description: 
 -- # Class: "ProgressionInfo" Description: ""
@@ -92,13 +93,21 @@
 --     * Slot: category Description: 
 --     * Slot: notes Description: 
 --     * Slot: DiseaseCollection_id Description: Autocreated FK slot
+-- # Class: "AnimalModel" Description: ""
+--     * Slot: id Description: 
+--     * Slot: species Description: 
+--     * Slot: genotype Description: 
+--     * Slot: background Description: 
+--     * Slot: category Description: 
+--     * Slot: description Description: 
+--     * Slot: Disease_name Description: Autocreated FK slot
 -- # Class: "Treatment" Description: ""
 --     * Slot: name Description: 
 --     * Slot: description Description: 
+--     * Slot: notes Description: 
 --     * Slot: context Description: 
 --     * Slot: review_notes Description: 
 --     * Slot: role Description: 
---     * Slot: notes Description: 
 --     * Slot: Disease_name Description: Autocreated FK slot
 -- # Class: "InfectiousAgent" Description: ""
 --     * Slot: name Description: 
@@ -153,6 +162,9 @@
 -- # Class: "Pathophysiology_examples" Description: ""
 --     * Slot: Pathophysiology_name Description: Autocreated FK slot
 --     * Slot: examples Description: 
+-- # Class: "Pathophysiology_synonyms" Description: ""
+--     * Slot: Pathophysiology_name Description: Autocreated FK slot
+--     * Slot: synonyms Description: 
 -- # Class: "Pathophysiology_pathways" Description: ""
 --     * Slot: Pathophysiology_name Description: Autocreated FK slot
 --     * Slot: pathways Description: 
@@ -210,6 +222,15 @@
 -- # Class: "Disease_synonyms" Description: ""
 --     * Slot: Disease_name Description: Autocreated FK slot
 --     * Slot: synonyms Description: 
+-- # Class: "AnimalModel_genes" Description: ""
+--     * Slot: AnimalModel_id Description: Autocreated FK slot
+--     * Slot: genes Description: 
+-- # Class: "AnimalModel_alleles" Description: ""
+--     * Slot: AnimalModel_id Description: Autocreated FK slot
+--     * Slot: alleles Description: 
+-- # Class: "AnimalModel_associated_phenotypes" Description: ""
+--     * Slot: AnimalModel_id Description: Autocreated FK slot
+--     * Slot: associated_phenotypes Description: 
 
 CREATE TABLE "Any" (
 	id INTEGER NOT NULL, 
@@ -245,6 +266,7 @@ CREATE TABLE "Prevalence" (
 	id INTEGER NOT NULL, 
 	subtype TEXT, 
 	population TEXT, 
+	notes TEXT, 
 	"Disease_name" TEXT, 
 	percentage_id INTEGER, 
 	PRIMARY KEY (id), 
@@ -328,13 +350,24 @@ CREATE TABLE "Environmental" (
 	PRIMARY KEY (name), 
 	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
 );
+CREATE TABLE "AnimalModel" (
+	id INTEGER NOT NULL, 
+	species TEXT, 
+	genotype TEXT, 
+	background TEXT, 
+	category TEXT, 
+	description TEXT, 
+	"Disease_name" TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
+);
 CREATE TABLE "Treatment" (
 	name TEXT NOT NULL, 
 	description TEXT, 
+	notes TEXT, 
 	context TEXT, 
 	review_notes TEXT, 
 	role TEXT, 
-	notes TEXT, 
 	"Disease_name" TEXT, 
 	PRIMARY KEY (name), 
 	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
@@ -442,6 +475,12 @@ CREATE TABLE "Pathophysiology_examples" (
 	PRIMARY KEY ("Pathophysiology_name", examples), 
 	FOREIGN KEY("Pathophysiology_name") REFERENCES "Pathophysiology" (name)
 );
+CREATE TABLE "Pathophysiology_synonyms" (
+	"Pathophysiology_name" TEXT, 
+	synonyms TEXT, 
+	PRIMARY KEY ("Pathophysiology_name", synonyms), 
+	FOREIGN KEY("Pathophysiology_name") REFERENCES "Pathophysiology" (name)
+);
 CREATE TABLE "Pathophysiology_pathways" (
 	"Pathophysiology_name" TEXT, 
 	pathways VARCHAR, 
@@ -537,6 +576,24 @@ CREATE TABLE "Environmental_examples" (
 	examples TEXT, 
 	PRIMARY KEY ("Environmental_name", examples), 
 	FOREIGN KEY("Environmental_name") REFERENCES "Environmental" (name)
+);
+CREATE TABLE "AnimalModel_genes" (
+	"AnimalModel_id" INTEGER, 
+	genes VARCHAR, 
+	PRIMARY KEY ("AnimalModel_id", genes), 
+	FOREIGN KEY("AnimalModel_id") REFERENCES "AnimalModel" (id)
+);
+CREATE TABLE "AnimalModel_alleles" (
+	"AnimalModel_id" INTEGER, 
+	alleles TEXT, 
+	PRIMARY KEY ("AnimalModel_id", alleles), 
+	FOREIGN KEY("AnimalModel_id") REFERENCES "AnimalModel" (id)
+);
+CREATE TABLE "AnimalModel_associated_phenotypes" (
+	"AnimalModel_id" INTEGER, 
+	associated_phenotypes TEXT, 
+	PRIMARY KEY ("AnimalModel_id", associated_phenotypes), 
+	FOREIGN KEY("AnimalModel_id") REFERENCES "AnimalModel" (id)
 );
 CREATE TABLE "EvidenceItem" (
 	id INTEGER NOT NULL, 

@@ -218,6 +218,12 @@ slots:
       - value: '[''TNF-alpha Production'', ''IL-1beta Production'', ''IL-6 Production'', ''IL-8 Production'', ''IFN-gamma Production'']'
     multivalued: true
     range: BiologicalProcessTerm
+  epidemiology:
+    examples:
+      - value: '[''Global'']'
+    multivalued: true
+    range: EpidemiologyInfo
+    inlined_as_list: true
   examples:
     examples:
       - value: '[''Kaposi Sarcoma'']'
@@ -346,6 +352,13 @@ slots:
       - value: '[''Phenol'']'
     range: string
     multivalued: true
+  alleles:
+    range: string
+    multivalued: true
+  species:
+    examples:
+      - value: Human
+    range: string
   effect:
     examples:
       - value: Potential trigger for flare-ups
@@ -402,10 +415,10 @@ slots:
     multivalued: true
     inlined_as_list: true
     range: Diagnosis
-  treatment:
+  modeling_considerations:
     multivalued: true
     inlined_as_list: true
-    range: Treatment
+    range: ModelingConsideration
   mechanism:
     multivalued: true
     inlined_as_list: true
@@ -422,6 +435,36 @@ slots:
     multivalued: true
     range: Disease
     inlined_as_list: true
+  animal_models:
+    multivalued: true
+    range: AnimalModel
+    inlined_as_list: true
+  genotype:
+    examples:
+      - value: HLA-DQ2
+    range: string
+  background:
+    range: string
+  associated_phenotypes:
+    examples:
+      - value: '[''Celiac Disease'', ''Type 1 Diabetes'', ''Autoimmune Thyroid Disease'']'
+    multivalued: true
+    range: string
+  minimum_value:
+    range: float
+  maximum_value:
+    range: float
+  mean_range:
+    range: string
+  factors:
+    examples:
+      - value: '[''Genetic'', ''Environmental'', ''Infectious'', ''Autoimmune'', ''Metabolic'', ''Neoplastic'', ''Traumatic'', ''Iatrogenic'', ''Idiopathic'']'
+    multivalued: true
+    range: string
+  unit:
+    examples:
+      - value: cm
+    range: string
 classes:
   Any:
     class_uri: linkml:Any
@@ -445,6 +488,7 @@ classes:
       - population
       - percentage
       - evidence
+      - notes
   ProgressionInfo:
     slots:
       - phase
@@ -457,6 +501,16 @@ classes:
       - notes
       - duration_days
       - duration
+  EpidemiologyInfo:
+    slots:
+      - name
+      - description
+      - minimum_value
+      - maximum_value
+      - mean_range
+      - notes
+      - factors
+      - unit
   Pathophysiology:
     slots:
       - name
@@ -467,6 +521,7 @@ classes:
       - locations
       - examples
       - role
+      - synonyms
       - consequence
       - gene
       - pathways
@@ -478,6 +533,7 @@ classes:
       - triggers
       - assays
       - mechanisms
+      - notes
   Phenotype:
     slots:
       - category
@@ -546,26 +602,39 @@ classes:
       - categories
       - infectious_agent
       - transmission
+      - modeling_considerations
+      - epidemiology
       - diagnosis
       - synonyms
-      - treatment
       - inheritance
+      - animal_models
       - notes
+  AnimalModel:
+    slots:
+      - species
+      - genotype
+      - background
+      - genes
+      - category
+      - alleles
+      - description
+      - associated_phenotypes
   Treatment:
     slots:
       - name
       - description
       - evidence
+      - notes
       - context
       - review_notes
       - role
-      - notes
       - mechanism
   InfectiousAgent:
     slots:
       - name
       - evidence
       - description
+      - has_subtypes
   Transmission:
     slots:
       - name
@@ -595,6 +664,10 @@ classes:
       - name
       - description
   Mechanism:
+    slots:
+      - name
+      - description
+  ModelingConsideration:
     slots:
       - name
       - description
