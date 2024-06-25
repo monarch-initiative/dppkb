@@ -76,6 +76,23 @@ has_subtypes:
   - description: Often triggered by physical exertion.
     name: Exercise-Induced Asthma
     review_notes: Added Exercise-Induced Asthma for a more comprehensive list of subtypes.
+    evidence:
+      - reference: PMID:22794682
+        supports: SUPPORT
+        snippet: patients with asthma may be classified as allergic (IgE mediated), nonallergic (often triggered by viral upper respiratory tract infections or no apparent cause), occupational, aspirin-exacerbated respiratory disease, potentially (near) fatal, exercise induced, and cough variant asthma.
+        explanation: This reference explicitly lists exercise-induced asthma as a subtype of asthma, supporting the statement.
+      - reference: PMID:5002114
+        supports: SUPPORT
+        snippet: This study indicates that swimming should be recommended in preference to running or cycling as an exercise programme for adults and children with asthma.
+        explanation: This study highlights exercise-induced asthma and provides insights into managing physical activities for those with this subtype.
+      - reference: PMID:22157157
+        supports: SUPPORT
+        snippet: Exercise-induced bronchoconstriction (EIB) refers to acute airflow obstruction that is triggered by a period of physical exertion.
+        explanation: This study details the pathology of exercise-induced bronchoconstriction, commonly referred to as exercise-induced asthma, supporting the statement.
+      - reference: PMID:37086818
+        supports: SUPPORT
+        snippet: Exercise is one of the most commonly reported symptom triggers for people with asthma.
+        explanation: This reference recognizes the role of physical exertion as a trigger for asthma symptoms, aligning with the concept of exercise-induced asthma as a subtype.
 pathophysiology:
   - name: Airway Inflammation
     description: Chronic inflammation leads to airway hyperresponsiveness and recurrent episodes of wheezing, breathlessness, chest tightness, and coughing.
@@ -267,6 +284,23 @@ phenotypes:
     frequency: FREQUENT
     name: Chest Tightness
     review_notes: Added Chest Tightness, which is also a common symptom of asthma.
+    evidence:
+      - reference: PMID:31662445
+        supports: SUPPORT
+        snippet: 'CONCLUSIONS: Asthma severity was dependent on variety of symptoms, consisting mostly of wheezing, breathlessness, chest tightness, and cough.'
+        explanation: The literature indicates that chest tightness is among the most common symptoms of asthma, supporting the statement that chest tightness is a frequent phenotype of respiratory symptoms in asthma patients.
+      - reference: PMID:36292755
+        supports: SUPPORT
+        snippet: Asthma is a chronic disease of the airways characterized by inflammation, tightened muscles, and thickened airway walls leading to symptoms such as shortness of breath, chest tightness, and cough in patients.
+        explanation: This article confirms that chest tightness is a common symptom of asthma, supporting the statement.
+      - reference: PMID:3595047
+        supports: SUPPORT
+        snippet: 'IMPLICATIONS: exercise-induced asthma should be considered in pediatric patients with symptoms of chest pain or dyspnea on exertion.'
+        explanation: Exercise-induced asthma includes symptoms like chest pain, which is related to chest tightness, supporting the statement.
+      - reference: PMID:19463209
+        supports: SUPPORT
+        snippet: We present the case of a 42-year-old man with a 2-year history of wheezing, chest tightness, and upper respiratory symptoms.
+        explanation: This case study highlights chest tightness as a symptom, supporting the statement as it shows chest tightness is a common feature in asthma triggered by recreational activities.
 biochemical:
   - name: Eosinophils
     presence: Elevated
@@ -401,6 +435,19 @@ genetic:
   - association: Associated
     name: ORMDL3
     review_notes: Added another gene commonly associated with asthma for completeness.
+    evidence:
+      - reference: PMID:25167772
+        supports: SUPPORT
+        snippet: The results of this meta-analysis firmly established that genetic variation at the rs7216389 locus, which controls the expression of the ORMDL3, may be a major, independent predisposing factor for asthma in ethnically diverse populations.
+        explanation: The meta-analysis confirms the association between the ORMDL3 gene and asthma susceptibility.
+      - reference: PMID:18754760
+        supports: PARTIAL
+        snippet: It is far from being clear which gene caused the association signal, as it is derived from a large linkage disequilibrium (LD) block.
+        explanation: The study suggests an association signal that includes ORMDL3 but indicates uncertainty about the specific gene responsible due to a large LD block.
+      - reference: PMID:21276132
+        supports: SUPPORT
+        snippet: The first GWAS for asthma discovered a novel associated locus on chromosome 17q21 encompassing the genes ORMDL3, GSDMB and ZPBP2.
+        explanation: This GWAS identifies ORMDL3 as part of a locus associated with asthma.
 environmental:
   - name: Allergens
     notes: Triggering factor for allergic asthma
@@ -497,6 +544,31 @@ environmental:
         explanation: The study reviews the impact of extreme weather events on asthma but does not mention tobacco smoke.
   - name: Occupational Exposures
     notes: Exposure to dust, chemicals, or gases in the workplace can trigger asthma symptoms.
+    evidence:
+      - reference: PMID:15579371
+        supports: SUPPORT
+        snippet: The prevalence of occupational asthma is rising, possibly due to the introduction of different chemicals and substances in the workplace. Etiologic agents include organic and inorganic compounds that are encountered in a variety of industries.
+        explanation: This reference explicitly states that occupational exposures to chemicals and substances in the workplace can trigger asthma.
+      - reference: PMID:33104273
+        supports: SUPPORT
+        snippet: Dentists are exposed to a variety of airborne chemicals that can act as irritants and sensitizers and may give rise to work-related respiratory symptoms.
+        explanation: This supports the statement by indicating that occupational exposure to airborne chemicals can lead to respiratory symptoms including asthma.
+      - reference: PMID:37971937
+        supports: SUPPORT
+        snippet: Multiple respiratory hazards have been identified in the cannabis cultivation and production industry, in which occupational asthma and work-related exacerbation of preexisting asthma have been reported.
+        explanation: This reference highlights occupational asthma caused by exposure to respiratory hazards in the cannabis industry.
+      - reference: PMID:19463209
+        supports: SUPPORT
+        snippet: Common asthma triggers during recreational activities include allergen exposure, concomitant viral infection, and exercise.
+        explanation: Although this reference discusses recreational triggers, the exposure to allergens also supports the idea that similar environmental triggers in occupational settings can lead to asthma.
+      - reference: PMID:36938642
+        supports: SUPPORT
+        snippet: Environmental and occupational exposures contribute to its causation. WTC-related or aggravated asthma is considered a World Trace Center (WTC) Health Program certifiable disease.
+        explanation: This supports the statement by acknowledging that occupational exposures can contribute to asthma.
+      - reference: PMID:29427981
+        supports: SUPPORT
+        snippet: Low-molecular-weight chemical sensitizers, causes of occupational asthma, also cause asthma in a manner analogous to allergen.
+        explanation: This reference supports that occupational exposures to chemical sensitizers can trigger asthma.
 treatments:
   - name: Inhaled Corticosteroid
     description: Reduce inflammation and prevent flare-ups.
@@ -566,3 +638,24 @@ treatments:
   - description: Provides rapid relief from acute asthma symptoms.
     name: Short-acting Beta Agonist
     review_notes: Added Short-acting Beta Agonist for completeness in treatment options.
+    evidence:
+      - reference: PMID:34369231
+        supports: SUPPORT
+        snippet: Albuterol is the most common fast acting medication for asthma, and it exists in multiple forms, including metered-dose inhaler and nebulized therapy.
+        explanation: Albuterol, a commonly used short-acting beta agonist, is indicated as a fast-acting medication for the relief of asthma symptoms.
+      - reference: PMID:30297688
+        supports: SUPPORT
+        snippet: Initial therapy in the stepwise approach for asthma management is short-acting beta(2)-agonist (SABA) therapy as needed for symptom control.
+        explanation: Short-acting beta agonists are recommended as initial therapy for the control of asthma symptoms, indicating their rapid relief properties.
+      - reference: PMID:27588581
+        supports: SUPPORT
+        snippet: Results demonstrate the efficacy of short-acting beta-agonist (SABA) delivered by metered-dose inhaler as first-line therapy for younger and older children.
+        explanation: The efficacy of SABAs as a first-line therapy in emergency asthma management highlights their role in providing rapid relief from acute asthma symptoms.
+      - reference: PMID:32482150
+        supports: SUPPORT
+        snippet: A majority of patients uses daily quick-relief medication, with the belief that it is the most important treatment because of its rapid onset of action.
+        explanation: The use of quick-relief medication, such as SABAs, by a majority of patients for asthma management is based on their rapid onset of action.
+      - reference: PMID:11253864
+        supports: SUPPORT
+        snippet: 'Clinical studies comparing the effectiveness of (R)-albuterol (levalbuterol) with racemic albuterol established a strong rationale for using single-isomer beta-agonists in place of the racemic mixture: reduced dosages provide equivalent bronchodilatory effects with fewer beta-mediated side effects.'
+        explanation: Levalbuterol, a single-isomer beta-agonist, is shown to provide effective rapid bronchodilation for asthma management.

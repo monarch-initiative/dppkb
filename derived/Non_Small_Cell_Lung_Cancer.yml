@@ -387,7 +387,7 @@ environmental:
         supports: SUPPORT
         snippet: 'Human lung cancers are phenotypically more diverse and broadly constitute 2 types: small cell lung cancers and nonsmall cell lung cancers (NSCLCs)... lung cancers resulting from exposure to environmental agents.'
         explanation: The reference supports the association between environmental agents, including radon, and non-small cell lung cancer.
-treatment:
+treatments:
   - name: Surgery
     description: Lobectomy or pneumonectomy for localized disease
     evidence:

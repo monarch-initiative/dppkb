@@ -127,6 +127,23 @@ pathophysiology:
       - Interstitial Cells
     description: Increased collagen deposition by interstitial cells contributes to myocardial stiffness.
     name: Myocardial Fibrosis
+    evidence:
+      - reference: PMID:1414892
+        supports: SUPPORT
+        snippet: It appears that increased collagen production is mainly responsible for the functional consequences of structural remodeling.
+        explanation: The increased collagen production discussed here is consistent with the contribution of interstitial cells to myocardial stiffness.
+      - reference: PMID:25573453
+        supports: SUPPORT
+        snippet: Tissue from cats with pre-clinical HCM also had a higher number of neutrophils and a greater collagen content than the myocardium of normal cats.
+        explanation: This study shows increased collagen deposition, contributing to myocardial stiffness, aligning with the statement.
+      - reference: PMID:29522370
+        supports: SUPPORT
+        snippet: We conclude that myocardial macrophages play an important role in the time-dependent increases in SPARC that enhance postsynthetic collagen processing, insoluble collagen content, and myocardial stiffness and contribute to the development of fibrosis.
+        explanation: The role of interstitial cells like macrophages in increasing collagen content supports the statement.
+      - reference: PMID:12510171
+        supports: SUPPORT
+        snippet: The myocardial collagen matrix consists of a network of fibrillar collagen which is intimately connected to the myocyte.
+        explanation: The mention of the collagen matrix supports the idea of increased collagen deposition by interstitial cells contributing to myocardial stiffness.
 phenotypes:
   - category: Cardiovascular
     name: Chest Pain

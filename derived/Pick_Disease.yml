@@ -232,6 +232,27 @@ genetic:
         supports: NO_EVIDENCE
         snippet: No individual mtDNA haplogroups or superhaplogroups were significantly associated with risk of Pick disease after adjustment for multiple testing.
         explanation: The study focused on mitochondrial DNA haplogroups and their association with Pick disease risk, finding no significant association. It did not address the GRN gene or its mutations.
+animal_models:
+  - species: Mouse
+    genotype: Tg(Thy1-MAPT*L266V*G272V)13Ema/0
+    background: 'involves: C57BL/6 * DBA/2'
+    category: Transgene Insertion
+    description: The human Tau containing three ~32 amino acid repeats bearing the L266V and G272V mutations associated with familial forms of Picks Disease is under the control of the neuronal mouse Thy1 promoter. Line 13 is a high expressing line and expresses 8 fold higher levels than line 2.
+    associated_phenotypes:
+      - Impaired Coordination
+      - Abnormal Dentate Gyrus Morphology
+      - Decreased Neocortex Volume
+      - Tau Protein Deposits
+      - Axonal Dystrophy
+    evidence:
+      - reference: PMID:11402147
+        supports: PARTIAL
+        snippet: The authors generated lines of transgenic (Tg) mice that overexpress the shortest human tau isoform in the CNS...these Tg mice developed age-related motor weakness as well as progressive hyperphosphorylation and decreased solubility of brain and spinal cord tau proteins.
+        explanation: The literature supports tau protein deposits and motor weakness (a potential indication of impaired coordination). However, it does not explicitly confirm abnormal dentate gyrus morphology, decreased neocortex volume, or axonal dystrophy.
+      - reference: PMID:16014652
+        supports: PARTIAL
+        snippet: Both brains showed severe neuronal loss in the temporal cortex, whereas in the frontal cortex the loss was less; and abundant Pick bodies in the dentate gyrus of the hippocampus, and caudate nucleus. The Pick bodies consisted exclusively of three-repeat (3R) isoforms.
+        explanation: Confirms tau protein deposits and identifies neuronal loss in specific brain regions, which can be interpreted as related to decreased neocortex volume. However, it does not confirm impaired coordination or axonal dystrophy, and focuses on human tissue rather than animal models.
 environmental:
   - name: Not Applicable
     notes: Environmental factors are not primarily associated with the onset of Pick's disease.

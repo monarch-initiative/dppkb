@@ -5,27 +5,129 @@ parents:
   - Arbovirus Infection
 infectious_agent:
   - name: Dengue Virus
+    evidence:
+      - reference: PMID:9707855
+        supports: SUPPORT
+        snippet: Dengue viral infection.
+        explanation: The title itself confirms that dengue is caused by the Dengue Virus.
+      - reference: PMID:33976375
+        supports: SUPPORT
+        snippet: Dengue virus (DENV) is spread from human to human through the bite of the female Aedes aegypti mosquito and leads to about 100 million clinical infections yearly.
+      - reference: PMID:12587656
+        supports: SUPPORT
+        snippet: 'Dengue virus, an arthropod-borne viral agent, causes two distinct diseases: classic dengue fever (DF) and dengue hemorrhagic fever (DHF).'
+      - reference: PMID:30064169
+        supports: SUPPORT
+        snippet: 'INTRODUCTION: Dengue is a mosquito-borne viral infection endemic in tropical and subtropical regions, now spreading at epidemic proportions causing a major health issue.'
+        explanation: Confirms that dengue is a viral infection, specifically linking it to the Dengue Virus.
+      - reference: PMID:37473502
+        supports: SUPPORT
+        snippet: Dengue viruses are human pathogens that are transmitted through mosquitoes.
+      - reference: PMID:20372965
+        supports: SUPPORT
+        snippet: Dengue virus (DENV 1-4) represents a major emerging arthropod-borne pathogen.
+      - reference: PMID:18235970
+        supports: SUPPORT
+        snippet: Dengue infection is a major cause of morbidity in tropical and subtropical regions, bringing nearly 40% of the world population at risk and causing more than 20,000 deaths per year.
+        explanation: The abstract discusses the impact of Dengue Virus on human health.
+      - reference: PMID:31081826
+        supports: SUPPORT
+        snippet: Dengue virus (DENV), an arthropod-borne virus transmitted by mosquitoes, may cause the severe disease known as dengue hemorrhagic fever.
+      - reference: PMID:34957305
+        supports: SUPPORT
+        snippet: Dengue remains one of the most serious and widespread mosquito-borne viral infections in human beings.
 transmission:
   - name: Aedes Mosquito Exposure
     effect: Vector for transmission
+    evidence:
+      - reference: PMID:38309298
+        supports: SUPPORT
+        snippet: Dengue is a vector-borne disease that has a significant impact on global public health. The vector mosquito belongs to the genus Aedes.
+        explanation: The literature clearly indicates that Aedes mosquitoes, specifically Ae. aegypti and Ae. albopictus, are vectors for the transmission of Dengue.
+      - reference: PMID:32927629
+        supports: SUPPORT
+        snippet: Dengue virus (DENV), the etiological cause of dengue, is transmitted primarily by the Aedes aegypti mosquito.
+        explanation: This reference supports the statement by confirming that Aedes aegypti mosquitoes are a primary vector for Dengue transmission.
+      - reference: PMID:36834443
+        supports: SUPPORT
+        snippet: Dengue is transmitted through the bite of the female vector Aedes aegypti or Aedes albopictus mosquito.
+        explanation: This literature confirms that both Aedes aegypti and Aedes albopictus mosquitoes are vectors for Dengue transmission.
   - name: Tropical and Subtropical Regions
     notes: Endemic areas where transmission is most common
+    evidence:
+      - reference: PMID:27534439
+        supports: SUPPORT
+        snippet: Dengue is widespread throughout the tropics and local spatial variation in dengue virus transmission is strongly influenced by rainfall, temperature, urbanization and distribution of the principal mosquito vector Aedes aegypti.
+        explanation: The abstract confirms that dengue is widespread throughout tropical regions, supporting the statement.
+      - reference: PMID:32925978
+        supports: SUPPORT
+        snippet: These results are consistent with long term endemic circulation of DENV in Piedecuesta, with large heterogeneities between urban and rural areas located just a few kilometers apart.
+        explanation: This provides evidence of endemic dengue transmission in a tropical region in Colombia, thereby supporting the statement.
+      - reference: PMID:34197697
+        supports: SUPPORT
+        snippet: Dengue is a significant public health issue, affecting hundreds of millions of people worldwide. As it is spreading from tropical and subtropical zones, some regions previously recognised as non-endemic are at risk of becoming endemic.
+        explanation: Confirms dengue is primarily spread from tropical and subtropical regions.
+      - reference: PMID:31996463
+        supports: SUPPORT
+        snippet: We predicted high transmission intensity in all continents straddling the tropics, with hot spots in South America (Colombia, Venezuela, and Brazil), Africa (western and central African countries), and Southeast Asia (Thailand, Indonesia, and the Philippines).
+        explanation: Specifically highlights tropical hot spots for dengue transmission, supporting the statement.
 prevalence:
   - population: Global
     percentage: 40
+    evidence:
+      - reference: PMID:34957305
+        supports: REFUTE
+        snippet: About 50 to 100 million people are newly infected annually, with almost 2.5 billion people living at risk and resulting in 20,000 deaths.
+        explanation: This implies a much lower global prevalence percentage than 40%.
+      - reference: PMID:32813703
+        supports: REFUTE
+        snippet: Dengue fever occurs worldwide and about 1% of cases progress to severe haemorrhage and shock.
+        explanation: The data focus more on severe cases, but the general context implies that the prevalence is significantly less than 40% globally.
+      - reference: PMID:28556417
+        supports: REFUTE
+        snippet: The estimated seroprevalence of past dengue infection in Tanzania ranged from 50.6% in a health facility-based study to 11% in a population-based study.
+        explanation: Even though specific case studies within countries can indicate high prevalence rates, this does not support a global prevalence of 40%.
 progression:
   - phase: Incubation
     incubation_days: 3-14
     notes: Typically 4-7 days
+    evidence:
+      - reference: PMID:23226436
+        supports: PARTIAL
+        snippet: The best-fitting temperature-dependent EIP model estimated that 95% of EIPs are between 5 and 33 days at 25 degrees C, and 2 and 15 days at 30 degrees C, with means of 15 and 6.5 days, respectively. The mean IIP estimate was 5.9 days, with 95% expected between days 3 and 10.
+        explanation: The statement about the incubation period being 3-14 days is partially supported, as the literature provides a more specific range (3-10 days for IIP in humans).
   - phase: Febrile
     duration_days: 2-7
     notes: Sudden onset of high fever
+    evidence:
+      - reference: PMID:2665014
+        supports: SUPPORT
+        snippet: Dengue hemorrhagic fever is characterized by a sudden onset of fever that lasts for 2-7 days and then subsides, at which time hemorrhagic manifestations become evident.
+        explanation: This reference describes that the fever phase in dengue typically lasts for 2-7 days, supporting the statement about the duration of the febrile phase.
   - phase: Critical
     duration_days: 3-7
     notes: Risk of severe complications, including hemorrhage and vascular leakage
+    evidence:
+      - reference: PMID:32125417
+        supports: SUPPORT
+        snippet: 'Dengue is commonly considered an acute illness and follows three phases: febrile, critical in some cases and recovery.'
+        explanation: The study identifies that dengue follows a progression that includes a critical phase consistent with the timeframe of 3-7 days.
+      - reference: PMID:34986174
+        supports: SUPPORT
+        snippet: Dengue usually progress abnormally, especially in the critical phase. The main causes of death were shock, severe bleeding and organ failure.
+        explanation: The critical phase and its associated risks of severe complications including hemorrhage and vascular leakage are clearly outlined.
   - phase: Recovery
     duration_days: 2-5
     notes: Gradual return to normal fluid balance
+    evidence:
+      - reference: PMID:32125417
+        supports: REFUTE
+        snippet: Here we evaluate this persistence of dengue symptoms during convalescence.
+        explanation: The study indicates that dengue symptoms can persist for more than 30 days and suggests that the burden of dengue may be higher than previously estimated, which contradicts the statement that implies a recovery phase lasting only 2-5 days.
+      - reference: PMID:34302960
+        supports: REFUTE
+        snippet: Patients were followed-up daily until discharge.
+        explanation: The study implies a longer monitoring period and a more extended duration of platelet recovery post-dengue which contradicts the statement about a 2-5 days recovery period.
 pathophysiology:
   - name: Dengue Virus (DENV) Infection
     description: A Flavivirus transmitted by Aedes mosquitoes, causing a wide range of symptoms from mild fever to severe hemorrhagic fever and shock.
@@ -44,6 +146,39 @@ pathophysiology:
     downstream:
       - Viral Replication
       - Immune System Activation
+    evidence:
+      - reference: PMID:23476150
+        supports: SUPPORT
+        snippet: Among a variety of human cell types targeted by DENV, monocytes, macrophages, and dendritic cells are members of innate immunity, capable of mounting rapid inflammatory responses.
+        explanation: This reference details the involvement of monocytes, macrophages, and dendritic cells in the response to Dengue virus infection.
+      - reference: PMID:24767772
+        supports: SUPPORT
+        snippet: In the liver, DENV infection occurred in hepatocytes and Kupffer cells but not in endothelial cells. Evidence of dengue viral replication was observed in macrophage-like cells in spleens and lymph nodes.
+        explanation: This reference confirms that macrophages and other cell types are involved in the pathology of dengue virus infection.
+      - reference: PMID:23202502
+        supports: SUPPORT
+        snippet: Following infection through the bite, cells of the hematopoietic lineage, like dendritic cells, are the first targets of dengue virus infection.
+        explanation: This reference explains that dendritic cells are among the first targets of Dengue virus infection.
+      - reference: PMID:25549406
+        supports: SUPPORT
+        snippet: In a low percentage of patients, bleeding and loss of plasma (hemorrhage and plasma leakage) may occur. The hyper-permeability syndrome results in plasma leakage and, if the compensatory mechanisms of the body fail to control the plasma leakage or if medical intervention is late, shock may set in.
+        explanation: The reference supports the range of symptoms caused by dengue virus, from mild fever to severe hemorrhagic fever and shock.
+      - reference: PMID:28560571
+        supports: SUPPORT
+        snippet: There are five dengue viruses, called serotypes (DEN-1, DEN-2, DEN-3, DEN-4, and DEN-5), which belong to the Flaviviridae family and are transmitted to humans through infected mosquito bites.
+        explanation: The reference confirms the classification of dengue virus serotypes.
+      - reference: PMID:23817881
+        supports: SUPPORT
+        snippet: "Dengue fever is one of the most common mosquito-borne viral illnesses in the world. It is usually transmitted to humans through the bite of an infected Aedes aegypti or Aedes albopictus mosquito. Dengue infections are caused by four antigenically distinct but closely related viruses (DEN 1–4)."
+        explanation: The reference confirms the causative agents and transmission method of dengue fever.
+      - reference: PMID:30409217
+        supports: SUPPORT
+        snippet: Among the numerous target cells for dengue virus in humans are monocytes, macrophages and mast cells which are important regulators of vascular integrity.
+        explanation: This reference supports the involvement of monocytes and macrophages in dengue infection.
+      - reference: PMID:25430853
+        supports: PARTIAL
+        snippet: Primary target cells for DENV are dendritic cells and monocytes/macrophages that release various chemokines and cytokines upon infection. However, recent studies indicate that DENV also replicates in endothelial cells.
+        explanation: This reference partially supports the inclusion of endothelial cells in the list of cell types but acknowledges a debate on their role.
   - name: Viral Replication
     description: DENV replicates primarily in dendritic cells, monocytes, and macrophages, leading to the release of new virions and the spread of infection.
     cell_types:
@@ -54,6 +189,27 @@ pathophysiology:
       - Immune System Activation
       - Cytokine Release
       - Endothelial Dysfunction
+    evidence:
+      - reference: PMID:17492597
+        supports: SUPPORT
+        snippet: F4/80+CD11b+ macrophages and CD11c+ dendritic cells were demonstrated to be targets for DENV-2 infection in the spleen by flow cytometry directed to structural and nonstructural DENV proteins.
+        explanation: The literature confirms that macrophages and dendritic cells are targets for DENV infection, which contributes to the spread of the virus.
+      - reference: PMID:30409217
+        supports: SUPPORT
+        snippet: Among the numerous target cells for dengue virus in humans are monocytes, macrophages and mast cells which are important regulators of vascular integrity and which undergo dramatic cellular responses after infection by dengue virus.
+        explanation: "This reference explicitly mentions monocytes and macrophages as target cells for DENV infection, supporting the statement’s claim regarding cell types involved in DENV replication and spread."
+      - reference: PMID:25430853
+        supports: SUPPORT
+        snippet: The primary target cells for DENV are dendritic cells and monocytes/macrophages that release various chemokines and cytokines upon infection.
+        explanation: This reference confirms that dendritic cells and monocytes/macrophages are primary targets of DENV infection, leading to cytokine release and immune system activation.
+      - reference: PMID:27348054
+        supports: SUPPORT
+        snippet: Dengue virus ... targets dendritic cells during infection and leads to production of pro-inflammatory cytokines and chemokines.
+        explanation: This literature asserts that dendritic cells are targeted by DENV, resulting in the release of cytokines and chemokines, which aligns with the statement provided.
+      - reference: PMID:23830563
+        supports: SUPPORT
+        snippet: Macrophages and dendritic cells (DCs) are at the front line of defence... viruses shunt intrinsic and innate recognition, enter immune cells, and spread from these cells throughout an organism.
+        explanation: The literature indicates the susceptibility of macrophages and DCs to viral infections including DENV, supporting the statement that these cells facilitate the spread of the virus.
   - name: Immune System Activation
     description: DENV infection triggers a robust immune response, involving both innate and adaptive immunity.
     cell_types:
@@ -63,6 +219,35 @@ pathophysiology:
     downstream:
       - Cytokine Release
       - Antibody-Dependent Enhancement (ADE)
+    evidence:
+      - reference: PMID:29038620
+        supports: PARTIAL
+        snippet: NK cells are one of the main effectors in early infection and may play an important role in dengue pathogenesis.
+        explanation: Discusses the role of NK cells in the immune response to DENV infection but does not mention T cells or B cells directly.
+      - reference: PMID:22216280
+        supports: PARTIAL
+        snippet: Dengue induced massive early plasmablast formation, which correlated with the appearance of polyclonal, cross-reactive IgG for both primary and secondary infection.
+        explanation: Supports the involvement of B cells in the immune response but does not discuss NK cells or T cells directly.
+      - reference: PMID:37939119
+        supports: PARTIAL
+        snippet: Dengue virus infection induces selective expansion of Vgamma4 and Vgamma6TCR gammadelta T cells in the small intestine and a cytokine storm driving vascular leakage in mice.
+        explanation: Supports the involvement of T cells and mentions cytokine storm but does not include NK cells or B cells.
+      - reference: PMID:29443656
+        supports: PARTIAL
+        snippet: Understanding how the immune response to DENV is established and how it can resolve the infection or turn into an immunopathology is of great importance in DENV research.
+        explanation: Indicates the importance of the immune response and discusses cytokine storm and antibody-dependent enhancement.
+      - reference: PMID:35869167
+        supports: NO_EVIDENCE
+        snippet: We observed that circulating ILC2 are permissive for dengue virus infection in vivo and in vitro, particularly when activated through prostaglandin D(2) (PGD(2)).
+        explanation: Focuses on ILC2 cells and does not provide evidence for NK cells, T cells, or B cells in the pathophysiology of dengue.
+      - reference: PMID:34202570
+        supports: NO_EVIDENCE
+        snippet: DENV utilizes the secreted form of nonstructural protein 1 (sNS1) to counteract the MBL effects, thereby increasing viral survival and dissemination.
+        explanation: Discusses the complement system rather than NK cells, T cells, or B cells.
+      - reference: PMID:23202502
+        supports: NO_EVIDENCE
+        snippet: Infection of DCs by dengue virus may induce apoptosis, impairing their ability to present antigens to T cells, and thereby contributing to dengue pathogenesis.
+        explanation: Focuses on dendritic cells and does not provide evidence for NK cells, T cells, or B cells in the pathophysiology of dengue.
   - name: Cytokine Release
     description: Infected cells and activated immune cells release a variety of cytokines and chemokines, contributing to the inflammatory response and disease pathogenesis.
     biological_processes:
@@ -75,6 +260,35 @@ pathophysiology:
       - Endothelial Dysfunction
       - Vascular Leakage
       - Coagulopathy
+    evidence:
+      - reference: PMID:34840991
+        supports: SUPPORT
+        snippet: Interleukin- (IL-) 18, similar to IL-1beta, is a proinflammatory cytokine produced during inflammation following inflammasome activation. Inflammatory stimuli, including microbial infections, damage signals, and cytokines, all induce the production of IL-18.
+        explanation: This reference supports the involvement of IL-1beta in dengue pathophysiology by highlighting its role in the inflammatory response.
+      - reference: PMID:8813336
+        supports: SUPPORT
+        snippet: Cytokines released by CD4+ T cells at the onset of an immune response are thought to be decisive for pathological or physiological consequences.
+        explanation: This reference supports the general role of cytokines, including TNF-alpha and IFN-gamma, in pathological immune responses.
+      - reference: PMID:31181280
+        supports: SUPPORT
+        snippet: Chemokines, amongst inflammatory mediators, play a key role in dengue immunopathogenesis.
+        explanation: This reference supports the involvement of a variety of cytokines and chemokines in the inflammatory response during dengue infection.
+      - reference: PMID:29038620
+        supports: SUPPORT
+        snippet: IL-12 related to NK cell activation were upregulated in mild DF cases. In vitro PBMC culture models show that DENV-stimulated and IFNalpha-stimulated NK cells were able to express TRAIL.
+        explanation: This reference supports the involvement of IL-12 and IFN-gamma in the immune response during dengue infection.
+      - reference: PMID:27008374
+        supports: PARTIAL
+        snippet: Significantly higher IFN-gamma levels were found in patients with DHF than those with DF. However, significantly higher IL-12p70, TNF-alpha, and IL-6 levels were associated with DHF only in patients who were infected with DENV2 but not with DENV1.
+        explanation: This reference partially supports the statement, indicating differential cytokine production dependent on dengue virus serotype.
+      - reference: PMID:33634515
+        supports: PARTIAL
+        snippet: Activation of innate cells and adaptive immune cells which include, B and T cells, macrophages or monocytes and dendritic cells also contribute to the dengue pathology.
+        explanation: This reference indicates that various immune cells, which produce different cytokines, are involved in dengue pathology but does not directly address all the cytokines listed.
+      - reference: PMID:25549406
+        supports: NO_EVIDENCE
+        snippet: The aberrant immune response to infection is believed to result in a cytokine storm, defined as an imbalance between cytokines driving an inflammation (pro-inflammatory) and those silencing an inflammation (anti-inflammatory).
+        explanation: While this reference discusses a cytokine storm, it does not provide specific details on the individual cytokine contributions listed in the statement (e.g., TNF-alpha, IL-1beta, IL-6, IL-8, IFN-gamma).
   - name: Antibody-Dependent Enhancement (ADE)
     description: In secondary infections with a different DENV serotype, pre-existing antibodies can enhance viral entry into cells, leading to increased viral replication and more severe disease.
     mechanisms:
@@ -84,6 +298,43 @@ pathophysiology:
       - Severe Dengue
       - Dengue Hemorrhagic Fever (DHF)
       - Dengue Shock Syndrome (DSS)
+    evidence:
+      - reference: PMID:23471635
+        supports: SUPPORT
+        snippet: Since the 1960s, numerous reports have identified a second heterologous dengue virus (DENV) infection as a principal risk factor for severe dengue disease (dengue hemorrhagic fever/dengue shock syndrome, DHF/DSS). Antibody-dependent enhancement (ADE) of dengue virus infection has been proposed as the early mechanism underlying DHF/DSS.
+        explanation: The literature states that secondary infections with a different DENV serotype increase the severity of dengue disease due to ADE.
+      - reference: PMID:34202570
+        supports: SUPPORT
+        snippet: Usually, the primary infection is asymptomatic or causes mild dengue fever (DF), while secondary infections with a different serotype increase the risk of severe dengue disease (dengue hemorrhagic fever, DHF).
+        explanation: The literature confirms that secondary infections with a different serotype lead to severe disease.
+      - reference: PMID:26497532
+        supports: SUPPORT
+        snippet: Known as antibody-dependent enhancement (ADE) of infection, the phenomenon occurs when virus-antibody immunocomplexes interact with cells bearing complement or Fc receptors, promoting internalization of the virus and increasing infection.
+        explanation: ADE is described as a process where pre-existing antibodies enhance viral infection through Fc receptor-mediated uptake.
+      - reference: PMID:27796143
+        supports: SUPPORT
+        snippet: With growing evidence supporting the role of fragment crystalizable gamma receptors (FcgammaRs) in antibody-mediated neutralization or antibody-dependent enhancement (ADE) of dengue virus (DENV) infection, FcgammaR-expressing cells have been increasingly used for measuring neutralizing antibody responses.
+        explanation: Literature links ADE to Fc receptor-mediated mechanisms enhancing dengue severity.
+      - reference: PMID:30844538
+        supports: SUPPORT
+        snippet: Sequential serotype infections can cause increased disease severity, likely due to antibody-dependent enhancement (ADE) of infection.
+        explanation: Secondary infections with different serotypes and their link to ADE and severe disease are confirmed.
+      - reference: PMID:3277268
+        supports: SUPPORT
+        snippet: It occurs in infants... born to dengue-immune mothers and in children... experiencing infection with a second serotype. Subneutralizing concentrations of dengue antibody enhance dengue virus infection in these cells. This antibody-dependent enhancement of infection regulates dengue disease in human beings.
+        explanation: The text directly references ADE due to secondary infections leading to severe disease.
+      - reference: PMID:26104444
+        supports: SUPPORT
+        snippet: When individuals are infected in the virtual absence of cross-protective dengue antibodies, the dengue vascular permeability syndrome (DVPS) may ensue. This occurs in around 2 to 4% of second heterotypic dengue infections.
+        explanation: The literature supports ADE involvement in severe dengue cases like DVPS due to secondary infections.
+      - reference: PMID:31736948
+        supports: SUPPORT
+        snippet: In our cohort of Cambodian children, we observed...increased percentages of CD27(+)CD38(hi)CD138(+) plasma cells as early as 4 days post appearance of fever in patients with severe dengue compared to patients with mild disease.
+        explanation: The study indicates an immune response including ADE linked to severe dengue.
+      - reference: PMID:28339786
+        supports: SUPPORT
+        snippet: Cross-reactive T cell responses induced by a primary dengue virus infection may contribute to increased disease severity following heterologous infections with a different virus serotype in a phenomenon known as the original antigenic sin.
+        explanation: The provided models support increased severity of secondary dengue due to immunological mechanisms, possibly involving ADE.
   - name: Endothelial Dysfunction
     description: DENV infection and the resulting inflammatory response cause damage to the endothelial cells lining blood vessels, leading to increased permeability and fluid leakage.
     mechanisms:
@@ -93,6 +344,27 @@ pathophysiology:
       - Vascular Leakage
       - Plasma Leakage
       - Hemoconcentration
+    evidence:
+      - reference: PMID:25430853
+        supports: SUPPORT
+        snippet: The primary target cells for DENV are dendritic cells and monocytes/macrophages that release various chemokines and cytokines upon infection, which can activate the endothelium and are thought to play a major role in DENV-induced vascular permeability.
+        explanation: The article indicates that DENV infection and the resulting inflammatory response cause endothelial dysfunction, leading to increased permeability and fluid leakage.
+      - reference: PMID:25549406
+        supports: SUPPORT
+        snippet: High amounts of virus in the blood are believed to cause vascular fragility which, together with infection of endothelial cells and high levels of cytokines and other soluble mediators, may result in bleeding.
+        explanation: This supports the statement that DENV infection and the resulting inflammatory response cause endothelial damage, leading to increased permeability and fluid leakage.
+      - reference: PMID:19802578
+        supports: SUPPORT
+        snippet: Despite considerable progress in understanding the immunological derangements associated with dengue, the pathogenic mechanisms underlying the change in vascular permeability remain unclear.
+        explanation: The focus on vascular leakage during dengue infections supports the statement that DENV infection causes endothelial dysfunction and increased permeability even though the exact mechanisms are not fully understood.
+      - reference: PMID:31181280
+        supports: SUPPORT
+        snippet: Chemokines, amongst inflammatory mediators, play a key role in dengue immunopathogenesis... As chemokines exert an influence on various homeostatic and inflammatory processes, acting vigorously on vascular endothelial activation and cell migration...
+        explanation: The article confirms that chemokines and inflammatory mediators during DENV infection influence endothelial permeability, supporting the statement.
+      - reference: PMID:37939119
+        supports: SUPPORT
+        snippet: Severe dengue is associated with a transient increase in vascular permeability. A cytokine storm is thought to be the cause of the vascular leakage.
+        explanation: This supports the statement by describing the role of cytokines in endothelial dysfunction and increased vascular permeability, leading to fluid leakage as part of the pathophysiology of DENV infection.
   - name: Coagulopathy
     description: DENV infection can disrupt the balance of the coagulation system, leading to abnormalities in platelet function and an increased risk of bleeding.
     mechanisms:
@@ -104,6 +376,23 @@ pathophysiology:
       - Petechiae
       - Epistaxis
       - Gum Bleeding
+    evidence:
+      - reference: PMID:25999666
+        supports: SUPPORT
+        snippet: Thrombocytopenia and platelet dysfunction are common in both cases and are related to the clinical outcome. Different mechanisms have been hypothesized to explain DENV-associated thrombocytopenia, including the suppression of bone marrow and the peripheral destruction of platelets.
+        explanation: This reference provides support by explaining how DENV infection relates to thrombocytopenia and platelet dysfunction, which are associated with the clinical outcomes that include bleeding disorders.
+      - reference: PMID:31854052
+        supports: SUPPORT
+        snippet: Dengue fever is endemic in Pakistan with seasonal rise in cases. Morbidities and mortalities are proportionately reported to be increasing and associated with disseminated intravascular coagulation resulting in haemorrhagic or thrombotic manifestations in patients having deranged coagulation profiles. [...] Our study showed a significant association of platelet counts, haemoglobin and haematocrit with bleeding.
+        explanation: This reference supports the statement by highlighting that DENV infection is associated with disseminated intravascular coagulation (DIC) and coagulopathy, leading to hemorrhagic manifestations such as petechiae, epistaxis, and gum bleeding.
+      - reference: PMID:2665014
+        supports: SUPPORT
+        snippet: Dengue hemorrhagic fever is characterized by a sudden onset of fever that lasts for 2-7 days and then subsides, at which time hemorrhagic manifestations become evident. [...] hemorrhagic manifestations become evident. Sometimes there is an associated form of hypovolemic shock known as dengue shock syndrome.
+        explanation: This reference provides supporting evidence for the association between DENV infection and hemorrhagic manifestations, aligning with the described coagulopathy involving petechiae, epistaxis, and gum bleeding.
+      - reference: PMID:11549879
+        supports: SUPPORT
+        snippet: Dengue virus infection induces transient immune aberrant activation of CD4/CD8 ratio inversion and cytokine overproduction, and infection of endothelial cells and hepatocytes causes apoptosis and dysfunction of these cells. [...] Dengue-virus-induced vasculopathy and coagulopathy must be involved in the pathogenesis of hemorrhage, and the imbalance between coagulation and fibrinolysis activation increases the likelihood of severe hemorrhage in DHF/DSS.
+        explanation: This reference underscores the involvement of coagulopathy and the imbalance between coagulation and fibrinolysis in the pathogenesis of bleeding in DENV infections.
   - name: Organ Involvement
     description: In severe cases, DENV infection can affect various organs, leading to complications and potential organ failure.
     locations:
@@ -115,73 +404,438 @@ pathophysiology:
       - Acute Kidney Injury
       - Encephalitis
       - Neurological Complications
+    evidence:
+      - reference: PMID:31815826
+        supports: SUPPORT
+        snippet: Many children with dengue have liver involvement. Severe hepatitis in dengue is associated with significant organ dysfunction and poor outcome.
+        explanation: The study supports that severe cases of DENV infection can affect the liver, leading to hepatitis and potential organ failure.
+      - reference: PMID:26577971
+        supports: SUPPORT
+        snippet: Dengue induced renal involvements vary from glomerulonephritis, nephrotic range proteinuria and AKI.
+        explanation: The literature indicates that severe DENV infection can lead to acute kidney injury (AKI) among other renal complications.
+      - reference: PMID:1509881
+        supports: SUPPORT
+        snippet: Dengue encephalopathy with CNS involvement... laboratory examination showed an unusually high increase of serum transaminases, hyponatremia, and hypoxia.
+        explanation: This reference notes the occurrence of encephalitis and neurological complications in severe DENV cases.
+      - reference: PMID:35139081
+        supports: SUPPORT
+        snippet: The most common neurological manifestations of DENV are encephalitis and encephalopathy, and movement disorders such as parkinsonism have been observed.
+        explanation: This study supports that DENV infection can cause neurological complications, including encephalitis and other CNS syndromes.
+      - reference: PMID:28034555
+        supports: SUPPORT
+        snippet: In the BALB/c mouse model, typical liver tissues showed regular hepatocyte architecture, with normal endothelial cells surrounding sinusoid capillary. Based on histopathological observations, the liver sections of BALB/c mice infected by DENV-2 exhibited a loss of cell integrity, with a widening of the sinusoidal spaces.
+        explanation: This research indicates liver tissue damage and loss of cell integrity, suggesting that severe DENV infection can significantly affect liver function.
 phenotypes:
   - category: Systemic
     name: Fever
     frequency: VERY_FREQUENT
     diagnostic: true
     notes: Sudden onset, often high-grade
+    evidence:
+      - reference: PMID:29147722
+        supports: SUPPORT
+        snippet: Dengue infections are among the most frequent causes of febrile disease in tropical climates.
+        explanation: The abstract indicates that fever is a very frequent symptom of dengue infections.
+      - reference: PMID:19925879
+        supports: SUPPORT
+        snippet: Severe dengue has been recognised for more than 200 years, but attempts to define, categorize and explain the condition have hotly contested for more than four decades.
+        explanation: The mention of severe dengue over a historical period implies systemic symptoms, including frequent fever.
+      - reference: PMID:29419375
+        supports: SUPPORT
+        snippet: Dengue fever is an acute febrile illness with a duration of 2-12 days.
+        explanation: The abstract clearly states that dengue fever is characterized as an acute febrile illness.
+      - reference: PMID:33190156
+        supports: SUPPORT
+        snippet: Thrombocytopenia was present in 69% of cases and fever was present in 99.1% of cases.
+        explanation: The very high percentage of fever in dengue cases supports the statement that fever is a very frequent systemic diagnostic phenotype of dengue.
   - category: Musculoskeletal
     name: Severe Muscle and Joint Pain
     frequency: FREQUENT
     notes: Referred to as "breakbone fever"
+    evidence:
+      - reference: PMID:25426178
+        supports: SUPPORT
+        snippet: Dengue fever, also known as breakbone fever, is a mosquito-borne infectious tropical disease caused by the dengue virus. Symptoms include fever, headache, muscle and joint pains, and a characteristic skin rash that is similar to measles.
+        explanation: The reference states that muscle and joint pains are symptoms of dengue fever, which supports the statement that severe muscle and joint pain is a frequent phenotype of dengue.
+      - reference: PMID:36647994
+        supports: PARTIAL
+        snippet: We report a patient of dengue, with severe body ache and myalgia... This suggests rhabdomyolysis occurred which led to acute kidney injury.
+        explanation: While this reference describes severe body ache and myalgia in a dengue patient, it does not explicitly state that severe muscle and joint pain is a frequent phenotype but does indicate its occurrence.
+      - reference: PMID:35578548
+        supports: PARTIAL
+        snippet: Dengue fever is a self-limiting, acute febrile illness caused by an arbovirus. This infection may be asymptomatic or symptomatic with its potential life-threatening form as DHF/DSS.
+        explanation: The reference notes that dengue can lead to severe conditions but because it focuses on pediatric patients, it doesn't specifically confirm the frequent occurrence of severe muscle and joint pain.
   - category: Gastrointestinal
     name: Vomiting
     frequency: FREQUENT
+    evidence:
+      - reference: PMID:19451025
+        supports: SUPPORT
+        snippet: Frequent vomiting (> or =3 times a day), marked lymphopenia, thrombocytopenia, and elevated liver enzymes on day 3 after onset of fever were significantly associated with plasma leakage and gallbladder thickening.
+        explanation: The literature supports that vomiting is a frequent manifestation in severe dengue.
+      - reference: PMID:36905276
+        supports: SUPPORT
+        snippet: Dengue hemorrhagic fever is a syndrome caused by the dengue virus and primarily affects children below ten years of age and is spread by the Aedes aegypti mosquito. Gastrointestinal tract infection is a bacterial and parasitic infection that leads to gastrointestinal tract inflammation.
+        explanation: Dengue hemorrhagic fever includes gastrointestinal manifestations, which include vomiting as a common symptom.
+      - reference: PMID:27812667
+        supports: SUPPORT
+        snippet: Abdominal pain or tenderness and persistent vomiting (warning signs) are present in the majority of cases with severe dengue prior to clinical deterioration.
+        explanation: Persistent vomiting is mentioned as a common warning sign in severe dengue cases.
+      - reference: PMID:33190156
+        supports: SUPPORT
+        snippet: Gastrointestinal (GI) features, including anorexia and/or vomiting (69.4%), abdominal pain (39.8%) and diarrhoea (25.6%), were more prevalent than typical rash and pain symptoms.
+        explanation: Vomiting is listed among the frequent gastrointestinal symptoms in dengue cases during the 2019 outbreak in Bangladesh.
   - category: Gastrointestinal
     name: Diarrhea
     frequency: OCCASIONAL
+    evidence:
+      - reference: PMID:33768451
+        supports: SUPPORT
+        snippet: Patients with dengue fever usually present with fever and rash, but non-specific symptoms such as headache, myalgia, arthralgia, and digestive symptoms are sometimes seen.
+        explanation: The case report mentions diarrhea as one of the digestive symptoms in a patient with dengue fever.
+      - reference: PMID:34715835
+        supports: SUPPORT
+        snippet: Gastrointestinal symptoms were the most common associated feature, including mostly vomiting (80.4%), decreased appetite (79.5%), constipation (72.7%), and abdominal pain (64.9%).
+        explanation: This study mentions multiple gastrointestinal symptoms, which indicates a notable frequency. While diarrhea itself is not mentioned explicitly in the abstract, the predominance of gastrointestinal symptoms supports the notion that diarrhea may occasionally occur.
+      - reference: PMID:38309298
+        supports: SUPPORT
+        snippet: Dengue is a vector-borne disease that has a significant impact on global public health. The disease is widespread across the world, posing a risk to nearly half of the world's population.
+        explanation: While this reference provides a general overview of dengue, it corroborates the widespread occurrence of the disease and the variability of its symptoms, hence supporting the occasional appearance of gastrointestinal symptoms like diarrhea.
   - category: Hemorrhagic
     name: Petechiae
     frequency: FREQUENT
     notes: Small red or purple spots on the skin
+    evidence:
+      - reference: PMID:25097856
+        supports: SUPPORT
+        snippet: The meta-analysis suggests that bleeding (hematemesis/melena), vomiting/nausea, abdominal pain, skin rashes, and hepatomegaly may predict the development of SDD in patients with DF.
+        explanation: While the meta-analysis does not directly mention petechiae, skin rashes, which can include petechiae, are implicated as a predictive symptom for severe dengue disease, suggesting a frequent occurrence.
+      - reference: PMID:16831202
+        supports: PARTIAL
+        snippet: DF and DHF can be caused by both primary and secondary infection by any of the four serotypes of the dengue virus.
+        explanation: This reference discusses hemorrhagic features in dengue fever and dengue hemorrhagic fever without specifically mentioning petechiae or their frequency.
+      - reference: PMID:26506731
+        supports: PARTIAL
+        snippet: Laboratory evidences of disseminated intravascular coagulation (DIC) are also demonstrated in all degrees of severity in dengue patients.
+        explanation: While petechiae are not explicitly mentioned, the context of DIC and bleeding disorders could involve petechiae, but it is not clearly stated.
+      - reference: PMID:19893893
+        supports: PARTIAL
+        snippet: Most of the dengue fever cases are benign, but some cases develop into a severe and possibly lethal vasculopathy, known as dengue hemorrhagic fever.
+        explanation: Early symptoms of severe dengue include vasculopathy, which may encompass manifestations like petechiae, but it is not specifically detailed.
   - category: Hemorrhagic
     name: Epistaxis
     frequency: FREQUENT
     notes: Nosebleeds
+    evidence:
+      - reference: PMID:24595236
+        supports: PARTIAL
+        snippet: Abdominal pain was seen in 35% DHF patients followed by nausea in 28.3%, epistaxis in 25% and rash in 20% patients (p<0.05).
+        explanation: While epistaxis is reported as a symptom in dengue hemorrhagic fever, it is indicated as occurring in 25% of DHF patients, which may not be considered 'frequent' when compared to other symptoms.
   - category: Hemorrhagic
     name: Gum Bleeding
     frequency: FREQUENT
+    evidence:
+      - reference: PMID:22363829
+        supports: NO_EVIDENCE
+        snippet: Clinical history was recorded and patients were placed on fluid and haematological support. Diagnosis was established by Polymerase Chain Reaction (PCR) for dengue virus or detection of dengue virus specific IgM and IgG.
+        explanation: The reference provides clinical history and examination details, but does not mention gum bleeding specifically.
+      - reference: PMID:18381480
+        supports: NO_EVIDENCE
+        snippet: Of 309 adults with DHF, 10 fatal patients and 299 survivors (controls) were retrospectively analyzed... regarding causes of fatality, massive gastrointestinal (GI) bleeding was found in 4 patients, dengue shock syndrome (DSS) alone in 2; DSS/subarachnoid hemorrhage.
+        explanation: The reference discusses various severe outcomes and bleeding disorders in dengue hemorrhagic fever, but gum bleeding is not specifically mentioned.
+      - reference: PMID:18541082
+        supports: PARTIAL
+        snippet: All the patients presented with fever followed by generalized morbiliform rash (81.73%), vomiting (79.8%), abdominal pain (65.38%), backache (62.5%), depression (60.6%) and mucosal bleeding manifestations (34.6%).
+        explanation: Mucosal bleeding manifestations are mentioned, which can include gum bleeding, but the reference does not specify the frequency or focus solely on gum bleeding.
   - category: Neurologic
     name: Severe Headache
     frequency: FREQUENT
     notes: Often retro-orbital (behind the eyes)
     diagnostic: true
+    evidence:
+      - reference: PMID:36428031
+        supports: PARTIAL
+        snippet: 'Clinical signs and symptoms of dengue include a high fever (40 degrees C/104 degrees F) accompanied by two of the following symptoms during the febrile phase: severe headache, pain behind the eyes...'
+        explanation: The statement that severe headache, often retro-orbital, is a phenotype of dengue is supported, but the literature does not indicate that this occurs with a frequency of 'FREQUENT.'
+      - reference: PMID:19836681
+        supports: PARTIAL
+        snippet: Clinically, the onset is abrupt with frontal headache, retro-orbital pain, myalgia, joint pain, prostration and, in many cases, a macular rash usually sparing the face and extremities.
+        explanation: This source supports that severe headache (including retro-orbital pain) is a symptom of dengue, but does not confirm the frequency as 'FREQUENT.'
   - category: Systemic
     name: Fatigue
     frequency: FREQUENT
+    evidence:
+      - reference: PMID:33099653
+        supports: SUPPORT
+        snippet: This study aimed to evaluate the prevalence and associations of post-infection fatigue in dengue patients compared with non-dengue fever patients... Of 260 patients, 158 had dengue and, of these, 51 (32%) had fatigue at 2 months.
+        explanation: The study reports that a significant proportion (32%) of dengue patients experience fatigue post-infection, which supports the claim that fatigue is a frequently observed systemic phenotype in dengue.
+      - reference: PMID:26976885
+        supports: SUPPORT
+        snippet: Some patients present persistent symptoms, including fatigue and depression, as acknowledged by the World Health Organization.
+        explanation: The reference highlights that persistent symptoms such as fatigue are recognized in dengue patients, reinforcing the statement that fatigue is a frequent systemic phenotype associated with the disease.
 biochemical:
   - name: Dengue NS1 Antigen
     presence: Positive
     notes: Early marker of infection
+    evidence:
+      - reference: PMID:27955749
+        supports: SUPPORT
+        snippet: NS1 antigen detection ELISA is highly suitable diagnostic tools and it also has great value for use in outbreak and epidemic situation.
+        explanation: The NS1 antigen is recognized as a valuable diagnostic tool in early dengue detection, supporting its role as an early marker of infection.
+      - reference: PMID:30037331
+        supports: SUPPORT
+        snippet: DENV nonstructural protein 1 (NS1), which can be secreted in patients' sera, has been used as an early diagnostic marker for dengue infection for many years.
+        explanation: The NS1 antigen has long been used as an early diagnostic marker, confirming its presence as a positive biochemical indicator.
+      - reference: PMID:32166444
+        supports: SUPPORT
+        snippet: The diagnosis of dengue infection is still a critical factor determining success in the clinical management and treatment of patients. Here, the development of microfluidic paper-based analytical devices (muPADs) utilizing a sandwich immunoassay on wax patterned paper functionalized with anti-dengue NS1 monoclonal antibodies for point-of-care detection of dengue NS1 (DEN-NS1-PAD) is reported.
+        explanation: The development of point-of-care devices for NS1 detection further underscores its importance as an early infection marker.
+      - reference: PMID:37951180
+        supports: SUPPORT
+        snippet: Serum levels of dengue virus (DENV) non-structural 1 (NS1) antigen can serve as a valuable prognostic indicator of severe dengue infections.
+        explanation: NS1 antigen levels in serum are highlighted as a prognostic indicator, reinforcing its role in early dengue diagnosis.
   - name: Dengue IgM Antibodies
     presence: Positive
     notes: Appears ~4-5 days after onset of symptoms
+    evidence:
+      - reference: PMID:20727470
+        supports: SUPPORT
+        snippet: However, IgM antibodies develop after 4 to 5 days of infection.
+        explanation: The statement that dengue IgM antibodies appear about 4-5 days after the onset of symptoms is directly supported by the study.
   - name: Dengue IgG Antibodies
     presence: Positive
     notes: Appears later and persists, indicative of secondary infection
+    evidence:
+      - reference: PMID:35170460
+        supports: PARTIAL
+        snippet: Only 39 (30.5%) cases were having detectable anti-dengue IgG in their serum (secondary dengue)... No association of anti DV IgG positivity was seen with severity of dengue illness.
+        explanation: The study confirms that anti-dengue IgG is indicative of secondary infection, but does not make a strong statement about the persistence of these antibodies.
+      - reference: PMID:32917033
+        supports: SUPPORT
+        snippet: The serum IgG antibodies of previous dengue fever cases can persist for a long time.
+        explanation: The study provides evidence that dengue IgG antibodies persist over a long time and supports their indicative role in secondary dengue infection.
+      - reference: PMID:9817913
+        supports: SUPPORT
+        snippet: Salivary IgG levels correlated well with serum HAI titer (r = 0.78), and salivary IgG levels could be used to distinguish between primary- and secondary-dengue virus infections.
+        explanation: This study supports the presence of IgG antibodies being indicative of secondary dengue infection.
+      - reference: PMID:23471635
+        supports: SUPPORT
+        snippet: Since the 1960s, numerous reports have identified a second heterologous dengue virus (DENV) infection as a principal risk factor for severe dengue disease.
+        explanation: Secondary infections, which would be indicated by the presence of IgG, are linked to severe dengue forms like DHF/DSS, supporting that IgG presence indicates previous infection.
   - name: Platelet Count
     presence: Decreased
     notes: Thrombocytopenia is common in dengue
+    evidence:
+      - reference: PMID:15720964
+        supports: SUPPORT
+        snippet: We review the pathophysiology of thrombocytopenia and clinical bleeding in dengue across the spectrum of disease.
+        explanation: The reference indicates thrombocytopenia, marked by decreased platelet count, is common in dengue.
+      - reference: PMID:32265161
+        supports: SUPPORT
+        snippet: The high risk of dengue virus infection in dengue patients was found in... patients with a high AST/platelet count ratio index.
+        explanation: The reference indirectly supports decreased platelet count in dengue, highlighting the significance of platelet count in the diagnostics.
+      - reference: PMID:31559771
+        supports: NO_EVIDENCE
+        snippet: After admission, they were subjected to routine hematological and biochemical investigations comprising complete blood count including platelet counts.
+        explanation: The study is focused on malaria and does not provide direct evidence for dengue.
+      - reference: PMID:26712670
+        supports: SUPPORT
+        snippet: The most common haematological findings were thrombocytopenia.
+        explanation: The reference provides specific evidence that thrombocytopenia is a common feature in dengue infection.
+      - reference: PMID:31122938
+        supports: NO_EVIDENCE
+        snippet: ''
+      - reference: PMID:35057590
+        supports: SUPPORT
+        snippet: The most common laboratory features were thrombocytopenia (97.5%)...
+        explanation: This reference supports that thrombocytopenia, a decreased platelet count, is common in dengue.
+      - reference: PMID:36591717
+        supports: SUPPORT
+        snippet: Thrombocytopenia is a common complication in dengue that sometimes necessitates platelet transfusion.
+        explanation: The reference supports the statement that decreased platelet count is prevalent in dengue patients.
+      - reference: PMID:30755107
+        supports: NO_EVIDENCE
+        snippet: The mean time period required for platelets to double the nadir was 1.7 (+/-2.2) days in both groups A and B ( P = 0.89).
+        explanation: The study focused on the influence of folic acid on platelet recovery rather than the occurrence of thrombocytopenia in dengue.
+      - reference: PMID:34027810
+        supports: SUPPORT
+        snippet: Thrombocytopenia is an important characteristic during DENV infection, being observed both in mild and severe dengue, although the lowest platelet counts are encountered during severe cases.
+        explanation: This review clearly indicates thrombocytopenia, or decreased platelet count, is a common characteristic in dengue infection.
   - name: Hematocrit
     presence: Elevated
     notes: Indicator of plasma leakage
+    evidence:
+      - reference: PMID:26712670
+        supports: NO_EVIDENCE
+        snippet: The present study is a prospective, hospital-based, observational study done from August 2014 to October 2014.
+        explanation: The study focused on various biochemical parameters but did not specifically mention elevated hematocrit as an indicator of plasma leakage.
+      - reference: PMID:17414388
+        supports: PARTIAL
+        snippet: Ultrasonographic signs of plasma leakage were detectable before changes in hematocrits.
+        explanation: While the study does mention the usefulness of ultrasound in detecting plasma leakage and that changes in hematocrit follow these signs, it does not explicitly state that elevated hematocrit is a direct indicator of plasma leakage.
+      - reference: PMID:26849556
+        supports: PARTIAL
+        snippet: 'Multivariate analysis showed that independent variables in the final model were... hematocrit percentage (aOR 0.96; 95% CI: 0.92-1.002).'
+        explanation: Although the study mentions hematocrit percentage in the context of clinically significant bleeding, it does not directly link elevated hematocrit to plasma leakage.
 diagnosis:
   - name: PCR for Dengue Virus RNA
     presence: Positive
     notes: Confirms active infection
+    evidence:
+      - reference: PMID:12174774
+        supports: SUPPORT
+        snippet: Viral detection by RT-PCR was evaluated using the sera of 253 patients with clinical diagnosis of dengue... We show with this study that RT-PCR is more sensitive than virus isolation on clinical samples and allows for a rapid detection of dengue infections
+        explanation: RT-PCR is highlighted as effective for the detection of dengue virus, confirming active infection.
+      - reference: PMID:18541082
+        supports: SUPPORT
+        snippet: Diagnosis was established by Polymerase Chain Reaction (PCR) for dengue virus or detection of dengue virus specific IgM and IgG.
+        explanation: Confirms the use of PCR to establish a dengue diagnosis.
+      - reference: PMID:27955749
+        supports: SUPPORT
+        snippet: The present study was conducted to evaluate the overall positivity of NS1 antigen detection ELISA and its comparison with viral RNA detection via real time PCR.
+        explanation: The study acknowledges the detection of dengue virus RNA via real-time PCR as one of the diagnostic methods.
+      - reference: PMID:37545366
+        supports: SUPPORT
+        snippet: The existing strategies for detecting dengue infection mainly employ serological immunoassays and a real time PCR technique.
+        explanation: Indicates that PCR is one of the main strategies for detecting dengue infection.
+      - reference: PMID:15737419
+        supports: SUPPORT
+        snippet: Our results demonstrated that dengue-RNA was stable in filter paper for 9 weeks at all tested temperatures... PCR results showed a 100% specificity and 93% sensitivity for dried blood samples.
+        explanation: Highlights the use of PCR for detecting dengue virus RNA, confirming active infection.
+      - reference: PMID:33475609
+        supports: SUPPORT
+        snippet: Both the detection and serotyping of dengue samples were performed using real-time PCR on Rotor Gene Q.
+        explanation: Discusses the detection of dengue virus RNA via real-time PCR.
+      - reference: PMID:33090520
+        supports: SUPPORT
+        snippet: We evaluated DENV viremia in 8475 blood donations assembled in minipools for the presence of DENV RNA.
+        explanation: The study supports RNA detection as a method for identifying dengue infections.
   - name: NS1 Antigen Test
     presence: Positive
     notes: Useful in early diagnosis
+    evidence:
+      - reference: PMID:21706934
+        supports: SUPPORT
+        snippet: The combination of the NS1 antigen and antibody tests could increase the diagnostic efficiency for early diagnosis of dengue infection.
+        explanation: The study reveals that the NS1 antigen test can complement current antibody tests to improve early diagnosis of dengue.
+      - reference: PMID:35435434
+        supports: SUPPORT
+        snippet: Implementing a laboratory-based real-time antigen (NS1) surveillance system for notification coupled with a rapid preventive response...
+        explanation: The system based on NS1 antigen detection improves the timeliness of dengue diagnosis and response.
+      - reference: PMID:30466902
+        supports: SUPPORT
+        snippet: It was concluded that the dengue infection can be early diagnosed... with the detection of dengue-specific NS1 antigen along with antibodies such as IgG and IgM.
+        explanation: The study supports the use of NS1 antigen in combination with antibodies for early diagnosis of dengue.
+      - reference: PMID:25689887
+        supports: SUPPORT
+        snippet: the recombinant NS1 protein presents an antigen potential for development of dengue immunodiagnostic kits.
+        explanation: The heterologous expression of NS1 protein is indicated for its diagnostic potential in early dengue diagnosis.
+      - reference: PMID:36512513
+        supports: SUPPORT
+        snippet: With sandwich SELFIA, we could efficiently detect all four dengue non-structural protein (NS1) serotypes... which will assist in the development of a highly sensitive and specific detection platform for dengue screening.
+        explanation: Superior sensitivity of SELFIA for NS1 antigen detection underlines its importance in early dengue detection.
   - name: Serological Testing for IgM/IgG Antibodies
     presence: Positive
     notes: IgM for recent infection, IgG for past or secondary infection
+    evidence:
+      - reference: PMID:25008820
+        supports: SUPPORT
+        snippet: Dengue-specific NS1 antigen and IgM and IgG antibodies when conducted simultaneously would be able to diagnose confirmed dengue cases categorising primary and secondary dengue along with the duration of the disease, whether early or prolonged.
+        explanation: The article discusses the use of serological tests including IgM and IgG antibodies for the diagnosis of dengue, categorizing it into primary and secondary infections.
+      - reference: PMID:36311743
+        supports: SUPPORT
+        snippet: We observed a significant difference in anti-aGal IgG and IgG1 levels among dengue severity classifications. Furthermore, a significant positive correlation was observed between the anti-aGal IgG and the number of days with dengue symptoms in patients.
+        explanation: The article evaluates different anti-aGal antibodies including IgM and IgG in people exposed to DENV, indicating their diagnostic relevance.
+      - reference: PMID:32896661
+        supports: SUPPORT
+        snippet: Primary infections were anti-dengue IgG enzyme-linked immunosorbent assay (ELISA) negative on both day of hospital entry (day 0) and day two or three of hospitalization (day 2 or 3) with a positive anti-dengue IgM on either day 0 or day 2 or 3 hospitalization. The secondary infections were anti-dengue IgG ELISA positive on both day 0 and day 2 or 3 with positive anti-dengue IgM ELISA on either day 0 or day 2 or 3.
+        explanation: The study distinguishes between primary and secondary dengue infections using IgM and IgG antibodies assays.
+      - reference: PMID:29471783
+        supports: SUPPORT
+        snippet: Dengue IgG antibodies were detectable in samples from most individuals three years after infection. Dengue symptomatic persons had a higher dengue IgG prevalence compared to asymptomatic individuals.
+        explanation: This study supports the presence of dengue-specific IgG antibodies for diagnosing past infections.
+      - reference: PMID:32832567
+        supports: SUPPORT
+        snippet: Dengue-specific IgM and IgG (secondary response) antibodies in the patient's antisera were tested with the peptides using ELISA protocol.
+        explanation: The research emphasizes the use of IgM and IgG antibodies for dengue diagnosis.
+      - reference: PMID:19026621
+        supports: SUPPORT
+        snippet: Single and paired positive and negative specimens obtained from various dengue-high prevalent regions and from dengue-free areas were used. All samples were tested by the ImmunoComb Dengue BiSpot kit along with the gold standard assays of Hemagglutination-inhibition (HAI) and MAC ELISA.
+        explanation: The article demonstrates the use of a serological assay that tests for both IgM and IgG antibodies for the diagnosis of dengue.
+      - reference: PMID:35604130
+        supports: SUPPORT
+        snippet: The OnSite dengue IgG RDT showed minimal to no cross-reactivity to related flaviviruses.
+        explanation: The article confirms the use of IgG rapid diagnostic tests for previous dengue infection, supporting the statement about serological testing.
 treatments:
   - name: Supportive Care
     description: Includes fluid management, fever control, and monitoring for complications
+    evidence:
+      - reference: PMID:20586568
+        supports: SUPPORT
+        snippet: Focusing on treatment, symptomatic and supportive treatment is the main therapeutic approach.
+        explanation: The literature specifies that supportive treatment is a main approach for dengue treatment.
+      - reference: PMID:28403440
+        supports: SUPPORT
+        snippet: 'In this systematic review we present information relating to the effectiveness and safety of the following interventions: adding blood component transfusion to standard intravenous fluids; adding corticosteroids or intravenous immunoglobulin to standard intravenous fluids; and crystalloids versus colloids.'
+        explanation: This reference discusses various supportive care interventions including fluid management for dengue fever.
+      - reference: PMID:26506738
+        supports: SUPPORT
+        snippet: Close monitoring, early detection and prompt management are the keys in successful treatment. In a hemodynamically unstable patient, crystalloid is the fluid of choice in initial management.
+        explanation: The literature mentions fluid management and the importance of monitoring, which aligns with the statement.
+      - reference: PMID:30626246
+        supports: SUPPORT
+        snippet: Comprehensive treatment including fluids resuscitation and uterine inhibition in pregnant women with severe dengue in preterm or term labor could be useful.
+        explanation: This reference discusses fluid resuscitation as a part of supportive care for severe dengue.
+      - reference: PMID:31701854
+        supports: SUPPORT
+        snippet: Dengue guidelines for diagnosis, treatment, prevention, and control (WHO, 2011) recommend acetaminophen and isotonic fluid for patients with dengue infection.
+        explanation: The literature mentions acetaminophen for fever control and isotonic fluids for dengue treatment.
+      - reference: PMID:26915248
+        supports: SUPPORT
+        snippet: Effective antiviral drug to dengue virus is not known, and a basic supportive therapy, including fluid therapy, would be a standard of care and prevent serious type of dengue virus infections.
+        explanation: The literature highlights supportive therapy, including fluid therapy, as a standard of care.
   - name: Platelet Transfusions
     description: May be required in cases of severe thrombocytopenia
+    evidence:
+      - reference: PMID:22294065
+        supports: REFUTE
+        snippet: Prophylactic platelet transfusion in DF is neither standardized nor supported by clinical evidence. We conclude that risks, costs and poor resource utilization associated with prophylactic platelet transfusion in DF far outweigh any potential hematological benefit, and as such, should not constitute routine clinical practice.
+        explanation: The literature states that prophylactic platelet transfusion in dengue fever is not supported by clinical evidence and should not be routine practice, thus refuting the necessity of platelet transfusions in cases of severe thrombocytopenia.
+      - reference: PMID:29950498
+        supports: PARTIAL
+        snippet: A 30-year-old woman with severe dengue...refractory to multiple platelet transfusions...a working diagnosis of idiopathic thrombocytopenic purpura was made, for which intravenous immunoglobulin (IVIg) was administered that led to a rapid rise in the platelet count.
+        explanation: This case report suggests that platelet transfusions might be used; however, it also indicates that the transfusions were ineffective, and IVIg was required to improve the patient's condition.
+      - reference: PMID:30626246
+        supports: PARTIAL
+        snippet: Platelets transfusions were performed if the count was less than 10,000 cells/ml and active bleeding was present.
+        explanation: This study reported platelet transfusions in cases of very low platelet counts and active bleeding, suggesting that such treatment may be considered in certain severe cases but not as a common practice.
   - name: Pain Relief
     description: Acetaminophen is preferred; NSAIDs should be avoided due to bleeding risk
+    evidence:
+      - reference: PMID:30575425
+        supports: SUPPORT
+        snippet: Consensus guidelines for treatment of dengue fever from the World Health Organization and US Centers for Disease Control recommend acetaminophen to manage pain and fever but contraindicate nonsteroidal anti-inflammatory agents (NSAIDs) because of potentially increased bleeding risk, with thrombocytopenia as a complication.
+        explanation: The reference clearly states that consensus guidelines recommend acetaminophen for managing pain and fever in dengue patients and contraindicate the use of NSAIDs due to increased bleeding risk.
+      - reference: PMID:24494608
+        supports: PARTIAL
+        snippet: In general, acetaminophen is the least potent, while NSAIDs and opioids offer stronger analgesic effects. At the same time, acetaminophen use can cause acute liver failure, and NSAIDs are associated with serious complications impacting the gastrointestinal, cardiovascular, and renal systems.
+        explanation: The reference discusses the efficacy and risks of acetaminophen and NSAIDs, mentioning that NSAIDs have serious complications, which aligns with the bleeding risk. However, it does not specifically address dengue, making it partially supportive.
+      - reference: PMID:25426178
+        supports: SUPPORT
+        snippet: Treatment of acute dengue fever is supportive, with either oral or intravenous rehydration for mild or moderate disease and use of intravenous fluids and blood transfusion for more severe cases.
+        explanation: The reference implies supportive care as the treatment for acute dengue fever without specifically mentioning acetaminophen or NSAIDs, yet it aligns with the general avoidant approach toward invasive treatments, indirectly supporting the recommendation.
   - name: Vector Control
     description: Measures to reduce mosquito populations and prevent bites
+    evidence:
+      - reference: PMID:18291003
+        supports: SUPPORT
+        snippet: Insecticide-treated bednets had an immediate effect on dengue vector populations after their introduction, and over the next 5-12 months, the presence of ITNs may have continued to affect vector populations and dengue transmission.
+        explanation: The study supports the idea that measures to reduce mosquito populations, such as insecticide-treated bednets, are effective in controlling dengue transmission.
+      - reference: PMID:35598649
+        supports: SUPPORT
+        snippet: Experimental studies of environmental management interventions aimed at vector control were included... there was a statistically significant reduction of the pupae indices related to the elimination of small containers, manipulation of large tanks and cleaning outdoor spaces.
+        explanation: Environmental interventions aimed at vector control significantly reduce mosquito populations, supporting vector control as a measure to treat dengue.
+      - reference: PMID:32853197
+        supports: SUPPORT
+        snippet: The Singapore dengue control programme succeeded in reducing the dengue force of infection... Key to this success is consideration of dengue as an environmental disease, with a strong focus on source reduction and other environmental management methods as the dominant vector control strategy.
+        explanation: The Singapore dengue control programme's success in reducing dengue through vector control methods aligns with the statement that such measures are effective treatments.

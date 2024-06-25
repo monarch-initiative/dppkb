@@ -166,6 +166,15 @@ phenotypes:
     name: Fever
     frequency: VERY_FREQUENT
     diagnostic: true
+    evidence:
+      - reference: PMID:32080199
+        supports: SUPPORT
+        snippet: EVD has a high case-fatality rate; it is characterized by fever, gastrointestinal signs and multiple organ dysfunction syndrome.
+        explanation: The literature indicates that fever is a very frequent symptom of Ebola Virus Disease (EVD).
+      - reference: PMID:28457350
+        supports: SUPPORT
+        snippet: This review highlights the range of aspects of EVD that the authors find are relevant to laboratory medicine, including the need for robust prediagnostic and laboratory processing algorithms to inform sampling of suspect patients, the vast majority of whom, in resource-rich settings, will have another diagnosis.
+        explanation: The background is specific to diagnostic issues for laboratory professionals, indicating the relevance of fever as a primary symptom for suspect cases during prediagnostic processes.
   - category: Systemic
     name: Hemorrhage
     severity: Severe

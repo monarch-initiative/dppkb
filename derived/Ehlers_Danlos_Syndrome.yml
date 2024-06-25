@@ -49,6 +49,15 @@ has_subtypes:
   - description: Characterized by kyphoscoliosis, hypotonia, and ocular fragility
     name: Kyphoscoliotic EDS (kEDS)
     review_notes: Added an additional clinically relevant subtype.
+    evidence:
+      - reference: PMID:18155911
+        supports: SUPPORT
+        snippet: The kyphoscoliotic type of Ehlers-Danlos syndrome (EDS VI) is an inherited connective tissue disorder characterized by hypotonia and kyphoscoliosis at birth, joint hypermobility, and skin hyperelasticity and fragility.
+        explanation: The reference describes the kyphoscoliotic type of Ehlers-Danlos syndrome (EDS VI) as having kyphoscoliosis and hypotonia.
+      - reference: PMID:20301635
+        supports: SUPPORT
+        snippet: PLOD1-related kyphoscoliotic Ehlers-Danlos syndrome (PLOD1-kEDS) is characterized by hypotonia, generalized joint hypermobility, early-onset kyphoscoliosis, skin fragility, and ocular abnormality.
+        explanation: The reference explicitly lists kyphoscoliosis, hypotonia, and ocular abnormalities as characteristics of PLOD1-kEDS.
 prevalence:
   - population: Global
     percentage: 0.02
@@ -80,6 +89,11 @@ progression:
   - age_range: 10-30
     phase: Peak Symptoms Development
     review_notes: Added an additional phase to describe the common age range where symptoms peak.
+    evidence:
+      - reference: PMID:37261967
+        supports: REFUTE
+        snippet: 'OBJECTIVE: This review sought to identify studies regarding aging in hEDS/HSD... No study had a stated aim regarding aging in hEDS/HSD, but all studies corroborated earlier natural history studies describing the age-related trajectory of manifestations in younger people. Studies found that symptom progression was heterogeneous, multisystemic, and unpredictable.'
+        explanation: The statement that there is a common age range where symptoms peak is refuted by the literature's indication that symptom progression is heterogeneous, multisystemic, and unpredictable.
 pathophysiology:
   - name: Collagen Abnormalities
     description: Mutations in genes encoding collagen or collagen-modifying enzymes lead to defective collagen synthesis and assembly.
@@ -220,6 +234,27 @@ phenotypes:
     frequency: OCCASIONAL
     name: Keratoconus
     review_notes: Added less common phenotype for better completeness.
+    evidence:
+      - reference: PMID:36237549
+        supports: SUPPORT
+        snippet: In addition to these commonly recognized phenotypes, recent studies have notably highlighted variable ophthalmic features in EDS.
+        explanation: The literature highlights that Ehlers-Danlos syndrome has variable ophthalmic features, which supports the assertion that ophthalmologic phenotypes, including keratoconus, are part of the syndrome.
+      - reference: PMID:28757364
+        supports: NO_EVIDENCE
+        snippet: As the two patients reported here illustrate, patients with kEDS-PLOD1 do not always have a kyphoscoliosis present at birth or in the first year of life, neither do they necessarily develop kyphoscoliosis later in infancy.
+        explanation: This reference talks mainly about kyphoscoliotic EDS and its genetic underpinnings, without specifically mentioning ophthalmologic features or keratoconus.
+      - reference: PMID:9493273
+        supports: NO_EVIDENCE
+        snippet: Keratoconus is most commonly an isolated disorder, although several reports describe an association with Down syndrome, Leber's congenital amaurosis, and mitral valve prolapse.
+        explanation: This reference discusses keratoconus but does not specifically link it to Ehlers-Danlos syndrome.
+      - reference: PMID:14679583
+        supports: SUPPORT
+        snippet: The brittle cornea syndrome (BCS) is a generalized connective tissue disorder characterized by corneal rupture following only minor trauma, keratoconus or keratoglobus, blue sclerae, hyperelasticity of the skin without excessive fragility, and hypermobility of the joints.
+        explanation: The brittle cornea syndrome listed here shares ophthalmologic phenotypes, including keratoconus, similar to Ehlers-Danlos syndrome.
+      - reference: PMID:37074408
+        supports: NO_EVIDENCE
+        snippet: OI patients had tomographically suspect corneas when using keratoconus diagnostic indices.
+        explanation: This reference discusses keratoconus in the context of osteogenesis imperfecta, not Ehlers-Danlos syndrome.
 biochemical:
   - name: Collagen Type III
     presence: Decreased or Abnormal
@@ -293,6 +328,56 @@ genetic:
     name: PLOD1
     subtype: Kyphoscoliotic EDS
     review_notes: Added an additional gene (PLOD1) known to be associated with Kyphoscoliotic EDS as an example of a less common subtype.
+    evidence:
+      - reference: PMID:32174067
+        supports: SUPPORT
+        snippet: Kyphoscoliotic Ehlers-Danlos syndrome (kEDS) is an autosomal recessive connective tissue disorder... The disorder results from a deficiency of the enzyme collagen lysyl hydroxylase 1 due to mutations in the gene PLOD1.
+        explanation: This source clearly states that pathogenic variants in the PLOD1 gene are responsible for kyphoscoliotic Ehlers-Danlos syndrome.
+      - reference: PMID:15979919
+        supports: SUPPORT
+        snippet: The kyphoscoliotic type of Ehlers-Danlos syndrome (EDS VIA) is an inheritable connective tissue disorder characterized by a deficiency of lysyl hydroxylase due to mutations in PLOD1.
+        explanation: This reference supports the association between PLOD1 mutations and kyphoscoliotic Ehlers-Danlos syndrome.
+      - reference: PMID:29982180
+        supports: SUPPORT
+        snippet: Pathogenic variants in the lysyl-hydroxylase-1 gene (PLOD1) are responsible for the kyphoscoliotic type of Ehlers-Danlos syndrome (EDS).
+        explanation: This source reinforces the role of PLOD1 pathogenic variants in causing kyphoscoliotic Ehlers-Danlos syndrome.
+      - reference: PMID:36054293
+        supports: SUPPORT
+        snippet: 'The autosomal recessive kyphoscoliotic EDS results from deficiency of either lysyl hydroxylase 1 (encoded by PLOD1), crucial for collagen cross-linking... '
+        explanation: This study adds further confirmation of the genetic association between PLOD1 and kyphoscoliotic Ehlers-Danlos syndrome.
+animal_models:
+  - species: Mouse
+    genotype: Col5a1 knockout
+    genes:
+      - Col5a1
+    associated_phenotypes:
+      - Skin hyperextensibility
+      - Joint hypermobility
+    evidence:
+      - reference: PMID:20587693
+        supports: PARTIAL
+        snippet: The heterozygous Col3a1 knockout mouse was investigated as a model for this disease... thorough histological examination of the aorta of heterozygous mice revealed the presence of a spectrum of lesions similar to those observed in human patients.
+        explanation: While this study focused on Col3a1 rather than Col5a1, it provides evidence that knockout models can be used to investigate aspects of vascular Ehlers-Danlos syndrome in mice.
+      - reference: PMID:20847697
+        supports: PARTIAL
+        snippet: It is currently estimated that approximately 50% of patients with a clinical diagnosis of classic Ehlers-Danlos syndrome harbor mutations in the COL5A1 and the COL5A2 gene... the disease is caused by a mutation leading to a nonfunctional COL5A1 allele and resulting in haploinsufficiency of type V collagen.
+        explanation: While the study confirms the involvement of COL5A1 mutations in Ehlers-Danlos Syndrome, it does not mention specific phenotype outcomes in animal models. Thus, the support for the proposed mouse model is partial.
+      - reference: PMID:35627182
+        supports: PARTIAL
+        snippet: We searched for private protein changing variants in known human EDS candidate genes and identified three independent heterozygous COL5A1 variants.
+        explanation: This study identified COL5A1 variants in Ehlers-Danlos Syndrome cases among cats, contributing to the understanding of COL5A1 mutations. However, it does not describe a mouse model specifically, making the support only partial.
+  - species: Mouse
+    genotype: Col3a1 heterozygous
+    genes:
+      - Col3a1
+    associated_phenotypes:
+      - Vascular fragility
+      - Arterial rupture
+    evidence:
+      - reference: PMID:20587693
+        supports: SUPPORT
+        snippet: Haploinsufficiency for Col3a1 in mice recapitulates features of vascular Ehlers-Danlos syndrome in humans and can be used as an experimental model.
+        explanation: The study shows that haploinsufficient Col3a1 mice exhibit reduced collagen content in the aorta and diminishing wall strength, mirroring vascular EDS in humans, which supports the statement.
 environmental:
   - name: Physical Trauma
     effect: Exacerbates Symptoms
@@ -312,6 +397,15 @@ environmental:
   - effect: Exacerbates Symptoms
     name: Repetitive Motion
     review_notes: Added based on domain knowledge as repetitive motion is often a factor in exacerbating symptoms for connective tissue disorders.
+    evidence:
+      - reference: PMID:31582002
+        supports: SUPPORT
+        snippet: Symptomatic joint hypermobility can result from soft tissue injury or muscular strain caused by muscular imbalance.
+        explanation: The text from the literature indicates that repetitive use injury can result from symptomatic joint hypermobility, which is consistent with the statement that repetitive motion exacerbates symptoms.
+      - reference: PMID:32175940
+        supports: PARTIAL
+        snippet: Thirteen EDS subtypes are recognized, with a wide degree of symptom overlap among subtypes and with other connective tissue disorders.
+        explanation: Although it discusses the overlap of symptoms, it does not directly state that repetitive motion exacerbates these symptoms. However, it implies increased fragility and susceptibility, which could be worsened by repetitive motion.
 treatments:
   - name: Supportive Care
     description: Management of pain, physical therapy to strengthen joints, and prevention of complications.
@@ -361,3 +455,12 @@ treatments:
   - description: Use of orthotic devices to support unstable joints.
     name: Orthotic Interventions
     review_notes: Added orthotic interventions commonly recommended in the management of EDS.
+    evidence:
+      - reference: PMID:27349123
+        supports: SUPPORT
+        snippet: ignorance of effective treatments such as oxygen therapy and orthotics are new concepts that should shake the prejudices derived from the history of this disease.
+        explanation: This reference mentions orthotic devices as part of the effective treatments for Ehlers-Danlos syndrome.
+      - reference: PMID:32709178
+        supports: SUPPORT
+        snippet: Occupational therapy and bracing were the most effective options with 70% of patients reporting improvement.
+        explanation: This reference supports the use of orthotic devices (e.g., bracing) as effective in the management of EDS.

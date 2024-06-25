@@ -182,6 +182,23 @@ phenotypes:
     name: Pleuritis
     frequency: FREQUENT
     notes: Recurrent chest pain due to inflammation of the pleura
+    evidence:
+      - reference: PMID:38204312
+        supports: SUPPORT
+        snippet: The most common signs and symptoms are fever, abdominal pain, chest pain, and arthritis.
+        explanation: The study highlights chest pain as a frequent symptom in FMF patients, indicating pleuritis as a common phenotype.
+      - reference: PMID:12092043
+        supports: SUPPORT
+        snippet: Lung involvement in FMF is limited mainly to transient pleuritis during acute attacks.
+        explanation: The study specifies that pleuritis, which is inflammation of the pleura, is a frequent thoracic phenotype in FMF.
+      - reference: PMID:36385047
+        supports: SUPPORT
+        snippet: Pericarditis, pleurisy and the response to colchicine indicated FMF.
+        explanation: This study identifies pleurisy, another term for pleuritis, as a characteristic symptom in FMF patients, supporting the statement.
+      - reference: PMID:36725780
+        supports: PARTIAL
+        snippet: Pleuritis is the only known pulmonary involvement of FMF; however, as far as we know, thoracic involvements in pleural, parenchymal, bronchial, and vascular structures have not been evaluated yet.
+        explanation: While the study acknowledges pleuritis as a known pulmonary involvement in FMF, it does not provide evidence on its frequency being "FREQUENT".
   - category: Renal
     name: Amyloidosis
     frequency: OCCASIONAL

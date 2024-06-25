@@ -193,6 +193,23 @@ phenotypes:
     sequelae:
       - Reduced Exercise Tolerance
       - Heart Failure Exacerbations
+    evidence:
+      - reference: PMID:31472880
+        supports: PARTIAL
+        snippet: Hypertensive heart disease includes the development of diastolic dysfunction, left ventricular hypertrophy, and heart failure with preserved and reduced ejection fraction. The development of heart failure can occur because of complications of ischemic heart disease or from progression of diastolic dysfunction to heart failure with preserved ejection fraction degenerating to a dilated heart with systolic dysfunction or heart failure with reduced ejection fraction.
+        explanation: The reference mentions heart failure as a frequent complication of hypertensive heart disease, but it does not specifically address dyspnea.
+      - reference: PMID:15950133
+        supports: PARTIAL
+        snippet: Dyspnea and leg effort are the major symptoms limiting exercise in healthy subjects and in patients with a variety of respiratory disorders.
+        explanation: While the reference discusses dyspnea as a symptom that limits exercise tolerance, it is not specific to hypertensive heart disease.
+      - reference: PMID:37345800
+        supports: SUPPORT
+        snippet: Ventilatory efficiency is impaired people with hypertension without a diagnosis of heart failure versus normotensive individuals.
+        explanation: This reference implies that dyspnea could be an issue in hypertensive patients, which could lead to reduced exercise tolerance.
+      - reference: PMID:26569571
+        supports: PARTIAL
+        snippet: Pulmonary hypertension (PH) due to left-sided heart disease (LSHD) is a common and disconcerting occurrence. For example, both heart failure (HF) with preserved and reduced ejection fraction (HFpEF and HFrEF) often lead to PH as a consequence of a chronic elevation in left atrial filling pressure.
+        explanation: It mentions heart failure and its link to dyspnea indirectly through pulmonary hypertension but does not focus on hypertensive heart disease specifically.
   - category: Cardiovascular
     name: Chest Pain
     frequency: OCCASIONAL

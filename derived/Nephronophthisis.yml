@@ -75,6 +75,27 @@ pathophysiology:
       - Hedgehog Pathway
     downstream:
       - Abnormal Cell Proliferation
+    evidence:
+      - reference: PMID:19186246
+        supports: PARTIAL
+        snippet: Their importance for key developmental pathways such as Sonic Hedgehog (Shh) and Wnt is beginning to emerge. The function of nodal cilia, for example, is vital for breaking early embryonic symmetry, Shh signaling is important for tissue morphogenesis and successful Wnt signaling for organ growth and differentiation. When ciliary function is perturbed...brains form improperly.
+        explanation: This reference supports the idea that disrupted cilia function affects the Wnt and Hedgehog pathways, but it does not specify nephronophthisis directly.
+      - reference: PMID:22206729
+        supports: SUPPORT
+        snippet: Mutations of the ankyrin-repeat protein Inversin, a member of a diverse family of more than 12 proteins, cause nephronophthisis (NPH)...Most NPH gene products (NPHPs) localize to the cilium, and appear to control the transport of cargo protein to the cilium by forming functional networks.
+        explanation: This reference directly links nephronophthisis to defective cilia and mentions involvement in pathways like Wnt signaling.
+      - reference: PMID:24162855
+        supports: PARTIAL
+        snippet: The primary cilium, a microtubule-based organelle that can serve as a signaling antenna, has been demonstrated to have a significant role in ensuring correct kidney development and function...one of the signaling pathways that requires the cilium for normal development is Wnt signaling.
+        explanation: This reference supports the involvement of the primary cilium in Wnt signaling but does not explicitly connect it to nephronophthisis.
+      - reference: PMID:20544799
+        supports: PARTIAL
+        snippet: Absence of the sonic hedgehog (shh) ligand is associated with the midline defect holoprosencephaly...mutation of proteins required for function of cilia often leads to impaired Shh signaling and disruption of neural tube closure.
+        explanation: This reference supports the idea that ciliary dysfunction affects Hedgehog signaling but focuses on neural tube defects rather than nephronophthisis.
+      - reference: PMID:35655331
+        supports: SUPPORT
+        snippet: Ciliary dysfunction causes many human conditions termed ciliopathies...ciliopathy spectrum could be the poster child for advances and challenges in Mendelian human genetics over the past half century...illustrates many core concepts of human genetics.
+        explanation: This reference supports the concept that defects in the primary cilia affect key signaling pathways, including the ones mentioned, in the context of nephronophthisis.
   - name: Renal Tubular Dysfunction
     locations:
       - Renal Tubule
@@ -84,18 +105,62 @@ pathophysiology:
       - Electrolyte Imbalance
       - Interstitial Fibrosis
     description: Ciliary dysfunction in renal tubular epithelial cells impairs fluid and electrolyte balance, leading to polyuria and polydipsia.
+    evidence:
+      - reference: PMID:21071979
+        supports: PARTIAL
+        snippet: Nephronophthisis is a recessive disorder of the kidney that is the leading cause of end-stage renal failure in children. Through positional cloning, many of the causative mutations have been mapped to genes involved in centrosome and cilia function.
+        explanation: The literature supports that nephronophthisis is related to ciliary dysfunction, but it does not explicitly mention polyuria and polydipsia as part of its pathophysiology.
+      - reference: PMID:16186680
+        supports: PARTIAL
+        snippet: Renal tubular disorders may affect multiple (e.g., Fanconi syndrome) or specific (e.g., nephrogenic diabetes insipidus, renal glucosuria) tubular functions. Most conditions are primary and monogenic but occasionally are secondary to other disorders.
+        explanation: The reference discusses renal tubular disorders, which can result in polyuria and electrolyte imbalance, but it does not explicitly link these to ciliary dysfunction in nephronophthisis.
+      - reference: PMID:9790573
+        supports: PARTIAL
+        snippet: Cysts originate within the glomeruli and all tubular structures, and their growth is the result of proliferation of incompletely differentiated epithelial cells and the accumulation of fluid within the cysts.
+        explanation: While the reference discusses fluid accumulation and cyst formation in polycystic kidney disease, it does not directly link these to nephronophthisis or explicitly mention polyuria.
+      - reference: PMID:18312782
+        supports: PARTIAL
+        snippet: Overlapping clinical entities including situs inversus, certain infertility disorders, as well as chronic respiratory infections have their roots in abnormal ciliary function.
+        explanation: This reference supports the involvement of ciliary dysfunction in various disorders but does not provide specific details on nephronophthisis and its pathophysiology related to polyuria and polydipsia.
   - name: Interstitial Fibrosis
     locations:
       - Kidney Interstitium
     description: Chronic tubular dysfunction and inflammation lead to the accumulation of extracellular matrix and progressive interstitial fibrosis.
+    evidence:
+      - reference: PMID:35533128
+        supports: SUPPORT
+        snippet: Diagnosis is made by a positive genetic test, or a kidney biopsy demonstrating chronic tubulointerstitial changes with thickening of the tubular basement membranes.
+        explanation: The diagnosis of nephronophthisis includes tubulointerstitial changes, which aligns with chronic tubular dysfunction and inflammation leading to interstitial fibrosis.
+      - reference: PMID:31399984
+        supports: PARTIAL
+        snippet: Renal interstitial lymphangiogenesis is found in patients with chronic kidney disease (CKD) and a series of animal models of renal fibrosis.
+        explanation: While the study focuses on lymphangiogenesis, it mentions renal interstitial fibrosis related to chronic kidney disease, of which nephronophthisis is a type.
   - name: Renal Cyst Formation
     locations:
       - Renal Tubule
     downstream:
       - Renal Insufficiency
     description: Abnormal cell proliferation and differentiation result in the formation of cysts in the kidney tubules, contributing to the loss of renal function.
+    evidence:
+      - reference: PMID:16966065
+        supports: WRONG_STATEMENT
+        snippet: Nephronophthisis is a chronic tubulo-interstitial nephritis which progress to terminal renal failure.
+        explanation: The statement claims that abnormal cell proliferation and differentiation result in cyst formation in nephronophthisis, but the literature describes nephronophthisis as a chronic tubulo-interstitial nephritis without indicating cyst formation due to abnormal cell proliferation and differentiation as a characteristic pathophysiological mechanism. Instead, it mentions cortical microcysts in infantile forms but emphasizes interstitial fibrosis and tubular basement membrane changes.
+      - reference: PMID:25575298
+        supports: NO_EVIDENCE
+        snippet: Almost all proteins associated with a broad spectrum of human cystic kidney diseases have been localized to the region in or around the cilia.
+        explanation: While this reference discusses abnormal cilia structure and function in cystic kidney diseases, it does not specifically address nephronophthisis or the mechanism of abnormal cell proliferation and differentiation leading to renal cyst formation in nephronophthisis.
   - name: Renal Insufficiency
     description: The combination of tubular dysfunction, interstitial fibrosis, and cyst formation leads to a gradual decline in renal function and eventual end-stage renal disease (ESRD).
+    evidence:
+      - reference: PMID:16966065
+        supports: SUPPORT
+        snippet: Nephronophthisis is a chronic tubulo-interstitial nephritis which progress to terminal renal failure... Histologic lesions concern tubular basement membranes which are thickened and multilayered or thinned. There is an associated interstitial fibrosis.
+        explanation: The provided excerpt mentions chronic tubulo-interstitial nephritis (tubular dysfunction and interstitial fibrosis) and progression to terminal renal failure, supporting the statement that these factors contribute to ESRD.
+      - reference: PMID:10352410
+        supports: PARTIAL
+        snippet: Progressive renal disease poses an increasing problem for the medical community. Though the causes of end-stage renal failure are multiple, the histologic pictures of chronic renal disease are remarkably similar being characterized by interstitial infiltration, fibrosis, tubular atrophy and dilatation.
+        explanation: This literature indicates the role of interstitial infiltration, fibrosis, and tubular atrophy leading to ESRD, which partially overlaps with the factors mentioned in the statement. However, cyst formation specific to nephronophthisis was not explicitly mentioned.
   - name: Extrarenal Manifestations
     subtypes:
       - Senior-Loken syndrome
@@ -103,9 +168,43 @@ pathophysiology:
       - Liver
       - Retina
       - Brain
-    description: "Some forms of nephronophthisis, such as Senior-Loken syndrome, may involve other organs due to the presence of primary cilia in various tissues."
+    description: Some forms of nephronophthisis, such as Senior-Loken syndrome, may involve other organs due to the presence of primary cilia in various tissues.
+    evidence:
+      - reference: PMID:35533128
+        supports: PARTIAL
+        snippet: Nephronophthisis is an autosomal recessive cystic kidney disease caused by mutations in genes that encode proteins involved in the primary cilia function, resulting in kidney disease and extrarenal manifestations such as retinal degeneration and liver fibrosis.
+        explanation: The literature supports the involvement of the liver and retina in nephronophthisis but does not mention the brain specifically in this context.
+      - reference: PMID:32432520
+        supports: PARTIAL
+        snippet: Senior-Loken syndrome (SLS) is a rare autosomal recessive disease characterised by nephronophthisis and retinal degeneration, and belongs to a group of genetically heterogeneous disorders known as the ciliopathies.
+        explanation: The literature supports the involvement of the retina in Senior-Loken syndrome but does not mention the liver or brain specifically in this context.
+      - reference: PMID:33306870
+        supports: SUPPORT
+        snippet: Senior-Loken syndrome is a rare genetic disorder that presents with nephronophthisis and retinal degeneration, leading to end-stage renal disease and progressive blindness.
+        explanation: The literature supports the involvement of the retina in Senior-Loken syndrome, which is a form of nephronophthisis.
+      - reference: PMID:35655331
+        supports: NO_EVIDENCE
+        snippet: The JS phenotype alone is caused by pathogenic variants in more than 40 genes; remarkably, all of the associated proteins function in and around the primary cilium.
+        explanation: This reference discusses the involvement of primary cilia in a broader sense but does not specify the extrarenal manifestations like those in Senior-Loken syndrome.
   - name: Progression and Severity
     description: The age of onset and rate of progression vary depending on the specific NPHP gene mutations and the type of nephronophthisis.
+    evidence:
+      - reference: PMID:34828368
+        supports: SUPPORT
+        snippet: NPHP gene types present with some common pathophysiological features alongside a diverse range of extra-renal phenotypes associated with specific syndromic presentations.
+        explanation: The reference states that there is diversity in pathophysiological features and extra-renal phenotypes among different NPHP gene types, which supports the statement that the age of onset and rate of progression vary.
+      - reference: PMID:35570616
+        supports: SUPPORT
+        snippet: Nephronophthisis is the most common genetic cause of kidney failure in childhood....Treatment for nephronophthisis is symptomatic, and kidney transplant is a good treatment option when kidney failure has developed.
+        explanation: While this reference highlights the general management of nephronophthisis, it implies variability in progression and severity since not all individuals progress to kidney failure at the same rate.
+      - reference: PMID:35922195
+        supports: SUPPORT
+        snippet: All 6 children progressed to end-stage renal disease (ESRD) within 10 (4, 65) months of onset.
+        explanation: The reference indicates variability in the progression to end-stage renal disease, supporting the statement regarding variable progression rates depending on the specific NPHP gene mutations.
+      - reference: PMID:16966065
+        supports: SUPPORT
+        snippet: There are three main clinical forms of nephronophtisis which have been associated with five gene defects. Juvenile nephronophtisis, the most frequent, progress to end stage renal failure before age 15.
+        explanation: This reference identifies different clinical forms of nephronophthisis, which progress at different rates, thus supporting the statement on variability in age of onset and progression.
 inheritance:
   - name: Autosomal Recessive
     evidence:

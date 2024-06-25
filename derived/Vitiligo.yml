@@ -428,3 +428,20 @@ treatments:
         supports: SUPPORT
         snippet: If vitiligo involves most of the body, it might be easier to depigment the normal remaining skin rather than to attempt repigmentation. Our review revealed that... Monobenzyl ether of hydroquinone (MBEH) is the most widely used depigmenting agent and has few side-effects.
         explanation: The reference supports the use of monobenzone (MBEH) for depigmentation in extensive vitiligo cases.
+animal_models:
+  - species: Zebrafish
+    genotype: MO1-zmiz1a/MO1-zmiz1b
+    genes:
+      - zmiz1a
+      - zmiz1b
+    associated_phenotypes:
+      - Pigmentation
+    evidence:
+      - reference: PMID:15357832
+        supports: NO_EVIDENCE
+        snippet: The zebrafish has a number of characteristics that make it an especially valuable model for the study of pigment cell biology and disease.
+        explanation: The reference discusses the use of zebrafish as a model for pigment cell biology and disease but does not specifically mention zmiz1a or zmiz1b genes or their association with vitiligo.
+      - reference: PMID:31437444
+        supports: NO_EVIDENCE
+        snippet: Thus, we characterize a potential zebrafish depigmentation disease model, a nicastrin(hi1384) mutant, which can be used for further treatment or drug development of diseases related to skin depigmentation and/or inflammation.
+        explanation: The reference discusses a zebrafish model related to nicastrin deficiency and depigmentation but does not mention zmiz1a or zmiz1b genes, nor does it specifically address vitiligo.

@@ -475,3 +475,47 @@ environmental:
         supports: SUPPORT
         snippet: Systemic lupus erythematosus (SLE) is a heterogeneous, multisystem autoimmune disorder characterized by unpredictable disease flares.... suggesting that stress-related disorders alter the susceptibility to SLE.
         explanation: This reference indicates a link between stress-related disorders and the development or worsening of SLE.
+animal_models:
+  - species: Mouse
+    genes:
+      - Fas
+    genotype: MRL/lpr strain
+    alleles:
+      - FAS lpr
+    description: genetically prone to develop lupus-like symptoms and APS
+    evidence:
+      - reference: PMID:25183233
+        supports: SUPPORT
+        snippet: Mouse models of autoimmunity, such as (NZBxNZW)F1, MRL/MpJ-Fas(lpr) (MRL-lpr) and BXSB mice, spontaneously develop systemic lupus erythematosus (SLE)-like syndromes...
+        explanation: This excerpt supports the statement by confirming that MRL/MpJ-Fas(lpr) (MRL-lpr) mice develop SLE-like syndromes.
+      - reference: PMID:14550881
+        supports: SUPPORT
+        snippet: The association of HLA-DR4, -DR7, -DRw53 and -DQB1*0302 with aCL... can also be found in SLE...
+        explanation: This excerpt supports the statement, indicating that there is an association between HLA alleles and SLE in MRL-lpr mice.
+      - reference: PMID:38113962
+        supports: SUPPORT
+        snippet: Sle1 and Fas(lpr) are two lupus susceptibility loci that lead to manifestations of systemic lupus erythematosus.
+        explanation: The snippet confirms that Fas(lpr) is a lupus susceptibility locus leading to SLE manifestations.
+      - reference: PMID:28078597
+        supports: SUPPORT
+        snippet: This is characterized by the development of arthritis and immune complex glomerulonephrosis making this strain a useful model for studying systemic lupus erythematosus.
+        explanation: This excerpt supports the statement by describing the MRL-lpr strain as a useful model for studying SLE, noting the development of relevant symptoms.
+      - reference: PMID:18325838
+        supports: PARTIAL
+        snippet: breeding the ApoE(-/-) defect onto MRL/lpr mice all caused a modest increase of atherosclerosis...
+        explanation: This excerpt partially supports the statement, indicating that breeding the ApoE(-/-) defect into MRL/lpr mice results in an increase in atherosclerosis (related to APS). However, it does not explicitly conclude a genetic predisposition to APS.
+  - species: Mouse
+    background: (NZB/BlNJ x NZW/LacJ)F1/J
+    evidence:
+      - reference: PMID:36211391
+        supports: PARTIAL
+        snippet: The (NZWxBXSB) F1 lupus-prone male mouse model of this disease is potentially useful to study mechanism and treatment modalities, but there is a lack of information about this model's characterization and disease progression.
+        explanation: The reference discusses the (NZWxBXSB) F1 model rather than the (NZB/BlNJ x NZW/LacJ) F1/J model.
+      - reference: PMID:33131691
+        supports: SUPPORT
+        snippet: The New Zealand Black (NZB) x New Zealand White (NZW) F1 (NZB/W F1) mouse represents the first spontaneous mouse model of SS. Considering that NZB/W F1 mice also develop a systemic lupus erythematosus (SLE)-like disease, this mouse model mimics the clinical presentation of polyautoimmunity seen in a sizable subset of SS patients.
+        explanation: This reference supports the use of (NZB x NZW) F1 mice as a model for SLE.
+      - reference: PMID:31943822
+        supports: SUPPORT
+        snippet: Lupus-prone (NZB x NZW)F1 mice that had been DNA-vaccinated with plasmids encoding Hsp70 and controls were monitored for lupus disease parameters including anti-double stranded DNA (anti-dsDNA) autoantibodies and cytokines using enzyme-linked immunosorbent assay, and for kidney function and pathology.
+        explanation: This reference supports the use of (NZB x NZW)F1 mice as a model for SLE.

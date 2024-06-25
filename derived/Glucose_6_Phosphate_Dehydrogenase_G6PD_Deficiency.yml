@@ -361,7 +361,7 @@ environmental:
         supports: SUPPORT
         snippet: Five cases of hemolytic episodes arising from the loading of trinitrotoluene (TNT) were detected. All five workers showed absolute G6PD deficiency.
         explanation: The incidence of hemolytic episodes in the context of TNT exposure further supports that environmental factors can trigger hemolysis in G6PD-deficient individuals.
-treatment:
+treatments:
   - name: Avoidance of Oxidative Stressors
     description: Identifying and avoiding triggers for acute hemolytic episodes
     evidence:
