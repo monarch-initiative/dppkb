@@ -369,6 +369,15 @@
 <div class="mermaid"> classDiagram
     class Disease
     click Disease href "../Disease"
+      Disease : animal_models
+
+
+
+
+    Disease --&gt; "*" AnimalModel : animal_models
+    click AnimalModel href "../AnimalModel"
+
+
       Disease : biochemical
 
 
@@ -400,6 +409,15 @@
 
     Disease --&gt; "*" Environmental : environmental
     click Environmental href "../Environmental"
+
+
+      Disease : epidemiology
+
+
+
+
+    Disease --&gt; "*" EpidemiologyInfo : epidemiology
+    click EpidemiologyInfo href "../EpidemiologyInfo"
 
 
       Disease : genetic
@@ -436,6 +454,15 @@
 
     Disease --&gt; "*" Inheritance : inheritance
     click Inheritance href "../Inheritance"
+
+
+      Disease : modeling_considerations
+
+
+
+
+    Disease --&gt; "*" ModelingConsideration : modeling_considerations
+    click ModelingConsideration href "../ModelingConsideration"
 
 
       Disease : name
@@ -489,15 +516,6 @@
 
     Disease --&gt; "*" Transmission : transmission
     click Transmission href "../Transmission"
-
-
-      Disease : treatment
-
-
-
-
-    Disease --&gt; "*" Treatment : treatment
-    click Treatment href "../Treatment"
 
 
       Disease : treatments
@@ -620,6 +638,18 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../modeling_considerations/">modeling_considerations</a></td>
+<td>* <br/> <a href="../ModelingConsideration/">ModelingConsideration</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../epidemiology/">epidemiology</a></td>
+<td>* <br/> <a href="../EpidemiologyInfo/">EpidemiologyInfo</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../diagnosis/">diagnosis</a></td>
 <td>* <br/> <a href="../Diagnosis/">Diagnosis</a></td>
 <td></td>
@@ -632,14 +662,14 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../treatment/">treatment</a></td>
-<td>* <br/> <a href="../Treatment/">Treatment</a></td>
+<td><a href="../inheritance/">inheritance</a></td>
+<td>* <br/> <a href="../Inheritance/">Inheritance</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../inheritance/">inheritance</a></td>
-<td>* <br/> <a href="../Inheritance/">Inheritance</a></td>
+<td><a href="../animal_models/">animal_models</a></td>
+<td>* <br/> <a href="../AnimalModel/">AnimalModel</a></td>
 <td></td>
 <td>direct</td>
 </tr>
@@ -717,10 +747,12 @@ slots:
 - categories
 - infectious_agent
 - transmission
+- modeling_considerations
+- epidemiology
 - diagnosis
 - synonyms
-- treatment
 - inheritance
+- animal_models
 - notes
 
 </code></pre>
@@ -741,6 +773,7 @@ attributes:
     owner: Disease
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
@@ -755,6 +788,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
     required: true
   description:
@@ -765,9 +799,11 @@ attributes:
     owner: Disease
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Environmental
     - Disease
+    - AnimalModel
     - Treatment
     - InfectiousAgent
     - Transmission
@@ -775,6 +811,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
   category:
     name: category
@@ -787,6 +824,7 @@ attributes:
     domain_of:
     - Phenotype
     - Disease
+    - AnimalModel
     range: string
   parents:
     name: parents
@@ -809,6 +847,7 @@ attributes:
     owner: Disease
     domain_of:
     - Disease
+    - InfectiousAgent
     range: Subtype
     inlined: true
     inlined_as_list: true
@@ -942,6 +981,32 @@ attributes:
     range: Transmission
     inlined: true
     inlined_as_list: true
+  modeling_considerations:
+    name: modeling_considerations
+    from_schema: https://w3id.org/dppkb
+    rank: 1000
+    multivalued: true
+    alias: modeling_considerations
+    owner: Disease
+    domain_of:
+    - Disease
+    range: ModelingConsideration
+    inlined: true
+    inlined_as_list: true
+  epidemiology:
+    name: epidemiology
+    examples:
+    - value: '[''Global'']'
+    from_schema: https://w3id.org/dppkb
+    rank: 1000
+    multivalued: true
+    alias: epidemiology
+    owner: Disease
+    domain_of:
+    - Disease
+    range: EpidemiologyInfo
+    inlined: true
+    inlined_as_list: true
   diagnosis:
     name: diagnosis
     from_schema: https://w3id.org/dppkb
@@ -964,22 +1029,11 @@ attributes:
     alias: synonyms
     owner: Disease
     domain_of:
+    - Pathophysiology
     - Biochemical
     - Environmental
     - Disease
     range: string
-  treatment:
-    name: treatment
-    from_schema: https://w3id.org/dppkb
-    rank: 1000
-    multivalued: true
-    alias: treatment
-    owner: Disease
-    domain_of:
-    - Disease
-    range: Treatment
-    inlined: true
-    inlined_as_list: true
   inheritance:
     name: inheritance
     examples:
@@ -995,6 +1049,18 @@ attributes:
     range: Inheritance
     inlined: true
     inlined_as_list: true
+  animal_models:
+    name: animal_models
+    from_schema: https://w3id.org/dppkb
+    rank: 1000
+    multivalued: true
+    alias: animal_models
+    owner: Disease
+    domain_of:
+    - Disease
+    range: AnimalModel
+    inlined: true
+    inlined_as_list: true
   notes:
     name: notes
     examples:
@@ -1005,7 +1071,10 @@ attributes:
     alias: notes
     owner: Disease
     domain_of:
+    - Prevalence
     - ProgressionInfo
+    - EpidemiologyInfo
+    - Pathophysiology
     - Phenotype
     - Biochemical
     - Environmental

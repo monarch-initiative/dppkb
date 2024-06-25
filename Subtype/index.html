@@ -471,6 +471,12 @@
 <td>range</td>
 <td><a href="./">Subtype</a></td>
 </tr>
+<tr>
+<td><a href="../InfectiousAgent/">InfectiousAgent</a></td>
+<td><a href="../has_subtypes/">has_subtypes</a></td>
+<td>range</td>
+<td><a href="./">Subtype</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -529,6 +535,7 @@ attributes:
     owner: Subtype
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
@@ -543,6 +550,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
     required: true
   description:
@@ -553,9 +561,11 @@ attributes:
     owner: Subtype
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Environmental
     - Disease
+    - AnimalModel
     - Treatment
     - InfectiousAgent
     - Transmission
@@ -563,6 +573,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
   evidence:
     name: evidence

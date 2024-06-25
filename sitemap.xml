@@ -2,637 +2,712 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/AnatomicalEntityTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/AnimalModel/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Any/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Assay/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/AssayTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Biochemical/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/BiologicalProcessTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Boolean/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/CellTypeTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/CellularComponentTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/ChemicalEntityTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Curie/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Date/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/DateOrDatetime/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Datetime/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Decimal/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Diagnosis/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Disease/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/DiseaseCollection/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/DiseaseTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Double/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Environmental/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/EpidemiologyInfo/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/EvidenceItem/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/EvidenceItemSupportEnum/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Float/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/FrequencyEnum/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/FrequencyQuantity/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/GeneTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Genetic/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/GeographyTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/InfectiousAgent/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Inheritance/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Integer/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Jsonpath/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Jsonpointer/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Mechanism/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/ModelingConsideration/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Ncname/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Nodeidentifier/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Objectidentifier/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/PMID/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Pathophysiology/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/PhaseTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Phenotype/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/PhenotypeTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Prevalence/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/ProgressionInfo/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Sparqlpath/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/String/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Subtype/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Time/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Transmission/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Treatment/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/TriggerTerm/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Uri/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Uriorcurie/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/Variant/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/about/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/age_range/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/alleles/</loc>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/animal_models/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/assays/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/associated_phenotypes/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/association/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/background/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/biochemical/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/biological_processes/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/categories/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/category/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/cell_types/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/cellular_components/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/chemical_entities/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/chemicals/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/consequence/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/context/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/description/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/diagnosis/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/diagnostic/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/diseases/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/downstream/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/dppkb/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/duration/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/duration_days/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/effect/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/environmental/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/epidemiology/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/evidence/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/examples/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/explanation/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/factors/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/features/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/frequency/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/gene/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/genes/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/genetic/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/genotype/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/geography/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/has_subtypes/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/incubation_days/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/incubation_years/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/infectious_agent/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/inheritance/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/locations/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/markers/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/maximum_value/</loc>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/mean_range/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/mechanism/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/mechanisms/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/minimum_value/</loc>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/modeling_considerations/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/name/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/notes/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/parents/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/pathophysiology/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/pathways/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/percentage/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/phase/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/phenotypes/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/population/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/presence/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/prevalence/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/progression/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/reference/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/results/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/review_notes/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/role/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/sequelae/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/severity/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/snippet/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/species/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/specificity/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/subtype/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/subtypes/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/supports/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/synonyms/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/transmission/</loc>
-         <lastmod>2024-06-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://monarch-initiative.github.io/dppkb/treatment/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/treatments/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/triggers/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/dppkb/unit/</loc>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/dppkb/variants/</loc>
-         <lastmod>2024-06-17</lastmod>
+         <lastmod>2024-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

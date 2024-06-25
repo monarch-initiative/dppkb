@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://monarch-initiative.github.io/dppkb/treatment/">
+        <link rel="canonical" href="https://monarch-initiative.github.io/dppkb/associated_phenotypes/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: treatment - dppkb</title>
+        <title>Slot: associated_phenotypes - dppkb</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-treatment" class="md-skip">
+        <a href="#slot-associated_phenotypes" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: treatment
+              Slot: associated_phenotypes
             
           </span>
         </div>
@@ -725,6 +725,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
@@ -765,14 +772,14 @@
                 
                   
 
-  <a href="https://github.com/monarch-initiative/dppkb/edit/master/docs/treatment.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/monarch-initiative/dppkb/edit/master/docs/associated_phenotypes.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-treatment">Slot: treatment</h1>
-<p>URI: <a href="https://w3id.org/dppkb/treatment">dppkb:treatment</a></p>
+<h1 id="slot-associated_phenotypes">Slot: associated_phenotypes</h1>
+<p>URI: <a href="https://w3id.org/dppkb/associated_phenotypes">dppkb:associated_phenotypes</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -786,7 +793,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Disease/">Disease</a></td>
+<td><a href="../AnimalModel/">AnimalModel</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -795,12 +802,25 @@
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p>Range: <a href="../Treatment/">Treatment</a></p>
+<p>Range: <a href="../String/">String</a></p>
 </li>
 <li>
 <p>Multivalued: True</p>
 </li>
 </ul>
+<h2 id="examples">Examples</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>['Celiac Disease', 'Type 1 Diabetes', 'Autoimmune Thyroid Disease']</td>
+</tr>
+</tbody>
+</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -809,16 +829,16 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: treatment
+<pre><code class="language-yaml">name: associated_phenotypes
+examples:
+- value: '[''Celiac Disease'', ''Type 1 Diabetes'', ''Autoimmune Thyroid Disease'']'
 from_schema: https://w3id.org/dppkb
 rank: 1000
 multivalued: true
-alias: treatment
+alias: associated_phenotypes
 domain_of:
-- Disease
-range: Treatment
-inlined: true
-inlined_as_list: true
+- AnimalModel
+range: string
 
 </code></pre>
 

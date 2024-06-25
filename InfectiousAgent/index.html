@@ -380,6 +380,15 @@
     click EvidenceItem href "../EvidenceItem"
 
 
+      InfectiousAgent : has_subtypes
+
+
+
+
+    InfectiousAgent --&gt; "*" Subtype : has_subtypes
+    click Subtype href "../Subtype"
+
+
       InfectiousAgent : name
 
 
@@ -411,6 +420,12 @@
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../has_subtypes/">has_subtypes</a></td>
+<td>* <br/> <a href="../Subtype/">Subtype</a></td>
 <td></td>
 <td>direct</td>
 </tr>
@@ -469,6 +484,7 @@ slots:
 - name
 - evidence
 - description
+- has_subtypes
 
 </code></pre>
 </details>
@@ -488,6 +504,7 @@ attributes:
     owner: InfectiousAgent
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
@@ -502,6 +519,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
     required: true
   evidence:
@@ -536,9 +554,11 @@ attributes:
     owner: InfectiousAgent
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Environmental
     - Disease
+    - AnimalModel
     - Treatment
     - InfectiousAgent
     - Transmission
@@ -546,7 +566,21 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
+  has_subtypes:
+    name: has_subtypes
+    from_schema: https://w3id.org/dppkb
+    rank: 1000
+    multivalued: true
+    alias: has_subtypes
+    owner: InfectiousAgent
+    domain_of:
+    - Disease
+    - InfectiousAgent
+    range: Subtype
+    inlined: true
+    inlined_as_list: true
 
 </code></pre>
 </details>

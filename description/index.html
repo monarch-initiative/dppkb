@@ -786,7 +786,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Variant/">Variant</a></td>
+<td><a href="../Disease/">Disease</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -796,12 +796,12 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Subtype/">Subtype</a></td>
+<td><a href="../Mechanism/">Mechanism</a></td>
 <td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../InfectiousAgent/">InfectiousAgent</a></td>
+<td><a href="../Variant/">Variant</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -811,7 +811,27 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Mechanism/">Mechanism</a></td>
+<td><a href="../Treatment/">Treatment</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AnimalModel/">AnimalModel</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Assay/">Assay</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../InfectiousAgent/">InfectiousAgent</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Subtype/">Subtype</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -821,12 +841,7 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Disease/">Disease</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Treatment/">Treatment</a></td>
+<td><a href="../EpidemiologyInfo/">EpidemiologyInfo</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -836,7 +851,7 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Assay/">Assay</a></td>
+<td><a href="../ModelingConsideration/">ModelingConsideration</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -860,9 +875,11 @@ rank: 1000
 alias: description
 domain_of:
 - Subtype
+- EpidemiologyInfo
 - Pathophysiology
 - Environmental
 - Disease
+- AnimalModel
 - Treatment
 - InfectiousAgent
 - Transmission
@@ -870,6 +887,7 @@ domain_of:
 - Inheritance
 - Variant
 - Mechanism
+- ModelingConsideration
 range: string
 
 </code></pre>

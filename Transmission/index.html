@@ -506,6 +506,7 @@ attributes:
     owner: Transmission
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
@@ -520,6 +521,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
     required: true
   description:
@@ -530,9 +532,11 @@ attributes:
     owner: Transmission
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Environmental
     - Disease
+    - AnimalModel
     - Treatment
     - InfectiousAgent
     - Transmission
@@ -540,6 +544,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
   evidence:
     name: evidence
@@ -575,7 +580,10 @@ attributes:
     alias: notes
     owner: Transmission
     domain_of:
+    - Prevalence
     - ProgressionInfo
+    - EpidemiologyInfo
+    - Pathophysiology
     - Phenotype
     - Biochemical
     - Environmental

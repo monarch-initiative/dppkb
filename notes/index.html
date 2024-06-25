@@ -793,17 +793,22 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Phenotype/">Phenotype</a></td>
+<td><a href="../Disease/">Disease</a></td>
 <td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Biochemical/">Biochemical</a></td>
+<td><a href="../Pathophysiology/">Pathophysiology</a></td>
 <td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Diagnosis/">Diagnosis</a></td>
+<td><a href="../Prevalence/">Prevalence</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ProgressionInfo/">ProgressionInfo</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -813,12 +818,17 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Transmission/">Transmission</a></td>
+<td><a href="../Diagnosis/">Diagnosis</a></td>
 <td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Disease/">Disease</a></td>
+<td><a href="../Biochemical/">Biochemical</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Phenotype/">Phenotype</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -828,7 +838,12 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ProgressionInfo/">ProgressionInfo</a></td>
+<td><a href="../Transmission/">Transmission</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../EpidemiologyInfo/">EpidemiologyInfo</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -867,7 +882,10 @@ from_schema: https://w3id.org/dppkb
 rank: 1000
 alias: notes
 domain_of:
+- Prevalence
 - ProgressionInfo
+- EpidemiologyInfo
+- Pathophysiology
 - Phenotype
 - Biochemical
 - Environmental

@@ -551,6 +551,7 @@ attributes:
     owner: Environmental
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
@@ -565,6 +566,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
     required: true
   presence:
@@ -615,7 +617,10 @@ attributes:
     alias: notes
     owner: Environmental
     domain_of:
+    - Prevalence
     - ProgressionInfo
+    - EpidemiologyInfo
+    - Pathophysiology
     - Phenotype
     - Biochemical
     - Environmental
@@ -632,9 +637,11 @@ attributes:
     owner: Environmental
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Environmental
     - Disease
+    - AnimalModel
     - Treatment
     - InfectiousAgent
     - Transmission
@@ -642,6 +649,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
   chemicals:
     name: chemicals
@@ -665,6 +673,7 @@ attributes:
     alias: synonyms
     owner: Environmental
     domain_of:
+    - Pathophysiology
     - Biochemical
     - Environmental
     - Disease

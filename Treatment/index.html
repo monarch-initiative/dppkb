@@ -432,6 +432,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../notes/">notes</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../context/">context</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
@@ -445,12 +451,6 @@
 </tr>
 <tr>
 <td><a href="../role/">role</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../notes/">notes</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
 <td>direct</td>
@@ -477,12 +477,6 @@
 <tr>
 <td><a href="../Disease/">Disease</a></td>
 <td><a href="../treatments/">treatments</a></td>
-<td>range</td>
-<td><a href="./">Treatment</a></td>
-</tr>
-<tr>
-<td><a href="../Disease/">Disease</a></td>
-<td><a href="../treatment/">treatment</a></td>
 <td>range</td>
 <td><a href="./">Treatment</a></td>
 </tr>
@@ -522,10 +516,10 @@ slots:
 - name
 - description
 - evidence
+- notes
 - context
 - review_notes
 - role
-- notes
 - mechanism
 
 </code></pre>
@@ -546,6 +540,7 @@ attributes:
     owner: Treatment
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
@@ -560,6 +555,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
     required: true
   description:
@@ -570,9 +566,11 @@ attributes:
     owner: Treatment
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Environmental
     - Disease
+    - AnimalModel
     - Treatment
     - InfectiousAgent
     - Transmission
@@ -580,6 +578,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
   evidence:
     name: evidence
@@ -605,6 +604,28 @@ attributes:
     range: EvidenceItem
     inlined: true
     inlined_as_list: true
+  notes:
+    name: notes
+    examples:
+    - value: Contagious stage where symptoms appear and the bacteria can be spread
+        to others.
+    from_schema: https://w3id.org/dppkb
+    rank: 1000
+    alias: notes
+    owner: Treatment
+    domain_of:
+    - Prevalence
+    - ProgressionInfo
+    - EpidemiologyInfo
+    - Pathophysiology
+    - Phenotype
+    - Biochemical
+    - Environmental
+    - Disease
+    - Treatment
+    - Transmission
+    - Diagnosis
+    range: string
   context:
     name: context
     examples:
@@ -645,25 +666,6 @@ attributes:
     domain_of:
     - Pathophysiology
     - Treatment
-    range: string
-  notes:
-    name: notes
-    examples:
-    - value: Contagious stage where symptoms appear and the bacteria can be spread
-        to others.
-    from_schema: https://w3id.org/dppkb
-    rank: 1000
-    alias: notes
-    owner: Treatment
-    domain_of:
-    - ProgressionInfo
-    - Phenotype
-    - Biochemical
-    - Environmental
-    - Disease
-    - Treatment
-    - Transmission
-    - Diagnosis
     range: string
   mechanism:
     name: mechanism

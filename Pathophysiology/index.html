@@ -462,6 +462,8 @@
 
       Pathophysiology : name
 
+      Pathophysiology : notes
+
       Pathophysiology : pathways
 
 
@@ -474,6 +476,8 @@
       Pathophysiology : role
 
       Pathophysiology : subtypes
+
+      Pathophysiology : synonyms
 
       Pathophysiology : triggers
 
@@ -547,6 +551,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../synonyms/">synonyms</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../consequence/">consequence</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
@@ -612,6 +622,12 @@
 <td></td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../notes/">notes</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -672,6 +688,7 @@ slots:
 - locations
 - examples
 - role
+- synonyms
 - consequence
 - gene
 - pathways
@@ -683,6 +700,7 @@ slots:
 - triggers
 - assays
 - mechanisms
+- notes
 
 </code></pre>
 </details>
@@ -702,6 +720,7 @@ attributes:
     owner: Pathophysiology
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
@@ -716,6 +735,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
     required: true
   description:
@@ -726,9 +746,11 @@ attributes:
     owner: Pathophysiology
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Environmental
     - Disease
+    - AnimalModel
     - Treatment
     - InfectiousAgent
     - Transmission
@@ -736,6 +758,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
   cell_types:
     name: cell_types
@@ -823,6 +846,21 @@ attributes:
     - Pathophysiology
     - Treatment
     range: string
+  synonyms:
+    name: synonyms
+    examples:
+    - value: '[''CYFRA 21-1'']'
+    from_schema: https://w3id.org/dppkb
+    rank: 1000
+    multivalued: true
+    alias: synonyms
+    owner: Pathophysiology
+    domain_of:
+    - Pathophysiology
+    - Biochemical
+    - Environmental
+    - Disease
+    range: string
   consequence:
     name: consequence
     examples:
@@ -880,6 +918,7 @@ attributes:
     owner: Pathophysiology
     domain_of:
     - Pathophysiology
+    - AnimalModel
     range: GeneTerm
   subtypes:
     name: subtypes
@@ -954,6 +993,28 @@ attributes:
     owner: Pathophysiology
     domain_of:
     - Pathophysiology
+    range: string
+  notes:
+    name: notes
+    examples:
+    - value: Contagious stage where symptoms appear and the bacteria can be spread
+        to others.
+    from_schema: https://w3id.org/dppkb
+    rank: 1000
+    alias: notes
+    owner: Pathophysiology
+    domain_of:
+    - Prevalence
+    - ProgressionInfo
+    - EpidemiologyInfo
+    - Pathophysiology
+    - Phenotype
+    - Biochemical
+    - Environmental
+    - Disease
+    - Treatment
+    - Transmission
+    - Diagnosis
     range: string
 
 </code></pre>

@@ -515,6 +515,7 @@ attributes:
     owner: Diagnosis
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
@@ -529,6 +530,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
     required: true
   presence:
@@ -579,7 +581,10 @@ attributes:
     alias: notes
     owner: Diagnosis
     domain_of:
+    - Prevalence
     - ProgressionInfo
+    - EpidemiologyInfo
+    - Pathophysiology
     - Phenotype
     - Biochemical
     - Environmental

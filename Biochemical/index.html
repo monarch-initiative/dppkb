@@ -581,6 +581,7 @@ attributes:
     owner: Biochemical
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
@@ -595,6 +596,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
     required: true
   presence:
@@ -672,7 +674,10 @@ attributes:
     alias: notes
     owner: Biochemical
     domain_of:
+    - Prevalence
     - ProgressionInfo
+    - EpidemiologyInfo
+    - Pathophysiology
     - Phenotype
     - Biochemical
     - Environmental
@@ -745,6 +750,7 @@ attributes:
     alias: synonyms
     owner: Biochemical
     domain_of:
+    - Pathophysiology
     - Biochemical
     - Environmental
     - Disease

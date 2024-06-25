@@ -567,6 +567,7 @@ attributes:
     domain_of:
     - Phenotype
     - Disease
+    - AnimalModel
     range: string
   name:
     name: name
@@ -579,6 +580,7 @@ attributes:
     owner: Phenotype
     domain_of:
     - Subtype
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
@@ -593,6 +595,7 @@ attributes:
     - Inheritance
     - Variant
     - Mechanism
+    - ModelingConsideration
     range: string
     required: true
   frequency:
@@ -706,7 +709,10 @@ attributes:
     alias: notes
     owner: Phenotype
     domain_of:
+    - Prevalence
     - ProgressionInfo
+    - EpidemiologyInfo
+    - Pathophysiology
     - Phenotype
     - Biochemical
     - Environmental
