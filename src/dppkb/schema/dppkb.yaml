@@ -511,6 +511,7 @@ classes:
       - notes
       - factors
       - unit
+      - evidence
   Pathophysiology:
     slots:
       - name
@@ -572,6 +573,7 @@ classes:
       - inheritance
       - variants
       - features
+      - notes
   Environmental:
     slots:
       - name
@@ -619,6 +621,7 @@ classes:
       - alleles
       - description
       - associated_phenotypes
+      - evidence
   Treatment:
     slots:
       - name
@@ -671,6 +674,7 @@ classes:
     slots:
       - name
       - description
+      - evidence
   DiseaseCollection:
     slots:
       - diseases

@@ -3323,11 +3323,9 @@ prevalence:
         explanation: The provided literature does not address the prevalence of Pick Disease, making it impossible to support or refute the given prevalence range of 0.002-0.004% in the general population.
       - reference: PMID:17076146
         supports: NO_EVIDENCE
-        snippet: None
         explanation: The provided literature focused on Pick's disease, but no specific prevalence data is given.
       - reference: PMID:18090424
         supports: NO_EVIDENCE
-        snippet: None
         explanation: This historical summary of Pick complex does not provide relevant prevalence figures necessary to support or refute the given statement.
 progression:
   - phase: Onset
@@ -7750,7 +7748,7 @@ animal_models:
         snippet: We show that mice lacking Bbs2 gene expression have major components of the human phenotype, including obesity and retinopathy.
         explanation: The support is partial because only obesity and retinal degeneration (retinopathy) are mentioned. Learning deficits and kidney abnormalities are not addressed.
       - reference: PMID:34262361
-        refutes: PARTIAL
+        supports: PARTIAL
         snippet: A 25-year-old male presented to the clinic complaining of poor visual acuity since childhood, night-blindness, and progressive peripheral vision loss.
         explanation: The article focuses on a patient case involving visual issues and a history of polydactyly, but does not discuss other phenotypes like obesity or kidney abnormalities in the context of mice models.
 ---
@@ -11255,11 +11253,9 @@ phenotypes:
         explanation: The source does indicate that Type 1 diabetes has varied presentations, including insulin deficiency and potentially weight loss due to failure to utilize glucose. However, the excerpt does not specifically mention weight loss as a frequent phenotype.
       - reference: PMID:12949265
         supports: NO_EVIDENCE
-        snippet: null
         explanation: The provided literature does not directly discuss weight loss as a frequent systemic phenotype of Type 1 diabetes.
       - reference: PMID:11508279
         supports: NO_EVIDENCE
-        snippet: null
         explanation: This reference discusses the Accelerator Hypothesis and weight gain in diabetes but does not address weight loss in Type 1 diabetes.
       - reference: PMID:37065759
         supports: PARTIAL
@@ -11267,7 +11263,6 @@ phenotypes:
         explanation: This reference addresses weight gain in relation to Type 1 Diabetes but does not state that weight loss is a frequent phenotype.
       - reference: PMID:19267337
         supports: NO_EVIDENCE
-        snippet: null
         explanation: The reference discusses the natural history of endogenous beta-cell function in Type 1 diabetes but does not mention weight loss being a frequent phenotype.
 biochemical:
   - name: Blood Glucose
@@ -11584,6 +11579,97 @@ prevalence:
         supports: REFUTE
         snippet: The estimated seroprevalence of past dengue infection in Tanzania ranged from 50.6% in a health facility-based study to 11% in a population-based study.
         explanation: Even though specific case studies within countries can indicate high prevalence rates, this does not support a global prevalence of 40%.
+epidemiology:
+  - name: Basic Reproduction Number (R0)
+    description: The average number of secondary infections caused by one infected individual in a completely susceptible population.
+    minimum_value: 1
+    maximum_value: 20
+    notes: Highly variable depending on vector density, human population factors, and environmental conditions.
+    factors:
+      - Aedes mosquito population density
+      - Climate conditions (temperature, rainfall)
+      - Human population density
+      - Immunity status of the population
+  - name: Effective Reproduction Number (R or Rt)
+    description: The average number of secondary cases per infectious case in a population made up of both susceptible and non-susceptible individuals.
+    minimum_value: 0.5
+    maximum_value: 10
+    notes: Changes over time as control measures are implemented and population immunity increases. Rt < 1 indicates declining epidemic.
+    factors:
+      - Vector control measures
+      - Human behavior (use of mosquito repellents, elimination of breeding sites)
+      - Seasonal variations in mosquito populations
+  - name: Serial Interval
+    description: The time between the onset of symptoms in a primary case and the onset of symptoms in secondary cases.
+    unit: days
+    minimum_value: 10
+    maximum_value: 30
+    mean_range: 15-20
+    notes: Longer than many other infectious diseases due to the mosquito vector life cycle.
+  - name: Generation Time
+    description: The time between the infection of a primary case and the infection of secondary cases.
+    unit: days
+    minimum_value: 8
+    maximum_value: 25
+    mean_range: 14-18
+    notes: Includes both the intrinsic incubation period in humans and the extrinsic incubation period in mosquitoes.
+  - name: Case Fatality Rate (CFR)
+    unit: percentage
+    minimum_value: 0.1
+    maximum_value: 5
+    notes: Varies significantly based on the severity of the infection and access to medical care. Higher for severe dengue.
+  - name: Infectivity Period
+    unit: days
+    minimum_value: 4
+    maximum_value: 12
+    notes: Period during which an infected person can transmit the virus to mosquitoes.
+  - name: Incubation Period
+    unit: days
+    minimum_value: 3
+    maximum_value: 14
+    mean_range: 4-7
+    notes: Time between mosquito bite and onset of symptoms.
+  - name: Attack Rate
+    description: The proportion of susceptible individuals who become infected during a specified time interval.
+    unit: percentage
+    minimum_value: 1
+    maximum_value: 90
+    notes: Highly variable depending on population immunity, vector density, and environmental factors.
+  - name: Asymptomatic Ratio
+    description: The proportion of infected individuals who do not display symptoms.
+    unit: percentage
+    minimum_value: 50
+    maximum_value: 80
+    notes: A significant proportion of dengue infections are asymptomatic or mildly symptomatic, complicating surveillance and control efforts.
+modeling_considerations:
+  - name: Vector Dynamics
+    description: Include mosquito population dynamics, life cycle, and biting rates
+  - name: Climate Factors
+    description: Model effects of temperature, rainfall, and humidity on mosquito populations and virus transmission
+  - name: Serotype Interactions
+    description: Account for four dengue serotypes and their immunological interactions
+  - name: Seasonal Variations
+    description: Consider seasonal changes in vector populations and human behavior
+  - name: Human Mobility
+    description: Incorporate human movement patterns that can spread the disease across different areas
+  - name: Intervention Impacts
+    description: Model effects of vector control measures, personal protection, and potential vaccination strategies
+  - name: Asymptomatic Cases
+    description: Account for the role of asymptomatic infections in disease transmission
+  - name: Urban vs. Rural Transmission
+    description: Consider differences in transmission dynamics between urban and rural settings
+  - name: Vertical Transmission
+    description: Include the possibility of virus transmission from infected mosquitoes to their offspring
+  - name: Host Immunity
+    description: Model the complex immune responses, including temporary cross-protection and potential antibody-dependent enhancement
+  - name: Environmental Reservoirs
+    description: Consider the role of egg resistance to desiccation in maintaining the virus in the environment
+  - name: Socioeconomic Factors
+    description: Incorporate the impact of socioeconomic conditions on exposure risk and access to interventions
+  - name: Stochastic vs. Deterministic Models
+    description: Choose appropriate modeling approach based on population size and heterogeneity
+  - name: Spatial Considerations
+    description: Incorporate geographical factors affecting mosquito habitats and human-vector interactions
 progression:
   - phase: Incubation
     incubation_days: 3-14
@@ -12070,6 +12156,45 @@ phenotypes:
         supports: SUPPORT
         snippet: Some patients present persistent symptoms, including fatigue and depression, as acknowledged by the World Health Organization.
         explanation: The reference highlights that persistent symptoms such as fatigue are recognized in dengue patients, reinforcing the statement that fatigue is a frequent systemic phenotype associated with the disease.
+  - category: Dermatologic
+    name: Maculopapular Rash
+    frequency: FREQUENT
+    notes: Typically appears 2-5 days after fever onset
+  - category: Ocular
+    name: Conjunctival Injection
+    frequency: FREQUENT
+    notes: Red, bloodshot eyes
+  - category: Gastrointestinal
+    name: Abdominal Pain
+    frequency: FREQUENT
+    notes: Can be severe in some cases
+  - category: Systemic
+    name: Lymphadenopathy
+    frequency: OCCASIONAL
+    notes: Swollen lymph nodes
+  - category: Respiratory
+    name: Cough
+    frequency: OCCASIONAL
+  - category: Neurologic
+    name: Altered Mental Status
+    frequency: RARE
+    notes: More common in severe dengue
+  - category: Cardiovascular
+    name: Hypotension
+    frequency: OCCASIONAL
+    notes: Can lead to shock in severe cases
+  - category: Hepatic
+    name: Hepatomegaly
+    frequency: OCCASIONAL
+    notes: Enlarged liver, more common in severe dengue
+  - category: Laboratory
+    name: Leukopenia
+    frequency: FREQUENT
+    notes: Low white blood cell count
+  - category: Laboratory
+    name: Elevated Liver Enzymes
+    frequency: FREQUENT
+    notes: Indicates liver involvement
 biochemical:
   - name: Dengue NS1 Antigen
     presence: Positive
@@ -14470,32 +14595,13 @@ epidemiology:
         explanation: The abstract discusses the effect of rainfall on cholera incidence but does not provide specific R0 values or detail the factors affecting R0.
   - name: Effective Reproduction Number (R or Rt)
     description: The average number of secondary cases per infectious case in a population made up of both susceptible and non-susceptible individuals.
+    minimum_value: 0.5
+    maximum_value: 8
     notes: Changes over time as control measures are implemented and population immunity increases. Rt < 1 indicates declining epidemic.
     factors:
       - Proportion of susceptible individuals
       - Control measures (e.g., improved sanitation, vaccination)
       - Changes in behavior (e.g., increased hygiene practices)
-    evidence:
-      - reference: PMID:35259956
-        supports: SUPPORT
-        snippet: The fate of ongoing infectious disease outbreaks is predicted through reproduction numbers, defining the long-term establishment of the infection...
-        explanation: This reference provides context on the use of reproduction numbers (R or Rt) to characterize ongoing infectious diseases like cholera.
-      - reference: PMID:32853313
-        supports: PARTIAL
-        snippet: '...we found Re was approximately 1.5. Consequently, we estimated about 90.3% had measles immunity...'
-        explanation: This reference addresses the use of effective reproduction number (Re) but specifically for a measles outbreak rather than cholera. However, it still supports the definition of Re in the context of the population's immunity.
-      - reference: PMID:38709376
-        supports: PARTIAL
-        snippet: '...we show that the endemic dynamic is convergence to the endemic equilibrium; while when the precaution level is the delayed best response...'
-        explanation: This reference discusses the dynamics of infectious diseases with respect to the basic reproduction number (R0) and its relation to control measures and population behavior, partially supporting the statement.
-      - reference: PMID:24101639
-        supports: PARTIAL
-        snippet: During 2008-2010, 85% of 26 district-level outbreaks occurred in the capital Lome or the coastal Maritime Region...
-        explanation: This reference provides epidemiological data on cholera outbreaks but does not specifically mention the reproduction number. It partially supports the context of cholera epidemiology.
-      - reference: PMID:21993137
-        supports: PARTIAL
-        snippet: 'Two parameters quantify the dynamics of a vector-borne infection: (1) the basic reproductive number (R(0)) that is the mean number of secondary infections transmitted from an infectious host by the bite of the vector...'
-        explanation: This reference provides detailed information on vector-borne diseases and the basic reproductive number (R0), which helps support the idea of using similar parameters for cholera.
   - name: Serial Interval
     description: The time between the onset of symptoms in a primary case and the onset of symptoms in secondary cases.
     unit: days
@@ -15317,3 +15423,158 @@ treatments:
         supports: PARTIAL
         snippet: Oral cholera vaccination could be deployed in a diverse range of situations from cholera-endemic areas and locations of humanitarian crises, but no clear consensus exists.
         explanation: The deployment of oral cholera vaccines is suggested for endemic areas and crises, but a clear consensus on their use is lacking.
+---
+category: Infectious Disease
+name: Hepatitis B
+parents:
+- Viral Infection
+infectious_agent:
+- name: Hepatitis B Virus (HBV)
+  description: A DNA virus that affects the liver and can cause both acute and chronic
+    hepatitis.
+transmission:
+- name: Blood-borne Transmission
+  description: Spread through contact with infected blood, including needlesticks
+    and blood transfusions.
+- name: Sexual Transmission
+  description: Spread through sexual contact with an infected person.
+- name: Mother-to-Child Transmission (Perinatal)
+  description: Spread from an infected mother to her baby during childbirth.
+prevalence:
+- population: Global
+  percentage: 3.5
+epidemiology:
+- name: Basic Reproduction Number (R0)
+  description: The average number of secondary infections caused by one infected individual
+    in a completely susceptible population.
+  minimum_value: 2
+  maximum_value: 10
+  notes: Highly variable based on geographic region, vaccination rates, and modes
+    of transmission.
+  factors:
+  - Vaccination coverage
+  - Healthcare practices
+  - Population mobility
+- name: Effective Reproduction Number (R or Rt)
+  description: The average number of secondary cases per infectious case in a population
+    with some immunity or control measures.
+  minimum_value: 0.3
+  maximum_value: 1.2
+  notes: Decreases with effective vaccination and antiviral therapies.
+  factors:
+  - Proportion of immune individuals
+  - Effectiveness of antiviral treatment
+- name: Incubation Period
+  unit: days
+  minimum_value: 30
+  maximum_value: 180
+  mean_range: 60-90
+  notes: Affects the timing of infection control measures and contact tracing.
+- name: Chronic Carriage Rate
+  description: The percentage of infected individuals who develop chronic hepatitis
+    B infection.
+  unit: percentage
+  minimum_value: 2
+  maximum_value: 10
+  notes: Higher in infants and young children than in adults.
+- name: Asymptomatic Ratio
+  description: The proportion of infected individuals who do not display symptoms.
+  unit: percentage
+  minimum_value: 50
+  maximum_value: 70
+  notes: Important for understanding true disease prevalence and silent spreaders.
+progression:
+- phase: Acute
+  duration: Weeks to Months
+  notes: May include jaundice, fatigue, abdominal pain, and elevated liver enzymes.
+- phase: Chronic
+  duration: Years to Decades
+  notes: Continuous virus presence in the liver, which may lead to cirrhosis or liver
+    cancer.
+- phase: Cirrhosis
+  duration: Variable
+  notes: Chronic infection can cause liver scarring, leading to liver dysfunction.
+- phase: Hepatocellular Carcinoma
+  duration: Variable
+  notes: Chronic infection significantly increases the risk of liver cancer.
+pathophysiology:
+- name: Hepatocyte Infection
+  description: HBV infects liver cells, integrates into the host genome, and persists.
+  cell_types:
+  - Hepatocyte
+  downstream:
+  - Chronic Inflammation
+- name: Chronic Inflammation
+  description: Persistent immune response against HBV-infected hepatocytes leads to
+    liver damage.
+  downstream:
+  - Liver Fibrosis
+  - Cirrhosis
+- name: Immune Clearance
+  description: The immune system attempts to clear the virus, which can succeed or
+    fail, leading to chronic infection.
+  cell_types:
+  - T Cell
+  - B Cell
+- name: Liver Fibrosis
+  description: Chronic inflammation promotes fibrotic tissue deposition replacing
+    healthy liver cells.
+  downstream:
+  - Cirrhosis
+- name: Cirrhosis
+  description: Extensive fibrosis and scarring significantly impair liver function.
+phenotypes:
+- category: Gastrointestinal
+  name: Jaundice
+  frequency: FREQUENT
+- category: Systemic
+  name: Fatigue
+  frequency: FREQUENT
+- category: Gastrointestinal
+  name: Abdominal Pain
+  frequency: OCCASIONAL
+- category: Hepatic
+  name: Elevated Liver Enzymes
+  frequency: FREQUENT
+biochemical:
+- name: Hepatitis B Surface Antigen (HBsAg)
+  presence: Positive
+  context: Indicates active infection
+- name: Hepatitis B e Antigen (HBeAg)
+  presence: Positive
+  context: Indicates active viral replication and high infectivity
+- name: HBV DNA
+  presence: Positive
+  context: Indicates viral load and active replication
+genetic:
+- name: HBV Genotype
+  presence: Multiple Genotypes (A-H)
+  notes: Influences disease progression and treatment response
+diagnosis:
+- name: HBsAg Test
+  presence: Positive
+  notes: Indicates current hepatitis B infection
+- name: HBeAg Test
+  presence: Positive
+  notes: Indicates high levels of viral replication
+- name: HBV DNA Test
+  presence: Positive
+  notes: Measures viral load in the blood
+- name: Liver Biopsy
+  notes: Assesses liver damage and fibrosis
+environmental:
+- name: Poor Sterile Practices
+  notes: Increases the risk of transmission via medical procedures
+- name: High-risk Behaviors
+  notes: Includes unprotected sexual contact and intravenous drug use
+treatments:
+- name: Antiviral Medications
+  description: Includes drugs like tenofovir and entecavir to suppress HBV replication.
+- name: Interferon Therapy
+  description: Boosts the immune system to fight the virus.
+- name: Liver Transplant
+  description: For end-stage liver disease.
+- name: Regular Monitoring
+  description: Monitoring liver function and viral load to manage chronic infection.
+- name: Vaccination
+  description: Hepatitis B vaccine provides prevention for uninfected individuals.
