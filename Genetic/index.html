@@ -422,6 +422,8 @@
 
       Genetic : name
 
+      Genetic : notes
+
       Genetic : presence
 
       Genetic : review_notes
@@ -511,6 +513,12 @@
 <td></td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../notes/">notes</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -573,6 +581,7 @@ slots:
 - inheritance
 - variants
 - features
+- notes
 
 </code></pre>
 </details>
@@ -635,16 +644,19 @@ attributes:
     - Subtype
     - Prevalence
     - ProgressionInfo
+    - EpidemiologyInfo
     - Pathophysiology
     - Phenotype
     - Biochemical
     - Genetic
     - Environmental
+    - AnimalModel
     - Treatment
     - InfectiousAgent
     - Transmission
     - Diagnosis
     - Inheritance
+    - ModelingConsideration
     range: EvidenceItem
     inlined: true
     inlined_as_list: true
@@ -743,6 +755,29 @@ attributes:
     owner: Genetic
     domain_of:
     - Genetic
+    range: string
+  notes:
+    name: notes
+    examples:
+    - value: Contagious stage where symptoms appear and the bacteria can be spread
+        to others.
+    from_schema: https://w3id.org/dppkb
+    rank: 1000
+    alias: notes
+    owner: Genetic
+    domain_of:
+    - Prevalence
+    - ProgressionInfo
+    - EpidemiologyInfo
+    - Pathophysiology
+    - Phenotype
+    - Biochemical
+    - Genetic
+    - Environmental
+    - Disease
+    - Treatment
+    - Transmission
+    - Diagnosis
     range: string
 
 </code></pre>

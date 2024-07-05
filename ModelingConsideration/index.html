@@ -391,6 +391,15 @@
     click ModelingConsideration href "../ModelingConsideration"
       ModelingConsideration : description
 
+      ModelingConsideration : evidence
+
+
+
+
+    ModelingConsideration --&gt; "*" EvidenceItem : evidence
+    click EvidenceItem href "../EvidenceItem"
+
+
       ModelingConsideration : name
 
 
@@ -416,6 +425,12 @@
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../evidence/">evidence</a></td>
+<td>* <br/> <a href="../EvidenceItem/">EvidenceItem</a></td>
 <td></td>
 <td>direct</td>
 </tr>
@@ -473,6 +488,7 @@ from_schema: https://w3id.org/dppkb
 slots:
 - name
 - description
+- evidence
 
 </code></pre>
 </details>
@@ -532,6 +548,33 @@ attributes:
     - Mechanism
     - ModelingConsideration
     range: string
+  evidence:
+    name: evidence
+    from_schema: https://w3id.org/dppkb
+    rank: 1000
+    multivalued: true
+    alias: evidence
+    owner: ModelingConsideration
+    domain_of:
+    - Subtype
+    - Prevalence
+    - ProgressionInfo
+    - EpidemiologyInfo
+    - Pathophysiology
+    - Phenotype
+    - Biochemical
+    - Genetic
+    - Environmental
+    - AnimalModel
+    - Treatment
+    - InfectiousAgent
+    - Transmission
+    - Diagnosis
+    - Inheritance
+    - ModelingConsideration
+    range: EvidenceItem
+    inlined: true
+    inlined_as_list: true
 
 </code></pre>
 </details>
