@@ -16406,782 +16406,721 @@ treatments:
     description: Vaccines available for prevention of meningococcal, pneumococcal, and Hib meningitis.
 ---
 name: Multisystem Inflammatory Syndrome in Children (MIS-C)
-description: A rare but serious condition associated with COVID-19, causing systemic
-  inflammation in children.
+description: A rare but serious condition associated with COVID-19, causing systemic inflammation in children.
 category: Complex
 parents:
-- Pediatric Condition
-- Inflammatory Syndrome
+  - Pediatric Condition
+  - Inflammatory Syndrome
 prevalence:
-- population: Children
-  percentage: Rare
+  - population: Children
+    percentage: Rare
 progression:
-- phase: Onset
-  age_range: 0-21
-  notes: Typically occurs 2-6 weeks after COVID-19 infection.
+  - phase: Onset
+    age_range: 0-21
+    notes: Typically occurs 2-6 weeks after COVID-19 infection.
 pathophysiology:
-- name: Post-Infectious Hyperinflammatory Response
-  description: Abnormally heightened immune response following COVID-19 infection.
-- name: Cytokine Storm
-  description: Excessive production of pro-inflammatory cytokines, leading to widespread
-    inflammation.
-  mediators:
-  - IL-6
-  - IL-10
-  - "TNF-\u03B1"
+  - name: Post-Infectious Hyperinflammatory Response
+    description: Abnormally heightened immune response following COVID-19 infection.
+  - name: Cytokine Storm
+    description: Excessive production of pro-inflammatory cytokines, leading to widespread inflammation.
+    mediators:
+      - IL-6
+      - IL-10
+      - "TNF-α"
 phenotypes:
-- category: Systemic
-  name: Fever
-  frequency: VERY_FREQUENT
-  diagnostic: true
-- category: Cardiovascular
-  name: Hypotension
-  frequency: FREQUENT
-  notes: May lead to shock and require intensive care.
-- category: Gastrointestinal
-  name: Abdominal Pain
-  frequency: VERY_FREQUENT
-  notes: Often similar to appendicitis
-- category: Dermatologic
-  name: Rash
-  frequency: FREQUENT
-- category: Hematologic
-  name: Coagulopathy
-  frequency: OCCASIONAL
-  notes: May involve thrombocytopenia or elevated D-dimer levels.
-- category: Neurologic
-  name: Headache
-  frequency: FREQUENT
-- category: Respiratory
-  name: Cough
-  frequency: OCCASIONAL
+  - category: Systemic
+    name: Fever
+    frequency: VERY_FREQUENT
+    diagnostic: true
+  - category: Cardiovascular
+    name: Hypotension
+    frequency: FREQUENT
+    notes: May lead to shock and require intensive care.
+  - category: Gastrointestinal
+    name: Abdominal Pain
+    frequency: VERY_FREQUENT
+    notes: Often similar to appendicitis
+  - category: Dermatologic
+    name: Rash
+    frequency: FREQUENT
+  - category: Hematologic
+    name: Coagulopathy
+    frequency: OCCASIONAL
+    notes: May involve thrombocytopenia or elevated D-dimer levels.
+  - category: Neurologic
+    name: Headache
+    frequency: FREQUENT
+  - category: Respiratory
+    name: Cough
+    frequency: OCCASIONAL
 biochemical:
-- name: C-Reactive Protein (CRP)
-  presence: Elevated
-  context: General inflammation
-- name: Erythrocyte Sedimentation Rate (ESR)
-  presence: Elevated
-  context: Systemic inflammation
-- name: Ferritin
-  presence: Elevated
-  context: Systemic inflammation
-- name: D-dimer
-  presence: Elevated
-  context: Coagulopathy
+  - name: C-Reactive Protein (CRP)
+    presence: Elevated
+    context: General inflammation
+  - name: Erythrocyte Sedimentation Rate (ESR)
+    presence: Elevated
+    context: Systemic inflammation
+  - name: Ferritin
+    presence: Elevated
+    context: Systemic inflammation
+  - name: D-dimer
+    presence: Elevated
+    context: Coagulopathy
 genetic:
-- name: Not Applicable
+  - name: Not Applicable
 environmental:
-- name: Not Applicable
-notes: MIS-C is primarily a post-infectious condition with no strong environmental
-  risk factors identified.
+  - name: Not Applicable
+notes: MIS-C is primarily a post-infectious condition with no strong environmental risk factors identified.
 treatments:
-- name: Intravenous Immunoglobulin (IVIG)
-  description: Used to modulate the immune response and reduce inflammation.
-- name: Corticosteroids
-  description: Anti-inflammatory medicines to reduce immune system activity and inflammation.
-- name: Aspirin
-  description: Used in cases with high risk of blood clots to prevent thrombotic complications.
-  notes: Dose may vary.
-- name: Supportive Care
-  description: Including fluids, blood pressure support, and respiratory support as
-    needed.
-
+  - name: Intravenous Immunoglobulin (IVIG)
+    description: Used to modulate the immune response and reduce inflammation.
+  - name: Corticosteroids
+    description: Anti-inflammatory medicines to reduce immune system activity and inflammation.
+  - name: Aspirin
+    description: Used in cases with high risk of blood clots to prevent thrombotic complications.
+    notes: Dose may vary.
+  - name: Supportive Care
+    description: Including fluids, blood pressure support, and respiratory support as needed.
 ---
 name: Addison's Disease
-description: Addison's Disease, also known as primary adrenal insufficiency, is a
-  rare endocrine disorder where the adrenal glands do not produce sufficient steroid
-  hormones, specifically cortisol and aldosterone.
+description: Addison's Disease, also known as primary adrenal insufficiency, is a rare endocrine disorder where the adrenal glands do not produce sufficient steroid hormones, specifically cortisol and aldosterone.
 category: Endocrine
 parents:
-- Adrenal Insufficiency
-- Autoimmune Disorder
+  - Adrenal Insufficiency
+  - Autoimmune Disorder
 prevalence:
-- population: Global
-  percentage: Rare
+  - population: Global
+    percentage: Rare
 progression:
-- phase: Onset
-  age_range: 30-50
+  - phase: Onset
+    age_range: 30-50
 pathophysiology:
-- name: Autoimmune Adrenalitis
-  description: The immune system mistakenly attacks the adrenal cortex, leading to
-    destruction of adrenal tissue and decreased hormone production.
-  downstream:
-  - Reduced Cortisol Production
-  - Reduced Aldosterone Production
-- name: Reduced Cortisol Production
-  description: Lack of cortisol impacts the body's ability to respond to stress and
-    maintain various metabolic functions.
-  downstream:
-  - Hypoglycemia
-  - Weight Loss
-- name: Reduced Aldosterone Production
-  description: Insufficient aldosterone affects the balance of sodium and potassium
-    in the body, leading to dehydration and low blood pressure.
-  downstream:
-  - Hyponatremia
-  - Hyperkalemia
+  - name: Autoimmune Adrenalitis
+    description: The immune system mistakenly attacks the adrenal cortex, leading to destruction of adrenal tissue and decreased hormone production.
+    downstream:
+      - Reduced Cortisol Production
+      - Reduced Aldosterone Production
+  - name: Reduced Cortisol Production
+    description: Lack of cortisol impacts the body's ability to respond to stress and maintain various metabolic functions.
+    downstream:
+      - Hypoglycemia
+      - Weight Loss
+  - name: Reduced Aldosterone Production
+    description: Insufficient aldosterone affects the balance of sodium and potassium in the body, leading to dehydration and low blood pressure.
+    downstream:
+      - Hyponatremia
+      - Hyperkalemia
 phenotypes:
-- category: Endocrine
-  name: Fatigue
-  frequency: VERY_FREQUENT
-- category: Gastrointestinal
-  name: Abdominal Pain
-  frequency: FREQUENT
-- category: Endocrine
-  name: Hyperpigmentation
-  frequency: VERY_FREQUENT
-  diagnostic: true
-  notes: Especially noticeable in areas exposed to friction, such as knuckles, elbows,
-    and knees.
-- category: Musculoskeletal
-  name: Muscle Weakness
-  frequency: FREQUENT
-- category: Systemic
-  name: Weight Loss
-  frequency: FREQUENT
-- category: Cardiovascular
-  name: Hypotension
-  frequency: FREQUENT
-- category: Endocrine
-  name: Salt Craving
-  frequency: OCCASIONAL
+  - category: Endocrine
+    name: Fatigue
+    frequency: VERY_FREQUENT
+  - category: Gastrointestinal
+    name: Abdominal Pain
+    frequency: FREQUENT
+  - category: Endocrine
+    name: Hyperpigmentation
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    notes: Especially noticeable in areas exposed to friction, such as knuckles, elbows, and knees.
+  - category: Musculoskeletal
+    name: Muscle Weakness
+    frequency: FREQUENT
+  - category: Systemic
+    name: Weight Loss
+    frequency: FREQUENT
+  - category: Cardiovascular
+    name: Hypotension
+    frequency: FREQUENT
+  - category: Endocrine
+    name: Salt Craving
+    frequency: OCCASIONAL
 biochemical:
-- name: Cortisol
-  presence: Decreased
-  context: Diagnostic indicator, measured in blood or saliva
-- name: ACTH (Adrenocorticotropic Hormone)
-  presence: Increased
-  context: Elevated due to lack of feedback inhibition by cortisol
-- name: Aldosterone
-  presence: Decreased
+  - name: Cortisol
+    presence: Decreased
+    context: Diagnostic indicator, measured in blood or saliva
+  - name: ACTH (Adrenocorticotropic Hormone)
+    presence: Increased
+    context: Elevated due to lack of feedback inhibition by cortisol
+  - name: Aldosterone
+    presence: Decreased
 diagnosis:
-- name: ACTH Stimulation Test
-  notes: Evaluates adrenal gland function by measuring cortisol response to synthetic
-    ACTH
-- name: Serum Electrolyte Panel
-  notes: May show hyponatremia and hyperkalemia
+  - name: ACTH Stimulation Test
+    notes: Evaluates adrenal gland function by measuring cortisol response to synthetic ACTH
+  - name: Serum Electrolyte Panel
+    notes: May show hyponatremia and hyperkalemia
 genetic:
-- name: AIRE
-  association: Autoimmune Polyendocrine Syndrome Type 1 (APS-1) is a known genetic
-    cause
+  - name: AIRE
+    association: Autoimmune Polyendocrine Syndrome Type 1 (APS-1) is a known genetic cause
 environmental:
-- name: Infections
-  notes: "Tuberculosis and other infections can cause adrenal damage leading to Addison\u2019\
-    s disease"
+  - name: Infections
+    notes: "Tuberculosis and other infections can cause adrenal damage leading to Addison’s disease"
 treatments:
-- name: Glucocorticoid Replacement
-  description: Hydrocortisone or prednisone to replace cortisol.
-- name: Mineralocorticoid Replacement
-  description: Fludrocortisone to replace aldosterone and manage electrolyte balance.
-- name: Salt Supplementation
-  description: Increased salt intake to manage hyponatremia.
-- name: Emergency Medical ID
-  description: Patients should carry an ID indicating their condition for emergency
-    situations.
-- name: Stress Dose Adjustments
-  description: Increased dose of corticosteroids during illness or stress.
-notes: Prompt diagnosis and lifelong management with hormone replacement therapy are
-  essential for preventing adrenal crises and maintaining health.
-
+  - name: Glucocorticoid Replacement
+    description: Hydrocortisone or prednisone to replace cortisol.
+  - name: Mineralocorticoid Replacement
+    description: Fludrocortisone to replace aldosterone and manage electrolyte balance.
+  - name: Salt Supplementation
+    description: Increased salt intake to manage hyponatremia.
+  - name: Emergency Medical ID
+    description: Patients should carry an ID indicating their condition for emergency situations.
+  - name: Stress Dose Adjustments
+    description: Increased dose of corticosteroids during illness or stress.
+notes: Prompt diagnosis and lifelong management with hormone replacement therapy are essential for preventing adrenal crises and maintaining health.
 ---
 name: Marfan Syndrome
 category: Genetic
 parents:
-- Connective Tissue Disorder
+  - Connective Tissue Disorder
 prevalence:
-- population: Global
-  percentage: 0.01-0.02
+  - population: Global
+    percentage: 0.01-0.02
 progression:
-- phase: Onset
-  age_range: Childhood-Adolescence
+  - phase: Onset
+    age_range: Childhood-Adolescence
 pathophysiology:
-- name: FBN1 Gene Mutation
-  description: Mutations in the FBN1 gene result in defective fibrillin-1 protein,
-    which affects the elasticity and strength of connective tissues.
-  gene: FBN1
+  - name: FBN1 Gene Mutation
+    description: Mutations in the FBN1 gene result in defective fibrillin-1 protein, which affects the elasticity and strength of connective tissues.
+    gene: FBN1
 phenotypes:
-- category: Cardiovascular
-  name: Aortic Aneurysm
-  frequency: FREQUENT
-  diagnostic: true
-  sequelae:
-  - Aortic Dissection
-- category: Musculoskeletal
-  name: Tall Stature
-  frequency: VERY_FREQUENT
-  diagnostic: true
-- category: Musculoskeletal
-  name: Arachnodactyly
-  frequency: VERY_FREQUENT
-  diagnostic: true
-- category: Ocular
-  name: Ectopia Lentis
-  frequency: FREQUENT
-  diagnostic: true
-  notes: Dislocation of the lens
-- category: Musculoskeletal
-  name: Scoliosis
-  frequency: FREQUENT
-  diagnostic: true
-- category: Respiratory
-  name: Pneumothorax
-  frequency: OCCASIONAL
+  - category: Cardiovascular
+    name: Aortic Aneurysm
+    frequency: FREQUENT
+    diagnostic: true
+    sequelae:
+      - Aortic Dissection
+  - category: Musculoskeletal
+    name: Tall Stature
+    frequency: VERY_FREQUENT
+    diagnostic: true
+  - category: Musculoskeletal
+    name: Arachnodactyly
+    frequency: VERY_FREQUENT
+    diagnostic: true
+  - category: Ocular
+    name: Ectopia Lentis
+    frequency: FREQUENT
+    diagnostic: true
+    notes: Dislocation of the lens
+  - category: Musculoskeletal
+    name: Scoliosis
+    frequency: FREQUENT
+    diagnostic: true
+  - category: Respiratory
+    name: Pneumothorax
+    frequency: OCCASIONAL
 biochemical:
-- name: Fibrillin-1 Protein
-  presence: Abnormal
-  context: Can be used in research settings but not routine diagnostics.
+  - name: Fibrillin-1 Protein
+    presence: Abnormal
+    context: Can be used in research settings but not routine diagnostics.
 genetic:
-- name: FBN1
-  association: Pathogenic Variants
+  - name: FBN1
+    association: Pathogenic Variants
 diagnosis:
-- name: Genetic Testing for FBN1 Mutations
-  presence: Positive in affected individuals
-- name: Echocardiogram
-  presence: Aortic root dilation
-  notes: Often used to monitor cardiovascular complications.
-- name: Slit Lamp Exam
-  presence: Ectopia lentis
-  notes: Used to detect lens dislocation.
+  - name: Genetic Testing for FBN1 Mutations
+    presence: Positive in affected individuals
+  - name: Echocardiogram
+    presence: Aortic root dilation
+    notes: Often used to monitor cardiovascular complications.
+  - name: Slit Lamp Exam
+    presence: Ectopia lentis
+    notes: Used to detect lens dislocation.
 environmental:
-- name: Physical Activity Restrictions
-  effect: Reduces risk of aortic dissection.
+  - name: Physical Activity Restrictions
+    effect: Reduces risk of aortic dissection.
 treatments:
-- name: Beta Blockers
-  description: Used to reduce stress on the aorta and prevent its enlargement.
-- name: Aortic Surgery
-  description: Recommended for severe aortic dilation to prevent dissection.
-- name: Orthopedic Interventions
-  description: Treatments for scoliosis and other skeletal abnormalities.
-- name: Vision Correction
-  description: Management of ocular issues such as ectopia lentis with glasses or
-    surgery.
+  - name: Beta Blockers
+    description: Used to reduce stress on the aorta and prevent its enlargement.
+  - name: Aortic Surgery
+    description: Recommended for severe aortic dilation to prevent dissection.
+  - name: Orthopedic Interventions
+    description: Treatments for scoliosis and other skeletal abnormalities.
+  - name: Vision Correction
+    description: Management of ocular issues such as ectopia lentis with glasses or surgery.
 ---
 name: Parvovirus B19 Infection
 category: Viral Disease
 parents:
-- Infectious Disease
-- Childhood Infection
+  - Infectious Disease
+  - Childhood Infection
 prevalence:
-- population: Global
-  percentage: Common
+  - population: Global
+    percentage: Common
 infectious_agent:
-- name: Parvovirus B19
-  description: A single-stranded DNA virus known to cause several clinical conditions,
-    particularly in children.
+  - name: Parvovirus B19
+    description: A single-stranded DNA virus known to cause several clinical conditions, particularly in children.
 transmission:
-- name: Respiratory Droplets
-  description: Spread through inhalation of respiratory droplets from infected individuals.
-- name: Vertical Transmission
-  description: Transmission from mother to fetus during pregnancy.
-- name: Blood Transfusion
-  description: Transmission through contaminated blood products.
+  - name: Respiratory Droplets
+    description: Spread through inhalation of respiratory droplets from infected individuals.
+  - name: Vertical Transmission
+    description: Transmission from mother to fetus during pregnancy.
+  - name: Blood Transfusion
+    description: Transmission through contaminated blood products.
 pathophysiology:
-- name: Viral Replication
-  description: The virus primarily targets erythroid progenitor cells in the bone
-    marrow, leading to disrupted red blood cell production.
-  cell_types:
-  - Erythroid Progenitor Cells
-- name: Immune Response
-  description: Immune-mediated response to the virus can lead to rash and joint symptoms.
+  - name: Viral Replication
+    description: The virus primarily targets erythroid progenitor cells in the bone marrow, leading to disrupted red blood cell production.
+    cell_types:
+      - Erythroid Progenitor Cells
+  - name: Immune Response
+    description: Immune-mediated response to the virus can lead to rash and joint symptoms.
 phenotypes:
-- category: Dermatologic
-  name: Erythema Infectiosum (Fifth Disease)
-  frequency: VERY_FREQUENT
-  diagnostic: true
-  sequelae:
-  - Slapped Cheek Rash
-- category: Hematologic
-  name: Transient Aplastic Crisis
-  frequency: OCCASIONAL
-  context: In individuals with hemolytic disorders.
-- category: Musculoskeletal
-  name: Arthropathy
-  frequency: FREQUENT
-  notes: Particularly in adults.
-- category: Fetal
-  name: Hydrops Fetalis
-  frequency: RARE
-  notes: Due to severe fetal anemia resulting from maternal infection.
+  - category: Dermatologic
+    name: Erythema Infectiosum (Fifth Disease)
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    sequelae:
+      - Slapped Cheek Rash
+  - category: Hematologic
+    name: Transient Aplastic Crisis
+    frequency: OCCASIONAL
+    context: In individuals with hemolytic disorders.
+  - category: Musculoskeletal
+    name: Arthropathy
+    frequency: FREQUENT
+    notes: Particularly in adults.
+  - category: Fetal
+    name: Hydrops Fetalis
+    frequency: RARE
+    notes: Due to severe fetal anemia resulting from maternal infection.
 biochemical:
-- name: Parvovirus B19 Serology
-  presence: Positive
-  context: Detection of specific antibodies (IgM and IgG) indicating recent or past
-    infection.
-- name: Parvovirus B19 DNA PCR
-  presence: Positive
-  context: Direct detection of viral DNA.
+  - name: Parvovirus B19 Serology
+    presence: Positive
+    context: Detection of specific antibodies (IgM and IgG) indicating recent or past infection.
+  - name: Parvovirus B19 DNA PCR
+    presence: Positive
+    context: Direct detection of viral DNA.
 diagnosis:
-- name: Clinical Examination
-  notes: Based on characteristic rash and illness pattern.
-- name: Serologic Testing
-  notes: Detection of IgM and IgG antibodies.
-- name: PCR Testing
-  notes: Detection of viral DNA in blood or other tissues.
+  - name: Clinical Examination
+    notes: Based on characteristic rash and illness pattern.
+  - name: Serologic Testing
+    notes: Detection of IgM and IgG antibodies.
+  - name: PCR Testing
+    notes: Detection of viral DNA in blood or other tissues.
 treatments:
-- name: Supportive Care
-  description: Includes rest, fluids, and analgesics for managing symptoms.
-- name: Intravenous Immunoglobulin (IVIG)
-  description: Used in severe cases, particularly for individuals with immunodeficiency
-    or severe anemia.
+  - name: Supportive Care
+    description: Includes rest, fluids, and analgesics for managing symptoms.
+  - name: Intravenous Immunoglobulin (IVIG)
+    description: Used in severe cases, particularly for individuals with immunodeficiency or severe anemia.
 environmental:
-- name: Personal Hygiene
-  description: Good hand hygiene to reduce risk of transmission.
-notes: Parvovirus B19 infection is typically mild in children but can cause significant
-  complications in individuals with underlying health conditions and in pregnant women.
+  - name: Personal Hygiene
+    description: Good hand hygiene to reduce risk of transmission.
+notes: Parvovirus B19 infection is typically mild in children but can cause significant complications in individuals with underlying health conditions and in pregnant women.
 ---
 name: "Graves' Disease"
 category: Endocrine Disorder
 parents:
-- Autoimmune Disease
-- Thyroid Disorder
+  - Autoimmune Disease
+  - Thyroid Disorder
 prevalence:
-- population: Global
-  percentage: 0.5-1
+  - population: Global
+    percentage: 0.5-1
 pathophysiology:
-- name: Autoantibody Production
-  description: The immune system produces thyroid-stimulating immunoglobulins (TSIs)
-    that mimic the activity of thyroid-stimulating hormone (TSH), leading to an overactive
-    thyroid.
-  cell_types:
-  - B cell
-  - T cell
-- name: Thyroid Overactivity
-  description: Excessive stimulation of the thyroid gland results in increased production
-    of thyroid hormones (thyroxine, T4, and triiodothyronine, T3).
-  downstream:
-  - Hyperthyroidism
-- name: Immune System Dysregulation
-  description: Dysregulated immune response leads to autoimmune attacks on the thyroid
-    gland.
-  cell_types:
-  - B cell
-  - T cell
+  - name: Autoantibody Production
+    description: The immune system produces thyroid-stimulating immunoglobulins (TSIs) that mimic the activity of thyroid-stimulating hormone (TSH), leading to an overactive thyroid.
+    cell_types:
+      - B cell
+      - T cell
+  - name: Thyroid Overactivity
+    description: Excessive stimulation of the thyroid gland results in increased production of thyroid hormones (thyroxine, T4, and triiodothyronine, T3).
+    downstream:
+      - Hyperthyroidism
+  - name: Immune System Dysregulation
+    description: Dysregulated immune response leads to autoimmune attacks on the thyroid gland.
+    cell_types:
+      - B cell
+      - T cell
 phenotypes:
-- category: Endocrine
-  name: Hyperthyroidism
-  frequency: VERY_FREQUENT
-  diagnostic: true
-  sequelae:
-  - Weight Loss
-  - Increased Appetite
-  - Heat Intolerance
-  - Sweating
-- category: Ocular
-  name: Exophthalmos (Proptosis)
-  frequency: FREQUENT
-  notes: Bulging of the eyes due to inflammation and tissue buildup behind the eyes.
-- category: Endocrine
-  name: Goiter
-  frequency: FREQUENT
-  notes: Enlargement of the thyroid gland, often visible as a swelling in the neck.
-- category: Cardiovascular
-  name: Tachycardia
-  frequency: FREQUENT
-  notes: Increased heart rate, commonly experienced as palpitations.
-- category: Musculoskeletal
-  name: Tremor
-  frequency: FREQUENT
-  notes: Fine shaking, particularly in the hands.
-- category: Psychiatric
-  name: Anxiety
-  frequency: FREQUENT
-- category: Psychiatric
-  frequency: FREQUENT
-  name: Irritability
-- category: Dermatologic
-  frequency: OCCASIONAL
-  name: Pretibial Myxedema
-  notes: Swelling and thickening of the skin, usually on the shins.
+  - category: Endocrine
+    name: Hyperthyroidism
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    sequelae:
+      - Weight Loss
+      - Increased Appetite
+      - Heat Intolerance
+      - Sweating
+  - category: Ocular
+    name: Exophthalmos (Proptosis)
+    frequency: FREQUENT
+    notes: Bulging of the eyes due to inflammation and tissue buildup behind the eyes.
+  - category: Endocrine
+    name: Goiter
+    frequency: FREQUENT
+    notes: Enlargement of the thyroid gland, often visible as a swelling in the neck.
+  - category: Cardiovascular
+    name: Tachycardia
+    frequency: FREQUENT
+    notes: Increased heart rate, commonly experienced as palpitations.
+  - category: Musculoskeletal
+    name: Tremor
+    frequency: FREQUENT
+    notes: Fine shaking, particularly in the hands.
+  - category: Psychiatric
+    name: Anxiety
+    frequency: FREQUENT
+  - category: Psychiatric
+    frequency: FREQUENT
+    name: Irritability
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Pretibial Myxedema
+    notes: Swelling and thickening of the skin, usually on the shins.
 biochemical:
-- name: Free Thyroxine (T4)
-  presence: Increased
-  context: Indicates hyperthyroidism
-- name: Free Triiodothyronine (T3)
-  presence: Increased
-  context: Indicates hyperthyroidism
-- name: Thyroid-Stimulating Hormone (TSH)
-  presence: Decreased
-  context: Indicates feedback suppression due to high levels of thyroid hormones
-- name: Thyroid-Stimulating Immunoglobulins (TSI)
-  presence: Positive
-  context: Confirms autoimmune etiology
+  - name: Free Thyroxine (T4)
+    presence: Increased
+    context: Indicates hyperthyroidism
+  - name: Free Triiodothyronine (T3)
+    presence: Increased
+    context: Indicates hyperthyroidism
+  - name: Thyroid-Stimulating Hormone (TSH)
+    presence: Decreased
+    context: Indicates feedback suppression due to high levels of thyroid hormones
+  - name: Thyroid-Stimulating Immunoglobulins (TSI)
+    presence: Positive
+    context: Confirms autoimmune etiology
 genetic:
-- name: HLA-DR3
-  association: Risk Factor
+  - name: HLA-DR3
+    association: Risk Factor
 environmental:
-- name: Stress
-  notes: Can trigger or exacerbate symptoms.
-- name: Smoking
-  notes: "Increases the risk of developing and worsening Graves\u2019 ophthalmopathy."
+  - name: Stress
+    notes: Can trigger or exacerbate symptoms.
+  - name: Smoking
+    notes: "Increases the risk of developing and worsening Graves’ ophthalmopathy."
 diagnosis:
-- name: Radioactive Iodine Uptake Test
-  notes: High uptake indicates hyperthyroidism.
-- name: Thyroid Ultrasound
-  notes: Visualizes the thyroid gland and detects abnormalities.
+  - name: Radioactive Iodine Uptake Test
+    notes: High uptake indicates hyperthyroidism.
+  - name: Thyroid Ultrasound
+    notes: Visualizes the thyroid gland and detects abnormalities.
 treatments:
-- name: Antithyroid Medications
-  description: Methimazole and propylthiouracil (PTU) to reduce thyroid hormone production.
-- name: Radioactive Iodine Therapy
-  description: Radioactive iodine is taken orally to destroy overactive thyroid cells.
-- name: Thyroidectomy
-  description: Surgical removal of part or all of the thyroid gland.
-- name: Beta Blockers
-  description: Used to manage cardiovascular symptoms like tachycardia and palpitations.
-- name: Corticosteroids
-  description: Used to reduce inflammation in severe ophthalmopathy.
-review_notes: Graves' Disease is an autoimmune disorder that leads to hyperthyroidism,
-  characterized by symptoms of an overactive thyroid such as weight loss, heat intolerance,
-  and tachycardia. It can also cause specific ocular and dermatologic manifestations.
-  Diagnosis involves a combination of biochemical tests with a high index of clinical
-  suspicion, and treatment options vary based on severity and patient preferences.
-
+  - name: Antithyroid Medications
+    description: Methimazole and propylthiouracil (PTU) to reduce thyroid hormone production.
+  - name: Radioactive Iodine Therapy
+    description: Radioactive iodine is taken orally to destroy overactive thyroid cells.
+  - name: Thyroidectomy
+    description: Surgical removal of part or all of the thyroid gland.
+  - name: Beta Blockers
+    description: Used to manage cardiovascular symptoms like tachycardia and palpitations.
+  - name: Corticosteroids
+    description: Used to reduce inflammation in severe ophthalmopathy.
+review_notes: Graves' Disease is an autoimmune disorder that leads to hyperthyroidism, characterized by symptoms of an overactive thyroid such as weight loss, heat intolerance, and tachycardia. It can also cause specific ocular and dermatologic manifestations. Diagnosis involves a combination of biochemical tests with a high index of clinical suspicion, and treatment options vary based on severity and patient preferences.
 ---
 name: Multiple Sclerosis
 category: Neurological Disorder
 parents:
-- Autoimmune Disorder
+  - Autoimmune Disorder
 prevalence:
-- population: Global
-  percentage: 0.1
+  - population: Global
+    percentage: 0.1
 progression:
-- phase: Relapsing-Remitting
-  notes: Characterized by periods of neurological symptoms (relapses) followed by
-    periods of partial or complete recovery (remissions).
-- phase: Secondary Progressive
-  notes: Following an initial relapsing-remitting phase, there is a progressive worsening
-    of neurological function over time.
-- phase: Primary Progressive
-  notes: A gradual progression of disability from onset without early relapses and
-    remissions.
-- phase: Progressive-Relapsing
-  notes: Progressive disability from onset with occasional acute relapses.
+  - phase: Relapsing-Remitting
+    notes: Characterized by periods of neurological symptoms (relapses) followed by periods of partial or complete recovery (remissions).
+  - phase: Secondary Progressive
+    notes: Following an initial relapsing-remitting phase, there is a progressive worsening of neurological function over time.
+  - phase: Primary Progressive
+    notes: A gradual progression of disability from onset without early relapses and remissions.
+  - phase: Progressive-Relapsing
+    notes: Progressive disability from onset with occasional acute relapses.
 pathophysiology:
-- name: Demyelination
-  description: The immune system attacks and destroys myelin, the protective sheath
-    around nerve fibers, disrupting nerve signal transmission.
-  cell_types:
-  - Oligodendrocyte
-  - T-lymphocyte
-  - B-lymphocyte
-  locations:
-  - Central Nervous System
-- name: Axonal Damage
-  description: Along with demyelination, damage to the axons themselves contributes
-    to the permanent neurological deficits.
-- name: Inflammatory Lesions
-  description: Immune cells crossing the blood-brain barrier create focal areas of
-    inflammation in the central nervous system.
+  - name: Demyelination
+    description: The immune system attacks and destroys myelin, the protective sheath around nerve fibers, disrupting nerve signal transmission.
+    cell_types:
+      - Oligodendrocyte
+      - T-lymphocyte
+      - B-lymphocyte
+    locations:
+      - Central Nervous System
+  - name: Axonal Damage
+    description: Along with demyelination, damage to the axons themselves contributes to the permanent neurological deficits.
+  - name: Inflammatory Lesions
+    description: Immune cells crossing the blood-brain barrier create focal areas of inflammation in the central nervous system.
 phenotypes:
-- category: Neurologic
-  name: Muscle Weakness
-  frequency: FREQUENT
-- category: Neurologic
-  name: Vision Problems
-  frequency: FREQUENT
-  notes: Including optic neuritis and double vision.
-- category: Neurologic
-  name: Fatigue
-  frequency: VERY_FREQUENT
-  diagnostic: true
-- category: Neurologic
-  name: Gait and Balance Issues
-  frequency: FREQUENT
-- category: Neurologic
-  name: Spasticity
-  frequency: FREQUENT
-- category: Neurologic
-  name: Cognitive Impairment
-  frequency: FREQUENT
-  notes: Difficulties with memory, attention, and information processing.
-- category: Neurologic
-  name: Bladder and Bowel Dysfunction
-  frequency: COMMON
-- category: Neurologic
-  name: Sensory Disturbances
-  frequency: FREQUENT
-  notes: Numbness or tingling in limbs.
+  - category: Neurologic
+    name: Muscle Weakness
+    frequency: FREQUENT
+  - category: Neurologic
+    name: Vision Problems
+    frequency: FREQUENT
+    notes: Including optic neuritis and double vision.
+  - category: Neurologic
+    name: Fatigue
+    frequency: VERY_FREQUENT
+    diagnostic: true
+  - category: Neurologic
+    name: Gait and Balance Issues
+    frequency: FREQUENT
+  - category: Neurologic
+    name: Spasticity
+    frequency: FREQUENT
+  - category: Neurologic
+    name: Cognitive Impairment
+    frequency: FREQUENT
+    notes: Difficulties with memory, attention, and information processing.
+  - category: Neurologic
+    name: Bladder and Bowel Dysfunction
+    frequency: COMMON
+  - category: Neurologic
+    name: Sensory Disturbances
+    frequency: FREQUENT
+    notes: Numbness or tingling in limbs.
 biochemical:
-- name: Oligoclonal Bands
-  presence: Positive
-  context: Detected in cerebrospinal fluid during lumbar puncture.
+  - name: Oligoclonal Bands
+    presence: Positive
+    context: Detected in cerebrospinal fluid during lumbar puncture.
 diagnosis:
-- name: MRI with Gadolinium Contrast
-  presence: Positive
-  notes: Used to identify areas of demyelination in the brain and spinal cord.
-- name: Lumbar Puncture
-  presence: Presence of oligoclonal bands in cerebrospinal fluid.
-- name: Evoked Potentials
-  presence: Delayed response times.
-  notes: Tests that measure the electrical activity in the brain in response to stimuli.
+  - name: MRI with Gadolinium Contrast
+    presence: Positive
+    notes: Used to identify areas of demyelination in the brain and spinal cord.
+  - name: Lumbar Puncture
+    presence: Presence of oligoclonal bands in cerebrospinal fluid.
+  - name: Evoked Potentials
+    presence: Delayed response times.
+    notes: Tests that measure the electrical activity in the brain in response to stimuli.
 genetic:
-- name: HLA-DRB1
-  association: Risk Factor
+  - name: HLA-DRB1
+    association: Risk Factor
 environmental:
-- name: Vitamin D Deficiency
-  effect: Increased risk
-- name: Epstein-Barr Virus Infection
-  effect: Increased risk
+  - name: Vitamin D Deficiency
+    effect: Increased risk
+  - name: Epstein-Barr Virus Infection
+    effect: Increased risk
 treatments:
-- name: Disease-Modifying Therapies (DMTs)
-  description: Medications that can slow the progression of the disease and reduce
-    the frequency and severity of relapses.
-  examples:
-  - Interferon-beta
-  - Glatiramer Acetate
-  - Natalizumab
-  - Fingolimod
-- name: Symptomatic Treatments
-  description: Range of therapies to manage symptoms like spasticity, pain, fatigue,
-    and bladder issues.
-  examples:
-  - Muscle Relaxants
-  - Physical Therapy
-  - Pain Management
-- name: Corticosteroids
-  description: Used to reduce inflammation and speed recovery during acute exacerbations.
-  examples:
-  - Prednisone
-
+  - name: Disease-Modifying Therapies (DMTs)
+    description: Medications that can slow the progression of the disease and reduce the frequency and severity of relapses.
+    examples:
+      - Interferon-beta
+      - Glatiramer Acetate
+      - Natalizumab
+      - Fingolimod
+  - name: Symptomatic Treatments
+    description: Range of therapies to manage symptoms like spasticity, pain, fatigue, and bladder issues.
+    examples:
+      - Muscle Relaxants
+      - Physical Therapy
+      - Pain Management
+  - name: Corticosteroids
+    description: Used to reduce inflammation and speed recovery during acute exacerbations.
+    examples:
+      - Prednisone
 ---
 name: Huntington's Disease
 category: Genetic
 parents:
-- Neurodegenerative Disorder
-- Movement Disorder
+  - Neurodegenerative Disorder
+  - Movement Disorder
 synonyms:
-- Huntington's Chorea
+  - Huntington's Chorea
 has_subtypes:
-- name: Juvenile Huntington's Disease
-  description: A rare, early-onset form that begins in childhood or adolescence and
-    progresses more rapidly than typical forms.
-- name: Late-Onset Huntington's Disease
-  description: Typically begins after the age of 50 and may have a slower progression.
+  - name: Juvenile Huntington's Disease
+    description: A rare, early-onset form that begins in childhood or adolescence and progresses more rapidly than typical forms.
+  - name: Late-Onset Huntington's Disease
+    description: Typically begins after the age of 50 and may have a slower progression.
 prevalence:
-- population: Global
-  percentage: 0.004-0.01
+  - population: Global
+    percentage: 0.004-0.01
 inheritance:
-- name: Autosomal Dominant
-pathophysiology:
-- name: CAG Repeat Expansion in the HTT Gene
-  description: Mutation characterized by an expanded number of CAG repeats, which
-    encodes an abnormal polyglutamine tract in the huntingtin protein.
-- name: Mutant Huntingtin Protein Aggregation
-  description: Aggregates of mutant huntingtin protein lead to neuronal dysfunction
-    and death, particularly in the striatum and cerebral cortex.
-- name: Excitotoxicity
-  description: Overactivation of glutamate receptors leading to neuronal damage.
-  cell_types:
-  - Medium Spiny Neuron
-phenotypes:
-- name: Chorea
-biochemical:
-- name: Elevated Neuronal Inclusions
-  presence: Positive
-  notes: Aggregates of mutant huntingtin protein found in neurons.
-genetic:
-- name: HTT
-  association: Pathogenic CAG Repeat Expansion
-  inheritance:
   - name: Autosomal Dominant
+pathophysiology:
+  - name: CAG Repeat Expansion in the HTT Gene
+    description: Mutation characterized by an expanded number of CAG repeats, which encodes an abnormal polyglutamine tract in the huntingtin protein.
+  - name: Mutant Huntingtin Protein Aggregation
+    description: Aggregates of mutant huntingtin protein lead to neuronal dysfunction and death, particularly in the striatum and cerebral cortex.
+  - name: Excitotoxicity
+    description: Overactivation of glutamate receptors leading to neuronal damage.
+    cell_types:
+      - Medium Spiny Neuron
+phenotypes:
+  - name: Chorea
+biochemical:
+  - name: Elevated Neuronal Inclusions
+    presence: Positive
+    notes: Aggregates of mutant huntingtin protein found in neurons.
+genetic:
+  - name: HTT
+    association: Pathogenic CAG Repeat Expansion
+    inheritance:
+      - name: Autosomal Dominant
 environmental:
-- name: None Applicable
+  - name: None Applicable
 animal_models:
-- species: Mouse
-  genotype: R6/2 Transgenic
-  description: Mice expressing human mutant huntingtin with expanded CAG repeats used
-    to model motor and cognitive deficits.
-  associated_phenotypes:
-  - Progressive Motor Dysfunction
-  - Cognitive Impairment
-  - Weight Loss
+  - species: Mouse
+    genotype: R6/2 Transgenic
+    description: Mice expressing human mutant huntingtin with expanded CAG repeats used to model motor and cognitive deficits.
+    associated_phenotypes:
+      - Progressive Motor Dysfunction
+      - Cognitive Impairment
+      - Weight Loss
 diagnosis:
-- name: Genetic Testing for HTT CAG Expansion
-  presence: Positive
-  notes: Confirmation of diagnosis through DNA analysis.
-- name: Neurological Examination
-  notes: Assessment of motor disturbances, cognitive function, and psychiatric symptoms.
+  - name: Genetic Testing for HTT CAG Expansion
+    presence: Positive
+    notes: Confirmation of diagnosis through DNA analysis.
+  - name: Neurological Examination
+    notes: Assessment of motor disturbances, cognitive function, and psychiatric symptoms.
 treatments:
-- name: Tetrabenazine
-  role: Symptomatic
-  description: Used to manage chorea by depleting dopamine.
-- name: Antipsychotic Medications
-  role: Symptomatic
-  description: Used for psychiatric symptoms like irritability and agitation.
-- name: Selective Serotonin Reuptake Inhibitors (SSRIs)
-  role: Symptomatic
-  description: Used to manage depression.
-- name: Physical Therapy
-  role: Supportive
-  description: Helps maintain mobility and function.
-- name: Speech Therapy
-  role: Supportive
-  description: Helps manage dysarthria and dysphagia.
-- name: Occupational Therapy
-  role: Supportive
-  description: Assists with daily living activities.
-review_notes: Huntington's Disease is a progressive neurodegenerative disorder characterized
-  by a triad of motor, cognitive, and psychiatric symptoms. The genetic basis and
-  impactful phenotypes have been summarized. Further research on therapeutic interventions
-  is ongoing, focusing on disease-modifying treatments.
-
+  - name: Tetrabenazine
+    role: Symptomatic
+    description: Used to manage chorea by depleting dopamine.
+  - name: Antipsychotic Medications
+    role: Symptomatic
+    description: Used for psychiatric symptoms like irritability and agitation.
+  - name: Selective Serotonin Reuptake Inhibitors (SSRIs)
+    role: Symptomatic
+    description: Used to manage depression.
+  - name: Physical Therapy
+    role: Supportive
+    description: Helps maintain mobility and function.
+  - name: Speech Therapy
+    role: Supportive
+    description: Helps manage dysarthria and dysphagia.
+  - name: Occupational Therapy
+    role: Supportive
+    description: Assists with daily living activities.
+review_notes: Huntington's Disease is a progressive neurodegenerative disorder characterized by a triad of motor, cognitive, and psychiatric symptoms. The genetic basis and impactful phenotypes have been summarized. Further research on therapeutic interventions is ongoing, focusing on disease-modifying treatments.
 ---
 name: Kawasaki Disease
-description: Kawasaki Disease is a condition in children that involves inflammation
-  of blood vessels throughout the body and is characterized by fever, rash, and other
-  symptoms.
+description: Kawasaki Disease is a condition in children that involves inflammation of blood vessels throughout the body and is characterized by fever, rash, and other symptoms.
 category: Pediatric Condition
 parents:
-- Vasculitis
+  - Vasculitis
 prevalence:
-- population: Children under 5
-  percentage: Rare
+  - population: Children under 5
+    percentage: Rare
 progression:
-- phase: Onset
-  age_range: 6 months to 5 years
-  notes: Sudden onset with high fever
-- phase: Acute
-  duration: 1-2 weeks
-  notes: High fever, rash, conjunctivitis, swollen hands and feet
-- phase: Subacute
-  duration: 2-4 weeks
-  notes: Peeling skin, joint pain, possible coronary artery changes
-- phase: Convalescent
-  duration: 6-8 weeks
-  notes: Symptoms resolve, but coronary artery abnormalities may persist
+  - phase: Onset
+    age_range: 6 months to 5 years
+    notes: Sudden onset with high fever
+  - phase: Acute
+    duration: 1-2 weeks
+    notes: High fever, rash, conjunctivitis, swollen hands and feet
+  - phase: Subacute
+    duration: 2-4 weeks
+    notes: Peeling skin, joint pain, possible coronary artery changes
+  - phase: Convalescent
+    duration: 6-8 weeks
+    notes: Symptoms resolve, but coronary artery abnormalities may persist
 pathophysiology:
-- name: Vascular Inflammation
-  description: Widespread inflammation of medium-sized arteries, including coronary
-    arteries.
-  downstream:
-  - Aneurysm Formation
-- name: Immune Response Dysregulation
-  description: An abnormal immune response leading to vessel wall damage and inflammation.
+  - name: Vascular Inflammation
+    description: Widespread inflammation of medium-sized arteries, including coronary arteries.
+    downstream:
+      - Aneurysm Formation
+  - name: Immune Response Dysregulation
+    description: An abnormal immune response leading to vessel wall damage and inflammation.
 phenotypes:
-- category: Systemic
-  name: Fever
-  frequency: VERY_FREQUENT
-  diagnostic: true
-- category: Dermatologic
-  name: Rash
-  frequency: VERY_FREQUENT
-- category: Ocular
-  name: Conjunctivitis
-  frequency: VERY_FREQUENT
-  notes: Non-purulent (no pus)
-- category: Musculoskeletal
-  name: Swelling of Hands and Feet
-  frequency: VERY_FREQUENT
-- category: Dermatologic
-  frequency: FREQUENT
-  name: Peeling Skin
-  notes: Particularly on the fingers and toes, often during the subacute phase
-- category: Oropharyngeal
-  frequency: VERY_FREQUENT
-  name: Red, Cracked Lips
-  notes: Includes "strawberry tongue" and inflammation in the mouth and throat
-- category: Cardiovascular
-  frequency: OCCASIONAL
-  name: Coronary Artery Aneurysms
-  notes: Can lead to serious heart complications
+  - category: Systemic
+    name: Fever
+    frequency: VERY_FREQUENT
+    diagnostic: true
+  - category: Dermatologic
+    name: Rash
+    frequency: VERY_FREQUENT
+  - category: Ocular
+    name: Conjunctivitis
+    frequency: VERY_FREQUENT
+    notes: Non-purulent (no pus)
+  - category: Musculoskeletal
+    name: Swelling of Hands and Feet
+    frequency: VERY_FREQUENT
+  - category: Dermatologic
+    frequency: FREQUENT
+    name: Peeling Skin
+    notes: Particularly on the fingers and toes, often during the subacute phase
+  - category: Oropharyngeal
+    frequency: VERY_FREQUENT
+    name: Red, Cracked Lips
+    notes: Includes "strawberry tongue" and inflammation in the mouth and throat
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Coronary Artery Aneurysms
+    notes: Can lead to serious heart complications
 biochemical:
-- name: C-Reactive Protein (CRP)
-  presence: Elevated
-  context: Indicator of inflammation
-- name: Erythrocyte Sedimentation Rate (ESR)
-  presence: Elevated
-  context: Indicator of inflammation
-- name: Platelet Count
-  presence: Elevated
-  context: Often seen in the subacute phase
+  - name: C-Reactive Protein (CRP)
+    presence: Elevated
+    context: Indicator of inflammation
+  - name: Erythrocyte Sedimentation Rate (ESR)
+    presence: Elevated
+    context: Indicator of inflammation
+  - name: Platelet Count
+    presence: Elevated
+    context: Often seen in the subacute phase
 diagnosis:
-- name: Echocardiogram
-  notes: Used to check for coronary artery involvement
-- name: Blood Tests
-  notes: Elevated inflammatory markers (CRP and ESR)
+  - name: Echocardiogram
+    notes: Used to check for coronary artery involvement
+  - name: Blood Tests
+    notes: Elevated inflammatory markers (CRP and ESR)
 treatments:
-- name: Intravenous Immunoglobulin (IVIG)
-  description: First-line treatment to reduce inflammation and risk of coronary artery
-    complications.
-- name: Aspirin
-  description: Used in high doses for its anti-inflammatory and antipyretic effects,
-    followed by a lower dose to prevent blood clots.
-- name: Corticosteroids
-  description: Used in cases resistant to IVIG or with severe inflammation.
-notes: Prompt treatment is crucial to prevent coronary artery complications. Long-term
-  follow-up may be necessary for some patients.
+  - name: Intravenous Immunoglobulin (IVIG)
+    description: First-line treatment to reduce inflammation and risk of coronary artery complications.
+  - name: Aspirin
+    description: Used in high doses for its anti-inflammatory and antipyretic effects, followed by a lower dose to prevent blood clots.
+  - name: Corticosteroids
+    description: Used in cases resistant to IVIG or with severe inflammation.
+notes: Prompt treatment is crucial to prevent coronary artery complications. Long-term follow-up may be necessary for some patients.
 ---
 name: Roifman-syndrome
 category: Genetic
 parents:
-- Immunodeficiency
-- Skeletal Dysplasia
+  - Immunodeficiency
+  - Skeletal Dysplasia
 prevalence:
-- population: Global
-  percentage: Rare
+  - population: Global
+    percentage: Rare
 progression:
-- phase: Onset
-  age_range: Infancy
+  - phase: Onset
+    age_range: Infancy
 pathophysiology:
-- name: RNU4ATAC Gene Mutation
-  description: Mutations in the RNU4ATAC gene result in defective minor spliceosomal
-    RNAs, affecting normal cellular processes.
-- name: Decreased NK Cell Function
-  cell_types:
-    - NK Cell
-- name: Decreased total and memory B cells
-  cell_types:
-    - Memory B cell
-- name: Hypogammaglobulinemia  
+  - name: RNU4ATAC Gene Mutation
+    description: Mutations in the RNU4ATAC gene result in defective minor spliceosomal RNAs, affecting normal cellular processes.
+  - name: Decreased NK Cell Function
+    cell_types:
+      - NK Cell
+  - name: Decreased total and memory B cells
+    cell_types:
+      - Memory B cell
+  - name: Hypogammaglobulinemia
 phenotypes:
-- category: Immunologic
-  name: Recurrent Infections
-  frequency: VERY_FREQUENT
-  diagnostic: true
-  notes: Frequent and severe bacterial infections due to immunodeficiency.
-- category: Skeletal
-  name: Growth Retardation
-  frequency: VERY_FREQUENT
-  diagnostic: true
-  notes: Short stature and skeletal abnormalities, such as shortened limbs.
-- category: Neurologic
-  name: Intellectual Disability
-  frequency: FREQUENT
-  notes: Ranging from mild to severe.
-- category: Craniofacial
-  name: Dysmorphic Facial Features
-  frequency: FREQUENT
-  notes: Includes a small head, broad nasal bridge, and other facial anomalies.
-- category: Ophthalmologic
-  name: Strabismus
-  frequency: FREQUENT
-  notes: Misalignment of the eyes.
+  - category: Immunologic
+    name: Recurrent Infections
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    notes: Frequent and severe bacterial infections due to immunodeficiency.
+  - category: Skeletal
+    name: Growth Retardation
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    notes: Short stature and skeletal abnormalities, such as shortened limbs.
+  - category: Neurologic
+    name: Intellectual Disability
+    frequency: FREQUENT
+    notes: Ranging from mild to severe.
+  - category: Craniofacial
+    name: Dysmorphic Facial Features
+    frequency: FREQUENT
+    notes: Includes a small head, broad nasal bridge, and other facial anomalies.
+  - category: Ophthalmologic
+    name: Strabismus
+    frequency: FREQUENT
+    notes: Misalignment of the eyes.
 biochemical:
-- name: Immunoglobulin Levels
-  presence: Abnormal
-  context: Typically reduced immunoglobulin levels indicating immunodeficiency.
+  - name: Immunoglobulin Levels
+    presence: Abnormal
+    context: Typically reduced immunoglobulin levels indicating immunodeficiency.
 genetic:
-- name: RNU4ATAC
-  association: Pathogenic Variants
-  mode_of_inheritance:
-    - name: Autosomal Recessive
+  - name: RNU4ATAC
+    association: Pathogenic Variants
+    mode_of_inheritance:
+      - name: Autosomal Recessive
 diagnosis:
-- name: Genetic Testing for RNU4ATAC Mutations
-  presence: Positive in affected individuals
+  - name: Genetic Testing for RNU4ATAC Mutations
+    presence: Positive in affected individuals
 environmental:
-- name: Immunizations
-  description: Ensure up-to-date vaccines due to immunodeficiency.
+  - name: Immunizations
+    description: Ensure up-to-date vaccines due to immunodeficiency.
 treatments:
-- name: Immunoglobulin Replacement Therapy
-  description: Regular infusions to prevent infections.
-- name: Antibiotic Prophylaxis
-  description: Preventative antibiotic treatment to reduce infection risk.
-- name: Growth Hormone Therapy
-  description: May be used to address growth retardation.
-- name: Supportive Educational Programs
-  description: Tailored to address intellectual disability and developmental delays.
-- name: Surgical Interventions
-  description: For severe skeletal or craniofacial abnormalities.
-
-
-
-
+  - name: Immunoglobulin Replacement Therapy
+    description: Regular infusions to prevent infections.
+  - name: Antibiotic Prophylaxis
+    description: Preventative antibiotic treatment to reduce infection risk.
+  - name: Growth Hormone Therapy
+    description: May be used to address growth retardation.
+  - name: Supportive Educational Programs
+    description: Tailored to address intellectual disability and developmental delays.
+  - name: Surgical Interventions
+    description: For severe skeletal or craniofacial abnormalities.
