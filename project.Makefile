@@ -34,6 +34,9 @@ app:
 tmp/with-evidence.yaml:
 	curategpt  citeseek --model gpt-4o $(KB) > $@.tmp && mv $@.tmp $@
 
+tmp/new.yaml:
+	curategpt complete-auto -X yaml  --model gpt-4o -p db -c $(COLLECTION) -P name > $@
+
 normalized: kb/$(KB_NAME)-clean.yaml
 	mv kb/$(KB_NAME)-clean.yaml kb/$(KB_NAME).yaml
 

@@ -309,6 +309,22 @@ phenotypes:
         supports: SUPPORT
         snippet: The earliest reports were of valvular disease, including verrucous endocarditis, as well as valvular thickening and insufficiency.
         explanation: This review discusses various cardiac abnormalities associated with APS, including valvular disease.
+  - category: Pregnancy-Related
+    context: Pregnancy
+    frequency: OCCASIONAL
+    name: Preeclampsia
+  - category: Hematologic
+    frequency: FREQUENT
+    name: Thrombocytopenia
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Cardiac Valve Disease
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Livedo Reticularis
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Migraine Headaches
 biochemical:
   - name: Antiphospholipid Antibodies
     presence: Positive
@@ -451,6 +467,7 @@ environmental:
         supports: NO_EVIDENCE
         snippet: The exact pathophysiologic mechanism in unclear but may be associated with an imbalance in the prostacyclin/ thromboxane ratio, which results in vasoconstriction and platelet aggregation.
         explanation: This reference discusses antiphospholipid syndrome in the context of pregnancy loss and does not provide evidence regarding infections as an environmental factor.
+review_notes: Antiphospholipid syndrome is an autoimmune disorder characterized by thrombosis (both venous and arterial) and pregnancy complications due to autoantibodies against phospholipid-binding proteins. I expanded the thrombosis phenotypes to include both venous thromboembolism (DVT/PE) and arterial thrombosis (stroke/MI). I also added additional occasional phenotypes seen in APS like preeclampsia, livedo reticularis skin changes, and migraines. The pregnancy complications are a key feature so I increased their frequency to frequent.
 ---
 name: Systemic Lupus Erythematosus
 description: An autoimmune multi-organ disease typically associated with vasculopathy and autoantibody production. Most patients have antinuclear antibodies (ANA). The presence of anti-dsDNA or anti-Smith antibodies are highly-specific
@@ -749,6 +766,36 @@ phenotypes:
         supports: NO_EVIDENCE
         snippet: 'CONCLUSION: This study aids in the recognition of the demographic, clinical, laboratory features, and the histological patterns of LN patients in Saudi Arabia, that probably has a role in the development and disease progression.'
         explanation: This study focuses on the prevalence and patterns of lupus nephritis but does not treat it as a hematologic phenotype.
+  - category: Renal
+    frequency: FREQUENT
+    name: Lupus Nephritis
+    notes: Inflammation of the kidneys, can lead to renal failure
+  - category: Hematologic
+    frequency: FREQUENT
+    name: Leukopenia
+    notes: Low white blood cell count
+  - category: Hematologic
+    frequency: FREQUENT
+    name: Thrombocytopenia
+    notes: Low platelet count
+  - category: Hematologic
+    frequency: OCCASIONAL
+    name: Hemolytic Anemia
+    notes: Destruction of red blood cells
+  - category: Cardiac
+    frequency: OCCASIONAL
+    name: Pericarditis
+    notes: Inflammation of the pericardium (lining around the heart)
+  - category: Pulmonary
+    frequency: OCCASIONAL
+    name: Pleuritis
+    notes: Inflammation of the pleura (lining around the lungs)
+  - category: Neuropsychiatric
+    frequency: OCCASIONAL
+    name: Seizures
+  - category: Neuropsychiatric
+    frequency: OCCASIONAL
+    name: Psychosis
 biochemical:
   - name: Anti-Nuclear Antibodies (ANA)
     specificity: High
@@ -972,6 +1019,7 @@ animal_models:
         supports: SUPPORT
         snippet: Lupus-prone (NZB x NZW)F1 mice that had been DNA-vaccinated with plasmids encoding Hsp70 and controls were monitored for lupus disease parameters including anti-double stranded DNA (anti-dsDNA) autoantibodies and cytokines using enzyme-linked immunosorbent assay, and for kidney function and pathology.
         explanation: This reference supports the use of (NZB x NZW)F1 mice as a model for SLE.
+review_notes: "SLE is a complex autoimmune disorder that can affect multiple organ systems.\nThe hallmark is production of autoantibodies. Diagnosis requires a combination \nof clinical findings and positive antibody tests (ANA, anti-dsDNA, anti-Sm).\nFrequency of involvement of each organ system is variable. Renal and CNS involvement\nare major sources of morbidity. Disease course is characterized by periods of \nflare and remission."
 ---
 name: Vitiligo
 description: An autoimmune skin disorder characterized by the loss of skin pigmentation due to the destruction of melanocytes.
@@ -1124,7 +1172,7 @@ pathophysiology:
 phenotypes:
   - category: Dermatological
     name: Depigmented Patches
-    frequency: FREQUENT
+    frequency: VERY_FREQUENT
     diagnostic: true
     sequelae:
       - Social Stigma
@@ -1151,14 +1199,28 @@ phenotypes:
         supports: PARTIAL
         snippet: Vitiligo was causally associated with reduced risks of several cancers... melanoma (OR 0.9983; 95% CI 0.9976-0.9990; p < 0.001), non-melanoma skin cancer (OR 0.9997; 95% CI 0.9995-0.9999; p < 0.001).
         explanation: Supports the reduction in the risk of skin cancer but does not address increased sensitivity to sunlight.
+    notes: Symmetrically distributed, well-demarcated white macules or patches
   - category: Dermatological
     name: Premature Hair Whitening
-    frequency: OCCASIONAL
+    frequency: FREQUENT
     evidence:
       - reference: PMID:26769615
         supports: SUPPORT
         snippet: Vitiligo in children is a distinct subset of vitiligo and differs from adult vitiligo. Characteristic features include family history of autoimmune or endocrine disease, higher incidence of segmental vitiligo, development of early or premature graying, increased incidence of autoantibodies and poor response to topical PUVA.
         explanation: The excerpt lists 'development of early or premature graying' as a characteristic feature of vitiligo in children, supporting the statement that premature hair whitening is occasionally associated with vitiligo.
+    notes: Especially noticeable in dark-haired individuals
+  - category: Autoimmune
+    frequency: FREQUENT
+    name: Associated Autoimmune Disorders
+    notes: Such as thyroid disease, type 1 diabetes, rheumatoid arthritis, etc.
+  - category: Ophthalmologic
+    frequency: OCCASIONAL
+    name: Uveitis
+    notes: Inflammation of the uveal tract of the eye
+  - category: Psychological
+    frequency: OCCASIONAL
+    name: Depression/Anxiety
+    notes: Related to altered appearance and social stigma
 biochemical:
   - name: Autoantibodies to Melanocytes
     presence: Elevated
@@ -1419,6 +1481,7 @@ animal_models:
         supports: NO_EVIDENCE
         snippet: Thus, we characterize a potential zebrafish depigmentation disease model, a nicastrin(hi1384) mutant, which can be used for further treatment or drug development of diseases related to skin depigmentation and/or inflammation.
         explanation: The reference discusses a zebrafish model related to nicastrin deficiency and depigmentation but does not mention zmiz1a or zmiz1b genes, nor does it specifically address vitiligo.
+review_notes: Vitiligo is an acquired disorder of skin pigmentation characterized by the development of white patches due to loss of melanocytes. While the depigmented patches and premature hair whitening are the defining features, it's important to highlight the frequent association with other autoimmune conditions. The psychosocial impact of the condition should also not be overlooked. I've adjusted some frequencies based on typical clinical presentation and added a few additional associated findings for completeness.
 ---
 name: Asthma
 category: Complex
@@ -1722,6 +1785,30 @@ phenotypes:
         supports: SUPPORT
         snippet: We present the case of a 42-year-old man with a 2-year history of wheezing, chest tightness, and upper respiratory symptoms.
         explanation: This case study highlights chest tightness as a symptom, supporting the statement as it shows chest tightness is a common feature in asthma triggered by recreational activities.
+  - category: Respiratory
+    frequency: FREQUENT
+    name: Rapid Breathing
+    notes: Increased respiratory rate, especially during an asthma attack
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Cyanosis
+    notes: Bluish discoloration of skin and mucous membranes due to low oxygen
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+    notes: Due to increased work of breathing and sleep disturbance
+  - category: Activity
+    frequency: FREQUENT
+    name: Exercise Intolerance
+    notes: Worsening of asthma symptoms with physical activity
+  - category: Sleep
+    frequency: FREQUENT
+    name: Sleep Disturbance
+    notes: Nocturnal asthma can cause nighttime coughing and difficulty sleeping
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Anxiety
+    notes: Asthma attacks can be frightening and cause anxiety about future episodes
 biochemical:
   - name: Eosinophils
     presence: Elevated
@@ -2411,6 +2498,21 @@ phenotypes:
         supports: PARTIAL
         snippet: 'The main skin lesions were: Sebaceous adenomas (43%), sebaceous carcinomas (27%), keratoacanthomas (16%), sebaceomas (13%), squamous cell carcinomas (23%), and basal cell carcinomas (10%).'
         explanation: Sebaceous adenomas are significant dermatologic manifestations of Lynch Syndrome, but the literature suggests they are more frequent than 'occasional'.
+  - category: Genitourinary
+    frequency: OCCASIONAL
+    name: Urinary Tract Cancer
+    notes: Transitional cell carcinoma of the ureter or renal pelvis
+  - category: Genitourinary
+    frequency: OCCASIONAL
+    name: Ovarian Cancer
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Sebaceous Adenomas
+    notes: Muir-Torre variant of Lynch syndrome
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Immunodeficiency
+    notes: Due to inherited mismatch repair deficiency in rare cases
 biochemical:
   - name: Microsatellite Instability Testing
     notes: High microsatellite instability in tumors
@@ -2453,6 +2555,8 @@ biochemical:
 genetic:
   - name: MLH1
     association: Germline Mutation
+    mode_of_inheritance:
+      - name: Autosomal Dominant
     evidence:
       - reference: PMID:28038733
         supports: SUPPORT
@@ -2657,6 +2761,7 @@ treatments:
         supports: PARTIAL
         snippet: Metastatic and localized mismatch repair-deficient (dMMR) tumors are exquisitely sensitive to immune checkpoint blockade (ICB).
         explanation: While ICB is effective for treating dMMR tumors in Lynch syndrome patients, it does not eliminate the risk of new neoplasia development, highlighting the need for continued surveillance.
+review_notes: Lynch syndrome is caused by inherited mutations in mismatch repair genes, leading to a very high lifetime risk of colorectal and endometrial cancers. Risks of other cancers like stomach, ovary, and urinary tract are also elevated. Screening and prophylactic surgery can reduce cancer incidence and mortality.
 ---
 name: Rheumatoid Arthritis
 category: Complex
@@ -2965,6 +3070,30 @@ phenotypes:
         supports: PARTIAL
         snippet: Compared with arthritis-onset RA-ILD... the ILD-onset RA-ILD had less rheumatoid nodules and higher titer of ACPA, and manifested more stable ILD...
         explanation: The study discusses clinical features and outcomes of RA-related ILD but does not provide information on the frequency of ILD in RA.
+  - category: Musculoskeletal
+    frequency: FREQUENT
+    name: Boutonniere Deformity
+    notes: Flexion contracture of PIP joint with hyperextension of DIP joint
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Swan-neck Deformity
+    notes: Hyperextension of PIP joint with flexion of DIP joint
+  - category: Extra-articular
+    frequency: OCCASIONAL
+    name: Sicca Syndrome
+    notes: Dry eyes and mouth due to secondary Sjogren's syndrome
+  - category: Extra-articular
+    frequency: OCCASIONAL
+    name: Scleritis
+    notes: Inflammation of the sclera of the eye
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Pericarditis
+    notes: Inflammation of the pericardium
+  - category: Hematologic
+    frequency: OCCASIONAL
+    name: Felty's Syndrome
+    notes: Combination of rheumatoid arthritis, splenomegaly, and neutropenia
 biochemical:
   - name: Rheumatoid Factor (RF)
     presence: Positive
@@ -3448,6 +3577,34 @@ phenotypes:
         supports: NO_EVIDENCE
         snippet: Neuropsychiatric disorders in patients and their families are associated with cognitive and behavioural changes post-MND diagnosis, with many occurring independently of MND-FTD and C9orf72 status.
         explanation: MND (Motor Neuron Disease) does overlap with frontotemporal dementia and associated behavioral changes, but this is not directly related to Pick's disease and does not provide evidence for high-frequency psychiatric phenotypes in Pick's disease.
+  - category: Psychiatric
+    frequency: FREQUENT
+    name: Compulsive Behaviors
+    notes: Repetitive, ritualistic behaviors such as hand-wringing, pacing, or collecting objects.
+  - category: Neurologic
+    frequency: FREQUENT
+    name: Aphasia
+    notes: Language difficulties, particularly with word-finding and naming. May progress to mutism in advanced stages.
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Parkinsonism
+    notes: Extrapyramidal signs such as rigidity, bradykinesia, and postural instability. More common as disease progresses.
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Primitive Reflexes
+    notes: Reemergence of reflexes normally suppressed in adulthood, such as the grasp reflex or rooting reflex.
+  - category: Cognitive
+    frequency: FREQUENT
+    name: Executive Dysfunction
+    notes: Impairment in planning, problem-solving, and abstract thinking. One of the earliest cognitive changes.
+  - category: Neurologic
+    frequency: RARE
+    name: Seizures
+    notes: Can occur in advanced stages, but are not a typical feature.
+  - category: Systemic
+    frequency: FREQUENT
+    name: Weight Loss
+    notes: May be due to forgetting to eat, loss of appetite, or increased activity levels.
 biochemical:
   - name: Tau Protein Accumulation
     notes: Tau-positive inclusions found in neurons and glial cells
@@ -3579,6 +3736,7 @@ treatments:
         supports: PARTIAL
         snippet: Clinical and biologic evidence in favor the entity is discussed. The changing and proliferating knowledge and terminology requires the integration of several levels of descriptions, while keeping the work in the past in sight.
         explanation: This reference provides clinical and biological descriptions of Pick's disease and does not explicitly mention caregiver support or education, thus only partially supporting the statement.
+review_notes: Pick disease is a type of frontotemporal dementia characterized by progressive changes in behavior, personality, and language. Motor symptoms like parkinsonism can emerge later in the course. Memory is relatively spared early on, in contrast to Alzheimer disease.
 ---
 name: Ebola Virus Disease (EVD)
 categories:
@@ -3782,6 +3940,9 @@ phenotypes:
         supports: SUPPORT
         snippet: 'Ebolavirus disease (EVD) continues to pose a serious threat to global health. A group of viruses within the genus Ebolavirus causes this severe hemorrhagic disease in humans: Ebola virus (EBOV; species Zaire ebolavirus), Sudan virus (SUDV; species Sudan ebolavirus), Bundibugyo virus, and Tai Forest virus. EBOV and SUDV are associated with the highest case fatality rates.'
         explanation: The literature supports that EVD is characterized by severe systemic symptoms, including severe hemorrhagic manifestations.
+    sequelae:
+      - Hypovolemic Shock
+      - Multiorgan Failure
   - category: Gastrointestinal
     name: Vomiting
     severity: Severe
@@ -3816,6 +3977,9 @@ phenotypes:
         supports: SUPPORT
         snippet: During the 2013-2016 West African (WA) Ebola virus (EBOV) outbreak, severe gastrointestinal symptoms were common in patients and associated with poor outcome.
         explanation: The reference highlights that severe gastrointestinal symptoms, including diarrhea, were common and associated with poor outcomes.
+    sequelae:
+      - Dehydration
+      - Electrolyte Imbalances
   - category: Dermatologic
     name: Maculopapular Rash
     frequency: FREQUENT
@@ -3824,6 +3988,29 @@ phenotypes:
         supports: SUPPORT
         snippet: The main cutaneous finding of Ebola is a nonspecific maculopapular rash that appears between day four and six of disease.
         explanation: The statement is supported as the primary dermatologic phenotype associated with Ebola Virus Disease (EVD) is a nonspecific maculopapular rash, and it is noted as a main cutaneous finding.
+  - category: Systemic
+    frequency: VERY_FREQUENT
+    name: Fatigue
+  - category: Musculoskeletal
+    frequency: FREQUENT
+    name: Myalgia
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Headache
+  - category: Gastrointestinal
+    frequency: FREQUENT
+    name: Abdominal Pain
+  - category: Hematologic
+    frequency: FREQUENT
+    name: Thrombocytopenia
+    sequelae:
+      - Increased Risk of Bleeding
+  - category: Hepatic
+    frequency: FREQUENT
+    name: Hepatitis
+    sequelae:
+      - Elevated Liver Enzymes
+      - Impaired Liver Function
 biochemical:
   - name: Ebola Virus Antigen
     presence: Positive
@@ -3938,6 +4125,7 @@ treatments:
         supports: SUPPORT
         snippet: In 2019, the FDA-approved the first anti-EBOV vaccine, rVSV-EBOV-GP (Ervebo(R) by Merck). This live-recombinant vaccine confers both prophylactic and therapeutic protection to nonhuman primates and humans.
         explanation: The article confirms that the rVSV-EBOV-GP (Ervebo) vaccine is FDA-approved and provides prophylactic protection against Ebola, supporting the statement that it is effective in preventing Ebola infection.
+review_notes: Ebola is a severe viral hemorrhagic fever. Key features are the sudden onset of fever, muscle pain, headache and sore throat, followed by vomiting, diarrhea, rash, impaired kidney and liver function, and in some cases, both internal and external bleeding. Mortality is high. Transmission occurs through direct contact with bodily fluids of infected people or animals.
 ---
 name: Jeavons Syndrome
 category: Complex
@@ -4097,6 +4285,14 @@ phenotypes:
         supports: PARTIAL
         snippet: All participants completed neuropsychological evaluations. Statistical analyses revealed performance that was below average on measures of global IQ, processing speed and rote, verbal learning coupled with average nonverbal reasoning, and sustained attention. There was also evidence of impaired higher-level verbal reasoning. While global IQ ranged from low average to borderline impaired, no participant could be accurately described as impaired or having intellectual disability (ID) given the consistently average performance noted on some higher-order tasks including nonverbal reasoning.
         explanation: The literature supports that there are cognitive impairments in Jeavons syndrome, but it does not explicitly classify these impairments as 'mild cognitive impairment' (MCI) nor does it mention the frequency as 'occasional'. The impairments are more specific and varied, making the statement partially correct but not completely accurate.
+  - category: Neurologic
+    frequency: FREQUENT
+    name: Photosensitivity
+    notes: Increased sensitivity to light stimulation, which can provoke seizures or eyelid myoclonia. A common finding in Jeavons syndrome.
+  - category: Developmental
+    frequency: OCCASIONAL
+    name: Developmental Delays
+    notes: Mildly delayed motor, language, or social milestones in some patients, especially with early onset of seizures.
 diagnosis:
   - name: EEG with Generalized Spike-and-Wave Patterns
     presence: Positive
@@ -4494,6 +4690,24 @@ phenotypes:
         supports: SUPPORT
         snippet: We conducted a large, multicenter, retrospective survey aimed to explore the impact of tumor bone involvement in Non-Small Cell Lung Cancer... Bone metastases were evident at diagnosis in 57.5% of patients.
         explanation: This reference discusses the occurrence of bone metastases in NSCLC patients, which is linked to symptoms like bone pain.
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Bone Pain
+    notes: May indicate bone metastases
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Chest Pain
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Recurrent Pneumonia
+    notes: Due to airway obstruction by tumor
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Headache
+    notes: May indicate brain metastases
 biochemical:
   - name: Carcinoembryonic Antigen
     synonyms:
@@ -5008,6 +5222,14 @@ phenotypes:
         supports: SUPPORT
         snippet: In this review, fava beans were found to be the only food for which there is conclusive clinical evidence linking the risk of hemolytic anemia to individuals with G6PD deficiency.
         explanation: The article supports the association between G6PD deficiency and hemolytic anemia triggered by fava bean consumption (favism).
+  - category: Hematologic
+    frequency: OCCASIONAL
+    name: Leukocyte Dysfunction
+    notes: Impaired phagocytosis and bactericidal activity, leading to increased susceptibility to certain infections
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Pallor
+    notes: Due to anemia, most noticeable during acute hemolytic episodes
 biochemical:
   - name: G6PD Enzyme Activity
     presence: Decreased or Absent
@@ -5180,6 +5402,7 @@ treatments:
         supports: SUPPORT
         snippet: Glucose-6-phosphate dehydrogenase (G6PD) deficiency, one of the most common human enzymopathies, is a major risk factor for hyperbilirubinemia and greatly increases the risk of kernicterus even in the developed world.
         explanation: This reference mentions G6PD deficiency as a significant risk factor for hyperbilirubinemia, which supports the need for early screening and monitoring.
+review_notes: G6PD deficiency is an X-linked recessive disorder characterized by defective red blood cell metabolism. The classic presentation is episodic hemolytic anemia, often triggered by infections, certain foods (e.g., fava beans), or medications. Severity can range from asymptomatic to life-threatening hemolytic crises. Neonatal hyperbilirubinemia is an important manifestation that requires prompt treatment to prevent kernicterus.
 ---
 name: Ehlers-Danlos Syndrome
 category: Genetic
@@ -5437,6 +5660,21 @@ phenotypes:
         supports: NO_EVIDENCE
         snippet: OI patients had tomographically suspect corneas when using keratoconus diagnostic indices.
         explanation: This reference discusses keratoconus in the context of osteogenesis imperfecta, not Ehlers-Danlos syndrome.
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Mitral Valve Prolapse
+    review_notes: Added this cardiovascular manifestation seen in some EDS subtypes.
+  - category: Cardiovascular
+    frequency: VERY_FREQUENT
+    name: Arterial Dissection and Rupture
+    subtype: Vascular EDS
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Gastroesophageal Reflux
+    review_notes: Added this gastrointestinal manifestation seen in some EDS patients.
+  - category: Ophthalmologic
+    frequency: OCCASIONAL
+    name: Keratoconus
 biochemical:
   - name: Collagen Type III
     presence: Decreased or Abnormal
@@ -5646,6 +5884,7 @@ treatments:
         supports: SUPPORT
         snippet: Occupational therapy and bracing were the most effective options with 70% of patients reporting improvement.
         explanation: This reference supports the use of orthotic devices (e.g., bracing) as effective in the management of EDS.
+review_notes: Overall, filled in some additional phenotypes based on the example schema for a more complete clinical picture. The original record seems focused on the severe vascular subtype, but I generalized it to capture manifestations across EDS subtypes.
 ---
 name: Ehlers-Danlos Syndrome, COL5A1-related
 category: Genetic
@@ -5796,6 +6035,30 @@ phenotypes:
         supports: PARTIAL
         snippet: 'Commonest GI symptoms were: abdominal pain (56.1%), nausea (42.3%), constipation (38.6%), heartburn (37.6%), and irritable bowel syndrome-like symptoms (27.5%)... Among 37.8% of the 378 patients who underwent esophagogastroduodenoscopy, the commonest abnormalities were gastritis, hiatal hernia and reflux esophagitis.'
         explanation: The study indicates that reflux esophagitis, which is related to gastroesophageal reflux, is one of the common abnormalities observed in EDS patients. However, it does not explicitly distinguish the frequency of this phenotype for COL5A1-related EDS specifically.
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Molluscoid Pseudotumors
+    notes: Fleshy lesions associated with scars
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Mitral Valve Prolapse
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Aortic Root Dilation
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Gastroesophageal Reflux
+  - category: Ocular
+    frequency: OCCASIONAL
+    name: Myopia
+    notes: Nearsightedness
+  - category: Ocular
+    frequency: OCCASIONAL
+    name: Blue Sclerae
+  - category: Oral
+    frequency: OCCASIONAL
+    name: Periodontal Disease
+    notes: Fragile gums prone to recession
 biochemical:
   - name: Collagen Type V
     presence: Decreased or Abnormal
@@ -6664,6 +6927,32 @@ phenotypes:
         supports: SUPPORT
         snippet: Fatigue, dyspnea, reduced exercise tolerance, and peripheral edema are common presenting complaints.
         explanation: The snippet from the literature directly supports the statement that fatigue is commonly reported among patients with hypertensive heart disease.
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Chest Pain
+    notes: May indicate underlying coronary artery disease, which is accelerated by hypertension
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Arrhythmias
+    sequelae:
+      - Palpitations
+      - Syncope
+    notes: Arrhythmias like atrial fibrillation are more common in hypertensive heart disease
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Aortic Dissection
+    notes: Hypertension is a major risk factor for aortic dissection
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Stroke
+    notes: Hypertension is a leading risk factor for both ischemic and hemorrhagic stroke
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+  - category: Renal
+    frequency: FREQUENT
+    name: Proteinuria
+    notes: Hypertension can cause and worsen kidney damage
 biochemical:
   - name: Brain Natriuretic Peptide (BNP)
     presence: Elevated
@@ -6904,6 +7193,7 @@ treatments:
         supports: PARTIAL
         snippet: Adopting healthy lifestyles, such as being active on >/=4 days per week, weight-loss in the presence of obesity, consuming a diet rich in fruits and vegetables, and sodium below the recommended threshold, avoiding high alcohol consumption and refraining from smoking have been effective lifestyle therapies to prevent or control stage 1 hypertension (HTN).
         explanation: This literature supports that lifestyle modifications including physical activity, sodium restriction, and other supportive measures are effective for controlling hypertension. However, it does not mention hypertensive heart disease specifically.
+review_notes: Added several key phenotypes of hypertensive heart disease, including the diagnostic finding of left ventricular hypertrophy. Also expanded on potential complications in other organ systems like the brain and kidneys. The cardiovascular manifestations are the most prominent, but the systemic effects of hypertension should not be overlooked.
 ---
 name: Monkeypox
 category: Viral Disease
@@ -7101,6 +7391,7 @@ phenotypes:
         supports: SUPPORT
         snippet: Initially, it presents with skin eruptions and fevers with diaphoresis and rigors. Clinically, the skin lesions progress from papules to vesiculopustules to resolving eschars.
         explanation: This reference confirms the typical progression of skin lesions, including rashes, in monkeypox.
+    notes: Rash typically starts on the face and spreads to other parts of the body
   - category: Systemic
     name: Fever
     frequency: VERY_FREQUENT
@@ -7117,6 +7408,7 @@ phenotypes:
         supports: SUPPORT
         snippet: Depending on the kind of exposure, patients with monkeypox may experience a febrile prodrome 5-13 days after exposure, which frequently includes lymphadenopathy, malaise, headaches, and muscle aches.
         explanation: This reference further supports the statement by mentioning fever as part of the common symptoms during the prodromal phase of monkeypox infection.
+    notes: Fever usually precedes the rash
   - category: Musculoskeletal
     name: Myalgia
     frequency: FREQUENT
@@ -7125,6 +7417,7 @@ phenotypes:
         supports: SUPPORT
         snippet: Other symptoms can include diarrhea, vomiting, myalgia, and backache.
         explanation: The reference states that myalgia is a symptom that can occur in monkeypox patients, indicating it's a recognized phenotype.
+    notes: Muscle aches and pain are common
   - category: Lymphatic
     name: Lymphadenopathy
     frequency: FREQUENT
@@ -7133,6 +7426,25 @@ phenotypes:
         supports: SUPPORT
         snippet: The primary lymphadenitis caused by human monkeypox infection, the first such human pathology to be documented, is unique among poxes in its association and prominence.
         explanation: The cited study specifically addresses the clinicopathologic features of human monkeypox lymphadenitis, confirming that lymphadenopathy is a common phenotype in monkeypox.
+    notes: Swollen lymph nodes, particularly in the neck and groin
+  - category: Systemic
+    frequency: FREQUENT
+    name: Headache
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Nausea
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Vomiting
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Sore Throat
+  - category: Ophthalmic
+    frequency: OCCASIONAL
+    name: Conjunctivitis
 biochemical:
   - name: Monkeypox Virus PCR
     presence: Positive
@@ -7279,6 +7591,7 @@ treatments:
         supports: PARTIAL
         snippet: Monkeypox is an infectious disease, characterised by a rash affecting the skin and soft tissues, including the oral cavity.
         explanation: The literature mentions the importance of infection control in preventing the spread of monkeypox, particularly in dental settings.
+review_notes: Added additional common symptoms including headache, fatigue, GI symptoms, sore throat and conjunctivitis, to provide a more complete clinical picture. Noted typical rash progression and that fever usually comes before rash.
 ---
 name: Bardet-Biedl Syndrome
 category: Genetic
@@ -7471,6 +7784,39 @@ phenotypes:
         supports: SUPPORT
         snippet: This type can cause severe and delayed onset renal failure.
         explanation: Bardet-Biedl type 9 is noted to cause severe and delayed onset renal failure, supporting the common occurrence of renal anomalies.
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Developmental Delay
+  - category: Genitourinary
+    frequency: FREQUENT
+    name: Renal Anomalies
+    notes: 'Includes:
+
+      - Renal cysts
+
+      - Renal hypoplasia/dysplasia
+
+      - Hydronephrosis
+
+'
+  - category: Genitourinary
+    frequency: OCCASIONAL
+    name: Hypogonadism
+    notes: In both males and females
+  - category: Behavioral
+    frequency: FREQUENT
+    name: Behavioral Abnormalities
+    notes: Includes impulsivity, emotional lability, disinhibition
+  - category: Craniofacial
+    frequency: FREQUENT
+    name: Dysmorphic Facial Features
+    notes: Includes deep-set eyes, flat nasal bridge, large ears
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Congenital Heart Defects
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Hirschsprung Disease
 biochemical:
   - name: Elevated Serum Leptin
     notes: Often found in patients with Bardet-Biedl syndrome.
@@ -7947,6 +8293,21 @@ phenotypes:
         supports: SUPPORT
         snippet: Frequent ventricular premature complexes, complex ventricular ectopic activity and asymptomatic ventricular tachycardia are common to both hypertrophic and dilated cardiomyopathy; in both conditions, sudden death is a common occurrence.
         explanation: This reference mentions common arrhythmic events in hypertrophic cardiomyopathy, supporting the idea that arrhythmias are a common cardiovascular phenotype in HCM.
+  - category: Cardiovascular
+    frequency: FREQUENT
+    name: Arrhythmias
+    notes: Abnormal heart rhythms are common. Can include atrial fibrillation and ventricular arrhythmias.
+    sequelae:
+      - Palpitations
+      - Sudden Cardiac Death
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Mitral Valve Regurgitation
+    notes: Thickened heart muscle can affect mitral valve function, causing leakage.
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Fatigue
+    notes: Due to reduced cardiac output and efficiency.
 biochemical:
   - name: Troponin
     presence: Elevated
@@ -8342,6 +8703,18 @@ phenotypes:
         supports: PARTIAL
         snippet: Counseling parents is critical for ensuring they understand their child's condition, how it must be treated, pitfalls that can occur during treatment, and how they will do in the long term ... outcomes, and familial nature.
         explanation: While the actual term 'failure to thrive' is not used, the discussion around growth and long-term outcomes implies potential issues with growth.
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Enterocolitis
+    notes: Potentially life-threatening complication
+  - category: Systemic
+    frequency: FREQUENT
+    name: Failure to Thrive
+    notes: Due to impaired nutrient absorption and increased metabolic demands
+  - category: Developmental
+    frequency: OCCASIONAL
+    name: Developmental Delay
+    notes: May occur in severe cases with prolonged malnutrition
 diagnosis:
   - name: Rectal Biopsy
     notes: Absence of ganglion cells confirms diagnosis
@@ -8673,6 +9046,22 @@ phenotypes:
         supports: REFUTE
         snippet: We report a patient with a late-onset form of TALDO deficiency characterized by hypergonadotropic hypogonadism...
         explanation: Hypergonadotropic hypogonadism is associated with TALDO deficiency, not aromatase deficiency, so this literature cannot be used to support the provided statement about aromatase deficiency.
+  - category: Reproductive
+    frequency: FREQUENT
+    name: Primary Amenorrhea
+    notes: In 46,XX individuals
+  - category: Reproductive
+    frequency: OCCASIONAL
+    name: Polycystic Ovaries
+    notes: In 46,XX individuals
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Tall Stature
+    notes: In both 46,XX and 46,XY individuals
+  - category: Cognitive
+    frequency: OCCASIONAL
+    name: Mild Cognitive Impairment
+    review_notes: Some case reports suggest possible association
 biochemical:
   - name: Serum Estrogen Levels
     presence: Decreased
@@ -8843,6 +9232,22 @@ phenotypes:
         supports: SUPPORT
         snippet: The typical symptoms are a tall stature...
         explanation: The literature explicitly mentions tall stature as a typical symptom in Klinefelter Syndrome patients.
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Reduced Muscle Tone
+    notes: Manifests in infancy and childhood
+  - category: Reproductive
+    frequency: OCCASIONAL
+    name: Micropenis
+    notes: Noted at birth in some cases
+  - category: Behavioral
+    frequency: OCCASIONAL
+    name: Psychosocial Difficulties
+    notes: May include shyness, low self-esteem, reduced assertiveness
+  - category: Cognitive
+    frequency: OCCASIONAL
+    name: Attention Deficit
+    notes: ADD/ADHD is more common than general population
 biochemical:
   - name: Testosterone
     presence: Decreased
@@ -9160,6 +9565,8 @@ phenotypes:
         supports: SUPPORT
         snippet: Using the patients'' self-reported information, we identified two subpopulations of Crohn's disease; these subpopulations differ in disease severity, associations with smoking, and genetic transmission patterns.
         explanation: "While this reference focuses on identifying subpopulations with varying disease severity, it underscores the heterogeneity of Crohn’s disease symptoms, indirectly supporting that abdominal pain is a frequent symptom."
+    diagnostic: true
+    notes: Often occurs in the right lower quadrant
   - category: Gastrointestinal
     name: Diarrhea
     frequency: VERY_FREQUENT
@@ -9167,6 +9574,7 @@ phenotypes:
     sequelae:
       - Weight Loss
       - Malnutrition
+      - Dehydration
     evidence:
       - reference: PMID:22230271
         supports: PARTIAL
@@ -9176,6 +9584,7 @@ phenotypes:
         supports: PARTIAL
         snippet: Malnutrition might play a key role in the prognosis of patients with Crohn's disease (CD) ... Forty-one patients (24.8%) had body weight loss whereas 124 patients (75.2%) had no body weight loss.
         explanation: This reference mentions weight loss and suggests a role for malnutrition in Crohn's disease prognosis, but does not confirm high frequency of gastrointestinal symptoms like diarrhea.
+    notes: Can be bloody or non-bloody
   - category: Systemic
     name: Fatigue
     frequency: FREQUENT
@@ -9188,6 +9597,34 @@ phenotypes:
         supports: SUPPORT
         snippet: Despite high prevalence and importance, the symptom is often underestimated in clinical practice.
         explanation: The reference articulates the high prevalence of fatigue in inflammatory diseases, supporting the statement that fatigue is common among Crohn's disease patients.
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Perianal Disease
+    notes: Fistulas, abscesses, skin tags
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Intestinal Obstruction
+    notes: Due to stricturing disease
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Arthritis
+    notes: Can affect both large and small joints
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Erythema Nodosum
+    notes: Painful nodules on shins
+  - category: Ocular
+    frequency: OCCASIONAL
+    name: Uveitis
+    notes: Inflammation of the eye
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+    notes: Often worsened during disease flares
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Fever
+    notes: More common during acute flares
 biochemical:
   - name: C-Reactive Protein (CRP)
     presence: Elevated
@@ -9450,6 +9887,7 @@ treatments:
         supports: SUPPORT
         snippet: A partial resection of 3rd and 4th portion of the duodenum and the first loop of jejunum was performed, with duodenojejunal anastomosis.
         explanation: The provided case demonstrates a scenario where surgery was performed due to refractory disease and complications, supporting the statement.
+review_notes: Crohn disease is a type of inflammatory bowel disease that can affect any part of the GI tract but most commonly the terminal ileum and colon. Extraintestinal manifestations involving the joints, skin and eyes occur in a subset of patients. The disease is characterized by periods of remission interspersed with flares.
 ---
 name: Familial Mediterranean Fever
 category: Genetic
@@ -9676,6 +10114,14 @@ phenotypes:
         supports: SUPPORT
         snippet: Amyloidosis [...] stands out as a major complication of familial Mediterranean fever (FMF). Splenic and renal involvement is more likely in FMF-associated systemic amyloidosis.
         explanation: The literature confirms the renal involvement in FMF-associated amyloidosis, thus supporting the statement.
+  - category: Integumentary
+    frequency: OCCASIONAL
+    name: Erysipelas-Like Erythema
+    notes: Recurrent erythematous skin lesions, usually on the lower legs
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Myalgia
+    notes: Muscle pain, often in the legs, associated with fever episodes
 diagnosis:
   - name: Genetic Testing
     results: Identifies MEFV mutations
@@ -9997,6 +10443,14 @@ phenotypes:
         supports: PARTIAL
         snippet: Transient neonatal pustular melanosis.
         explanation: The title indicates a relation to transient neonatal pustular melanosis, but the document itself does not specify the frequency of occurrence of hyperpigmented macules or confirm that it is a 'High' frequency phenotypic characteristic.
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Benign Course
+    notes: Despite the alarming appearance, TNPM is a benign self-limited condition that does not require treatment.
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: No Systemic Symptoms
+    notes: Infants with TNPM are otherwise healthy and do not have any associated fever, irritability, or other systemic symptoms.
 diagnosis:
   - name: Dermatologic Examination
     notes: Observation of typical pustules, ruptured lesions, and resultant hyperpigmented macules.
@@ -10340,6 +10794,18 @@ phenotypes:
         supports: SUPPORT
         snippet: At least 10% of NPHP cases present with extrarenal conditions, which most often include retinal degeneration.
         explanation: This indicates that ophthalmologic phenotypes, including retinitis pigmentosa, occur occasionally in cases of nephronophthisis.
+  - category: Developmental
+    frequency: OCCASIONAL
+    name: Growth Retardation
+    notes: May be seen due to chronic kidney disease
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Bone Deformities
+    notes: Related to renal osteodystrophy from kidney failure
+  - category: Endocrine
+    frequency: OCCASIONAL
+    name: Secondary Hyperparathyroidism
+    notes: Develops as a consequence of chronic renal failure
 biochemical:
   - name: Serum Creatinine
     presence: Elevated
@@ -10448,6 +10914,7 @@ treatments:
         supports: SUPPORT
         snippet: At the moment there is no healing therapy, so early kidney transplant is a fundamental tool to improve prognosis.
         explanation: There is no curative treatment for nephronophthisis, indicating that supportive care, including symptomatic treatment and monitoring, is currently applied to manage associated complications.
+review_notes: Nephronophthisis is a ciliopathy causing chronic tubulointerstitial nephritis. The cardinal feature is progressive renal failure, usually beginning in childhood and adolescence and leading to end-stage renal disease. Extrarenal manifestations like retinitis pigmentosa, liver fibrosis, and bone anomalies may also be seen, though less commonly than the renal phenotypes. Hypertension and other cardiovascular sequelae of renal failure are important associated features.
 ---
 name: Peroxisome Biogenesis Disorder
 category: Genetic
@@ -10755,6 +11222,23 @@ phenotypes:
         supports: PARTIAL
         snippet: Zellweger syndrome, the most lethal of the three peroxisomal biogenesis disorders, causes infantile hypotonia, seizures, and death within the first year.
         explanation: While the text does not explicitly mention craniofacial dysmorphism, the severity of symptoms and multisystem involvement suggest potential craniofacial manifestations.
+  - category: Endocrine
+    frequency: FREQUENT
+    name: Adrenal Insufficiency
+    notes: Due to adrenal gland dysfunction
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Chondrodysplasia Punctata
+    notes: Stippling of epiphyses on X-rays
+  - category: Hematologic
+    frequency: OCCASIONAL
+    name: Thrombocytopenia
+    notes: Low platelet count
+  - category: Cardiac
+    frequency: OCCASIONAL
+    name: Cardiomyopathy
+    sequelae:
+      - Heart Failure
 biochemical:
   - name: Very Long Chain Fatty Acids (VLCFA)
     presence: Elevated
@@ -10938,6 +11422,7 @@ treatments:
         supports: SUPPORT
         snippet: Furthermore, it is also important to identify pre-symptomatic patients by family analysis of probands by providing appropriate disease information and genetic counseling, which will also lead to early intervention.
         explanation: The literature discusses the importance of providing disease information and genetic counseling to families, supporting the statement about providing information and support to families regarding inheritance and implications in the context of peroxisomal diseases.
+review_notes: This is a multisystem disorder affecting multiple organ systems due to defective peroxisome function. The phenotypes can be quite variable, but neurologic and hepatic manifestations are most prominent. Additional phenotypes were added to capture the broader spectrum.
 ---
 name: Type I Diabetes
 category: Metabolic
@@ -11264,6 +11749,35 @@ phenotypes:
       - reference: PMID:19267337
         supports: NO_EVIDENCE
         explanation: The reference discusses the natural history of endogenous beta-cell function in Type 1 diabetes but does not mention weight loss being a frequent phenotype.
+  - category: Systemic
+    frequency: FREQUENT
+    name: Polyuria
+    notes: Caused by osmotic diuresis from hyperglycemia
+  - category: Systemic
+    frequency: FREQUENT
+    name: Polydipsia
+    notes: Excessive thirst due to dehydration from polyuria
+  - category: Endocrine
+    frequency: OCCASIONAL
+    name: Diabetic Ketoacidosis
+    notes: Life-threatening complication of insulin deficiency
+    sequelae:
+      - Abdominal Pain
+      - Vomiting
+      - Rapid Breathing
+      - Confusion
+  - category: Ophthalmologic
+    frequency: OCCASIONAL
+    name: Diabetic Retinopathy
+    notes: Leading cause of blindness, due to chronic hyperglycemia
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Diabetic Neuropathy
+    notes: Nerve damage from chronic hyperglycemia
+  - category: Renal
+    frequency: OCCASIONAL
+    name: Diabetic Nephropathy
+    notes: Kidney damage from chronic hyperglycemia
 biochemical:
   - name: Blood Glucose
     presence: Elevated
@@ -11490,6 +12004,7 @@ treatments:
         supports: SUPPORT
         snippet: Weight loss treatments provide a wide-range of benefits in reducing both morbidity and mortality in those who are obese.
         explanation: It mentions lifestyle interventions as a part of weight loss treatments that benefit T1D management, highlighting their efficacy and safety.
+review_notes: Type 1 diabetes is characterized by autoimmune destruction of insulin-producing pancreatic beta cells, leading to absolute insulin deficiency. The hallmark is hyperglycemia, which causes many acute symptoms like polyuria, polydipsia, weight loss, as well as long-term complications in multiple organ systems if blood sugars are not well-controlled. Diabetic ketoacidosis is a serious acute complication of insulin deficiency.
 ---
 name: Dengue
 category: Infectious Disease
@@ -12195,6 +12710,22 @@ phenotypes:
     name: Elevated Liver Enzymes
     frequency: FREQUENT
     notes: Indicates liver involvement
+  - category: Hemorrhagic
+    frequency: OCCASIONAL
+    name: Hemorrhage
+    notes: Severe bleeding from the nose, gums, or gastrointestinal tract can occur in severe dengue (dengue hemorrhagic fever)
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Myocarditis
+    notes: Inflammation of the heart muscle, can occur in severe dengue
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Pleural Effusion
+    notes: Fluid buildup around the lungs, can occur in severe dengue
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Shock
+    notes: Can occur in severe dengue due to plasma leakage and low blood volume
 biochemical:
   - name: Dengue NS1 Antigen
     presence: Positive
@@ -12461,6 +12992,7 @@ treatments:
         supports: SUPPORT
         snippet: The Singapore dengue control programme succeeded in reducing the dengue force of infection... Key to this success is consideration of dengue as an environmental disease, with a strong focus on source reduction and other environmental management methods as the dominant vector control strategy.
         explanation: The Singapore dengue control programme's success in reducing dengue through vector control methods aligns with the statement that such measures are effective treatments.
+review_notes: Additional severe and potentially life-threatening manifestations of dengue included to provide a more comprehensive clinical picture. The frequency of these severe phenotypes is listed as OCCASIONAL as they occur in a minority of dengue cases, while still being important to recognize.
 ---
 name: Tuberculosis
 category: Infectious Disease
@@ -12747,6 +13279,25 @@ phenotypes:
         supports: PARTIAL
         snippet: Other haematological abnormalities of the white blood cells include leucopenia, neutropenia, lymphocytopenia, monocytopenia, leukocytosis, neutrophilia, lymphocytosis, and monocytosis.
         explanation: While it mentions a comprehensive list of haematological abnormalities, hemoptysis, though not directly mentioned, is still indirectly supported through related abnormalities.
+  - category: Respiratory
+    frequency: FREQUENT
+    name: Chest Pain
+    notes: Often described as pleuritic chest pain
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Dyspnea
+    notes: Shortness of breath
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Fatigue
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Back Pain
+    notes: May indicate spinal tuberculosis (Pott's disease)
+  - category: Lymphatic
+    frequency: OCCASIONAL
+    name: Lymphadenopathy
+    notes: Swollen lymph nodes, especially in the neck
 biochemical:
   - name: Tuberculin Skin Test (TST)
     presence: Positive
@@ -13732,6 +14283,18 @@ phenotypes:
         supports: PARTIAL
         snippet: Malignant melanomas of the skin primarily metastasize to lymph nodes, and the detection of sentinel lymph node metastases serves as an important prognostic parameter.
         explanation: This source confirms the occurrence of lymph node metastasization in melanoma but does not specifically address it in the context of congenital melanocytic nevus.
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Pruritus
+    notes: Itching of the lesion can sometimes occur
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Ulceration
+    notes: Breakdown of skin overlying the melanoma
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Bleeding
+    notes: Melanoma lesions can sometimes bleed
 diagnosis:
   - name: Dermatoscopic Examination
     notes: Detailed visual examination of skin lesions
@@ -14084,6 +14647,9 @@ phenotypes:
         supports: SUPPORT
         snippet: Attempts to connect the products of the analysis of the EBC with the clinical manifestations of COPD such as dyspnea are scarce. Up to date research has shown a positive correlation between the elevated levels of some markers of EBC such as H(2)O(2) and 8-isoprostane and dyspnea, while others present ambiguous results.
         explanation: The correlation between dyspnea and COPD is reinforced by the positive association found with certain markers in exhaled breath condensate.
+    sequelae:
+      - Exercise Intolerance
+      - Reduced Quality of Life
   - category: Respiratory
     name: Chronic Cough
     frequency: VERY_FREQUENT
@@ -14097,6 +14663,7 @@ phenotypes:
         supports: SUPPORT
         snippet: COPD is now widely accepted as a heterogeneous condition with multiple phenotypes and endotypes. This review will discuss the old and new concepts for the different types of COPD phenotypes.
         explanation: The statement mentions the heterogeneity of COPD with multiple phenotypes, which could include phenotypes like chronic cough.
+    notes: Often productive of mucus
   - category: Respiratory
     name: Sputum Production
     frequency: VERY_FREQUENT
@@ -14109,6 +14676,28 @@ phenotypes:
         supports: SUPPORT
         snippet: Chronic bronchitis (CB) is a common but variable phenomenon in chronic obstructive pulmonary disease (COPD).
         explanation: Chronic bronchitis, which involves overproduction and hypersecretion of mucus, is described as a common phenomenon in COPD, indicating sputum production is a frequent COPD phenotype.
+    notes: Mucus is often difficult to expectorate
+  - category: Respiratory
+    frequency: FREQUENT
+    name: Wheezing
+    notes: Due to airflow obstruction
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Barrel Chest
+    notes: Due to hyperinflation of the lungs
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Respiratory Failure
+    sequelae:
+      - Hypoxemia
+      - Hypercapnia
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Weight Loss
+    notes: More common in advanced disease
 biochemical:
   - name: Arterial Blood Gases
     presence: Altered
@@ -14397,6 +14986,7 @@ treatments:
         supports: SUPPORT
         snippet: Chronic obstructive pulmonary disease...treated by lung transplantation.
         explanation: This abstract explicitly mentions the use of lung transplantation for individuals with very severe COPD.
+review_notes: COPD is characterized by progressive airflow obstruction that is not fully reversible. Key respiratory symptoms include dyspnea, chronic cough, sputum production, and wheezing. As the disease progresses, patients may develop signs of lung hyperinflation (barrel chest) and are at risk for respiratory failure. Systemic effects like fatigue and weight loss are also common, particularly in advanced disease.
 ---
 name: Cholera
 category: Infectious Disease
@@ -15204,6 +15794,30 @@ phenotypes:
         supports: SUPPORT
         snippet: Intestinal infection with Vibrio cholerae results in the loss of large volumes of watery stool, leading to severe and rapidly progressing dehydration and shock.
         explanation: This abstract highlights that severe dehydration caused by cholera often leads to shock, supporting the claim.
+  - category: Systemic
+    diagnostic: true
+    frequency: VERY_FREQUENT
+    name: Dehydration
+    sequelae:
+      - Sunken Eyes
+      - Low Blood Pressure
+      - Tachycardia
+      - Acute Kidney Injury
+    notes: Can lead to death within hours if untreated
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Hypovolemic Shock
+    notes: Caused by severe dehydration due to fluid loss
+  - category: Electrolyte/Metabolic
+    frequency: FREQUENT
+    name: Hypokalemia
+  - category: Electrolyte/Metabolic
+    frequency: FREQUENT
+    name: Metabolic Acidosis
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Muscle Cramps
+    notes: Due to electrolyte imbalances
 biochemical:
   - name: Electrolytes
     presence: Low Sodium, Potassium, and Bicarbonate Levels
@@ -15423,158 +16037,1151 @@ treatments:
         supports: PARTIAL
         snippet: Oral cholera vaccination could be deployed in a diverse range of situations from cholera-endemic areas and locations of humanitarian crises, but no clear consensus exists.
         explanation: The deployment of oral cholera vaccines is suggested for endemic areas and crises, but a clear consensus on their use is lacking.
+review_notes: Cholera is an acute diarrheal illness caused by infection with the bacterium Vibrio cholerae. It can cause rapid and severe dehydration that can be lethal. Additional key features include "rice-water" diarrhea, vomiting, and electrolyte imbalances like hypokalemia and metabolic acidosis due to the massive fluid losses. Hypovolemic shock is the most severe complication. Rapid fluid and electrolyte replacement is critical.
 ---
 category: Infectious Disease
 name: Hepatitis B
 parents:
-- Viral Infection
+  - Viral Infection
 infectious_agent:
-- name: Hepatitis B Virus (HBV)
-  description: A DNA virus that affects the liver and can cause both acute and chronic
-    hepatitis.
+  - name: Hepatitis B Virus (HBV)
+    description: A DNA virus that affects the liver and can cause both acute and chronic hepatitis.
 transmission:
-- name: Blood-borne Transmission
-  description: Spread through contact with infected blood, including needlesticks
-    and blood transfusions.
-- name: Sexual Transmission
-  description: Spread through sexual contact with an infected person.
-- name: Mother-to-Child Transmission (Perinatal)
-  description: Spread from an infected mother to her baby during childbirth.
+  - name: Blood-borne Transmission
+    description: Spread through contact with infected blood, including needlesticks and blood transfusions.
+  - name: Sexual Transmission
+    description: Spread through sexual contact with an infected person.
+  - name: Mother-to-Child Transmission (Perinatal)
+    description: Spread from an infected mother to her baby during childbirth.
 prevalence:
-- population: Global
-  percentage: 3.5
+  - population: Global
+    percentage: 3.5
 epidemiology:
-- name: Basic Reproduction Number (R0)
-  description: The average number of secondary infections caused by one infected individual
-    in a completely susceptible population.
-  minimum_value: 2
-  maximum_value: 10
-  notes: Highly variable based on geographic region, vaccination rates, and modes
-    of transmission.
-  factors:
-  - Vaccination coverage
-  - Healthcare practices
-  - Population mobility
-- name: Effective Reproduction Number (R or Rt)
-  description: The average number of secondary cases per infectious case in a population
-    with some immunity or control measures.
-  minimum_value: 0.3
-  maximum_value: 1.2
-  notes: Decreases with effective vaccination and antiviral therapies.
-  factors:
-  - Proportion of immune individuals
-  - Effectiveness of antiviral treatment
-- name: Incubation Period
-  unit: days
-  minimum_value: 30
-  maximum_value: 180
-  mean_range: 60-90
-  notes: Affects the timing of infection control measures and contact tracing.
-- name: Chronic Carriage Rate
-  description: The percentage of infected individuals who develop chronic hepatitis
-    B infection.
-  unit: percentage
-  minimum_value: 2
-  maximum_value: 10
-  notes: Higher in infants and young children than in adults.
-- name: Asymptomatic Ratio
-  description: The proportion of infected individuals who do not display symptoms.
-  unit: percentage
-  minimum_value: 50
-  maximum_value: 70
-  notes: Important for understanding true disease prevalence and silent spreaders.
+  - name: Basic Reproduction Number (R0)
+    description: The average number of secondary infections caused by one infected individual in a completely susceptible population.
+    minimum_value: 2
+    maximum_value: 10
+    notes: Highly variable based on geographic region, vaccination rates, and modes of transmission.
+    factors:
+      - Vaccination coverage
+      - Healthcare practices
+      - Population mobility
+  - name: Effective Reproduction Number (R or Rt)
+    description: The average number of secondary cases per infectious case in a population with some immunity or control measures.
+    minimum_value: 0.3
+    maximum_value: 1.2
+    notes: Decreases with effective vaccination and antiviral therapies.
+    factors:
+      - Proportion of immune individuals
+      - Effectiveness of antiviral treatment
+  - name: Incubation Period
+    unit: days
+    minimum_value: 30
+    maximum_value: 180
+    mean_range: 60-90
+    notes: Affects the timing of infection control measures and contact tracing.
+  - name: Chronic Carriage Rate
+    description: The percentage of infected individuals who develop chronic hepatitis B infection.
+    unit: percentage
+    minimum_value: 2
+    maximum_value: 10
+    notes: Higher in infants and young children than in adults.
+  - name: Asymptomatic Ratio
+    description: The proportion of infected individuals who do not display symptoms.
+    unit: percentage
+    minimum_value: 50
+    maximum_value: 70
+    notes: Important for understanding true disease prevalence and silent spreaders.
 progression:
-- phase: Acute
-  duration: Weeks to Months
-  notes: May include jaundice, fatigue, abdominal pain, and elevated liver enzymes.
-- phase: Chronic
-  duration: Years to Decades
-  notes: Continuous virus presence in the liver, which may lead to cirrhosis or liver
-    cancer.
-- phase: Cirrhosis
-  duration: Variable
-  notes: Chronic infection can cause liver scarring, leading to liver dysfunction.
-- phase: Hepatocellular Carcinoma
-  duration: Variable
-  notes: Chronic infection significantly increases the risk of liver cancer.
+  - phase: Acute
+    duration: Weeks to Months
+    notes: May include jaundice, fatigue, abdominal pain, and elevated liver enzymes.
+  - phase: Chronic
+    duration: Years to Decades
+    notes: Continuous virus presence in the liver, which may lead to cirrhosis or liver cancer.
+  - phase: Cirrhosis
+    duration: Variable
+    notes: Chronic infection can cause liver scarring, leading to liver dysfunction.
+  - phase: Hepatocellular Carcinoma
+    duration: Variable
+    notes: Chronic infection significantly increases the risk of liver cancer.
 pathophysiology:
-- name: Hepatocyte Infection
-  description: HBV infects liver cells, integrates into the host genome, and persists.
-  cell_types:
-  - Hepatocyte
-  downstream:
-  - Chronic Inflammation
-- name: Chronic Inflammation
-  description: Persistent immune response against HBV-infected hepatocytes leads to
-    liver damage.
-  downstream:
-  - Liver Fibrosis
-  - Cirrhosis
-- name: Immune Clearance
-  description: The immune system attempts to clear the virus, which can succeed or
-    fail, leading to chronic infection.
-  cell_types:
-  - T Cell
-  - B Cell
-- name: Liver Fibrosis
-  description: Chronic inflammation promotes fibrotic tissue deposition replacing
-    healthy liver cells.
-  downstream:
-  - Cirrhosis
-- name: Cirrhosis
-  description: Extensive fibrosis and scarring significantly impair liver function.
+  - name: Hepatocyte Infection
+    description: HBV infects liver cells, integrates into the host genome, and persists.
+    cell_types:
+      - Hepatocyte
+    downstream:
+      - Chronic Inflammation
+  - name: Chronic Inflammation
+    description: Persistent immune response against HBV-infected hepatocytes leads to liver damage.
+    downstream:
+      - Liver Fibrosis
+      - Cirrhosis
+  - name: Immune Clearance
+    description: The immune system attempts to clear the virus, which can succeed or fail, leading to chronic infection.
+    cell_types:
+      - T Cell
+      - B Cell
+  - name: Liver Fibrosis
+    description: Chronic inflammation promotes fibrotic tissue deposition replacing healthy liver cells.
+    downstream:
+      - Cirrhosis
+  - name: Cirrhosis
+    description: Extensive fibrosis and scarring significantly impair liver function.
 phenotypes:
-- category: Gastrointestinal
-  name: Jaundice
-  frequency: FREQUENT
+  - category: Gastrointestinal
+    name: Jaundice
+    frequency: FREQUENT
+    notes: Due to liver dysfunction causing elevated bilirubin levels
+  - category: Systemic
+    name: Fatigue
+    frequency: FREQUENT
+  - category: Gastrointestinal
+    name: Abdominal Pain
+    frequency: OCCASIONAL
+    notes: May be related to liver inflammation
+  - category: Hepatic
+    name: Elevated Liver Enzymes
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    notes: Reflects liver cell damage and is a key diagnostic feature
+  - category: Gastrointestinal
+    frequency: FREQUENT
+    name: Nausea
+  - category: Gastrointestinal
+    frequency: FREQUENT
+    name: Vomiting
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Fever
+  - category: Hepatic
+    frequency: OCCASIONAL
+    name: Hepatomegaly
+    notes: Liver enlargement
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Arthralgias
+    notes: Joint pain
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Rash
+biochemical:
+  - name: Hepatitis B Surface Antigen (HBsAg)
+    presence: Positive
+    context: Indicates active infection
+  - name: Hepatitis B e Antigen (HBeAg)
+    presence: Positive
+    context: Indicates active viral replication and high infectivity
+  - name: HBV DNA
+    presence: Positive
+    context: Indicates viral load and active replication
+genetic:
+  - name: HBV Genotype
+    presence: Multiple Genotypes (A-H)
+    notes: Influences disease progression and treatment response
+diagnosis:
+  - name: HBsAg Test
+    presence: Positive
+    notes: Indicates current hepatitis B infection
+  - name: HBeAg Test
+    presence: Positive
+    notes: Indicates high levels of viral replication
+  - name: HBV DNA Test
+    presence: Positive
+    notes: Measures viral load in the blood
+  - name: Liver Biopsy
+    notes: Assesses liver damage and fibrosis
+environmental:
+  - name: Poor Sterile Practices
+    notes: Increases the risk of transmission via medical procedures
+  - name: High-risk Behaviors
+    notes: Includes unprotected sexual contact and intravenous drug use
+treatments:
+  - name: Antiviral Medications
+    description: Includes drugs like tenofovir and entecavir to suppress HBV replication.
+  - name: Interferon Therapy
+    description: Boosts the immune system to fight the virus.
+  - name: Liver Transplant
+    description: For end-stage liver disease.
+  - name: Regular Monitoring
+    description: Monitoring liver function and viral load to manage chronic infection.
+  - name: Vaccination
+    description: Hepatitis B vaccine provides prevention for uninfected individuals.
+review_notes: Added additional common and diagnostically relevant phenotypes seen in Hepatitis B including nausea, vomiting, fever, liver enlargement, joint pains, and rash. Marked elevated liver enzymes as a key diagnostic feature. Provided additional clinical notes for some phenotypes.
+---
+name: ATTR_Amyloidosis
+category: Genetic
+parents:
+  - Amyloidosis
+  - Neuromuscular Disorder
+  - Cardiomyopathy
+has_subtypes:
+  - name: ATTRm (hereditary)
+    description: Caused by mutations in the TTR gene, leading to misfolded transthyretin proteins and amyloid deposits in various tissues.
+  - name: ATTRwt (wild-type/senile)
+    description: Occurs without mutations in the TTR gene, commonly affecting older individuals, with amyloid deposits primarily in the heart.
+prevalence:
+  - population: Global
+    percentage: Rare
+progression:
+  - phase: Onset
+    age_range: 30-70 (hereditary); 60-80 (wild-type)
+pathophysiology:
+  - name: TTR Gene Mutation
+    description: Mutations in the TTR gene result in the production of unstable transthyretin proteins that misfold and aggregate into amyloid fibrils.
+  - name: Amyloid Fibril Deposition
+    description: Misfolded transthyretin proteins form amyloid fibrils that deposit in tissues such as the nerves, heart, kidneys, and gastrointestinal tract.
+phenotypes:
+  - category: Neurologic
+    name: Peripheral Neuropathy
+    frequency: FREQUENT
+    diagnostic: true
+    sequelae:
+      - Sensory Loss
+      - Numbness and Tingling
+      - Autonomic Dysfunction
+  - category: Cardiovascular
+    name: Cardiomyopathy
+    frequency: FREQUENT
+    diagnostic: true
+    sequelae:
+      - Heart Failure
+      - Arrhythmias
+      - Orthostatic Hypotension
+  - category: Gastrointestinal
+    name: Gastrointestinal Symptoms
+    frequency: FREQUENT
+    notes: Include nausea, diarrhea, constipation, and weight loss
+  - category: Ocular
+    name: Vitreous Opacities
+    frequency: OCCASIONAL
+    notes: Can lead to visual impairment
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Carpal Tunnel Syndrome
+    notes: Due to amyloid deposition in the wrist
+  - category: Genitourinary
+    frequency: OCCASIONAL
+    name: Renal Dysfunction
+    notes: Due to amyloid deposition in the kidneys, can lead to proteinuria and renal failure
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+    notes: Can be severe and limit activities of daily living
+biochemical:
+  - name: Serum Transthyretin Levels
+    presence: Abnormal (low)
+    context: Diagnostic indicator
+  - name: Amyloid P Component
+    presence: Elevated
+    notes: May be used to monitor disease progression
+genetic:
+  - name: TTR
+    association: Pathogenic Variants
+    examples:
+      - Val30Met
+      - Thr60Ala
+    frequency: Variable by population
+diagnosis:
+  - name: Genetic Testing for TTR Mutations
+    presence: Positive in hereditary cases
+  - name: Biopsy with Congo Red Staining
+    presence: Positive for amyloid deposits
+  - name: Cardiac MRI
+    notes: May show characteristic patterns of amyloid deposition
+  - name: Nerve Conduction Studies
+    notes: Useful for diagnosing peripheral neuropathy
+environmental:
+  - name: None Applicable
+treatments:
+  - name: Tafamidis
+    role: TTR Stabilizer
+    description: Helps stabilize transthyretin and prevent amyloid fibril formation.
+  - name: Patisiran
+    role: RNA Interference
+    description: Reduces production of transthyretin protein to decrease amyloid formation.
+  - name: Inotersen
+    role: Antisense Oligonucleotide
+    description: Reduces TTR protein production to limit amyloid accumulation.
+  - name: Liver Transplant
+    description: Considered for hereditary cases to reduce production of mutant TTR.
+  - name: Heart Transplant
+    description: May be necessary for those with severe cardiomyopathy.
+  - name: Supportive Care
+    description: Symptomatic treatment for neuropathy, heart failure, and gastrointestinal issues.
+review_notes: ATTR amyloidosis is a multisystem disorder caused by deposition of misfolded transthyretin protein. Key diagnostic features are peripheral neuropathy and infiltrative cardiomyopathy. Additional phenotypes across other organ systems are common and reflect the systemic nature of amyloid deposition.
+---
+name: Bacterial meningitis
+category: Infectious Disease
+parents:
+  - Meningitis
+  - Bacterial Infection
+infectious_agent:
+  - name: Neisseria meningitidis
+    description: A common cause of bacterial meningitis, particularly in children and young adults.
+  - name: Streptococcus pneumoniae
+    description: The most common cause of bacterial meningitis in adults.
+  - name: Haemophilus influenzae
+    description: Was a common cause in children before the Hib vaccine.
+  - name: Listeria monocytogenes
+    description: Can cause meningitis in newborns, pregnant women, and immunocompromised individuals.
+transmission:
+  - name: Respiratory Droplets
+    description: Spread through close contact with an infected person, such as coughing or sneezing.
+prevalence:
+  - population: Global
+    percentage: Variable, higher in regions with lower vaccination rates
+  - population: Infants and Young Children
+    notes: At higher risk, particularly if not vaccinated
+  - population: Elderly
+    notes: At increased risk due to weakened immune system
+  - population: Immunocompromised Individuals
+    notes: More susceptible to bacterial meningitis
+epidemiology:
+  - name: Incidence, Developed Countries
+    unit: cases per 100,000 population per year
+    value_range: 0.1-1
+  - name: Incidence, Developing Countries
+    unit: cases per 100,000 population per year
+    value_range: 1-10
+    notes: Higher incidence due to lower vaccination rates and crowded living conditions
+  - name: Case Fatality Rate, Treated
+    unit: percentage
+    value_range: 10-15
+  - name: Case Fatality Rate, Untreated
+    unit: percentage
+    value_range: 70-100
+pathophysiology:
+  - name: Bacterial Invasion
+    description: Bacteria enter the bloodstream and cross the blood-brain barrier to infect the meninges.
+  - name: Inflammation
+    description: Bacterial components trigger a strong inflammatory response in the subarachnoid space.
+    mediators:
+      - Cytokines
+      - Chemokines
+  - name: Increased Intracranial Pressure
+    description: Inflammation and accumulation of purulent exudate lead to increased intracranial pressure.
+    consequences:
+      - Altered Mental Status
+      - Seizures
+      - Focal Neurological Deficits
+phenotypes:
+  - category: Neurological
+    name: Headache
+    frequency: VERY_FREQUENT
+  - category: Neurological
+    name: Neck Stiffness
+    frequency: VERY_FREQUENT
+    diagnostic: true
+  - category: Neurological
+    name: Altered Mental Status
+    frequency: FREQUENT
+  - category: Systemic
+    name: Fever
+    frequency: VERY_FREQUENT
+  - category: Integumentary
+    name: Petechial Rash
+    frequency: OCCASIONAL
+    notes: Particularly with meningococcal meningitis
+diagnosis:
+  - name: Lumbar Puncture
+    description: CSF analysis shows elevated white blood cell count, low glucose, and high protein.
+    diagnostic: true
+  - name: CSF Culture
+    description: Identifies the causative bacterial pathogen.
+  - name: Blood Culture
+    description: May be positive for the causative bacteria.
+  - name: CT or MRI
+    description: To rule out other causes and detect complications like brain abscess or hydrocephalus.
+treatments:
+  - name: Empiric Antibiotic Therapy
+    description: Broad-spectrum antibiotics (e.g., ceftriaxone, vancomycin) started immediately after lumbar puncture.
+  - name: Targeted Antibiotic Therapy
+    description: Antibiotics tailored to the specific pathogen once identified.
+  - name: Dexamethasone
+    description: Corticosteroid used to reduce inflammation and complications, particularly in pneumococcal meningitis.
+  - name: Supportive Care
+    description: Fluids, electrolyte management, seizure control, and monitoring of intracranial pressure.
+  - name: Vaccination
+    description: Vaccines available for prevention of meningococcal, pneumococcal, and Hib meningitis.
+---
+name: Multisystem Inflammatory Syndrome in Children (MIS-C)
+description: A rare but serious condition associated with COVID-19, causing systemic
+  inflammation in children.
+category: Complex
+parents:
+- Pediatric Condition
+- Inflammatory Syndrome
+prevalence:
+- population: Children
+  percentage: Rare
+progression:
+- phase: Onset
+  age_range: 0-21
+  notes: Typically occurs 2-6 weeks after COVID-19 infection.
+pathophysiology:
+- name: Post-Infectious Hyperinflammatory Response
+  description: Abnormally heightened immune response following COVID-19 infection.
+- name: Cytokine Storm
+  description: Excessive production of pro-inflammatory cytokines, leading to widespread
+    inflammation.
+  mediators:
+  - IL-6
+  - IL-10
+  - "TNF-\u03B1"
+phenotypes:
 - category: Systemic
-  name: Fatigue
+  name: Fever
+  frequency: VERY_FREQUENT
+  diagnostic: true
+- category: Cardiovascular
+  name: Hypotension
   frequency: FREQUENT
+  notes: May lead to shock and require intensive care.
 - category: Gastrointestinal
   name: Abdominal Pain
-  frequency: OCCASIONAL
-- category: Hepatic
-  name: Elevated Liver Enzymes
+  frequency: VERY_FREQUENT
+  notes: Often similar to appendicitis
+- category: Dermatologic
+  name: Rash
   frequency: FREQUENT
+- category: Hematologic
+  name: Coagulopathy
+  frequency: OCCASIONAL
+  notes: May involve thrombocytopenia or elevated D-dimer levels.
+- category: Neurologic
+  name: Headache
+  frequency: FREQUENT
+- category: Respiratory
+  name: Cough
+  frequency: OCCASIONAL
 biochemical:
-- name: Hepatitis B Surface Antigen (HBsAg)
-  presence: Positive
-  context: Indicates active infection
-- name: Hepatitis B e Antigen (HBeAg)
-  presence: Positive
-  context: Indicates active viral replication and high infectivity
-- name: HBV DNA
-  presence: Positive
-  context: Indicates viral load and active replication
+- name: C-Reactive Protein (CRP)
+  presence: Elevated
+  context: General inflammation
+- name: Erythrocyte Sedimentation Rate (ESR)
+  presence: Elevated
+  context: Systemic inflammation
+- name: Ferritin
+  presence: Elevated
+  context: Systemic inflammation
+- name: D-dimer
+  presence: Elevated
+  context: Coagulopathy
 genetic:
-- name: HBV Genotype
-  presence: Multiple Genotypes (A-H)
-  notes: Influences disease progression and treatment response
-diagnosis:
-- name: HBsAg Test
-  presence: Positive
-  notes: Indicates current hepatitis B infection
-- name: HBeAg Test
-  presence: Positive
-  notes: Indicates high levels of viral replication
-- name: HBV DNA Test
-  presence: Positive
-  notes: Measures viral load in the blood
-- name: Liver Biopsy
-  notes: Assesses liver damage and fibrosis
+- name: Not Applicable
 environmental:
-- name: Poor Sterile Practices
-  notes: Increases the risk of transmission via medical procedures
-- name: High-risk Behaviors
-  notes: Includes unprotected sexual contact and intravenous drug use
+- name: Not Applicable
+notes: MIS-C is primarily a post-infectious condition with no strong environmental
+  risk factors identified.
 treatments:
-- name: Antiviral Medications
-  description: Includes drugs like tenofovir and entecavir to suppress HBV replication.
-- name: Interferon Therapy
-  description: Boosts the immune system to fight the virus.
-- name: Liver Transplant
-  description: For end-stage liver disease.
-- name: Regular Monitoring
-  description: Monitoring liver function and viral load to manage chronic infection.
-- name: Vaccination
-  description: Hepatitis B vaccine provides prevention for uninfected individuals.
+- name: Intravenous Immunoglobulin (IVIG)
+  description: Used to modulate the immune response and reduce inflammation.
+- name: Corticosteroids
+  description: Anti-inflammatory medicines to reduce immune system activity and inflammation.
+- name: Aspirin
+  description: Used in cases with high risk of blood clots to prevent thrombotic complications.
+  notes: Dose may vary.
+- name: Supportive Care
+  description: Including fluids, blood pressure support, and respiratory support as
+    needed.
+
+---
+name: Addison's Disease
+description: Addison's Disease, also known as primary adrenal insufficiency, is a
+  rare endocrine disorder where the adrenal glands do not produce sufficient steroid
+  hormones, specifically cortisol and aldosterone.
+category: Endocrine
+parents:
+- Adrenal Insufficiency
+- Autoimmune Disorder
+prevalence:
+- population: Global
+  percentage: Rare
+progression:
+- phase: Onset
+  age_range: 30-50
+pathophysiology:
+- name: Autoimmune Adrenalitis
+  description: The immune system mistakenly attacks the adrenal cortex, leading to
+    destruction of adrenal tissue and decreased hormone production.
+  downstream:
+  - Reduced Cortisol Production
+  - Reduced Aldosterone Production
+- name: Reduced Cortisol Production
+  description: Lack of cortisol impacts the body's ability to respond to stress and
+    maintain various metabolic functions.
+  downstream:
+  - Hypoglycemia
+  - Weight Loss
+- name: Reduced Aldosterone Production
+  description: Insufficient aldosterone affects the balance of sodium and potassium
+    in the body, leading to dehydration and low blood pressure.
+  downstream:
+  - Hyponatremia
+  - Hyperkalemia
+phenotypes:
+- category: Endocrine
+  name: Fatigue
+  frequency: VERY_FREQUENT
+- category: Gastrointestinal
+  name: Abdominal Pain
+  frequency: FREQUENT
+- category: Endocrine
+  name: Hyperpigmentation
+  frequency: VERY_FREQUENT
+  diagnostic: true
+  notes: Especially noticeable in areas exposed to friction, such as knuckles, elbows,
+    and knees.
+- category: Musculoskeletal
+  name: Muscle Weakness
+  frequency: FREQUENT
+- category: Systemic
+  name: Weight Loss
+  frequency: FREQUENT
+- category: Cardiovascular
+  name: Hypotension
+  frequency: FREQUENT
+- category: Endocrine
+  name: Salt Craving
+  frequency: OCCASIONAL
+biochemical:
+- name: Cortisol
+  presence: Decreased
+  context: Diagnostic indicator, measured in blood or saliva
+- name: ACTH (Adrenocorticotropic Hormone)
+  presence: Increased
+  context: Elevated due to lack of feedback inhibition by cortisol
+- name: Aldosterone
+  presence: Decreased
+diagnosis:
+- name: ACTH Stimulation Test
+  notes: Evaluates adrenal gland function by measuring cortisol response to synthetic
+    ACTH
+- name: Serum Electrolyte Panel
+  notes: May show hyponatremia and hyperkalemia
+genetic:
+- name: AIRE
+  association: Autoimmune Polyendocrine Syndrome Type 1 (APS-1) is a known genetic
+    cause
+environmental:
+- name: Infections
+  notes: "Tuberculosis and other infections can cause adrenal damage leading to Addison\u2019\
+    s disease"
+treatments:
+- name: Glucocorticoid Replacement
+  description: Hydrocortisone or prednisone to replace cortisol.
+- name: Mineralocorticoid Replacement
+  description: Fludrocortisone to replace aldosterone and manage electrolyte balance.
+- name: Salt Supplementation
+  description: Increased salt intake to manage hyponatremia.
+- name: Emergency Medical ID
+  description: Patients should carry an ID indicating their condition for emergency
+    situations.
+- name: Stress Dose Adjustments
+  description: Increased dose of corticosteroids during illness or stress.
+notes: Prompt diagnosis and lifelong management with hormone replacement therapy are
+  essential for preventing adrenal crises and maintaining health.
+
+---
+name: Marfan Syndrome
+category: Genetic
+parents:
+- Connective Tissue Disorder
+prevalence:
+- population: Global
+  percentage: 0.01-0.02
+progression:
+- phase: Onset
+  age_range: Childhood-Adolescence
+pathophysiology:
+- name: FBN1 Gene Mutation
+  description: Mutations in the FBN1 gene result in defective fibrillin-1 protein,
+    which affects the elasticity and strength of connective tissues.
+  gene: FBN1
+phenotypes:
+- category: Cardiovascular
+  name: Aortic Aneurysm
+  frequency: FREQUENT
+  diagnostic: true
+  sequelae:
+  - Aortic Dissection
+- category: Musculoskeletal
+  name: Tall Stature
+  frequency: VERY_FREQUENT
+  diagnostic: true
+- category: Musculoskeletal
+  name: Arachnodactyly
+  frequency: VERY_FREQUENT
+  diagnostic: true
+- category: Ocular
+  name: Ectopia Lentis
+  frequency: FREQUENT
+  diagnostic: true
+  notes: Dislocation of the lens
+- category: Musculoskeletal
+  name: Scoliosis
+  frequency: FREQUENT
+  diagnostic: true
+- category: Respiratory
+  name: Pneumothorax
+  frequency: OCCASIONAL
+biochemical:
+- name: Fibrillin-1 Protein
+  presence: Abnormal
+  context: Can be used in research settings but not routine diagnostics.
+genetic:
+- name: FBN1
+  association: Pathogenic Variants
+diagnosis:
+- name: Genetic Testing for FBN1 Mutations
+  presence: Positive in affected individuals
+- name: Echocardiogram
+  presence: Aortic root dilation
+  notes: Often used to monitor cardiovascular complications.
+- name: Slit Lamp Exam
+  presence: Ectopia lentis
+  notes: Used to detect lens dislocation.
+environmental:
+- name: Physical Activity Restrictions
+  effect: Reduces risk of aortic dissection.
+treatments:
+- name: Beta Blockers
+  description: Used to reduce stress on the aorta and prevent its enlargement.
+- name: Aortic Surgery
+  description: Recommended for severe aortic dilation to prevent dissection.
+- name: Orthopedic Interventions
+  description: Treatments for scoliosis and other skeletal abnormalities.
+- name: Vision Correction
+  description: Management of ocular issues such as ectopia lentis with glasses or
+    surgery.
+---
+name: Parvovirus B19 Infection
+category: Viral Disease
+parents:
+- Infectious Disease
+- Childhood Infection
+prevalence:
+- population: Global
+  percentage: Common
+infectious_agent:
+- name: Parvovirus B19
+  description: A single-stranded DNA virus known to cause several clinical conditions,
+    particularly in children.
+transmission:
+- name: Respiratory Droplets
+  description: Spread through inhalation of respiratory droplets from infected individuals.
+- name: Vertical Transmission
+  description: Transmission from mother to fetus during pregnancy.
+- name: Blood Transfusion
+  description: Transmission through contaminated blood products.
+pathophysiology:
+- name: Viral Replication
+  description: The virus primarily targets erythroid progenitor cells in the bone
+    marrow, leading to disrupted red blood cell production.
+  cell_types:
+  - Erythroid Progenitor Cells
+- name: Immune Response
+  description: Immune-mediated response to the virus can lead to rash and joint symptoms.
+phenotypes:
+- category: Dermatologic
+  name: Erythema Infectiosum (Fifth Disease)
+  frequency: VERY_FREQUENT
+  diagnostic: true
+  sequelae:
+  - Slapped Cheek Rash
+- category: Hematologic
+  name: Transient Aplastic Crisis
+  frequency: OCCASIONAL
+  context: In individuals with hemolytic disorders.
+- category: Musculoskeletal
+  name: Arthropathy
+  frequency: FREQUENT
+  notes: Particularly in adults.
+- category: Fetal
+  name: Hydrops Fetalis
+  frequency: RARE
+  notes: Due to severe fetal anemia resulting from maternal infection.
+biochemical:
+- name: Parvovirus B19 Serology
+  presence: Positive
+  context: Detection of specific antibodies (IgM and IgG) indicating recent or past
+    infection.
+- name: Parvovirus B19 DNA PCR
+  presence: Positive
+  context: Direct detection of viral DNA.
+diagnosis:
+- name: Clinical Examination
+  notes: Based on characteristic rash and illness pattern.
+- name: Serologic Testing
+  notes: Detection of IgM and IgG antibodies.
+- name: PCR Testing
+  notes: Detection of viral DNA in blood or other tissues.
+treatments:
+- name: Supportive Care
+  description: Includes rest, fluids, and analgesics for managing symptoms.
+- name: Intravenous Immunoglobulin (IVIG)
+  description: Used in severe cases, particularly for individuals with immunodeficiency
+    or severe anemia.
+environmental:
+- name: Personal Hygiene
+  description: Good hand hygiene to reduce risk of transmission.
+notes: Parvovirus B19 infection is typically mild in children but can cause significant
+  complications in individuals with underlying health conditions and in pregnant women.
+---
+name: "Graves' Disease"
+category: Endocrine Disorder
+parents:
+- Autoimmune Disease
+- Thyroid Disorder
+prevalence:
+- population: Global
+  percentage: 0.5-1
+pathophysiology:
+- name: Autoantibody Production
+  description: The immune system produces thyroid-stimulating immunoglobulins (TSIs)
+    that mimic the activity of thyroid-stimulating hormone (TSH), leading to an overactive
+    thyroid.
+  cell_types:
+  - B cell
+  - T cell
+- name: Thyroid Overactivity
+  description: Excessive stimulation of the thyroid gland results in increased production
+    of thyroid hormones (thyroxine, T4, and triiodothyronine, T3).
+  downstream:
+  - Hyperthyroidism
+- name: Immune System Dysregulation
+  description: Dysregulated immune response leads to autoimmune attacks on the thyroid
+    gland.
+  cell_types:
+  - B cell
+  - T cell
+phenotypes:
+- category: Endocrine
+  name: Hyperthyroidism
+  frequency: VERY_FREQUENT
+  diagnostic: true
+  sequelae:
+  - Weight Loss
+  - Increased Appetite
+  - Heat Intolerance
+  - Sweating
+- category: Ocular
+  name: Exophthalmos (Proptosis)
+  frequency: FREQUENT
+  notes: Bulging of the eyes due to inflammation and tissue buildup behind the eyes.
+- category: Endocrine
+  name: Goiter
+  frequency: FREQUENT
+  notes: Enlargement of the thyroid gland, often visible as a swelling in the neck.
+- category: Cardiovascular
+  name: Tachycardia
+  frequency: FREQUENT
+  notes: Increased heart rate, commonly experienced as palpitations.
+- category: Musculoskeletal
+  name: Tremor
+  frequency: FREQUENT
+  notes: Fine shaking, particularly in the hands.
+- category: Psychiatric
+  name: Anxiety
+  frequency: FREQUENT
+- category: Psychiatric
+  frequency: FREQUENT
+  name: Irritability
+- category: Dermatologic
+  frequency: OCCASIONAL
+  name: Pretibial Myxedema
+  notes: Swelling and thickening of the skin, usually on the shins.
+biochemical:
+- name: Free Thyroxine (T4)
+  presence: Increased
+  context: Indicates hyperthyroidism
+- name: Free Triiodothyronine (T3)
+  presence: Increased
+  context: Indicates hyperthyroidism
+- name: Thyroid-Stimulating Hormone (TSH)
+  presence: Decreased
+  context: Indicates feedback suppression due to high levels of thyroid hormones
+- name: Thyroid-Stimulating Immunoglobulins (TSI)
+  presence: Positive
+  context: Confirms autoimmune etiology
+genetic:
+- name: HLA-DR3
+  association: Risk Factor
+environmental:
+- name: Stress
+  notes: Can trigger or exacerbate symptoms.
+- name: Smoking
+  notes: "Increases the risk of developing and worsening Graves\u2019 ophthalmopathy."
+diagnosis:
+- name: Radioactive Iodine Uptake Test
+  notes: High uptake indicates hyperthyroidism.
+- name: Thyroid Ultrasound
+  notes: Visualizes the thyroid gland and detects abnormalities.
+treatments:
+- name: Antithyroid Medications
+  description: Methimazole and propylthiouracil (PTU) to reduce thyroid hormone production.
+- name: Radioactive Iodine Therapy
+  description: Radioactive iodine is taken orally to destroy overactive thyroid cells.
+- name: Thyroidectomy
+  description: Surgical removal of part or all of the thyroid gland.
+- name: Beta Blockers
+  description: Used to manage cardiovascular symptoms like tachycardia and palpitations.
+- name: Corticosteroids
+  description: Used to reduce inflammation in severe ophthalmopathy.
+review_notes: Graves' Disease is an autoimmune disorder that leads to hyperthyroidism,
+  characterized by symptoms of an overactive thyroid such as weight loss, heat intolerance,
+  and tachycardia. It can also cause specific ocular and dermatologic manifestations.
+  Diagnosis involves a combination of biochemical tests with a high index of clinical
+  suspicion, and treatment options vary based on severity and patient preferences.
+
+---
+name: Multiple Sclerosis
+category: Neurological Disorder
+parents:
+- Autoimmune Disorder
+prevalence:
+- population: Global
+  percentage: 0.1
+progression:
+- phase: Relapsing-Remitting
+  notes: Characterized by periods of neurological symptoms (relapses) followed by
+    periods of partial or complete recovery (remissions).
+- phase: Secondary Progressive
+  notes: Following an initial relapsing-remitting phase, there is a progressive worsening
+    of neurological function over time.
+- phase: Primary Progressive
+  notes: A gradual progression of disability from onset without early relapses and
+    remissions.
+- phase: Progressive-Relapsing
+  notes: Progressive disability from onset with occasional acute relapses.
+pathophysiology:
+- name: Demyelination
+  description: The immune system attacks and destroys myelin, the protective sheath
+    around nerve fibers, disrupting nerve signal transmission.
+  cell_types:
+  - Oligodendrocyte
+  - T-lymphocyte
+  - B-lymphocyte
+  locations:
+  - Central Nervous System
+- name: Axonal Damage
+  description: Along with demyelination, damage to the axons themselves contributes
+    to the permanent neurological deficits.
+- name: Inflammatory Lesions
+  description: Immune cells crossing the blood-brain barrier create focal areas of
+    inflammation in the central nervous system.
+phenotypes:
+- category: Neurologic
+  name: Muscle Weakness
+  frequency: FREQUENT
+- category: Neurologic
+  name: Vision Problems
+  frequency: FREQUENT
+  notes: Including optic neuritis and double vision.
+- category: Neurologic
+  name: Fatigue
+  frequency: VERY_FREQUENT
+  diagnostic: true
+- category: Neurologic
+  name: Gait and Balance Issues
+  frequency: FREQUENT
+- category: Neurologic
+  name: Spasticity
+  frequency: FREQUENT
+- category: Neurologic
+  name: Cognitive Impairment
+  frequency: FREQUENT
+  notes: Difficulties with memory, attention, and information processing.
+- category: Neurologic
+  name: Bladder and Bowel Dysfunction
+  frequency: COMMON
+- category: Neurologic
+  name: Sensory Disturbances
+  frequency: FREQUENT
+  notes: Numbness or tingling in limbs.
+biochemical:
+- name: Oligoclonal Bands
+  presence: Positive
+  context: Detected in cerebrospinal fluid during lumbar puncture.
+diagnosis:
+- name: MRI with Gadolinium Contrast
+  presence: Positive
+  notes: Used to identify areas of demyelination in the brain and spinal cord.
+- name: Lumbar Puncture
+  presence: Presence of oligoclonal bands in cerebrospinal fluid.
+- name: Evoked Potentials
+  presence: Delayed response times.
+  notes: Tests that measure the electrical activity in the brain in response to stimuli.
+genetic:
+- name: HLA-DRB1
+  association: Risk Factor
+environmental:
+- name: Vitamin D Deficiency
+  effect: Increased risk
+- name: Epstein-Barr Virus Infection
+  effect: Increased risk
+treatments:
+- name: Disease-Modifying Therapies (DMTs)
+  description: Medications that can slow the progression of the disease and reduce
+    the frequency and severity of relapses.
+  examples:
+  - Interferon-beta
+  - Glatiramer Acetate
+  - Natalizumab
+  - Fingolimod
+- name: Symptomatic Treatments
+  description: Range of therapies to manage symptoms like spasticity, pain, fatigue,
+    and bladder issues.
+  examples:
+  - Muscle Relaxants
+  - Physical Therapy
+  - Pain Management
+- name: Corticosteroids
+  description: Used to reduce inflammation and speed recovery during acute exacerbations.
+  examples:
+  - Prednisone
+
+---
+name: Huntington's Disease
+category: Genetic
+parents:
+- Neurodegenerative Disorder
+- Movement Disorder
+synonyms:
+- Huntington's Chorea
+has_subtypes:
+- name: Juvenile Huntington's Disease
+  description: A rare, early-onset form that begins in childhood or adolescence and
+    progresses more rapidly than typical forms.
+- name: Late-Onset Huntington's Disease
+  description: Typically begins after the age of 50 and may have a slower progression.
+prevalence:
+- population: Global
+  percentage: 0.004-0.01
+inheritance:
+- name: Autosomal Dominant
+pathophysiology:
+- name: CAG Repeat Expansion in the HTT Gene
+  description: Mutation characterized by an expanded number of CAG repeats, which
+    encodes an abnormal polyglutamine tract in the huntingtin protein.
+- name: Mutant Huntingtin Protein Aggregation
+  description: Aggregates of mutant huntingtin protein lead to neuronal dysfunction
+    and death, particularly in the striatum and cerebral cortex.
+- name: Excitotoxicity
+  description: Overactivation of glutamate receptors leading to neuronal damage.
+  cell_types:
+  - Medium Spiny Neuron
+phenotypes:
+- name: Chorea
+biochemical:
+- name: Elevated Neuronal Inclusions
+  presence: Positive
+  notes: Aggregates of mutant huntingtin protein found in neurons.
+genetic:
+- name: HTT
+  association: Pathogenic CAG Repeat Expansion
+  inheritance:
+  - name: Autosomal Dominant
+environmental:
+- name: None Applicable
+animal_models:
+- species: Mouse
+  genotype: R6/2 Transgenic
+  description: Mice expressing human mutant huntingtin with expanded CAG repeats used
+    to model motor and cognitive deficits.
+  associated_phenotypes:
+  - Progressive Motor Dysfunction
+  - Cognitive Impairment
+  - Weight Loss
+diagnosis:
+- name: Genetic Testing for HTT CAG Expansion
+  presence: Positive
+  notes: Confirmation of diagnosis through DNA analysis.
+- name: Neurological Examination
+  notes: Assessment of motor disturbances, cognitive function, and psychiatric symptoms.
+treatments:
+- name: Tetrabenazine
+  role: Symptomatic
+  description: Used to manage chorea by depleting dopamine.
+- name: Antipsychotic Medications
+  role: Symptomatic
+  description: Used for psychiatric symptoms like irritability and agitation.
+- name: Selective Serotonin Reuptake Inhibitors (SSRIs)
+  role: Symptomatic
+  description: Used to manage depression.
+- name: Physical Therapy
+  role: Supportive
+  description: Helps maintain mobility and function.
+- name: Speech Therapy
+  role: Supportive
+  description: Helps manage dysarthria and dysphagia.
+- name: Occupational Therapy
+  role: Supportive
+  description: Assists with daily living activities.
+review_notes: Huntington's Disease is a progressive neurodegenerative disorder characterized
+  by a triad of motor, cognitive, and psychiatric symptoms. The genetic basis and
+  impactful phenotypes have been summarized. Further research on therapeutic interventions
+  is ongoing, focusing on disease-modifying treatments.
+
+---
+name: Kawasaki Disease
+description: Kawasaki Disease is a condition in children that involves inflammation
+  of blood vessels throughout the body and is characterized by fever, rash, and other
+  symptoms.
+category: Pediatric Condition
+parents:
+- Vasculitis
+prevalence:
+- population: Children under 5
+  percentage: Rare
+progression:
+- phase: Onset
+  age_range: 6 months to 5 years
+  notes: Sudden onset with high fever
+- phase: Acute
+  duration: 1-2 weeks
+  notes: High fever, rash, conjunctivitis, swollen hands and feet
+- phase: Subacute
+  duration: 2-4 weeks
+  notes: Peeling skin, joint pain, possible coronary artery changes
+- phase: Convalescent
+  duration: 6-8 weeks
+  notes: Symptoms resolve, but coronary artery abnormalities may persist
+pathophysiology:
+- name: Vascular Inflammation
+  description: Widespread inflammation of medium-sized arteries, including coronary
+    arteries.
+  downstream:
+  - Aneurysm Formation
+- name: Immune Response Dysregulation
+  description: An abnormal immune response leading to vessel wall damage and inflammation.
+phenotypes:
+- category: Systemic
+  name: Fever
+  frequency: VERY_FREQUENT
+  diagnostic: true
+- category: Dermatologic
+  name: Rash
+  frequency: VERY_FREQUENT
+- category: Ocular
+  name: Conjunctivitis
+  frequency: VERY_FREQUENT
+  notes: Non-purulent (no pus)
+- category: Musculoskeletal
+  name: Swelling of Hands and Feet
+  frequency: VERY_FREQUENT
+- category: Dermatologic
+  frequency: FREQUENT
+  name: Peeling Skin
+  notes: Particularly on the fingers and toes, often during the subacute phase
+- category: Oropharyngeal
+  frequency: VERY_FREQUENT
+  name: Red, Cracked Lips
+  notes: Includes "strawberry tongue" and inflammation in the mouth and throat
+- category: Cardiovascular
+  frequency: OCCASIONAL
+  name: Coronary Artery Aneurysms
+  notes: Can lead to serious heart complications
+biochemical:
+- name: C-Reactive Protein (CRP)
+  presence: Elevated
+  context: Indicator of inflammation
+- name: Erythrocyte Sedimentation Rate (ESR)
+  presence: Elevated
+  context: Indicator of inflammation
+- name: Platelet Count
+  presence: Elevated
+  context: Often seen in the subacute phase
+diagnosis:
+- name: Echocardiogram
+  notes: Used to check for coronary artery involvement
+- name: Blood Tests
+  notes: Elevated inflammatory markers (CRP and ESR)
+treatments:
+- name: Intravenous Immunoglobulin (IVIG)
+  description: First-line treatment to reduce inflammation and risk of coronary artery
+    complications.
+- name: Aspirin
+  description: Used in high doses for its anti-inflammatory and antipyretic effects,
+    followed by a lower dose to prevent blood clots.
+- name: Corticosteroids
+  description: Used in cases resistant to IVIG or with severe inflammation.
+notes: Prompt treatment is crucial to prevent coronary artery complications. Long-term
+  follow-up may be necessary for some patients.
+---
+name: Roifman-syndrome
+category: Genetic
+parents:
+- Immunodeficiency
+- Skeletal Dysplasia
+prevalence:
+- population: Global
+  percentage: Rare
+progression:
+- phase: Onset
+  age_range: Infancy
+pathophysiology:
+- name: RNU4ATAC Gene Mutation
+  description: Mutations in the RNU4ATAC gene result in defective minor spliceosomal
+    RNAs, affecting normal cellular processes.
+- name: Decreased NK Cell Function
+  cell_types:
+    - NK Cell
+- name: Decreased total and memory B cells
+  cell_types:
+    - Memory B cell
+- name: Hypogammaglobulinemia  
+phenotypes:
+- category: Immunologic
+  name: Recurrent Infections
+  frequency: VERY_FREQUENT
+  diagnostic: true
+  notes: Frequent and severe bacterial infections due to immunodeficiency.
+- category: Skeletal
+  name: Growth Retardation
+  frequency: VERY_FREQUENT
+  diagnostic: true
+  notes: Short stature and skeletal abnormalities, such as shortened limbs.
+- category: Neurologic
+  name: Intellectual Disability
+  frequency: FREQUENT
+  notes: Ranging from mild to severe.
+- category: Craniofacial
+  name: Dysmorphic Facial Features
+  frequency: FREQUENT
+  notes: Includes a small head, broad nasal bridge, and other facial anomalies.
+- category: Ophthalmologic
+  name: Strabismus
+  frequency: FREQUENT
+  notes: Misalignment of the eyes.
+biochemical:
+- name: Immunoglobulin Levels
+  presence: Abnormal
+  context: Typically reduced immunoglobulin levels indicating immunodeficiency.
+genetic:
+- name: RNU4ATAC
+  association: Pathogenic Variants
+  mode_of_inheritance:
+    - name: Autosomal Recessive
+diagnosis:
+- name: Genetic Testing for RNU4ATAC Mutations
+  presence: Positive in affected individuals
+environmental:
+- name: Immunizations
+  description: Ensure up-to-date vaccines due to immunodeficiency.
+treatments:
+- name: Immunoglobulin Replacement Therapy
+  description: Regular infusions to prevent infections.
+- name: Antibiotic Prophylaxis
+  description: Preventative antibiotic treatment to reduce infection risk.
+- name: Growth Hormone Therapy
+  description: May be used to address growth retardation.
+- name: Supportive Educational Programs
+  description: Tailored to address intellectual disability and developmental delays.
+- name: Surgical Interventions
+  description: For severe skeletal or craniofacial abnormalities.
+
+
+
+
