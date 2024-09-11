@@ -196,32 +196,13 @@ epidemiology:
         explanation: The abstract discusses the effect of rainfall on cholera incidence but does not provide specific R0 values or detail the factors affecting R0.
   - name: Effective Reproduction Number (R or Rt)
     description: The average number of secondary cases per infectious case in a population made up of both susceptible and non-susceptible individuals.
+    minimum_value: 0.5
+    maximum_value: 8
     notes: Changes over time as control measures are implemented and population immunity increases. Rt < 1 indicates declining epidemic.
     factors:
       - Proportion of susceptible individuals
       - Control measures (e.g., improved sanitation, vaccination)
       - Changes in behavior (e.g., increased hygiene practices)
-    evidence:
-      - reference: PMID:35259956
-        supports: SUPPORT
-        snippet: The fate of ongoing infectious disease outbreaks is predicted through reproduction numbers, defining the long-term establishment of the infection...
-        explanation: This reference provides context on the use of reproduction numbers (R or Rt) to characterize ongoing infectious diseases like cholera.
-      - reference: PMID:32853313
-        supports: PARTIAL
-        snippet: '...we found Re was approximately 1.5. Consequently, we estimated about 90.3% had measles immunity...'
-        explanation: This reference addresses the use of effective reproduction number (Re) but specifically for a measles outbreak rather than cholera. However, it still supports the definition of Re in the context of the population's immunity.
-      - reference: PMID:38709376
-        supports: PARTIAL
-        snippet: '...we show that the endemic dynamic is convergence to the endemic equilibrium; while when the precaution level is the delayed best response...'
-        explanation: This reference discusses the dynamics of infectious diseases with respect to the basic reproduction number (R0) and its relation to control measures and population behavior, partially supporting the statement.
-      - reference: PMID:24101639
-        supports: PARTIAL
-        snippet: During 2008-2010, 85% of 26 district-level outbreaks occurred in the capital Lome or the coastal Maritime Region...
-        explanation: This reference provides epidemiological data on cholera outbreaks but does not specifically mention the reproduction number. It partially supports the context of cholera epidemiology.
-      - reference: PMID:21993137
-        supports: PARTIAL
-        snippet: 'Two parameters quantify the dynamics of a vector-borne infection: (1) the basic reproductive number (R(0)) that is the mean number of secondary infections transmitted from an infectious host by the bite of the vector...'
-        explanation: This reference provides detailed information on vector-borne diseases and the basic reproductive number (R0), which helps support the idea of using similar parameters for cholera.
   - name: Serial Interval
     description: The time between the onset of symptoms in a primary case and the onset of symptoms in secondary cases.
     unit: days
@@ -824,6 +805,30 @@ phenotypes:
         supports: SUPPORT
         snippet: Intestinal infection with Vibrio cholerae results in the loss of large volumes of watery stool, leading to severe and rapidly progressing dehydration and shock.
         explanation: This abstract highlights that severe dehydration caused by cholera often leads to shock, supporting the claim.
+  - category: Systemic
+    diagnostic: true
+    frequency: VERY_FREQUENT
+    name: Dehydration
+    sequelae:
+      - Sunken Eyes
+      - Low Blood Pressure
+      - Tachycardia
+      - Acute Kidney Injury
+    notes: Can lead to death within hours if untreated
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Hypovolemic Shock
+    notes: Caused by severe dehydration due to fluid loss
+  - category: Electrolyte/Metabolic
+    frequency: FREQUENT
+    name: Hypokalemia
+  - category: Electrolyte/Metabolic
+    frequency: FREQUENT
+    name: Metabolic Acidosis
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Muscle Cramps
+    notes: Due to electrolyte imbalances
 biochemical:
   - name: Electrolytes
     presence: Low Sodium, Potassium, and Bicarbonate Levels
@@ -1043,3 +1048,4 @@ treatments:
         supports: PARTIAL
         snippet: Oral cholera vaccination could be deployed in a diverse range of situations from cholera-endemic areas and locations of humanitarian crises, but no clear consensus exists.
         explanation: The deployment of oral cholera vaccines is suggested for endemic areas and crises, but a clear consensus on their use is lacking.
+review_notes: Cholera is an acute diarrheal illness caused by infection with the bacterium Vibrio cholerae. It can cause rapid and severe dehydration that can be lethal. Additional key features include "rice-water" diarrhea, vomiting, and electrolyte imbalances like hypokalemia and metabolic acidosis due to the massive fluid losses. Hypovolemic shock is the most severe complication. Rapid fluid and electrolyte replacement is critical.

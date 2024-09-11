@@ -284,6 +284,25 @@ phenotypes:
         supports: PARTIAL
         snippet: Other haematological abnormalities of the white blood cells include leucopenia, neutropenia, lymphocytopenia, monocytopenia, leukocytosis, neutrophilia, lymphocytosis, and monocytosis.
         explanation: While it mentions a comprehensive list of haematological abnormalities, hemoptysis, though not directly mentioned, is still indirectly supported through related abnormalities.
+  - category: Respiratory
+    frequency: FREQUENT
+    name: Chest Pain
+    notes: Often described as pleuritic chest pain
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Dyspnea
+    notes: Shortness of breath
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Fatigue
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Back Pain
+    notes: May indicate spinal tuberculosis (Pott's disease)
+  - category: Lymphatic
+    frequency: OCCASIONAL
+    name: Lymphadenopathy
+    notes: Swollen lymph nodes, especially in the neck
 biochemical:
   - name: Tuberculin Skin Test (TST)
     presence: Positive

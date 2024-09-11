@@ -85,6 +85,22 @@ phenotypes:
         supports: SUPPORT
         snippet: The typical symptoms are a tall stature...
         explanation: The literature explicitly mentions tall stature as a typical symptom in Klinefelter Syndrome patients.
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Reduced Muscle Tone
+    notes: Manifests in infancy and childhood
+  - category: Reproductive
+    frequency: OCCASIONAL
+    name: Micropenis
+    notes: Noted at birth in some cases
+  - category: Behavioral
+    frequency: OCCASIONAL
+    name: Psychosocial Difficulties
+    notes: May include shyness, low self-esteem, reduced assertiveness
+  - category: Cognitive
+    frequency: OCCASIONAL
+    name: Attention Deficit
+    notes: ADD/ADHD is more common than general population
 biochemical:
   - name: Testosterone
     presence: Decreased

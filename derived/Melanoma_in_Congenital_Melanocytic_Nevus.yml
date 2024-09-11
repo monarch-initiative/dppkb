@@ -144,6 +144,18 @@ phenotypes:
         supports: PARTIAL
         snippet: Malignant melanomas of the skin primarily metastasize to lymph nodes, and the detection of sentinel lymph node metastases serves as an important prognostic parameter.
         explanation: This source confirms the occurrence of lymph node metastasization in melanoma but does not specifically address it in the context of congenital melanocytic nevus.
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Pruritus
+    notes: Itching of the lesion can sometimes occur
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Ulceration
+    notes: Breakdown of skin overlying the melanoma
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Bleeding
+    notes: Melanoma lesions can sometimes bleed
 diagnosis:
   - name: Dermatoscopic Examination
     notes: Detailed visual examination of skin lesions

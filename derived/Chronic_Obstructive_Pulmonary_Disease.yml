@@ -168,6 +168,9 @@ phenotypes:
         supports: SUPPORT
         snippet: Attempts to connect the products of the analysis of the EBC with the clinical manifestations of COPD such as dyspnea are scarce. Up to date research has shown a positive correlation between the elevated levels of some markers of EBC such as H(2)O(2) and 8-isoprostane and dyspnea, while others present ambiguous results.
         explanation: The correlation between dyspnea and COPD is reinforced by the positive association found with certain markers in exhaled breath condensate.
+    sequelae:
+      - Exercise Intolerance
+      - Reduced Quality of Life
   - category: Respiratory
     name: Chronic Cough
     frequency: VERY_FREQUENT
@@ -181,6 +184,7 @@ phenotypes:
         supports: SUPPORT
         snippet: COPD is now widely accepted as a heterogeneous condition with multiple phenotypes and endotypes. This review will discuss the old and new concepts for the different types of COPD phenotypes.
         explanation: The statement mentions the heterogeneity of COPD with multiple phenotypes, which could include phenotypes like chronic cough.
+    notes: Often productive of mucus
   - category: Respiratory
     name: Sputum Production
     frequency: VERY_FREQUENT
@@ -193,6 +197,28 @@ phenotypes:
         supports: SUPPORT
         snippet: Chronic bronchitis (CB) is a common but variable phenomenon in chronic obstructive pulmonary disease (COPD).
         explanation: Chronic bronchitis, which involves overproduction and hypersecretion of mucus, is described as a common phenomenon in COPD, indicating sputum production is a frequent COPD phenotype.
+    notes: Mucus is often difficult to expectorate
+  - category: Respiratory
+    frequency: FREQUENT
+    name: Wheezing
+    notes: Due to airflow obstruction
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Barrel Chest
+    notes: Due to hyperinflation of the lungs
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Respiratory Failure
+    sequelae:
+      - Hypoxemia
+      - Hypercapnia
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Weight Loss
+    notes: More common in advanced disease
 biochemical:
   - name: Arterial Blood Gases
     presence: Altered
@@ -481,3 +507,4 @@ treatments:
         supports: SUPPORT
         snippet: Chronic obstructive pulmonary disease...treated by lung transplantation.
         explanation: This abstract explicitly mentions the use of lung transplantation for individuals with very severe COPD.
+review_notes: COPD is characterized by progressive airflow obstruction that is not fully reversible. Key respiratory symptoms include dyspnea, chronic cough, sputum production, and wheezing. As the disease progresses, patients may develop signs of lung hyperinflation (barrel chest) and are at risk for respiratory failure. Systemic effects like fatigue and weight loss are also common, particularly in advanced disease.

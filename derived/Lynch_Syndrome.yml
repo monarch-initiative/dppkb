@@ -329,6 +329,21 @@ phenotypes:
         supports: PARTIAL
         snippet: 'The main skin lesions were: Sebaceous adenomas (43%), sebaceous carcinomas (27%), keratoacanthomas (16%), sebaceomas (13%), squamous cell carcinomas (23%), and basal cell carcinomas (10%).'
         explanation: Sebaceous adenomas are significant dermatologic manifestations of Lynch Syndrome, but the literature suggests they are more frequent than 'occasional'.
+  - category: Genitourinary
+    frequency: OCCASIONAL
+    name: Urinary Tract Cancer
+    notes: Transitional cell carcinoma of the ureter or renal pelvis
+  - category: Genitourinary
+    frequency: OCCASIONAL
+    name: Ovarian Cancer
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Sebaceous Adenomas
+    notes: Muir-Torre variant of Lynch syndrome
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Immunodeficiency
+    notes: Due to inherited mismatch repair deficiency in rare cases
 biochemical:
   - name: Microsatellite Instability Testing
     notes: High microsatellite instability in tumors
@@ -371,6 +386,8 @@ biochemical:
 genetic:
   - name: MLH1
     association: Germline Mutation
+    mode_of_inheritance:
+      - name: Autosomal Dominant
     evidence:
       - reference: PMID:28038733
         supports: SUPPORT
@@ -575,3 +592,4 @@ treatments:
         supports: PARTIAL
         snippet: Metastatic and localized mismatch repair-deficient (dMMR) tumors are exquisitely sensitive to immune checkpoint blockade (ICB).
         explanation: While ICB is effective for treating dMMR tumors in Lynch syndrome patients, it does not eliminate the risk of new neoplasia development, highlighting the need for continued surveillance.
+review_notes: Lynch syndrome is caused by inherited mutations in mismatch repair genes, leading to a very high lifetime risk of colorectal and endometrial cancers. Risks of other cancers like stomach, ovary, and urinary tract are also elevated. Screening and prophylactic surgery can reduce cancer incidence and mortality.

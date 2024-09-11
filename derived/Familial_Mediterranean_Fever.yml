@@ -224,6 +224,14 @@ phenotypes:
         supports: SUPPORT
         snippet: Amyloidosis [...] stands out as a major complication of familial Mediterranean fever (FMF). Splenic and renal involvement is more likely in FMF-associated systemic amyloidosis.
         explanation: The literature confirms the renal involvement in FMF-associated amyloidosis, thus supporting the statement.
+  - category: Integumentary
+    frequency: OCCASIONAL
+    name: Erysipelas-Like Erythema
+    notes: Recurrent erythematous skin lesions, usually on the lower legs
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Myalgia
+    notes: Muscle pain, often in the legs, associated with fever episodes
 diagnosis:
   - name: Genetic Testing
     results: Identifies MEFV mutations

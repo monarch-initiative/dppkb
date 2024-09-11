@@ -148,6 +148,30 @@ phenotypes:
         supports: PARTIAL
         snippet: 'Commonest GI symptoms were: abdominal pain (56.1%), nausea (42.3%), constipation (38.6%), heartburn (37.6%), and irritable bowel syndrome-like symptoms (27.5%)... Among 37.8% of the 378 patients who underwent esophagogastroduodenoscopy, the commonest abnormalities were gastritis, hiatal hernia and reflux esophagitis.'
         explanation: The study indicates that reflux esophagitis, which is related to gastroesophageal reflux, is one of the common abnormalities observed in EDS patients. However, it does not explicitly distinguish the frequency of this phenotype for COL5A1-related EDS specifically.
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Molluscoid Pseudotumors
+    notes: Fleshy lesions associated with scars
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Mitral Valve Prolapse
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Aortic Root Dilation
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Gastroesophageal Reflux
+  - category: Ocular
+    frequency: OCCASIONAL
+    name: Myopia
+    notes: Nearsightedness
+  - category: Ocular
+    frequency: OCCASIONAL
+    name: Blue Sclerae
+  - category: Oral
+    frequency: OCCASIONAL
+    name: Periodontal Disease
+    notes: Fragile gums prone to recession
 biochemical:
   - name: Collagen Type V
     presence: Decreased or Abnormal

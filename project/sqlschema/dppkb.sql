@@ -5,6 +5,7 @@
 --     * Slot: description Description: 
 --     * Slot: review_notes Description: 
 --     * Slot: Disease_name Description: Autocreated FK slot
+--     * Slot: InfectiousAgent_name Description: Autocreated FK slot
 -- # Class: "EvidenceItem" Description: ""
 --     * Slot: id Description: 
 --     * Slot: reference Description: 
@@ -14,16 +15,19 @@
 --     * Slot: Subtype_name Description: Autocreated FK slot
 --     * Slot: Prevalence_id Description: Autocreated FK slot
 --     * Slot: ProgressionInfo_id Description: Autocreated FK slot
+--     * Slot: EpidemiologyInfo_name Description: Autocreated FK slot
 --     * Slot: Pathophysiology_name Description: Autocreated FK slot
 --     * Slot: Phenotype_name Description: Autocreated FK slot
 --     * Slot: Biochemical_name Description: Autocreated FK slot
 --     * Slot: Genetic_name Description: Autocreated FK slot
 --     * Slot: Environmental_name Description: Autocreated FK slot
+--     * Slot: AnimalModel_id Description: Autocreated FK slot
 --     * Slot: Treatment_name Description: Autocreated FK slot
 --     * Slot: InfectiousAgent_name Description: Autocreated FK slot
 --     * Slot: Transmission_name Description: Autocreated FK slot
 --     * Slot: Diagnosis_name Description: Autocreated FK slot
 --     * Slot: Inheritance_name Description: Autocreated FK slot
+--     * Slot: ModelingConsideration_name Description: Autocreated FK slot
 -- # Class: "Prevalence" Description: ""
 --     * Slot: id Description: 
 --     * Slot: subtype Description: 
@@ -43,12 +47,22 @@
 --     * Slot: duration_days Description: 
 --     * Slot: duration Description: 
 --     * Slot: Disease_name Description: Autocreated FK slot
+-- # Class: "EpidemiologyInfo" Description: ""
+--     * Slot: name Description: 
+--     * Slot: description Description: 
+--     * Slot: minimum_value Description: 
+--     * Slot: maximum_value Description: 
+--     * Slot: mean_range Description: 
+--     * Slot: notes Description: 
+--     * Slot: unit Description: 
+--     * Slot: Disease_name Description: Autocreated FK slot
 -- # Class: "Pathophysiology" Description: ""
 --     * Slot: name Description: 
 --     * Slot: description Description: 
 --     * Slot: role Description: 
 --     * Slot: consequence Description: 
 --     * Slot: gene Description: 
+--     * Slot: notes Description: 
 --     * Slot: Disease_name Description: Autocreated FK slot
 -- # Class: "Phenotype" Description: ""
 --     * Slot: category Description: 
@@ -77,6 +91,7 @@
 --     * Slot: review_notes Description: 
 --     * Slot: subtype Description: 
 --     * Slot: features Description: 
+--     * Slot: notes Description: 
 --     * Slot: Disease_name Description: Autocreated FK slot
 --     * Slot: frequency_id Description: 
 -- # Class: "Environmental" Description: ""
@@ -92,6 +107,7 @@
 --     * Slot: description Description: 
 --     * Slot: category Description: 
 --     * Slot: notes Description: 
+--     * Slot: review_notes Description: 
 --     * Slot: DiseaseCollection_id Description: Autocreated FK slot
 -- # Class: "AnimalModel" Description: ""
 --     * Slot: id Description: 
@@ -128,6 +144,7 @@
 --     * Slot: notes Description: 
 --     * Slot: results Description: 
 --     * Slot: markers Description: 
+--     * Slot: description Description: 
 --     * Slot: Disease_name Description: Autocreated FK slot
 -- # Class: "Inheritance" Description: ""
 --     * Slot: name Description: 
@@ -142,6 +159,10 @@
 --     * Slot: name Description: 
 --     * Slot: description Description: 
 --     * Slot: Treatment_name Description: Autocreated FK slot
+-- # Class: "ModelingConsideration" Description: ""
+--     * Slot: name Description: 
+--     * Slot: description Description: 
+--     * Slot: Disease_name Description: Autocreated FK slot
 -- # Class: "DiseaseCollection" Description: ""
 --     * Slot: id Description: 
 -- # Class: "Subtype_locations" Description: ""
@@ -150,6 +171,9 @@
 -- # Class: "Subtype_geography" Description: ""
 --     * Slot: Subtype_name Description: Autocreated FK slot
 --     * Slot: geography Description: 
+-- # Class: "EpidemiologyInfo_factors" Description: ""
+--     * Slot: EpidemiologyInfo_name Description: Autocreated FK slot
+--     * Slot: factors Description: 
 -- # Class: "Pathophysiology_cell_types" Description: ""
 --     * Slot: Pathophysiology_name Description: Autocreated FK slot
 --     * Slot: cell_types Description: 
@@ -204,6 +228,9 @@
 -- # Class: "Biochemical_synonyms" Description: ""
 --     * Slot: Biochemical_name Description: Autocreated FK slot
 --     * Slot: synonyms Description: 
+-- # Class: "Genetic_examples" Description: ""
+--     * Slot: Genetic_name Description: Autocreated FK slot
+--     * Slot: examples Description: 
 -- # Class: "Environmental_chemicals" Description: ""
 --     * Slot: Environmental_name Description: Autocreated FK slot
 --     * Slot: chemicals Description: 
@@ -250,17 +277,10 @@ CREATE TABLE "Disease" (
 	description TEXT, 
 	category TEXT, 
 	notes TEXT, 
+	review_notes TEXT, 
 	"DiseaseCollection_id" INTEGER, 
 	PRIMARY KEY (name), 
 	FOREIGN KEY("DiseaseCollection_id") REFERENCES "DiseaseCollection" (id)
-);
-CREATE TABLE "Subtype" (
-	name TEXT NOT NULL, 
-	description TEXT, 
-	review_notes TEXT, 
-	"Disease_name" TEXT, 
-	PRIMARY KEY (name), 
-	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
 );
 CREATE TABLE "Prevalence" (
 	id INTEGER NOT NULL, 
@@ -288,12 +308,25 @@ CREATE TABLE "ProgressionInfo" (
 	PRIMARY KEY (id), 
 	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
 );
+CREATE TABLE "EpidemiologyInfo" (
+	name TEXT NOT NULL, 
+	description TEXT, 
+	minimum_value FLOAT, 
+	maximum_value FLOAT, 
+	mean_range TEXT, 
+	notes TEXT, 
+	unit TEXT, 
+	"Disease_name" TEXT, 
+	PRIMARY KEY (name), 
+	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
+);
 CREATE TABLE "Pathophysiology" (
 	name TEXT NOT NULL, 
 	description TEXT, 
 	role TEXT, 
 	consequence TEXT, 
 	gene VARCHAR, 
+	notes TEXT, 
 	"Disease_name" TEXT, 
 	PRIMARY KEY (name), 
 	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
@@ -333,6 +366,7 @@ CREATE TABLE "Genetic" (
 	review_notes TEXT, 
 	subtype TEXT, 
 	features TEXT, 
+	notes TEXT, 
 	"Disease_name" TEXT, 
 	frequency_id INTEGER, 
 	PRIMARY KEY (name), 
@@ -394,6 +428,14 @@ CREATE TABLE "Diagnosis" (
 	notes TEXT, 
 	results TEXT, 
 	markers TEXT, 
+	description TEXT, 
+	"Disease_name" TEXT, 
+	PRIMARY KEY (name), 
+	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
+);
+CREATE TABLE "ModelingConsideration" (
+	name TEXT NOT NULL, 
+	description TEXT, 
 	"Disease_name" TEXT, 
 	PRIMARY KEY (name), 
 	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
@@ -415,6 +457,16 @@ CREATE TABLE "Disease_synonyms" (
 	synonyms TEXT, 
 	PRIMARY KEY ("Disease_name", synonyms), 
 	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
+);
+CREATE TABLE "Subtype" (
+	name TEXT NOT NULL, 
+	description TEXT, 
+	review_notes TEXT, 
+	"Disease_name" TEXT, 
+	"InfectiousAgent_name" TEXT, 
+	PRIMARY KEY (name), 
+	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name), 
+	FOREIGN KEY("InfectiousAgent_name") REFERENCES "InfectiousAgent" (name)
 );
 CREATE TABLE "Inheritance" (
 	name TEXT NOT NULL, 
@@ -439,17 +491,11 @@ CREATE TABLE "Mechanism" (
 	PRIMARY KEY (name), 
 	FOREIGN KEY("Treatment_name") REFERENCES "Treatment" (name)
 );
-CREATE TABLE "Subtype_locations" (
-	"Subtype_name" TEXT, 
-	locations VARCHAR, 
-	PRIMARY KEY ("Subtype_name", locations), 
-	FOREIGN KEY("Subtype_name") REFERENCES "Subtype" (name)
-);
-CREATE TABLE "Subtype_geography" (
-	"Subtype_name" TEXT, 
-	geography VARCHAR, 
-	PRIMARY KEY ("Subtype_name", geography), 
-	FOREIGN KEY("Subtype_name") REFERENCES "Subtype" (name)
+CREATE TABLE "EpidemiologyInfo_factors" (
+	"EpidemiologyInfo_name" TEXT, 
+	factors TEXT, 
+	PRIMARY KEY ("EpidemiologyInfo_name", factors), 
+	FOREIGN KEY("EpidemiologyInfo_name") REFERENCES "EpidemiologyInfo" (name)
 );
 CREATE TABLE "Pathophysiology_cell_types" (
 	"Pathophysiology_name" TEXT, 
@@ -559,6 +605,12 @@ CREATE TABLE "Biochemical_synonyms" (
 	PRIMARY KEY ("Biochemical_name", synonyms), 
 	FOREIGN KEY("Biochemical_name") REFERENCES "Biochemical" (name)
 );
+CREATE TABLE "Genetic_examples" (
+	"Genetic_name" TEXT, 
+	examples TEXT, 
+	PRIMARY KEY ("Genetic_name", examples), 
+	FOREIGN KEY("Genetic_name") REFERENCES "Genetic" (name)
+);
 CREATE TABLE "Environmental_chemicals" (
 	"Environmental_name" TEXT, 
 	chemicals TEXT, 
@@ -604,28 +656,46 @@ CREATE TABLE "EvidenceItem" (
 	"Subtype_name" TEXT, 
 	"Prevalence_id" INTEGER, 
 	"ProgressionInfo_id" INTEGER, 
+	"EpidemiologyInfo_name" TEXT, 
 	"Pathophysiology_name" TEXT, 
 	"Phenotype_name" TEXT, 
 	"Biochemical_name" TEXT, 
 	"Genetic_name" TEXT, 
 	"Environmental_name" TEXT, 
+	"AnimalModel_id" INTEGER, 
 	"Treatment_name" TEXT, 
 	"InfectiousAgent_name" TEXT, 
 	"Transmission_name" TEXT, 
 	"Diagnosis_name" TEXT, 
 	"Inheritance_name" TEXT, 
+	"ModelingConsideration_name" TEXT, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY("Subtype_name") REFERENCES "Subtype" (name), 
 	FOREIGN KEY("Prevalence_id") REFERENCES "Prevalence" (id), 
 	FOREIGN KEY("ProgressionInfo_id") REFERENCES "ProgressionInfo" (id), 
+	FOREIGN KEY("EpidemiologyInfo_name") REFERENCES "EpidemiologyInfo" (name), 
 	FOREIGN KEY("Pathophysiology_name") REFERENCES "Pathophysiology" (name), 
 	FOREIGN KEY("Phenotype_name") REFERENCES "Phenotype" (name), 
 	FOREIGN KEY("Biochemical_name") REFERENCES "Biochemical" (name), 
 	FOREIGN KEY("Genetic_name") REFERENCES "Genetic" (name), 
 	FOREIGN KEY("Environmental_name") REFERENCES "Environmental" (name), 
+	FOREIGN KEY("AnimalModel_id") REFERENCES "AnimalModel" (id), 
 	FOREIGN KEY("Treatment_name") REFERENCES "Treatment" (name), 
 	FOREIGN KEY("InfectiousAgent_name") REFERENCES "InfectiousAgent" (name), 
 	FOREIGN KEY("Transmission_name") REFERENCES "Transmission" (name), 
 	FOREIGN KEY("Diagnosis_name") REFERENCES "Diagnosis" (name), 
-	FOREIGN KEY("Inheritance_name") REFERENCES "Inheritance" (name)
+	FOREIGN KEY("Inheritance_name") REFERENCES "Inheritance" (name), 
+	FOREIGN KEY("ModelingConsideration_name") REFERENCES "ModelingConsideration" (name)
+);
+CREATE TABLE "Subtype_locations" (
+	"Subtype_name" TEXT, 
+	locations VARCHAR, 
+	PRIMARY KEY ("Subtype_name", locations), 
+	FOREIGN KEY("Subtype_name") REFERENCES "Subtype" (name)
+);
+CREATE TABLE "Subtype_geography" (
+	"Subtype_name" TEXT, 
+	geography VARCHAR, 
+	PRIMARY KEY ("Subtype_name", geography), 
+	FOREIGN KEY("Subtype_name") REFERENCES "Subtype" (name)
 );

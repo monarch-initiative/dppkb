@@ -194,6 +194,21 @@ phenotypes:
         supports: SUPPORT
         snippet: Frequent ventricular premature complexes, complex ventricular ectopic activity and asymptomatic ventricular tachycardia are common to both hypertrophic and dilated cardiomyopathy; in both conditions, sudden death is a common occurrence.
         explanation: This reference mentions common arrhythmic events in hypertrophic cardiomyopathy, supporting the idea that arrhythmias are a common cardiovascular phenotype in HCM.
+  - category: Cardiovascular
+    frequency: FREQUENT
+    name: Arrhythmias
+    notes: Abnormal heart rhythms are common. Can include atrial fibrillation and ventricular arrhythmias.
+    sequelae:
+      - Palpitations
+      - Sudden Cardiac Death
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Mitral Valve Regurgitation
+    notes: Thickened heart muscle can affect mitral valve function, causing leakage.
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Fatigue
+    notes: Due to reduced cardiac output and efficiency.
 biochemical:
   - name: Troponin
     presence: Elevated

@@ -296,6 +296,36 @@ phenotypes:
         supports: NO_EVIDENCE
         snippet: 'CONCLUSION: This study aids in the recognition of the demographic, clinical, laboratory features, and the histological patterns of LN patients in Saudi Arabia, that probably has a role in the development and disease progression.'
         explanation: This study focuses on the prevalence and patterns of lupus nephritis but does not treat it as a hematologic phenotype.
+  - category: Renal
+    frequency: FREQUENT
+    name: Lupus Nephritis
+    notes: Inflammation of the kidneys, can lead to renal failure
+  - category: Hematologic
+    frequency: FREQUENT
+    name: Leukopenia
+    notes: Low white blood cell count
+  - category: Hematologic
+    frequency: FREQUENT
+    name: Thrombocytopenia
+    notes: Low platelet count
+  - category: Hematologic
+    frequency: OCCASIONAL
+    name: Hemolytic Anemia
+    notes: Destruction of red blood cells
+  - category: Cardiac
+    frequency: OCCASIONAL
+    name: Pericarditis
+    notes: Inflammation of the pericardium (lining around the heart)
+  - category: Pulmonary
+    frequency: OCCASIONAL
+    name: Pleuritis
+    notes: Inflammation of the pleura (lining around the lungs)
+  - category: Neuropsychiatric
+    frequency: OCCASIONAL
+    name: Seizures
+  - category: Neuropsychiatric
+    frequency: OCCASIONAL
+    name: Psychosis
 biochemical:
   - name: Anti-Nuclear Antibodies (ANA)
     specificity: High
@@ -519,3 +549,4 @@ animal_models:
         supports: SUPPORT
         snippet: Lupus-prone (NZB x NZW)F1 mice that had been DNA-vaccinated with plasmids encoding Hsp70 and controls were monitored for lupus disease parameters including anti-double stranded DNA (anti-dsDNA) autoantibodies and cytokines using enzyme-linked immunosorbent assay, and for kidney function and pathology.
         explanation: This reference supports the use of (NZB x NZW)F1 mice as a model for SLE.
+review_notes: "SLE is a complex autoimmune disorder that can affect multiple organ systems.\nThe hallmark is production of autoantibodies. Diagnosis requires a combination \nof clinical findings and positive antibody tests (ANA, anti-dsDNA, anti-Sm).\nFrequency of involvement of each organ system is variable. Renal and CNS involvement\nare major sources of morbidity. Disease course is characterized by periods of \nflare and remission."

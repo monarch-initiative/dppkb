@@ -195,6 +195,7 @@ phenotypes:
         supports: SUPPORT
         snippet: Initially, it presents with skin eruptions and fevers with diaphoresis and rigors. Clinically, the skin lesions progress from papules to vesiculopustules to resolving eschars.
         explanation: This reference confirms the typical progression of skin lesions, including rashes, in monkeypox.
+    notes: Rash typically starts on the face and spreads to other parts of the body
   - category: Systemic
     name: Fever
     frequency: VERY_FREQUENT
@@ -211,6 +212,7 @@ phenotypes:
         supports: SUPPORT
         snippet: Depending on the kind of exposure, patients with monkeypox may experience a febrile prodrome 5-13 days after exposure, which frequently includes lymphadenopathy, malaise, headaches, and muscle aches.
         explanation: This reference further supports the statement by mentioning fever as part of the common symptoms during the prodromal phase of monkeypox infection.
+    notes: Fever usually precedes the rash
   - category: Musculoskeletal
     name: Myalgia
     frequency: FREQUENT
@@ -219,6 +221,7 @@ phenotypes:
         supports: SUPPORT
         snippet: Other symptoms can include diarrhea, vomiting, myalgia, and backache.
         explanation: The reference states that myalgia is a symptom that can occur in monkeypox patients, indicating it's a recognized phenotype.
+    notes: Muscle aches and pain are common
   - category: Lymphatic
     name: Lymphadenopathy
     frequency: FREQUENT
@@ -227,6 +230,25 @@ phenotypes:
         supports: SUPPORT
         snippet: The primary lymphadenitis caused by human monkeypox infection, the first such human pathology to be documented, is unique among poxes in its association and prominence.
         explanation: The cited study specifically addresses the clinicopathologic features of human monkeypox lymphadenitis, confirming that lymphadenopathy is a common phenotype in monkeypox.
+    notes: Swollen lymph nodes, particularly in the neck and groin
+  - category: Systemic
+    frequency: FREQUENT
+    name: Headache
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Nausea
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Vomiting
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Sore Throat
+  - category: Ophthalmic
+    frequency: OCCASIONAL
+    name: Conjunctivitis
 biochemical:
   - name: Monkeypox Virus PCR
     presence: Positive
@@ -373,3 +395,4 @@ treatments:
         supports: PARTIAL
         snippet: Monkeypox is an infectious disease, characterised by a rash affecting the skin and soft tissues, including the oral cavity.
         explanation: The literature mentions the importance of infection control in preventing the spread of monkeypox, particularly in dental settings.
+review_notes: Added additional common symptoms including headache, fatigue, GI symptoms, sore throat and conjunctivitis, to provide a more complete clinical picture. Noted typical rash progression and that fever usually comes before rash.

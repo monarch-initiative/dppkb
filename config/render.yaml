@@ -1,7 +1,7 @@
 rules:
   - render_as: description_list
     applies_to_slots:
-#      - subtypes
+      - has_subtypes
       - pathophysiology
       - prevalence
       - progression

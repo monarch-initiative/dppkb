@@ -305,6 +305,23 @@ phenotypes:
         supports: PARTIAL
         snippet: Zellweger syndrome, the most lethal of the three peroxisomal biogenesis disorders, causes infantile hypotonia, seizures, and death within the first year.
         explanation: While the text does not explicitly mention craniofacial dysmorphism, the severity of symptoms and multisystem involvement suggest potential craniofacial manifestations.
+  - category: Endocrine
+    frequency: FREQUENT
+    name: Adrenal Insufficiency
+    notes: Due to adrenal gland dysfunction
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Chondrodysplasia Punctata
+    notes: Stippling of epiphyses on X-rays
+  - category: Hematologic
+    frequency: OCCASIONAL
+    name: Thrombocytopenia
+    notes: Low platelet count
+  - category: Cardiac
+    frequency: OCCASIONAL
+    name: Cardiomyopathy
+    sequelae:
+      - Heart Failure
 biochemical:
   - name: Very Long Chain Fatty Acids (VLCFA)
     presence: Elevated
@@ -488,3 +505,4 @@ treatments:
         supports: SUPPORT
         snippet: Furthermore, it is also important to identify pre-symptomatic patients by family analysis of probands by providing appropriate disease information and genetic counseling, which will also lead to early intervention.
         explanation: The literature discusses the importance of providing disease information and genetic counseling to families, supporting the statement about providing information and support to families regarding inheritance and implications in the context of peroxisomal diseases.
+review_notes: This is a multisystem disorder affecting multiple organ systems due to defective peroxisome function. The phenotypes can be quite variable, but neurologic and hepatic manifestations are most prominent. Additional phenotypes were added to capture the broader spectrum.

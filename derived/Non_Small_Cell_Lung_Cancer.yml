@@ -238,6 +238,24 @@ phenotypes:
         supports: SUPPORT
         snippet: We conducted a large, multicenter, retrospective survey aimed to explore the impact of tumor bone involvement in Non-Small Cell Lung Cancer... Bone metastases were evident at diagnosis in 57.5% of patients.
         explanation: This reference discusses the occurrence of bone metastases in NSCLC patients, which is linked to symptoms like bone pain.
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Bone Pain
+    notes: May indicate bone metastases
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Chest Pain
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Recurrent Pneumonia
+    notes: Due to airway obstruction by tumor
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Headache
+    notes: May indicate brain metastases
 biochemical:
   - name: Carcinoembryonic Antigen
     synonyms:

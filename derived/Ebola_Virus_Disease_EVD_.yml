@@ -201,6 +201,9 @@ phenotypes:
         supports: SUPPORT
         snippet: 'Ebolavirus disease (EVD) continues to pose a serious threat to global health. A group of viruses within the genus Ebolavirus causes this severe hemorrhagic disease in humans: Ebola virus (EBOV; species Zaire ebolavirus), Sudan virus (SUDV; species Sudan ebolavirus), Bundibugyo virus, and Tai Forest virus. EBOV and SUDV are associated with the highest case fatality rates.'
         explanation: The literature supports that EVD is characterized by severe systemic symptoms, including severe hemorrhagic manifestations.
+    sequelae:
+      - Hypovolemic Shock
+      - Multiorgan Failure
   - category: Gastrointestinal
     name: Vomiting
     severity: Severe
@@ -235,6 +238,9 @@ phenotypes:
         supports: SUPPORT
         snippet: During the 2013-2016 West African (WA) Ebola virus (EBOV) outbreak, severe gastrointestinal symptoms were common in patients and associated with poor outcome.
         explanation: The reference highlights that severe gastrointestinal symptoms, including diarrhea, were common and associated with poor outcomes.
+    sequelae:
+      - Dehydration
+      - Electrolyte Imbalances
   - category: Dermatologic
     name: Maculopapular Rash
     frequency: FREQUENT
@@ -243,6 +249,29 @@ phenotypes:
         supports: SUPPORT
         snippet: The main cutaneous finding of Ebola is a nonspecific maculopapular rash that appears between day four and six of disease.
         explanation: The statement is supported as the primary dermatologic phenotype associated with Ebola Virus Disease (EVD) is a nonspecific maculopapular rash, and it is noted as a main cutaneous finding.
+  - category: Systemic
+    frequency: VERY_FREQUENT
+    name: Fatigue
+  - category: Musculoskeletal
+    frequency: FREQUENT
+    name: Myalgia
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Headache
+  - category: Gastrointestinal
+    frequency: FREQUENT
+    name: Abdominal Pain
+  - category: Hematologic
+    frequency: FREQUENT
+    name: Thrombocytopenia
+    sequelae:
+      - Increased Risk of Bleeding
+  - category: Hepatic
+    frequency: FREQUENT
+    name: Hepatitis
+    sequelae:
+      - Elevated Liver Enzymes
+      - Impaired Liver Function
 biochemical:
   - name: Ebola Virus Antigen
     presence: Positive
@@ -357,3 +386,4 @@ treatments:
         supports: SUPPORT
         snippet: In 2019, the FDA-approved the first anti-EBOV vaccine, rVSV-EBOV-GP (Ervebo(R) by Merck). This live-recombinant vaccine confers both prophylactic and therapeutic protection to nonhuman primates and humans.
         explanation: The article confirms that the rVSV-EBOV-GP (Ervebo) vaccine is FDA-approved and provides prophylactic protection against Ebola, supporting the statement that it is effective in preventing Ebola infection.
+review_notes: Ebola is a severe viral hemorrhagic fever. Key features are the sudden onset of fever, muscle pain, headache and sore throat, followed by vomiting, diarrhea, rash, impaired kidney and liver function, and in some cases, both internal and external bleeding. Mortality is high. Transmission occurs through direct contact with bodily fluids of infected people or animals.

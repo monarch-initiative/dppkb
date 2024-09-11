@@ -164,6 +164,18 @@ phenotypes:
         supports: PARTIAL
         snippet: Counseling parents is critical for ensuring they understand their child's condition, how it must be treated, pitfalls that can occur during treatment, and how they will do in the long term ... outcomes, and familial nature.
         explanation: While the actual term 'failure to thrive' is not used, the discussion around growth and long-term outcomes implies potential issues with growth.
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Enterocolitis
+    notes: Potentially life-threatening complication
+  - category: Systemic
+    frequency: FREQUENT
+    name: Failure to Thrive
+    notes: Due to impaired nutrient absorption and increased metabolic demands
+  - category: Developmental
+    frequency: OCCASIONAL
+    name: Developmental Delay
+    notes: May occur in severe cases with prolonged malnutrition
 diagnosis:
   - name: Rectal Biopsy
     notes: Absence of ganglion cells confirms diagnosis

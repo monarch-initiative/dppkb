@@ -2555,7 +2555,7 @@ biochemical:
 genetic:
   - name: MLH1
     association: Germline Mutation
-    mode_of_inheritance:
+    inheritance:
       - name: Autosomal Dominant
     evidence:
       - reference: PMID:28038733
@@ -16340,28 +16340,32 @@ prevalence:
 epidemiology:
   - name: Incidence, Developed Countries
     unit: cases per 100,000 population per year
-    value_range: 0.1-1
+    minimum_value: 0.1
+    maximum_value: 1
   - name: Incidence, Developing Countries
     unit: cases per 100,000 population per year
-    value_range: 1-10
+    minimum_value: 1
+    maximum_value: 10
     notes: Higher incidence due to lower vaccination rates and crowded living conditions
   - name: Case Fatality Rate, Treated
     unit: percentage
-    value_range: 10-15
+    minimum_value: 10
+    maximum_value: 15
   - name: Case Fatality Rate, Untreated
     unit: percentage
-    value_range: 70-100
+    minimum_value: 70
+    maximum_value: 100
 pathophysiology:
   - name: Bacterial Invasion
     description: Bacteria enter the bloodstream and cross the blood-brain barrier to infect the meninges.
   - name: Inflammation
     description: Bacterial components trigger a strong inflammatory response in the subarachnoid space.
-    mediators:
+    chemical_entities:
       - Cytokines
       - Chemokines
   - name: Increased Intracranial Pressure
     description: Inflammation and accumulation of purulent exudate lead to increased intracranial pressure.
-    consequences:
+    downstream:
       - Altered Mental Status
       - Seizures
       - Focal Neurological Deficits
@@ -16383,7 +16387,6 @@ phenotypes:
     name: Petechial Rash
     frequency: OCCASIONAL
     notes: Particularly with meningococcal meningitis
-diagnosis:
   - name: Lumbar Puncture
     description: CSF analysis shows elevated white blood cell count, low glucose, and high protein.
     diagnostic: true
@@ -16423,7 +16426,7 @@ pathophysiology:
     description: Abnormally heightened immune response following COVID-19 infection.
   - name: Cytokine Storm
     description: Excessive production of pro-inflammatory cytokines, leading to widespread inflammation.
-    mediators:
+    genes:
       - IL-6
       - IL-10
       - "TNF-α"
@@ -17105,7 +17108,7 @@ biochemical:
 genetic:
   - name: RNU4ATAC
     association: Pathogenic Variants
-    mode_of_inheritance:
+    inheritance:
       - name: Autosomal Recessive
 diagnosis:
   - name: Genetic Testing for RNU4ATAC Mutations
@@ -17124,3 +17127,91 @@ treatments:
     description: Tailored to address intellectual disability and developmental delays.
   - name: Surgical Interventions
     description: For severe skeletal or craniofacial abnormalities.
+---
+name: Primary_Ciliary_Dyskinesia
+category: Genetic
+parents:
+- Ciliopathy
+- Respiratory Disease
+prevalence:
+- population: Global
+  percentage: 0.025-0.05
+pathophysiology:
+- name: Ciliary Dysfunction
+  description: Defects in the structure and function of motile cilia impair mucociliary
+    clearance.
+  genes:
+  - DNAI1
+  - DNAH5
+  cellular_components:
+  - Cilia
+  downstream:
+  - Impaired Mucociliary Clearance
+- name: Impaired Mucociliary Clearance
+  description: Failure to effectively remove mucus and pathogens from respiratory
+    passages.
+  downstream:
+  - Chronic Respiratory Infections
+  - Sinusitis
+  - Otitis Media
+- name: Situs Inversus
+  description: Abnormal placement of internal organs due to ciliary dysfunction during
+    embryonic development.
+  frequency: 50%
+phenotypes:
+- category: Respiratory
+  name: Chronic Cough
+  frequency: VERY_FREQUENT
+  diagnostic: true
+- category: Respiratory
+  name: Recurrent Respiratory Infections
+  frequency: VERY_FREQUENT
+- category: Respiratory
+  name: Bronchiectasis
+  frequency: FREQUENT
+- category: Otologic
+  name: Chronic Otitis Media
+  frequency: FREQUENT
+- category: Otologic
+  name: Hearing Loss
+  frequency: OCCASIONAL
+- category: Gastrointestinal
+  name: Nasal Polyps
+  frequency: FREQUENT
+- category: Cardiac
+  name: Situs Inversus Totalis
+  frequency: OCCASIONAL
+biochemical:
+- name: Nitric Oxide
+  presence: Decreased
+  context: Lower levels in nasal and exhaled breath
+genetic:
+- name: DNAI1
+  association: Pathogenic Variants
+- name: DNAH5
+  association: Pathogenic Variants
+diagnosis:
+- name: High-Speed Video Microscopy
+  notes: Assess ciliary motion and structure
+- name: Transmission Electron Microscopy
+  notes: Examines ciliary ultrastructure for diagnostic defects
+- name: Nasal Nitric Oxide Test
+  notes: Measures nasal nitric oxide levels, typically decreased in PCD patients
+environmental:
+- name: Air Pollution
+  effect: Exacerbates Symptoms
+treatments:
+- name: Airway Clearance Techniques
+  description: Methods to help clear mucus from the lungs, such as chest physical
+    therapy.
+- name: Antibiotic Therapy
+  description: Long-term or prophylactic antibiotics to control respiratory infections.
+- name: Bronchodilators
+  description: Medications to help open airways and ease breathing.
+- name: Nasal Steroids
+  description: Used to treat nasal polyps and chronic sinusitis.
+- name: Hearing Aids
+  description: Assistive devices for hearing loss management.
+- name: Genetic Counseling
+  description: Provides information and support for affected individuals and families.
+

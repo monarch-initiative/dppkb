@@ -313,11 +313,9 @@ phenotypes:
         explanation: The source does indicate that Type 1 diabetes has varied presentations, including insulin deficiency and potentially weight loss due to failure to utilize glucose. However, the excerpt does not specifically mention weight loss as a frequent phenotype.
       - reference: PMID:12949265
         supports: NO_EVIDENCE
-        snippet: null
         explanation: The provided literature does not directly discuss weight loss as a frequent systemic phenotype of Type 1 diabetes.
       - reference: PMID:11508279
         supports: NO_EVIDENCE
-        snippet: null
         explanation: This reference discusses the Accelerator Hypothesis and weight gain in diabetes but does not address weight loss in Type 1 diabetes.
       - reference: PMID:37065759
         supports: PARTIAL
@@ -325,8 +323,36 @@ phenotypes:
         explanation: This reference addresses weight gain in relation to Type 1 Diabetes but does not state that weight loss is a frequent phenotype.
       - reference: PMID:19267337
         supports: NO_EVIDENCE
-        snippet: null
         explanation: The reference discusses the natural history of endogenous beta-cell function in Type 1 diabetes but does not mention weight loss being a frequent phenotype.
+  - category: Systemic
+    frequency: FREQUENT
+    name: Polyuria
+    notes: Caused by osmotic diuresis from hyperglycemia
+  - category: Systemic
+    frequency: FREQUENT
+    name: Polydipsia
+    notes: Excessive thirst due to dehydration from polyuria
+  - category: Endocrine
+    frequency: OCCASIONAL
+    name: Diabetic Ketoacidosis
+    notes: Life-threatening complication of insulin deficiency
+    sequelae:
+      - Abdominal Pain
+      - Vomiting
+      - Rapid Breathing
+      - Confusion
+  - category: Ophthalmologic
+    frequency: OCCASIONAL
+    name: Diabetic Retinopathy
+    notes: Leading cause of blindness, due to chronic hyperglycemia
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Diabetic Neuropathy
+    notes: Nerve damage from chronic hyperglycemia
+  - category: Renal
+    frequency: OCCASIONAL
+    name: Diabetic Nephropathy
+    notes: Kidney damage from chronic hyperglycemia
 biochemical:
   - name: Blood Glucose
     presence: Elevated
@@ -553,3 +579,4 @@ treatments:
         supports: SUPPORT
         snippet: Weight loss treatments provide a wide-range of benefits in reducing both morbidity and mortality in those who are obese.
         explanation: It mentions lifestyle interventions as a part of weight loss treatments that benefit T1D management, highlighting their efficacy and safety.
+review_notes: Type 1 diabetes is characterized by autoimmune destruction of insulin-producing pancreatic beta cells, leading to absolute insulin deficiency. The hallmark is hyperglycemia, which causes many acute symptoms like polyuria, polydipsia, weight loss, as well as long-term complications in multiple organ systems if blood sugars are not well-controlled. Diabetic ketoacidosis is a serious acute complication of insulin deficiency.

@@ -589,9 +589,10 @@
       "from_schema": "https://w3id.org/dppkb",
       "slot_uri": "https://w3id.org/dppkb/name",
       "identifier": true,
-      "owner": "Mechanism",
+      "owner": "ModelingConsideration",
       "domain_of": [
         "Subtype",
+        "EpidemiologyInfo",
         "Pathophysiology",
         "Phenotype",
         "Biochemical",
@@ -605,7 +606,8 @@
         "Diagnosis",
         "Inheritance",
         "Variant",
-        "Mechanism"
+        "Mechanism",
+        "ModelingConsideration"
       ],
       "range": "string",
       "required": true,
@@ -616,9 +618,10 @@
       "definition_uri": "https://w3id.org/dppkb/description",
       "from_schema": "https://w3id.org/dppkb",
       "slot_uri": "https://w3id.org/dppkb/description",
-      "owner": "Mechanism",
+      "owner": "ModelingConsideration",
       "domain_of": [
         "Subtype",
+        "EpidemiologyInfo",
         "Pathophysiology",
         "Environmental",
         "Disease",
@@ -627,9 +630,11 @@
         "InfectiousAgent",
         "Transmission",
         "Assay",
+        "Diagnosis",
         "Inheritance",
         "Variant",
-        "Mechanism"
+        "Mechanism",
+        "ModelingConsideration"
       ],
       "range": "string",
       "@type": "SlotDefinition"
@@ -640,21 +645,24 @@
       "from_schema": "https://w3id.org/dppkb",
       "slot_uri": "https://w3id.org/dppkb/evidence",
       "multivalued": true,
-      "owner": "Inheritance",
+      "owner": "ModelingConsideration",
       "domain_of": [
         "Subtype",
         "Prevalence",
         "ProgressionInfo",
+        "EpidemiologyInfo",
         "Pathophysiology",
         "Phenotype",
         "Biochemical",
         "Genetic",
         "Environmental",
+        "AnimalModel",
         "Treatment",
         "InfectiousAgent",
         "Transmission",
         "Diagnosis",
-        "Inheritance"
+        "Inheritance",
+        "ModelingConsideration"
       ],
       "range": "EvidenceItem",
       "inlined": true,
@@ -679,6 +687,7 @@
         "Phenotype",
         "Genetic",
         "Environmental",
+        "Disease",
         "Treatment"
       ],
       "range": "string",
@@ -950,8 +959,11 @@
       "domain_of": [
         "Prevalence",
         "ProgressionInfo",
+        "EpidemiologyInfo",
+        "Pathophysiology",
         "Phenotype",
         "Biochemical",
+        "Genetic",
         "Environmental",
         "Disease",
         "Treatment",
@@ -1037,6 +1049,27 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "epidemiology",
+      "definition_uri": "https://w3id.org/dppkb/epidemiology",
+      "examples": [
+        {
+          "value": "['Global']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkb/epidemiology",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "EpidemiologyInfo",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "examples",
       "definition_uri": "https://w3id.org/dppkb/examples",
       "examples": [
@@ -1051,6 +1084,7 @@
       "owner": "Environmental",
       "domain_of": [
         "Pathophysiology",
+        "Genetic",
         "Environmental"
       ],
       "range": "string",
@@ -1194,9 +1228,10 @@
       "from_schema": "https://w3id.org/dppkb",
       "slot_uri": "https://w3id.org/dppkb/has_subtypes",
       "multivalued": true,
-      "owner": "Disease",
+      "owner": "InfectiousAgent",
       "domain_of": [
-        "Disease"
+        "Disease",
+        "InfectiousAgent"
       ],
       "range": "Subtype",
       "inlined": true,
@@ -1820,6 +1855,21 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "modeling_considerations",
+      "definition_uri": "https://w3id.org/dppkb/modeling_considerations",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkb/modeling_considerations",
+      "multivalued": true,
+      "owner": "Disease",
+      "domain_of": [
+        "Disease"
+      ],
+      "range": "ModelingConsideration",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "mechanism",
       "definition_uri": "https://w3id.org/dppkb/mechanism",
       "from_schema": "https://w3id.org/dppkb",
@@ -1948,6 +1998,79 @@
       ],
       "range": "string",
       "@type": "SlotDefinition"
+    },
+    {
+      "name": "minimum_value",
+      "definition_uri": "https://w3id.org/dppkb/minimum_value",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkb/minimum_value",
+      "owner": "EpidemiologyInfo",
+      "domain_of": [
+        "EpidemiologyInfo"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "maximum_value",
+      "definition_uri": "https://w3id.org/dppkb/maximum_value",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkb/maximum_value",
+      "owner": "EpidemiologyInfo",
+      "domain_of": [
+        "EpidemiologyInfo"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "mean_range",
+      "definition_uri": "https://w3id.org/dppkb/mean_range",
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkb/mean_range",
+      "owner": "EpidemiologyInfo",
+      "domain_of": [
+        "EpidemiologyInfo"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "factors",
+      "definition_uri": "https://w3id.org/dppkb/factors",
+      "examples": [
+        {
+          "value": "['Genetic', 'Environmental', 'Infectious', 'Autoimmune', 'Metabolic', 'Neoplastic', 'Traumatic', 'Iatrogenic', 'Idiopathic']",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkb/factors",
+      "multivalued": true,
+      "owner": "EpidemiologyInfo",
+      "domain_of": [
+        "EpidemiologyInfo"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "unit",
+      "definition_uri": "https://w3id.org/dppkb/unit",
+      "examples": [
+        {
+          "value": "cm",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/dppkb",
+      "slot_uri": "https://w3id.org/dppkb/unit",
+      "owner": "EpidemiologyInfo",
+      "domain_of": [
+        "EpidemiologyInfo"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
     }
   ],
   "classes": [
@@ -2028,6 +2151,25 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "EpidemiologyInfo",
+      "definition_uri": "https://w3id.org/dppkb/EpidemiologyInfo",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "description",
+        "minimum_value",
+        "maximum_value",
+        "mean_range",
+        "notes",
+        "factors",
+        "unit",
+        "evidence"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkb/EpidemiologyInfo",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "Pathophysiology",
       "definition_uri": "https://w3id.org/dppkb/Pathophysiology",
       "from_schema": "https://w3id.org/dppkb",
@@ -2051,7 +2193,8 @@
         "chemical_entities",
         "triggers",
         "assays",
-        "mechanisms"
+        "mechanisms",
+        "notes"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/dppkb/Pathophysiology",
@@ -2113,7 +2256,9 @@
         "frequency",
         "inheritance",
         "variants",
-        "features"
+        "features",
+        "notes",
+        "examples"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/dppkb/Genetic",
@@ -2160,11 +2305,14 @@
         "categories",
         "infectious_agent",
         "transmission",
+        "modeling_considerations",
+        "epidemiology",
         "diagnosis",
         "synonyms",
         "inheritance",
         "animal_models",
-        "notes"
+        "notes",
+        "review_notes"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/dppkb/Disease",
@@ -2182,7 +2330,8 @@
         "category",
         "alleles",
         "description",
-        "associated_phenotypes"
+        "associated_phenotypes",
+        "evidence"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/dppkb/AnimalModel",
@@ -2213,7 +2362,8 @@
       "slots": [
         "name",
         "evidence",
-        "description"
+        "description",
+        "has_subtypes"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/dppkb/InfectiousAgent",
@@ -2256,7 +2406,8 @@
         "evidence",
         "notes",
         "results",
-        "markers"
+        "markers",
+        "description"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/dppkb/Diagnosis",
@@ -2300,6 +2451,19 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "ModelingConsideration",
+      "definition_uri": "https://w3id.org/dppkb/ModelingConsideration",
+      "from_schema": "https://w3id.org/dppkb",
+      "slots": [
+        "name",
+        "description",
+        "evidence"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/dppkb/ModelingConsideration",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "DiseaseCollection",
       "definition_uri": "https://w3id.org/dppkb/DiseaseCollection",
       "from_schema": "https://w3id.org/dppkb",
@@ -2314,9 +2478,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "dppkb.yaml",
-  "source_file_date": "2024-06-21T22:52:25",
-  "source_file_size": 13917,
-  "generation_date": "2024-06-25T11:12:58",
+  "source_file_date": "2024-07-24T17:33:29",
+  "source_file_size": 14994,
+  "generation_date": "2024-09-10T15:16:51",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/dppkb.context.jsonld",

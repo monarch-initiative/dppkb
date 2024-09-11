@@ -1,5 +1,5 @@
 # Auto generated from dppkb.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-06-25T11:12:58
+# Generation date: 2024-09-10T15:16:51
 # Schema: dppkb
 #
 # id: https://w3id.org/dppkb
@@ -22,7 +22,7 @@ from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
 from linkml_runtime.utils.enumerations import EnumDefinitionImpl
 from rdflib import Namespace, URIRef
 from linkml_runtime.utils.curienamespace import CurieNamespace
-from linkml_runtime.linkml_model.types import Boolean, String
+from linkml_runtime.linkml_model.types import Boolean, Float, String
 from linkml_runtime.utils.metamodelcore import Bool
 
 metamodel_version = "1.7.0"
@@ -63,6 +63,10 @@ class FrequencyQuantity(String):
 
 # Class references
 class SubtypeName(extended_str):
+    pass
+
+
+class EpidemiologyInfoName(extended_str):
     pass
 
 
@@ -119,6 +123,10 @@ class VariantName(extended_str):
 
 
 class MechanismName(extended_str):
+    pass
+
+
+class ModelingConsiderationName(extended_str):
     pass
 
 
@@ -274,6 +282,60 @@ class ProgressionInfo(YAMLRoot):
 
 
 @dataclass
+class EpidemiologyInfo(YAMLRoot):
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DPPKB["EpidemiologyInfo"]
+    class_class_curie: ClassVar[str] = "dppkb:EpidemiologyInfo"
+    class_name: ClassVar[str] = "EpidemiologyInfo"
+    class_model_uri: ClassVar[URIRef] = DPPKB.EpidemiologyInfo
+
+    name: Union[str, EpidemiologyInfoName] = None
+    description: Optional[str] = None
+    minimum_value: Optional[float] = None
+    maximum_value: Optional[float] = None
+    mean_range: Optional[str] = None
+    notes: Optional[str] = None
+    factors: Optional[Union[str, List[str]]] = empty_list()
+    unit: Optional[str] = None
+    evidence: Optional[Union[Union[dict, EvidenceItem], List[Union[dict, EvidenceItem]]]] = empty_list()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.name):
+            self.MissingRequiredField("name")
+        if not isinstance(self.name, EpidemiologyInfoName):
+            self.name = EpidemiologyInfoName(self.name)
+
+        if self.description is not None and not isinstance(self.description, str):
+            self.description = str(self.description)
+
+        if self.minimum_value is not None and not isinstance(self.minimum_value, float):
+            self.minimum_value = float(self.minimum_value)
+
+        if self.maximum_value is not None and not isinstance(self.maximum_value, float):
+            self.maximum_value = float(self.maximum_value)
+
+        if self.mean_range is not None and not isinstance(self.mean_range, str):
+            self.mean_range = str(self.mean_range)
+
+        if self.notes is not None and not isinstance(self.notes, str):
+            self.notes = str(self.notes)
+
+        if not isinstance(self.factors, list):
+            self.factors = [self.factors] if self.factors is not None else []
+        self.factors = [v if isinstance(v, str) else str(v) for v in self.factors]
+
+        if self.unit is not None and not isinstance(self.unit, str):
+            self.unit = str(self.unit)
+
+        if not isinstance(self.evidence, list):
+            self.evidence = [self.evidence] if self.evidence is not None else []
+        self.evidence = [v if isinstance(v, EvidenceItem) else EvidenceItem(**as_dict(v)) for v in self.evidence]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
 class Pathophysiology(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -302,6 +364,7 @@ class Pathophysiology(YAMLRoot):
     triggers: Optional[Union[Union[str, "TriggerTerm"], List[Union[str, "TriggerTerm"]]]] = empty_list()
     assays: Optional[Union[Union[str, "AssayTerm"], List[Union[str, "AssayTerm"]]]] = empty_list()
     mechanisms: Optional[Union[str, List[str]]] = empty_list()
+    notes: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.name):
@@ -341,6 +404,9 @@ class Pathophysiology(YAMLRoot):
         if not isinstance(self.mechanisms, list):
             self.mechanisms = [self.mechanisms] if self.mechanisms is not None else []
         self.mechanisms = [v if isinstance(v, str) else str(v) for v in self.mechanisms]
+
+        if self.notes is not None and not isinstance(self.notes, str):
+            self.notes = str(self.notes)
 
         super().__post_init__(**kwargs)
 
@@ -476,6 +542,8 @@ class Genetic(YAMLRoot):
     inheritance: Optional[Union[Dict[Union[str, InheritanceName], Union[dict, "Inheritance"]], List[Union[dict, "Inheritance"]]]] = empty_dict()
     variants: Optional[Union[Dict[Union[str, VariantName], Union[dict, "Variant"]], List[Union[dict, "Variant"]]]] = empty_dict()
     features: Optional[str] = None
+    notes: Optional[str] = None
+    examples: Optional[Union[str, List[str]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.name):
@@ -505,6 +573,13 @@ class Genetic(YAMLRoot):
 
         if self.features is not None and not isinstance(self.features, str):
             self.features = str(self.features)
+
+        if self.notes is not None and not isinstance(self.notes, str):
+            self.notes = str(self.notes)
+
+        if not isinstance(self.examples, list):
+            self.examples = [self.examples] if self.examples is not None else []
+        self.examples = [v if isinstance(v, str) else str(v) for v in self.examples]
 
         super().__post_init__(**kwargs)
 
@@ -594,11 +669,14 @@ class Disease(YAMLRoot):
     categories: Optional[Union[str, List[str]]] = empty_list()
     infectious_agent: Optional[Union[Dict[Union[str, InfectiousAgentName], Union[dict, "InfectiousAgent"]], List[Union[dict, "InfectiousAgent"]]]] = empty_dict()
     transmission: Optional[Union[Dict[Union[str, TransmissionName], Union[dict, "Transmission"]], List[Union[dict, "Transmission"]]]] = empty_dict()
+    modeling_considerations: Optional[Union[Dict[Union[str, ModelingConsiderationName], Union[dict, "ModelingConsideration"]], List[Union[dict, "ModelingConsideration"]]]] = empty_dict()
+    epidemiology: Optional[Union[Dict[Union[str, EpidemiologyInfoName], Union[dict, EpidemiologyInfo]], List[Union[dict, EpidemiologyInfo]]]] = empty_dict()
     diagnosis: Optional[Union[Dict[Union[str, DiagnosisName], Union[dict, "Diagnosis"]], List[Union[dict, "Diagnosis"]]]] = empty_dict()
     synonyms: Optional[Union[str, List[str]]] = empty_list()
     inheritance: Optional[Union[Dict[Union[str, InheritanceName], Union[dict, "Inheritance"]], List[Union[dict, "Inheritance"]]]] = empty_dict()
     animal_models: Optional[Union[Union[dict, "AnimalModel"], List[Union[dict, "AnimalModel"]]]] = empty_list()
     notes: Optional[str] = None
+    review_notes: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.name):
@@ -646,6 +724,10 @@ class Disease(YAMLRoot):
 
         self._normalize_inlined_as_list(slot_name="transmission", slot_type=Transmission, key_name="name", keyed=True)
 
+        self._normalize_inlined_as_list(slot_name="modeling_considerations", slot_type=ModelingConsideration, key_name="name", keyed=True)
+
+        self._normalize_inlined_as_list(slot_name="epidemiology", slot_type=EpidemiologyInfo, key_name="name", keyed=True)
+
         self._normalize_inlined_as_list(slot_name="diagnosis", slot_type=Diagnosis, key_name="name", keyed=True)
 
         if not isinstance(self.synonyms, list):
@@ -660,6 +742,9 @@ class Disease(YAMLRoot):
 
         if self.notes is not None and not isinstance(self.notes, str):
             self.notes = str(self.notes)
+
+        if self.review_notes is not None and not isinstance(self.review_notes, str):
+            self.review_notes = str(self.review_notes)
 
         super().__post_init__(**kwargs)
 
@@ -681,6 +766,7 @@ class AnimalModel(YAMLRoot):
     alleles: Optional[Union[str, List[str]]] = empty_list()
     description: Optional[str] = None
     associated_phenotypes: Optional[Union[str, List[str]]] = empty_list()
+    evidence: Optional[Union[Union[dict, EvidenceItem], List[Union[dict, EvidenceItem]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self.species is not None and not isinstance(self.species, str):
@@ -705,6 +791,10 @@ class AnimalModel(YAMLRoot):
         if not isinstance(self.associated_phenotypes, list):
             self.associated_phenotypes = [self.associated_phenotypes] if self.associated_phenotypes is not None else []
         self.associated_phenotypes = [v if isinstance(v, str) else str(v) for v in self.associated_phenotypes]
+
+        if not isinstance(self.evidence, list):
+            self.evidence = [self.evidence] if self.evidence is not None else []
+        self.evidence = [v if isinstance(v, EvidenceItem) else EvidenceItem(**as_dict(v)) for v in self.evidence]
 
         super().__post_init__(**kwargs)
 
@@ -769,6 +859,7 @@ class InfectiousAgent(YAMLRoot):
     name: Union[str, InfectiousAgentName] = None
     evidence: Optional[Union[Union[dict, EvidenceItem], List[Union[dict, EvidenceItem]]]] = empty_list()
     description: Optional[str] = None
+    has_subtypes: Optional[Union[Dict[Union[str, SubtypeName], Union[dict, Subtype]], List[Union[dict, Subtype]]]] = empty_dict()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.name):
@@ -782,6 +873,8 @@ class InfectiousAgent(YAMLRoot):
 
         if self.description is not None and not isinstance(self.description, str):
             self.description = str(self.description)
+
+        self._normalize_inlined_as_list(slot_name="has_subtypes", slot_type=Subtype, key_name="name", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -862,6 +955,7 @@ class Diagnosis(YAMLRoot):
     notes: Optional[str] = None
     results: Optional[str] = None
     markers: Optional[str] = None
+    description: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.name):
@@ -884,6 +978,9 @@ class Diagnosis(YAMLRoot):
 
         if self.markers is not None and not isinstance(self.markers, str):
             self.markers = str(self.markers)
+
+        if self.description is not None and not isinstance(self.description, str):
+            self.description = str(self.description)
 
         super().__post_init__(**kwargs)
 
@@ -961,6 +1058,35 @@ class Mechanism(YAMLRoot):
 
         if self.description is not None and not isinstance(self.description, str):
             self.description = str(self.description)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class ModelingConsideration(YAMLRoot):
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DPPKB["ModelingConsideration"]
+    class_class_curie: ClassVar[str] = "dppkb:ModelingConsideration"
+    class_name: ClassVar[str] = "ModelingConsideration"
+    class_model_uri: ClassVar[URIRef] = DPPKB.ModelingConsideration
+
+    name: Union[str, ModelingConsiderationName] = None
+    description: Optional[str] = None
+    evidence: Optional[Union[Union[dict, EvidenceItem], List[Union[dict, EvidenceItem]]]] = empty_list()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.name):
+            self.MissingRequiredField("name")
+        if not isinstance(self.name, ModelingConsiderationName):
+            self.name = ModelingConsiderationName(self.name)
+
+        if self.description is not None and not isinstance(self.description, str):
+            self.description = str(self.description)
+
+        if not isinstance(self.evidence, list):
+            self.evidence = [self.evidence] if self.evidence is not None else []
+        self.evidence = [v if isinstance(v, EvidenceItem) else EvidenceItem(**as_dict(v)) for v in self.evidence]
 
         super().__post_init__(**kwargs)
 
@@ -1215,6 +1341,9 @@ slots.cell_types = Slot(uri=DPPKB.cell_types, name="cell_types", curie=DPPKB.cur
 slots.biological_processes = Slot(uri=DPPKB.biological_processes, name="biological_processes", curie=DPPKB.curie('biological_processes'),
                    model_uri=DPPKB.biological_processes, domain=None, range=Optional[Union[Union[str, "BiologicalProcessTerm"], List[Union[str, "BiologicalProcessTerm"]]]])
 
+slots.epidemiology = Slot(uri=DPPKB.epidemiology, name="epidemiology", curie=DPPKB.curie('epidemiology'),
+                   model_uri=DPPKB.epidemiology, domain=None, range=Optional[Union[Dict[Union[str, EpidemiologyInfoName], Union[dict, EpidemiologyInfo]], List[Union[dict, EpidemiologyInfo]]]])
+
 slots.examples = Slot(uri=DPPKB.examples, name="examples", curie=DPPKB.curie('examples'),
                    model_uri=DPPKB.examples, domain=None, range=Optional[Union[str, List[str]]])
 
@@ -1347,6 +1476,9 @@ slots.transmission = Slot(uri=DPPKB.transmission, name="transmission", curie=DPP
 slots.diagnosis = Slot(uri=DPPKB.diagnosis, name="diagnosis", curie=DPPKB.curie('diagnosis'),
                    model_uri=DPPKB.diagnosis, domain=None, range=Optional[Union[Dict[Union[str, DiagnosisName], Union[dict, Diagnosis]], List[Union[dict, Diagnosis]]]])
 
+slots.modeling_considerations = Slot(uri=DPPKB.modeling_considerations, name="modeling_considerations", curie=DPPKB.curie('modeling_considerations'),
+                   model_uri=DPPKB.modeling_considerations, domain=None, range=Optional[Union[Dict[Union[str, ModelingConsiderationName], Union[dict, ModelingConsideration]], List[Union[dict, ModelingConsideration]]]])
+
 slots.mechanism = Slot(uri=DPPKB.mechanism, name="mechanism", curie=DPPKB.curie('mechanism'),
                    model_uri=DPPKB.mechanism, domain=None, range=Optional[Union[Dict[Union[str, MechanismName], Union[dict, Mechanism]], List[Union[dict, Mechanism]]]])
 
@@ -1370,3 +1502,18 @@ slots.background = Slot(uri=DPPKB.background, name="background", curie=DPPKB.cur
 
 slots.associated_phenotypes = Slot(uri=DPPKB.associated_phenotypes, name="associated_phenotypes", curie=DPPKB.curie('associated_phenotypes'),
                    model_uri=DPPKB.associated_phenotypes, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.minimum_value = Slot(uri=DPPKB.minimum_value, name="minimum_value", curie=DPPKB.curie('minimum_value'),
+                   model_uri=DPPKB.minimum_value, domain=None, range=Optional[float])
+
+slots.maximum_value = Slot(uri=DPPKB.maximum_value, name="maximum_value", curie=DPPKB.curie('maximum_value'),
+                   model_uri=DPPKB.maximum_value, domain=None, range=Optional[float])
+
+slots.mean_range = Slot(uri=DPPKB.mean_range, name="mean_range", curie=DPPKB.curie('mean_range'),
+                   model_uri=DPPKB.mean_range, domain=None, range=Optional[str])
+
+slots.factors = Slot(uri=DPPKB.factors, name="factors", curie=DPPKB.curie('factors'),
+                   model_uri=DPPKB.factors, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.unit = Slot(uri=DPPKB.unit, name="unit", curie=DPPKB.curie('unit'),
+                   model_uri=DPPKB.unit, domain=None, range=Optional[str])

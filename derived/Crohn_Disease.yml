@@ -140,6 +140,8 @@ phenotypes:
         supports: SUPPORT
         snippet: Using the patients'' self-reported information, we identified two subpopulations of Crohn's disease; these subpopulations differ in disease severity, associations with smoking, and genetic transmission patterns.
         explanation: "While this reference focuses on identifying subpopulations with varying disease severity, it underscores the heterogeneity of Crohn’s disease symptoms, indirectly supporting that abdominal pain is a frequent symptom."
+    diagnostic: true
+    notes: Often occurs in the right lower quadrant
   - category: Gastrointestinal
     name: Diarrhea
     frequency: VERY_FREQUENT
@@ -147,6 +149,7 @@ phenotypes:
     sequelae:
       - Weight Loss
       - Malnutrition
+      - Dehydration
     evidence:
       - reference: PMID:22230271
         supports: PARTIAL
@@ -156,6 +159,7 @@ phenotypes:
         supports: PARTIAL
         snippet: Malnutrition might play a key role in the prognosis of patients with Crohn's disease (CD) ... Forty-one patients (24.8%) had body weight loss whereas 124 patients (75.2%) had no body weight loss.
         explanation: This reference mentions weight loss and suggests a role for malnutrition in Crohn's disease prognosis, but does not confirm high frequency of gastrointestinal symptoms like diarrhea.
+    notes: Can be bloody or non-bloody
   - category: Systemic
     name: Fatigue
     frequency: FREQUENT
@@ -168,6 +172,34 @@ phenotypes:
         supports: SUPPORT
         snippet: Despite high prevalence and importance, the symptom is often underestimated in clinical practice.
         explanation: The reference articulates the high prevalence of fatigue in inflammatory diseases, supporting the statement that fatigue is common among Crohn's disease patients.
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Perianal Disease
+    notes: Fistulas, abscesses, skin tags
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Intestinal Obstruction
+    notes: Due to stricturing disease
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Arthritis
+    notes: Can affect both large and small joints
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Erythema Nodosum
+    notes: Painful nodules on shins
+  - category: Ocular
+    frequency: OCCASIONAL
+    name: Uveitis
+    notes: Inflammation of the eye
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+    notes: Often worsened during disease flares
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Fever
+    notes: More common during acute flares
 biochemical:
   - name: C-Reactive Protein (CRP)
     presence: Elevated
@@ -430,3 +462,4 @@ treatments:
         supports: SUPPORT
         snippet: A partial resection of 3rd and 4th portion of the duodenum and the first loop of jejunum was performed, with duodenojejunal anastomosis.
         explanation: The provided case demonstrates a scenario where surgery was performed due to refractory disease and complications, supporting the statement.
+review_notes: Crohn disease is a type of inflammatory bowel disease that can affect any part of the GI tract but most commonly the terminal ileum and colon. Extraintestinal manifestations involving the joints, skin and eyes occur in a subset of patients. The disease is characterized by periods of remission interspersed with flares.

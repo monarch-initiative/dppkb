@@ -37,11 +37,9 @@ prevalence:
         explanation: The provided literature does not address the prevalence of Pick Disease, making it impossible to support or refute the given prevalence range of 0.002-0.004% in the general population.
       - reference: PMID:17076146
         supports: NO_EVIDENCE
-        snippet: None
         explanation: The provided literature focused on Pick's disease, but no specific prevalence data is given.
       - reference: PMID:18090424
         supports: NO_EVIDENCE
-        snippet: None
         explanation: This historical summary of Pick complex does not provide relevant prevalence figures necessary to support or refute the given statement.
 progression:
   - phase: Onset
@@ -164,6 +162,34 @@ phenotypes:
         supports: NO_EVIDENCE
         snippet: Neuropsychiatric disorders in patients and their families are associated with cognitive and behavioural changes post-MND diagnosis, with many occurring independently of MND-FTD and C9orf72 status.
         explanation: MND (Motor Neuron Disease) does overlap with frontotemporal dementia and associated behavioral changes, but this is not directly related to Pick's disease and does not provide evidence for high-frequency psychiatric phenotypes in Pick's disease.
+  - category: Psychiatric
+    frequency: FREQUENT
+    name: Compulsive Behaviors
+    notes: Repetitive, ritualistic behaviors such as hand-wringing, pacing, or collecting objects.
+  - category: Neurologic
+    frequency: FREQUENT
+    name: Aphasia
+    notes: Language difficulties, particularly with word-finding and naming. May progress to mutism in advanced stages.
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Parkinsonism
+    notes: Extrapyramidal signs such as rigidity, bradykinesia, and postural instability. More common as disease progresses.
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Primitive Reflexes
+    notes: Reemergence of reflexes normally suppressed in adulthood, such as the grasp reflex or rooting reflex.
+  - category: Cognitive
+    frequency: FREQUENT
+    name: Executive Dysfunction
+    notes: Impairment in planning, problem-solving, and abstract thinking. One of the earliest cognitive changes.
+  - category: Neurologic
+    frequency: RARE
+    name: Seizures
+    notes: Can occur in advanced stages, but are not a typical feature.
+  - category: Systemic
+    frequency: FREQUENT
+    name: Weight Loss
+    notes: May be due to forgetting to eat, loss of appetite, or increased activity levels.
 biochemical:
   - name: Tau Protein Accumulation
     notes: Tau-positive inclusions found in neurons and glial cells
@@ -295,3 +321,4 @@ treatments:
         supports: PARTIAL
         snippet: Clinical and biologic evidence in favor the entity is discussed. The changing and proliferating knowledge and terminology requires the integration of several levels of descriptions, while keeping the work in the past in sight.
         explanation: This reference provides clinical and biological descriptions of Pick's disease and does not explicitly mention caregiver support or education, thus only partially supporting the statement.
+review_notes: Pick disease is a type of frontotemporal dementia characterized by progressive changes in behavior, personality, and language. Motor symptoms like parkinsonism can emerge later in the course. Memory is relatively spared early on, in contrast to Alzheimer disease.

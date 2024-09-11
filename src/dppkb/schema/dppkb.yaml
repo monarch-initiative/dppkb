@@ -535,11 +535,13 @@ classes:
       - assays
       - mechanisms
       - notes
+      - frequency
   Phenotype:
     slots:
       - category
       - name
       - frequency
+      - description
       - diagnostic
       - sequelae
       - evidence
@@ -634,6 +636,7 @@ classes:
       - review_notes
       - role
       - mechanism
+      - examples
   InfectiousAgent:
     slots:
       - name

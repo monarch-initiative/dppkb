@@ -306,6 +306,30 @@ phenotypes:
         supports: PARTIAL
         snippet: Compared with arthritis-onset RA-ILD... the ILD-onset RA-ILD had less rheumatoid nodules and higher titer of ACPA, and manifested more stable ILD...
         explanation: The study discusses clinical features and outcomes of RA-related ILD but does not provide information on the frequency of ILD in RA.
+  - category: Musculoskeletal
+    frequency: FREQUENT
+    name: Boutonniere Deformity
+    notes: Flexion contracture of PIP joint with hyperextension of DIP joint
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Swan-neck Deformity
+    notes: Hyperextension of PIP joint with flexion of DIP joint
+  - category: Extra-articular
+    frequency: OCCASIONAL
+    name: Sicca Syndrome
+    notes: Dry eyes and mouth due to secondary Sjogren's syndrome
+  - category: Extra-articular
+    frequency: OCCASIONAL
+    name: Scleritis
+    notes: Inflammation of the sclera of the eye
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Pericarditis
+    notes: Inflammation of the pericardium
+  - category: Hematologic
+    frequency: OCCASIONAL
+    name: Felty's Syndrome
+    notes: Combination of rheumatoid arthritis, splenomegaly, and neutropenia
 biochemical:
   - name: Rheumatoid Factor (RF)
     presence: Positive

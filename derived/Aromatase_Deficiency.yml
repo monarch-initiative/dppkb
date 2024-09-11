@@ -128,6 +128,22 @@ phenotypes:
         supports: REFUTE
         snippet: We report a patient with a late-onset form of TALDO deficiency characterized by hypergonadotropic hypogonadism...
         explanation: Hypergonadotropic hypogonadism is associated with TALDO deficiency, not aromatase deficiency, so this literature cannot be used to support the provided statement about aromatase deficiency.
+  - category: Reproductive
+    frequency: FREQUENT
+    name: Primary Amenorrhea
+    notes: In 46,XX individuals
+  - category: Reproductive
+    frequency: OCCASIONAL
+    name: Polycystic Ovaries
+    notes: In 46,XX individuals
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Tall Stature
+    notes: In both 46,XX and 46,XY individuals
+  - category: Cognitive
+    frequency: OCCASIONAL
+    name: Mild Cognitive Impairment
+    review_notes: Some case reports suggest possible association
 biochemical:
   - name: Serum Estrogen Levels
     presence: Decreased

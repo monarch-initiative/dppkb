@@ -9,6 +9,7 @@ type AnimalModel
     alleles: [String]
     description: String
     associatedPhenotypes: [String]
+    evidence: [EvidenceItem]
   }
 
 type Any
@@ -44,6 +45,7 @@ type Diagnosis
     notes: String
     results: String
     markers: String
+    description: String
   }
 
 type Disease
@@ -64,11 +66,14 @@ type Disease
     categories: [String]
     infectiousAgent: [InfectiousAgent]
     transmission: [Transmission]
+    modelingConsiderations: [ModelingConsideration]
+    epidemiology: [EpidemiologyInfo]
     diagnosis: [Diagnosis]
     synonyms: [String]
     inheritance: [Inheritance]
     animalModels: [AnimalModel]
     notes: String
+    reviewNotes: String
   }
 
 type DiseaseCollection
@@ -88,6 +93,19 @@ type Environmental
     effect: String
     examples: [String]
     reviewNotes: String
+  }
+
+type EpidemiologyInfo
+  {
+    name: String!
+    description: String
+    minimumValue: Float
+    maximumValue: Float
+    meanRange: String
+    notes: String
+    factors: [String]
+    unit: String
+    evidence: [EvidenceItem]
   }
 
 type EvidenceItem
@@ -110,6 +128,8 @@ type Genetic
     inheritance: [Inheritance]
     variants: [Variant]
     features: String
+    notes: String
+    examples: [String]
   }
 
 type InfectiousAgent
@@ -117,6 +137,7 @@ type InfectiousAgent
     name: String!
     evidence: [EvidenceItem]
     description: String
+    hasSubtypes: [Subtype]
   }
 
 type Inheritance
@@ -130,6 +151,13 @@ type Mechanism
   {
     name: String!
     description: String
+  }
+
+type ModelingConsideration
+  {
+    name: String!
+    description: String
+    evidence: [EvidenceItem]
   }
 
 type Pathophysiology
@@ -154,6 +182,7 @@ type Pathophysiology
     triggers: [TriggerTerm]
     assays: [AssayTerm]
     mechanisms: [String]
+    notes: String
   }
 
 type Phenotype

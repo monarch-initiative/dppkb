@@ -299,6 +299,18 @@ phenotypes:
         supports: SUPPORT
         snippet: At least 10% of NPHP cases present with extrarenal conditions, which most often include retinal degeneration.
         explanation: This indicates that ophthalmologic phenotypes, including retinitis pigmentosa, occur occasionally in cases of nephronophthisis.
+  - category: Developmental
+    frequency: OCCASIONAL
+    name: Growth Retardation
+    notes: May be seen due to chronic kidney disease
+  - category: Musculoskeletal
+    frequency: OCCASIONAL
+    name: Bone Deformities
+    notes: Related to renal osteodystrophy from kidney failure
+  - category: Endocrine
+    frequency: OCCASIONAL
+    name: Secondary Hyperparathyroidism
+    notes: Develops as a consequence of chronic renal failure
 biochemical:
   - name: Serum Creatinine
     presence: Elevated
@@ -407,3 +419,4 @@ treatments:
         supports: SUPPORT
         snippet: At the moment there is no healing therapy, so early kidney transplant is a fundamental tool to improve prognosis.
         explanation: There is no curative treatment for nephronophthisis, indicating that supportive care, including symptomatic treatment and monitoring, is currently applied to manage associated complications.
+review_notes: Nephronophthisis is a ciliopathy causing chronic tubulointerstitial nephritis. The cardinal feature is progressive renal failure, usually beginning in childhood and adolescence and leading to end-stage renal disease. Extrarenal manifestations like retinitis pigmentosa, liver fibrosis, and bone anomalies may also be seen, though less commonly than the renal phenotypes. Hypertension and other cardiovascular sequelae of renal failure are important associated features.

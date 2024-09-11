@@ -309,6 +309,22 @@ phenotypes:
         supports: SUPPORT
         snippet: The earliest reports were of valvular disease, including verrucous endocarditis, as well as valvular thickening and insufficiency.
         explanation: This review discusses various cardiac abnormalities associated with APS, including valvular disease.
+  - category: Pregnancy-Related
+    context: Pregnancy
+    frequency: OCCASIONAL
+    name: Preeclampsia
+  - category: Hematologic
+    frequency: FREQUENT
+    name: Thrombocytopenia
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Cardiac Valve Disease
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Livedo Reticularis
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Migraine Headaches
 biochemical:
   - name: Antiphospholipid Antibodies
     presence: Positive
@@ -451,3 +467,4 @@ environmental:
         supports: NO_EVIDENCE
         snippet: The exact pathophysiologic mechanism in unclear but may be associated with an imbalance in the prostacyclin/ thromboxane ratio, which results in vasoconstriction and platelet aggregation.
         explanation: This reference discusses antiphospholipid syndrome in the context of pregnancy loss and does not provide evidence regarding infections as an environmental factor.
+review_notes: Antiphospholipid syndrome is an autoimmune disorder characterized by thrombosis (both venous and arterial) and pregnancy complications due to autoantibodies against phospholipid-binding proteins. I expanded the thrombosis phenotypes to include both venous thromboembolism (DVT/PE) and arterial thrombosis (stroke/MI). I also added additional occasional phenotypes seen in APS like preeclampsia, livedo reticularis skin changes, and migraines. The pregnancy complications are a key feature so I increased their frequency to frequent.

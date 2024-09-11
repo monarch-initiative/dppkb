@@ -190,6 +190,39 @@ phenotypes:
         supports: SUPPORT
         snippet: This type can cause severe and delayed onset renal failure.
         explanation: Bardet-Biedl type 9 is noted to cause severe and delayed onset renal failure, supporting the common occurrence of renal anomalies.
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Developmental Delay
+  - category: Genitourinary
+    frequency: FREQUENT
+    name: Renal Anomalies
+    notes: 'Includes:
+
+      - Renal cysts
+
+      - Renal hypoplasia/dysplasia
+
+      - Hydronephrosis
+
+'
+  - category: Genitourinary
+    frequency: OCCASIONAL
+    name: Hypogonadism
+    notes: In both males and females
+  - category: Behavioral
+    frequency: FREQUENT
+    name: Behavioral Abnormalities
+    notes: Includes impulsivity, emotional lability, disinhibition
+  - category: Craniofacial
+    frequency: FREQUENT
+    name: Dysmorphic Facial Features
+    notes: Includes deep-set eyes, flat nasal bridge, large ears
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Congenital Heart Defects
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Hirschsprung Disease
 biochemical:
   - name: Elevated Serum Leptin
     notes: Often found in patients with Bardet-Biedl syndrome.
@@ -467,6 +500,6 @@ animal_models:
         snippet: We show that mice lacking Bbs2 gene expression have major components of the human phenotype, including obesity and retinopathy.
         explanation: The support is partial because only obesity and retinal degeneration (retinopathy) are mentioned. Learning deficits and kidney abnormalities are not addressed.
       - reference: PMID:34262361
-        refutes: PARTIAL
+        supports: PARTIAL
         snippet: A 25-year-old male presented to the clinic complaining of poor visual acuity since childhood, night-blindness, and progressive peripheral vision loss.
         explanation: The article focuses on a patient case involving visual issues and a history of polydactyly, but does not discuss other phenotypes like obesity or kidney abnormalities in the context of mice models.

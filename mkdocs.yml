@@ -14,17 +14,16 @@ plugins:
       version: 10.9.0
 nav:
   # - Home: home.md
-  - Index: index.md
   - About: about.md
-  - KB: data.html
+  - Index: index.md
   - Disease:
     - Acquired_Immunodeficiency_Syndrome: kb/Acquired_Immunodeficiency_Syndrome.html
     - Antiphospholipid_Syndrome: kb/Antiphospholipid_Syndrome.html
     - Aromatase_Deficiency: kb/Aromatase_Deficiency.html
     - Asthma: kb/Asthma.html
     - Bardet_Biedl_Syndrome: kb/Bardet_Biedl_Syndrome.html
-    - Chronic_Obstructive_Pulmonary_Disease: kb/Chronic_Obstructive_Pulmonary_Disease.html
     - Cholera: kb/Cholera.html
+    - Chronic_Obstructive_Pulmonary_Disease: kb/Chronic_Obstructive_Pulmonary_Disease.html
     - Crohn_Disease: kb/Crohn_Disease.html
     - Dengue: kb/Dengue.html
     - Ebola_Virus_Disease_EVD_: kb/Ebola_Virus_Disease_EVD_.html

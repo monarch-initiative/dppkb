@@ -247,6 +247,14 @@ phenotypes:
         supports: SUPPORT
         snippet: In this review, fava beans were found to be the only food for which there is conclusive clinical evidence linking the risk of hemolytic anemia to individuals with G6PD deficiency.
         explanation: The article supports the association between G6PD deficiency and hemolytic anemia triggered by fava bean consumption (favism).
+  - category: Hematologic
+    frequency: OCCASIONAL
+    name: Leukocyte Dysfunction
+    notes: Impaired phagocytosis and bactericidal activity, leading to increased susceptibility to certain infections
+  - category: Dermatologic
+    frequency: OCCASIONAL
+    name: Pallor
+    notes: Due to anemia, most noticeable during acute hemolytic episodes
 biochemical:
   - name: G6PD Enzyme Activity
     presence: Decreased or Absent
@@ -419,3 +427,4 @@ treatments:
         supports: SUPPORT
         snippet: Glucose-6-phosphate dehydrogenase (G6PD) deficiency, one of the most common human enzymopathies, is a major risk factor for hyperbilirubinemia and greatly increases the risk of kernicterus even in the developed world.
         explanation: This reference mentions G6PD deficiency as a significant risk factor for hyperbilirubinemia, which supports the need for early screening and monitoring.
+review_notes: G6PD deficiency is an X-linked recessive disorder characterized by defective red blood cell metabolism. The classic presentation is episodic hemolytic anemia, often triggered by infections, certain foods (e.g., fava beans), or medications. Severity can range from asymptomatic to life-threatening hemolytic crises. Neonatal hyperbilirubinemia is an important manifestation that requires prompt treatment to prevent kernicterus.

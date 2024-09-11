@@ -150,7 +150,7 @@ pathophysiology:
 phenotypes:
   - category: Dermatological
     name: Depigmented Patches
-    frequency: FREQUENT
+    frequency: VERY_FREQUENT
     diagnostic: true
     sequelae:
       - Social Stigma
@@ -177,14 +177,28 @@ phenotypes:
         supports: PARTIAL
         snippet: Vitiligo was causally associated with reduced risks of several cancers... melanoma (OR 0.9983; 95% CI 0.9976-0.9990; p < 0.001), non-melanoma skin cancer (OR 0.9997; 95% CI 0.9995-0.9999; p < 0.001).
         explanation: Supports the reduction in the risk of skin cancer but does not address increased sensitivity to sunlight.
+    notes: Symmetrically distributed, well-demarcated white macules or patches
   - category: Dermatological
     name: Premature Hair Whitening
-    frequency: OCCASIONAL
+    frequency: FREQUENT
     evidence:
       - reference: PMID:26769615
         supports: SUPPORT
         snippet: Vitiligo in children is a distinct subset of vitiligo and differs from adult vitiligo. Characteristic features include family history of autoimmune or endocrine disease, higher incidence of segmental vitiligo, development of early or premature graying, increased incidence of autoantibodies and poor response to topical PUVA.
         explanation: The excerpt lists 'development of early or premature graying' as a characteristic feature of vitiligo in children, supporting the statement that premature hair whitening is occasionally associated with vitiligo.
+    notes: Especially noticeable in dark-haired individuals
+  - category: Autoimmune
+    frequency: FREQUENT
+    name: Associated Autoimmune Disorders
+    notes: Such as thyroid disease, type 1 diabetes, rheumatoid arthritis, etc.
+  - category: Ophthalmologic
+    frequency: OCCASIONAL
+    name: Uveitis
+    notes: Inflammation of the uveal tract of the eye
+  - category: Psychological
+    frequency: OCCASIONAL
+    name: Depression/Anxiety
+    notes: Related to altered appearance and social stigma
 biochemical:
   - name: Autoantibodies to Melanocytes
     presence: Elevated
@@ -445,3 +459,4 @@ animal_models:
         supports: NO_EVIDENCE
         snippet: Thus, we characterize a potential zebrafish depigmentation disease model, a nicastrin(hi1384) mutant, which can be used for further treatment or drug development of diseases related to skin depigmentation and/or inflammation.
         explanation: The reference discusses a zebrafish model related to nicastrin deficiency and depigmentation but does not mention zmiz1a or zmiz1b genes, nor does it specifically address vitiligo.
+review_notes: Vitiligo is an acquired disorder of skin pigmentation characterized by the development of white patches due to loss of melanocytes. While the depigmented patches and premature hair whitening are the defining features, it's important to highlight the frequent association with other autoimmune conditions. The psychosocial impact of the condition should also not be overlooked. I've adjusted some frequencies based on typical clinical presentation and added a few additional associated findings for completeness.

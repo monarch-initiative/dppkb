@@ -157,6 +157,14 @@ phenotypes:
         supports: PARTIAL
         snippet: All participants completed neuropsychological evaluations. Statistical analyses revealed performance that was below average on measures of global IQ, processing speed and rote, verbal learning coupled with average nonverbal reasoning, and sustained attention. There was also evidence of impaired higher-level verbal reasoning. While global IQ ranged from low average to borderline impaired, no participant could be accurately described as impaired or having intellectual disability (ID) given the consistently average performance noted on some higher-order tasks including nonverbal reasoning.
         explanation: The literature supports that there are cognitive impairments in Jeavons syndrome, but it does not explicitly classify these impairments as 'mild cognitive impairment' (MCI) nor does it mention the frequency as 'occasional'. The impairments are more specific and varied, making the statement partially correct but not completely accurate.
+  - category: Neurologic
+    frequency: FREQUENT
+    name: Photosensitivity
+    notes: Increased sensitivity to light stimulation, which can provoke seizures or eyelid myoclonia. A common finding in Jeavons syndrome.
+  - category: Developmental
+    frequency: OCCASIONAL
+    name: Developmental Delays
+    notes: Mildly delayed motor, language, or social milestones in some patients, especially with early onset of seizures.
 diagnosis:
   - name: EEG with Generalized Spike-and-Wave Patterns
     presence: Positive

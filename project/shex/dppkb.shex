@@ -55,7 +55,8 @@ linkml:Sparqlpath xsd:string
           <category> @linkml:String ? ;
           <alleles> @linkml:String * ;
           <description> @linkml:String ? ;
-          <associated_phenotypes> @linkml:String *
+          <associated_phenotypes> @linkml:String * ;
+          <evidence> @<EvidenceItem> *
        ) ;
        rdf:type [ <AnimalModel> ] ?
     )
@@ -94,7 +95,8 @@ linkml:Sparqlpath xsd:string
           <evidence> @<EvidenceItem> * ;
           <notes> @linkml:String ? ;
           <results> @linkml:String ? ;
-          <markers> @linkml:String ?
+          <markers> @linkml:String ? ;
+          <description> @linkml:String ?
        ) ;
        rdf:type [ <Diagnosis> ]
     )
@@ -116,11 +118,14 @@ linkml:Sparqlpath xsd:string
           <categories> @linkml:String * ;
           <infectious_agent> @<InfectiousAgent> * ;
           <transmission> @<Transmission> * ;
+          <modeling_considerations> @<ModelingConsideration> * ;
+          <epidemiology> @<EpidemiologyInfo> * ;
           <diagnosis> @<Diagnosis> * ;
           <synonyms> @linkml:String * ;
           <inheritance> @<Inheritance> * ;
           <animal_models> @<AnimalModel> * ;
-          <notes> @linkml:String ?
+          <notes> @linkml:String ? ;
+          <review_notes> @linkml:String ?
        ) ;
        rdf:type [ <Disease> ]
     )
@@ -147,6 +152,20 @@ linkml:Sparqlpath xsd:string
     )
 }
 
+<EpidemiologyInfo> CLOSED {
+    (  $<EpidemiologyInfo_tes> (  <description> @linkml:String ? ;
+          <minimum_value> @linkml:Float ? ;
+          <maximum_value> @linkml:Float ? ;
+          <mean_range> @linkml:String ? ;
+          <notes> @linkml:String ? ;
+          <factors> @linkml:String * ;
+          <unit> @linkml:String ? ;
+          <evidence> @<EvidenceItem> *
+       ) ;
+       rdf:type [ <EpidemiologyInfo> ]
+    )
+}
+
 <EvidenceItem> CLOSED {
     (  $<EvidenceItem_tes> (  <reference> @<PMID> ? ;
           <supports> [ <https://w3id.org/dppkb/EvidenceItemSupportEnum#WRONG_STATEMENT>
@@ -169,7 +188,9 @@ linkml:Sparqlpath xsd:string
           <frequency> @<Any> ? ;
           <inheritance> @<Inheritance> * ;
           <variants> @<Variant> * ;
-          <features> @linkml:String ?
+          <features> @linkml:String ? ;
+          <notes> @linkml:String ? ;
+          <examples> @linkml:String *
        ) ;
        rdf:type [ <Genetic> ]
     )
@@ -177,7 +198,8 @@ linkml:Sparqlpath xsd:string
 
 <InfectiousAgent> CLOSED {
     (  $<InfectiousAgent_tes> (  <evidence> @<EvidenceItem> * ;
-          <description> @linkml:String ?
+          <description> @linkml:String ? ;
+          <has_subtypes> @<Subtype> *
        ) ;
        rdf:type [ <InfectiousAgent> ]
     )
@@ -194,6 +216,14 @@ linkml:Sparqlpath xsd:string
 <Mechanism> CLOSED {
     (  $<Mechanism_tes> <description> @linkml:String ? ;
        rdf:type [ <Mechanism> ]
+    )
+}
+
+<ModelingConsideration> CLOSED {
+    (  $<ModelingConsideration_tes> (  <description> @linkml:String ? ;
+          <evidence> @<EvidenceItem> *
+       ) ;
+       rdf:type [ <ModelingConsideration> ]
     )
 }
 
@@ -216,7 +246,8 @@ linkml:Sparqlpath xsd:string
           <chemical_entities> . * ;
           <triggers> . * ;
           <assays> . * ;
-          <mechanisms> @linkml:String *
+          <mechanisms> @linkml:String * ;
+          <notes> @linkml:String ?
        ) ;
        rdf:type [ <Pathophysiology> ]
     )

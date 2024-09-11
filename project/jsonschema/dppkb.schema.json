@@ -30,6 +30,12 @@
                 "description": {
                     "type": "string"
                 },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
                 "genes": {
                     "items": {
                         "$ref": "#/$defs/GeneTerm"
@@ -168,6 +174,9 @@
             "additionalProperties": false,
             "description": "",
             "properties": {
+                "description": {
+                    "type": "string"
+                },
                 "evidence": {
                     "items": {
                         "$ref": "#/$defs/EvidenceItem"
@@ -236,6 +245,12 @@
                     },
                     "type": "array"
                 },
+                "epidemiology": {
+                    "items": {
+                        "$ref": "#/$defs/EpidemiologyInfo"
+                    },
+                    "type": "array"
+                },
                 "genetic": {
                     "items": {
                         "$ref": "#/$defs/Genetic"
@@ -257,6 +272,12 @@
                 "inheritance": {
                     "items": {
                         "$ref": "#/$defs/Inheritance"
+                    },
+                    "type": "array"
+                },
+                "modeling_considerations": {
+                    "items": {
+                        "$ref": "#/$defs/ModelingConsideration"
                     },
                     "type": "array"
                 },
@@ -295,6 +316,9 @@
                         "$ref": "#/$defs/ProgressionInfo"
                     },
                     "type": "array"
+                },
+                "review_notes": {
+                    "type": "string"
                 },
                 "synonyms": {
                     "items": {
@@ -393,6 +417,50 @@
             "title": "Environmental",
             "type": "object"
         },
+        "EpidemiologyInfo": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "factors": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "maximum_value": {
+                    "type": "number"
+                },
+                "mean_range": {
+                    "type": "string"
+                },
+                "minimum_value": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "unit": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "EpidemiologyInfo",
+            "type": "object"
+        },
         "EvidenceItem": {
             "additionalProperties": false,
             "description": "",
@@ -455,6 +523,12 @@
                     },
                     "type": "array"
                 },
+                "examples": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "features": {
                     "type": "string"
                 },
@@ -476,6 +550,9 @@
                     "type": "array"
                 },
                 "name": {
+                    "type": "string"
+                },
+                "notes": {
                     "type": "string"
                 },
                 "presence": {
@@ -515,6 +592,12 @@
                 "evidence": {
                     "items": {
                         "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "has_subtypes": {
+                    "items": {
+                        "$ref": "#/$defs/Subtype"
                     },
                     "type": "array"
                 },
@@ -566,6 +649,29 @@
                 "name"
             ],
             "title": "Mechanism",
+            "type": "object"
+        },
+        "ModelingConsideration": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "ModelingConsideration",
             "type": "object"
         },
         "Pathophysiology": {
@@ -648,6 +754,9 @@
                     "type": "array"
                 },
                 "name": {
+                    "type": "string"
+                },
+                "notes": {
                     "type": "string"
                 },
                 "pathways": {

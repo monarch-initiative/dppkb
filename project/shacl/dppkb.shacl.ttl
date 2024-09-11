@@ -38,14 +38,27 @@ linkml:Any a sh:NodeShape ;
 dppkb:AnimalModel a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
+    sh:property [ sh:in [ rdf:rest () ] ;
+            sh:order 3 ;
+            sh:path dppkb:genes ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path dppkb:description ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path dppkb:alleles ],
+        [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path dppkb:category ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:order 3 ;
-            sh:path dppkb:genes ],
+        [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 8 ;
+            sh:path dppkb:evidence ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -59,43 +72,32 @@ dppkb:AnimalModel a sh:NodeShape ;
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path dppkb:description ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path dppkb:associated_phenotypes ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path dppkb:species ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path dppkb:alleles ] ;
+            sh:order 7 ;
+            sh:path dppkb:associated_phenotypes ] ;
     sh:targetClass dppkb:AnimalModel .
 
 dppkb:Biochemical a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:in [ rdf:rest () ] ;
-            sh:order 9 ;
-            sh:path dppkb:assays ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path dppkb:subtype ],
-        [ sh:class dppkb:EvidenceItem ;
+    sh:property [ sh:class dppkb:EvidenceItem ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 2 ;
             sh:path dppkb:evidence ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path dppkb:presence ],
+            sh:order 7 ;
+            sh:path dppkb:subtype ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path dppkb:name ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -104,39 +106,48 @@ dppkb:Biochemical a sh:NodeShape ;
         [ sh:in [ rdf:rest () ] ;
             sh:order 8 ;
             sh:path dppkb:cell_types ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:order 9 ;
+            sh:path dppkb:assays ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path dppkb:presence ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:in ( HP:0040282 "OCCASIONAL" HP:0040281 HP:0040284 HP:0040280 ) ] [ sh:nodeKind sh:Literal ] ) ;
+            sh:order 4 ;
+            sh:path dppkb:frequency ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 5 ;
             sh:path dppkb:notes ],
         [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path dppkb:context ],
-        [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 10 ;
             sh:path dppkb:synonyms ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path dppkb:context ] ;
+    sh:targetClass dppkb:Biochemical .
+
+dppkb:Diagnosis a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path dppkb:description ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path dppkb:name ],
-        [ sh:maxCount 1 ;
-            sh:or ( [ sh:in ( HP:0040282 "OCCASIONAL" HP:0040281 HP:0040284 HP:0040280 ) ] [ sh:nodeKind sh:Literal ] ) ;
-            sh:order 4 ;
-            sh:path dppkb:frequency ] ;
-    sh:targetClass dppkb:Biochemical .
-
-dppkb:Diagnosis a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class dppkb:EvidenceItem ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 2 ;
-            sh:path dppkb:evidence ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -145,14 +156,8 @@ dppkb:Diagnosis a sh:NodeShape ;
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path dppkb:notes ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path dppkb:name ],
+            sh:order 4 ;
+            sh:path dppkb:results ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -161,14 +166,95 @@ dppkb:Diagnosis a sh:NodeShape ;
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path dppkb:results ] ;
+            sh:order 3 ;
+            sh:path dppkb:notes ],
+        [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dppkb:evidence ] ;
     sh:targetClass dppkb:Diagnosis .
 
 dppkb:Disease a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class dppkb:Transmission ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path dppkb:parents ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 23 ;
+            sh:path dppkb:review_notes ],
+        [ sh:class dppkb:Environmental ;
+            sh:nodeKind sh:IRI ;
+            sh:order 11 ;
+            sh:path dppkb:environmental ],
+        [ sh:class dppkb:Prevalence ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 5 ;
+            sh:path dppkb:prevalence ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path dppkb:name ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 19 ;
+            sh:path dppkb:synonyms ],
+        [ sh:class dppkb:Subtype ;
+            sh:nodeKind sh:IRI ;
+            sh:order 4 ;
+            sh:path dppkb:has_subtypes ],
+        [ sh:class dppkb:Inheritance ;
+            sh:nodeKind sh:IRI ;
+            sh:order 20 ;
+            sh:path dppkb:inheritance ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path dppkb:category ],
+        [ sh:class dppkb:Pathophysiology ;
+            sh:nodeKind sh:IRI ;
+            sh:order 7 ;
+            sh:path dppkb:pathophysiology ],
+        [ sh:class dppkb:Genetic ;
+            sh:nodeKind sh:IRI ;
+            sh:order 10 ;
+            sh:path dppkb:genetic ],
+        [ sh:class dppkb:Biochemical ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path dppkb:biochemical ],
+        [ sh:class dppkb:Diagnosis ;
+            sh:nodeKind sh:IRI ;
+            sh:order 18 ;
+            sh:path dppkb:diagnosis ],
+        [ sh:class dppkb:ModelingConsideration ;
+            sh:nodeKind sh:IRI ;
+            sh:order 16 ;
+            sh:path dppkb:modeling_considerations ],
+        [ sh:class dppkb:EpidemiologyInfo ;
+            sh:nodeKind sh:IRI ;
+            sh:order 17 ;
+            sh:path dppkb:epidemiology ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 22 ;
+            sh:path dppkb:notes ],
+        [ sh:class dppkb:AnimalModel ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 21 ;
+            sh:path dppkb:animal_models ],
+        [ sh:class dppkb:InfectiousAgent ;
+            sh:nodeKind sh:IRI ;
+            sh:order 14 ;
+            sh:path dppkb:infectious_agent ],
+        [ sh:class dppkb:Transmission ;
             sh:nodeKind sh:IRI ;
             sh:order 15 ;
             sh:path dppkb:transmission ],
@@ -177,78 +263,10 @@ dppkb:Disease a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
             sh:path dppkb:description ],
-        [ sh:class dppkb:Biochemical ;
-            sh:nodeKind sh:IRI ;
-            sh:order 9 ;
-            sh:path dppkb:biochemical ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path dppkb:category ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path dppkb:name ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path dppkb:parents ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path dppkb:notes ],
-        [ sh:class dppkb:AnimalModel ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 19 ;
-            sh:path dppkb:animal_models ],
         [ sh:class dppkb:Phenotype ;
             sh:nodeKind sh:IRI ;
             sh:order 8 ;
             sh:path dppkb:phenotypes ],
-        [ sh:class dppkb:Diagnosis ;
-            sh:nodeKind sh:IRI ;
-            sh:order 16 ;
-            sh:path dppkb:diagnosis ],
-        [ sh:class dppkb:Pathophysiology ;
-            sh:nodeKind sh:IRI ;
-            sh:order 7 ;
-            sh:path dppkb:pathophysiology ],
-        [ sh:class dppkb:Treatment ;
-            sh:nodeKind sh:IRI ;
-            sh:order 12 ;
-            sh:path dppkb:treatments ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path dppkb:synonyms ],
-        [ sh:class dppkb:Subtype ;
-            sh:nodeKind sh:IRI ;
-            sh:order 4 ;
-            sh:path dppkb:has_subtypes ],
-        [ sh:class dppkb:Prevalence ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 5 ;
-            sh:path dppkb:prevalence ],
-        [ sh:class dppkb:Genetic ;
-            sh:nodeKind sh:IRI ;
-            sh:order 10 ;
-            sh:path dppkb:genetic ],
-        [ sh:class dppkb:Inheritance ;
-            sh:nodeKind sh:IRI ;
-            sh:order 18 ;
-            sh:path dppkb:inheritance ],
-        [ sh:class dppkb:InfectiousAgent ;
-            sh:nodeKind sh:IRI ;
-            sh:order 14 ;
-            sh:path dppkb:infectious_agent ],
-        [ sh:class dppkb:Environmental ;
-            sh:nodeKind sh:IRI ;
-            sh:order 11 ;
-            sh:path dppkb:environmental ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 13 ;
@@ -256,21 +274,29 @@ dppkb:Disease a sh:NodeShape ;
         [ sh:class dppkb:ProgressionInfo ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 6 ;
-            sh:path dppkb:progression ] ;
+            sh:path dppkb:progression ],
+        [ sh:class dppkb:Treatment ;
+            sh:nodeKind sh:IRI ;
+            sh:order 12 ;
+            sh:path dppkb:treatments ] ;
     sh:targetClass dppkb:Disease .
 
 dppkb:Environmental a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class dppkb:EvidenceItem ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path dppkb:chemicals ],
+        [ sh:class dppkb:EvidenceItem ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 2 ;
             sh:path dppkb:evidence ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path dppkb:presence ],
+            sh:order 9 ;
+            sh:path dppkb:review_notes ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
             sh:order 6 ;
@@ -283,18 +309,13 @@ dppkb:Environmental a sh:NodeShape ;
             sh:path dppkb:name ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path dppkb:chemicals ],
+            sh:order 8 ;
+            sh:path dppkb:examples ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path dppkb:review_notes ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path dppkb:notes ],
+            sh:order 1 ;
+            sh:path dppkb:presence ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -303,13 +324,63 @@ dppkb:Environmental a sh:NodeShape ;
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path dppkb:notes ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
             sh:order 4 ;
-            sh:path dppkb:description ],
+            sh:path dppkb:description ] ;
+    sh:targetClass dppkb:Environmental .
+
+dppkb:EpidemiologyInfo a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path dppkb:unit ],
+        [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 8 ;
+            sh:path dppkb:evidence ],
         [ sh:datatype xsd:string ;
             sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path dppkb:examples ] ;
-    sh:targetClass dppkb:Environmental .
+            sh:order 6 ;
+            sh:path dppkb:factors ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path dppkb:notes ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path dppkb:description ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path dppkb:name ],
+        [ sh:datatype xsd:float ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path dppkb:minimum_value ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path dppkb:mean_range ],
+        [ sh:datatype xsd:float ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path dppkb:maximum_value ] ;
+    sh:targetClass dppkb:EpidemiologyInfo .
 
 dppkb:Genetic a sh:NodeShape ;
     sh:closed true ;
@@ -318,6 +389,25 @@ dppkb:Genetic a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:order 7 ;
             sh:path dppkb:inheritance ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path dppkb:subtype ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path dppkb:examples ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path dppkb:presence ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path dppkb:notes ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -329,20 +419,15 @@ dppkb:Genetic a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 3 ;
             sh:path dppkb:association ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:in ( HP:0040282 "OCCASIONAL" HP:0040281 HP:0040284 HP:0040280 ) ] [ sh:nodeKind sh:Literal ] ) ;
+            sh:order 6 ;
+            sh:path dppkb:frequency ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path dppkb:subtype ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path dppkb:presence ],
-        [ sh:class dppkb:EvidenceItem ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 2 ;
-            sh:path dppkb:evidence ],
+            sh:order 4 ;
+            sh:path dppkb:review_notes ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -352,35 +437,34 @@ dppkb:Genetic a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:order 8 ;
             sh:path dppkb:variants ],
-        [ sh:maxCount 1 ;
-            sh:or ( [ sh:in ( HP:0040282 "OCCASIONAL" HP:0040281 HP:0040284 HP:0040280 ) ] [ sh:nodeKind sh:Literal ] ) ;
-            sh:order 6 ;
-            sh:path dppkb:frequency ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path dppkb:review_notes ] ;
+        [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dppkb:evidence ] ;
     sh:targetClass dppkb:Genetic .
 
 dppkb:InfectiousAgent a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
+    sh:property [ sh:class dppkb:Subtype ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path dppkb:has_subtypes ],
+        [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 2 ;
             sh:path dppkb:description ],
+        [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path dppkb:evidence ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path dppkb:name ],
-        [ sh:class dppkb:EvidenceItem ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 1 ;
-            sh:path dppkb:evidence ] ;
+            sh:path dppkb:name ] ;
     sh:targetClass dppkb:InfectiousAgent .
 
 dppkb:Mechanism a sh:NodeShape ;
@@ -399,74 +483,46 @@ dppkb:Mechanism a sh:NodeShape ;
             sh:path dppkb:name ] ;
     sh:targetClass dppkb:Mechanism .
 
-dppkb:Pathophysiology a sh:NodeShape ;
+dppkb:ModelingConsideration a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:in [ rdf:rest () ] ;
-            sh:order 11 ;
-            sh:path dppkb:pathways ],
-        [ sh:datatype xsd:string ;
+    sh:property [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path dppkb:role ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:order 13 ;
-            sh:path dppkb:genes ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:order 18 ;
-            sh:path dppkb:assays ],
-        [ sh:class dppkb:EvidenceItem ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 3 ;
-            sh:path dppkb:evidence ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path dppkb:consequence ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path dppkb:downstream ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:order 16 ;
-            sh:path dppkb:chemical_entities ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path dppkb:synonyms ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:order 5 ;
-            sh:path dppkb:locations ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:order 15 ;
-            sh:path dppkb:cellular_components ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path dppkb:mechanisms ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:order 4 ;
-            sh:path dppkb:biological_processes ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:maxCount 1 ;
-            sh:order 10 ;
-            sh:path dppkb:gene ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path dppkb:examples ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path dppkb:subtypes ],
+            sh:order 1 ;
+            sh:path dppkb:description ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path dppkb:name ],
+        [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dppkb:evidence ] ;
+    sh:targetClass dppkb:ModelingConsideration .
+
+dppkb:Pathophysiology a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path dppkb:role ],
+        [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 3 ;
+            sh:path dppkb:evidence ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 19 ;
+            sh:path dppkb:mechanisms ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path dppkb:downstream ],
         [ sh:in [ rdf:rest () ] ;
             sh:order 2 ;
             sh:path dppkb:cell_types ],
@@ -476,8 +532,61 @@ dppkb:Pathophysiology a sh:NodeShape ;
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path dppkb:consequence ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:order 16 ;
+            sh:path dppkb:chemical_entities ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path dppkb:subtypes ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:order 15 ;
+            sh:path dppkb:cellular_components ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path dppkb:description ] ;
+            sh:path dppkb:description ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:order 13 ;
+            sh:path dppkb:genes ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:order 5 ;
+            sh:path dppkb:locations ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path dppkb:notes ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:order 4 ;
+            sh:path dppkb:biological_processes ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:order 18 ;
+            sh:path dppkb:assays ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path dppkb:name ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:order 10 ;
+            sh:path dppkb:gene ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:order 11 ;
+            sh:path dppkb:pathways ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path dppkb:examples ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path dppkb:synonyms ] ;
     sh:targetClass dppkb:Pathophysiology .
 
 dppkb:Phenotype a sh:NodeShape ;
@@ -486,32 +595,12 @@ dppkb:Phenotype a sh:NodeShape ;
     sh:property [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path dppkb:severity ],
-        [ sh:datatype xsd:boolean ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path dppkb:diagnostic ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
             sh:order 10 ;
             sh:path dppkb:subtype ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path dppkb:category ],
-        [ sh:datatype xsd:string ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path dppkb:sequelae ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path dppkb:notes ],
+        [ sh:maxCount 1 ;
+            sh:or ( [ sh:in ( HP:0040282 "OCCASIONAL" HP:0040281 HP:0040284 HP:0040280 ) ] [ sh:nodeKind sh:Literal ] ) ;
+            sh:order 2 ;
+            sh:path dppkb:frequency ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -523,6 +612,25 @@ dppkb:Phenotype a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 6 ;
             sh:path dppkb:context ],
+        [ sh:datatype xsd:string ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path dppkb:sequelae ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path dppkb:category ],
+        [ sh:datatype xsd:boolean ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path dppkb:diagnostic ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path dppkb:severity ],
         [ sh:class dppkb:EvidenceItem ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 5 ;
@@ -532,16 +640,26 @@ dppkb:Phenotype a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 7 ;
             sh:path dppkb:review_notes ],
-        [ sh:maxCount 1 ;
-            sh:or ( [ sh:in ( HP:0040282 "OCCASIONAL" HP:0040281 HP:0040284 HP:0040280 ) ] [ sh:nodeKind sh:Literal ] ) ;
-            sh:order 2 ;
-            sh:path dppkb:frequency ] ;
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path dppkb:notes ] ;
     sh:targetClass dppkb:Phenotype .
 
 dppkb:Prevalence a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path dppkb:population ],
+        [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 3 ;
+            sh:path dppkb:evidence ],
+        [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
@@ -551,15 +669,6 @@ dppkb:Prevalence a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path dppkb:subtype ],
-        [ sh:class dppkb:EvidenceItem ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 3 ;
-            sh:path dppkb:evidence ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path dppkb:population ],
         [ sh:maxCount 1 ;
             sh:or ( [ sh:datatype xsd:float ;
                         sh:nodeKind sh:Literal ] [ sh:datatype xsd:integer ;
@@ -575,8 +684,36 @@ dppkb:ProgressionInfo a sh:NodeShape ;
     sh:property [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path dppkb:duration_days ],
+            sh:order 9 ;
+            sh:path dppkb:duration ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path dppkb:notes ],
+        [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 3 ;
+            sh:path dppkb:evidence ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path dppkb:incubation_years ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path dppkb:age_range ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path dppkb:phase ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path dppkb:review_notes ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -585,81 +722,22 @@ dppkb:ProgressionInfo a sh:NodeShape ;
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path dppkb:age_range ],
-        [ sh:class dppkb:EvidenceItem ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 3 ;
-            sh:path dppkb:evidence ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path dppkb:notes ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path dppkb:incubation_years ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path dppkb:phase ],
+            sh:order 8 ;
+            sh:path dppkb:duration_days ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
-            sh:path dppkb:incubation_days ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path dppkb:review_notes ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path dppkb:duration ] ;
+            sh:path dppkb:incubation_days ] ;
     sh:targetClass dppkb:ProgressionInfo .
-
-dppkb:Subtype a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path dppkb:description ],
-        [ sh:class dppkb:EvidenceItem ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 2 ;
-            sh:path dppkb:evidence ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:order 5 ;
-            sh:path dppkb:geography ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path dppkb:name ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path dppkb:review_notes ],
-        [ sh:in [ rdf:rest () ] ;
-            sh:order 4 ;
-            sh:path dppkb:locations ] ;
-    sh:targetClass dppkb:Subtype .
 
 dppkb:Transmission a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path dppkb:description ],
+    sh:property [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dppkb:evidence ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -669,26 +747,33 @@ dppkb:Transmission a sh:NodeShape ;
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path dppkb:effect ],
-        [ sh:class dppkb:EvidenceItem ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 2 ;
-            sh:path dppkb:evidence ],
+            sh:order 3 ;
+            sh:path dppkb:notes ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path dppkb:notes ] ;
+            sh:order 4 ;
+            sh:path dppkb:effect ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path dppkb:description ] ;
     sh:targetClass dppkb:Transmission .
 
 dppkb:Treatment a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class dppkb:Mechanism ;
-            sh:nodeKind sh:IRI ;
-            sh:order 7 ;
-            sh:path dppkb:mechanism ],
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path dppkb:description ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path dppkb:review_notes ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -697,22 +782,16 @@ dppkb:Treatment a sh:NodeShape ;
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path dppkb:review_notes ],
+            sh:order 3 ;
+            sh:path dppkb:notes ],
+        [ sh:class dppkb:Mechanism ;
+            sh:nodeKind sh:IRI ;
+            sh:order 7 ;
+            sh:path dppkb:mechanism ],
         [ sh:class dppkb:EvidenceItem ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 2 ;
             sh:path dppkb:evidence ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path dppkb:description ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path dppkb:notes ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -731,15 +810,15 @@ dppkb:Variant a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path dppkb:description ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path dppkb:name ] ;
+            sh:path dppkb:name ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path dppkb:description ] ;
     sh:targetClass dppkb:Variant .
 
 dppkb:Inheritance a sh:NodeShape ;
@@ -747,20 +826,50 @@ dppkb:Inheritance a sh:NodeShape ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path dppkb:description ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path dppkb:name ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path dppkb:description ],
         [ sh:class dppkb:EvidenceItem ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 1 ;
             sh:path dppkb:evidence ] ;
     sh:targetClass dppkb:Inheritance .
+
+dppkb:Subtype a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class dppkb:EvidenceItem ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path dppkb:evidence ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path dppkb:name ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:order 4 ;
+            sh:path dppkb:locations ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path dppkb:description ],
+        [ sh:in [ rdf:rest () ] ;
+            sh:order 5 ;
+            sh:path dppkb:geography ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path dppkb:review_notes ] ;
+    sh:targetClass dppkb:Subtype .
 
 dppkb:EvidenceItem a sh:NodeShape ;
     sh:closed true ;

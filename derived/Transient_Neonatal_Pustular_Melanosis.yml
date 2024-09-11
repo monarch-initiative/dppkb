@@ -203,6 +203,14 @@ phenotypes:
         supports: PARTIAL
         snippet: Transient neonatal pustular melanosis.
         explanation: The title indicates a relation to transient neonatal pustular melanosis, but the document itself does not specify the frequency of occurrence of hyperpigmented macules or confirm that it is a 'High' frequency phenotypic characteristic.
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Benign Course
+    notes: Despite the alarming appearance, TNPM is a benign self-limited condition that does not require treatment.
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: No Systemic Symptoms
+    notes: Infants with TNPM are otherwise healthy and do not have any associated fever, irritability, or other systemic symptoms.
 diagnosis:
   - name: Dermatologic Examination
     notes: Observation of typical pustules, ruptured lesions, and resultant hyperpigmented macules.

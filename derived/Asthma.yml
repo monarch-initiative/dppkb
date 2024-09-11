@@ -301,6 +301,30 @@ phenotypes:
         supports: SUPPORT
         snippet: We present the case of a 42-year-old man with a 2-year history of wheezing, chest tightness, and upper respiratory symptoms.
         explanation: This case study highlights chest tightness as a symptom, supporting the statement as it shows chest tightness is a common feature in asthma triggered by recreational activities.
+  - category: Respiratory
+    frequency: FREQUENT
+    name: Rapid Breathing
+    notes: Increased respiratory rate, especially during an asthma attack
+  - category: Respiratory
+    frequency: OCCASIONAL
+    name: Cyanosis
+    notes: Bluish discoloration of skin and mucous membranes due to low oxygen
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+    notes: Due to increased work of breathing and sleep disturbance
+  - category: Activity
+    frequency: FREQUENT
+    name: Exercise Intolerance
+    notes: Worsening of asthma symptoms with physical activity
+  - category: Sleep
+    frequency: FREQUENT
+    name: Sleep Disturbance
+    notes: Nocturnal asthma can cause nighttime coughing and difficulty sleeping
+  - category: Systemic
+    frequency: OCCASIONAL
+    name: Anxiety
+    notes: Asthma attacks can be frightening and cause anxiety about future episodes
 biochemical:
   - name: Eosinophils
     presence: Elevated

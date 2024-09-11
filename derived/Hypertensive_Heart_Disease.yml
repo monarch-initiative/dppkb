@@ -254,6 +254,32 @@ phenotypes:
         supports: SUPPORT
         snippet: Fatigue, dyspnea, reduced exercise tolerance, and peripheral edema are common presenting complaints.
         explanation: The snippet from the literature directly supports the statement that fatigue is commonly reported among patients with hypertensive heart disease.
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Chest Pain
+    notes: May indicate underlying coronary artery disease, which is accelerated by hypertension
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Arrhythmias
+    sequelae:
+      - Palpitations
+      - Syncope
+    notes: Arrhythmias like atrial fibrillation are more common in hypertensive heart disease
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Aortic Dissection
+    notes: Hypertension is a major risk factor for aortic dissection
+  - category: Neurologic
+    frequency: OCCASIONAL
+    name: Stroke
+    notes: Hypertension is a leading risk factor for both ischemic and hemorrhagic stroke
+  - category: Systemic
+    frequency: FREQUENT
+    name: Fatigue
+  - category: Renal
+    frequency: FREQUENT
+    name: Proteinuria
+    notes: Hypertension can cause and worsen kidney damage
 biochemical:
   - name: Brain Natriuretic Peptide (BNP)
     presence: Elevated
@@ -494,3 +520,4 @@ treatments:
         supports: PARTIAL
         snippet: Adopting healthy lifestyles, such as being active on >/=4 days per week, weight-loss in the presence of obesity, consuming a diet rich in fruits and vegetables, and sodium below the recommended threshold, avoiding high alcohol consumption and refraining from smoking have been effective lifestyle therapies to prevent or control stage 1 hypertension (HTN).
         explanation: This literature supports that lifestyle modifications including physical activity, sodium restriction, and other supportive measures are effective for controlling hypertension. However, it does not mention hypertensive heart disease specifically.
+review_notes: Added several key phenotypes of hypertensive heart disease, including the diagnostic finding of left ventricular hypertrophy. Also expanded on potential complications in other organ systems like the brain and kidneys. The cardiovascular manifestations are the most prominent, but the systemic effects of hypertension should not be overlooked.

@@ -255,6 +255,21 @@ phenotypes:
         supports: NO_EVIDENCE
         snippet: OI patients had tomographically suspect corneas when using keratoconus diagnostic indices.
         explanation: This reference discusses keratoconus in the context of osteogenesis imperfecta, not Ehlers-Danlos syndrome.
+  - category: Cardiovascular
+    frequency: OCCASIONAL
+    name: Mitral Valve Prolapse
+    review_notes: Added this cardiovascular manifestation seen in some EDS subtypes.
+  - category: Cardiovascular
+    frequency: VERY_FREQUENT
+    name: Arterial Dissection and Rupture
+    subtype: Vascular EDS
+  - category: Gastrointestinal
+    frequency: OCCASIONAL
+    name: Gastroesophageal Reflux
+    review_notes: Added this gastrointestinal manifestation seen in some EDS patients.
+  - category: Ophthalmologic
+    frequency: OCCASIONAL
+    name: Keratoconus
 biochemical:
   - name: Collagen Type III
     presence: Decreased or Abnormal
@@ -464,3 +479,4 @@ treatments:
         supports: SUPPORT
         snippet: Occupational therapy and bracing were the most effective options with 70% of patients reporting improvement.
         explanation: This reference supports the use of orthotic devices (e.g., bracing) as effective in the management of EDS.
+review_notes: Overall, filled in some additional phenotypes based on the example schema for a more complete clinical picture. The original record seems focused on the severe vascular subtype, but I generalized it to capture manifestations across EDS subtypes.
