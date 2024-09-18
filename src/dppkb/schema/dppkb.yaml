@@ -51,6 +51,24 @@ enums:
       OBLIGATE:
         description: Obligate
         meaning: HP:0040280 ## Obligate
+  ClinicalSignificanceEnum:
+    description: The clinical significance of a finding
+    permissible_values:
+      PATHOGENIC:
+        description: Pathogenic
+        meaning: HP:0040285 ## Pathogenic
+      LIKELY_PATHOGENIC:
+        description: Likely pathogenic
+        meaning: HP:0040286 ## Likely pathogenic
+      BENIGN:
+        description: Benign
+        meaning: HP:0040287 ## Benign
+      LIKELY_BENIGN:
+        description: Likely benign
+        meaning: HP:0040288 ## Likely benign
+      UNCERTAIN_SIGNIFICANCE:
+        description: Uncertain significance
+        meaning: HP:0040289 ## Uncertain significance
   AssayTerm:
     description: A term representing an assay
     reachable_from:
@@ -123,6 +141,7 @@ enums:
       is_direct: false
       relationship_types:
         - rdfs:subClassOf
+
 slots:
   name:
     examples:
@@ -343,6 +362,8 @@ slots:
     multivalued: true
     inlined_as_list: true
     range: Variant
+    comments:
+      - can currently be used at gene or disease level, TODO - decide the best level
   features:
     examples:
       - value: DNA virus from the Orthopoxvirus genus
@@ -439,12 +460,25 @@ slots:
     multivalued: true
     range: AnimalModel
     inlined_as_list: true
+  functional_effects:
+    multivalued: true
+    inlined_as_list: true
+    range: FunctionalEffect
   genotype:
     examples:
       - value: HLA-DQ2
     range: string
+  type:
+    range: string
+  clinical_significance:
+    range: ClinicalSignificanceEnum
   background:
     range: string
+  sequence_length:
+    range: integer
+  identifiers:
+    multivalued: true
+    range: uriorcurie
   associated_phenotypes:
     examples:
       - value: '[''Celiac Disease'', ''Type 1 Diabetes'', ''Autoimmune Thyroid Disease'']'
@@ -464,6 +498,8 @@ slots:
   unit:
     examples:
       - value: cm
+    range: string
+  function:
     range: string
 classes:
   Any:
@@ -602,6 +638,7 @@ classes:
       - phenotypes
       - biochemical
       - genetic
+      - variants
       - environmental
       - treatments
       - categories
@@ -672,6 +709,19 @@ classes:
     slots:
       - name
       - description
+      - gene
+      - evidence
+      - functional_effects
+      - synonyms
+      - identifiers
+      - sequence_length
+      - clinical_significance
+      - type
+  FunctionalEffect:
+    slots:
+      - function
+      - description
+      - type
   Mechanism:
     slots:
       - name

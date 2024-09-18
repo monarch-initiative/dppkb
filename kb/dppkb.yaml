@@ -17214,4 +17214,116 @@ treatments:
   description: Assistive devices for hearing loss management.
 - name: Genetic Counseling
   description: Provides information and support for affected individuals and families.
+---
+name: Axenfeld-Rieger_syndrome
+category: Genetic
+parents:
+- Congenital Eye Disorder
+- Craniofacial Disorder
+has_subtypes:
+- name: Axenfeld-Rieger Syndrome Type 1 (RIEG1)
+  description: Caused by mutations in the PITX2 gene, characterized by ocular abnormalities
+    and extra-ocular symptoms.
+- name: Axenfeld-Rieger Syndrome Type 3 (RIEG3)
+  description: Caused by mutations in the FOXC1 gene, associated with similar phenotypic
+    features as Type 1.
+prevalence:
+- population: General Population
+  percentage: 0.001-0.002
+pathophysiology:
+- name: Increased transactivation activity of PITX2
+  description: Mutations in the PITX2 gene disrupt its function as a transcription factor, impairing its ability to bind DNA and regulate gene expression critical for eye development.
+- name: Ocular Anomalies
+  description: Improper development of the anterior segment of the eye, leading to
+    issues such as iris defects and abnormal angle structures.
+- name: Systemic Anomalies
+  description: Involves multiple systems, often including dental, craniofacial, and
+    umbilical abnormalities.
+- name: Glaucoma-related Vision Loss
+  frequency: OCCASIONAL
+  description: Loss of vision due to uncontrolled intraocular pressure.
+phenotypes:
+- category: Ophthalmologic
+  name: Glaucoma
+  frequency: VERY_FREQUENT
+  severity: Severe
+  diagnostic: true
+  notes: Early onset, often leading to vision loss if untreated. Abnormal development of the anterior segment due to defective PITX2 function leads to poor aqueous humor drainage, resulting in elevated intraocular pressure and glaucoma.
+- category: Ophthalmologic
+  name: Posterior Embryotoxon
+  frequency: VERY_FREQUENT
+  severity: Mild
+  diagnostic: true
+  notes: "A prominent, anteriorly displaced Schwalbe's line seen on eye examination."
+- category: Ophthalmologic
+  name: Iris Hypoplasia
+  frequency: VERY_FREQUENT
+  notes: Underdevelopment of the iris, may include corectopia (displacement of the
+    pupil). Mutations like the V45L variant cause reduced DNA-binding with increased transactivation, disrupting iris development due to unregulated gene expression during embryogenesis.
+- category: Craniofacial
+  name: Dental Anomalies
+  frequency: FREQUENT
+  notes: Includes missing teeth (hypodontia), small teeth (microdontia), and enamel
+    hypoplasia.
+- category: Craniofacial
+  name: Craniofacial Dysmorphism
+  frequency: FREQUENT
+  notes: Includes features such as an underdeveloped maxilla, broad nasal bridge,
+    and hypertelorism (increased distance between the eyes).
+- category: Systemic
+  name: Redundant Periumbilical Skin
+  frequency: OCCASIONAL
+  notes: Extra fold of skin around the belly button. Often considered a diagnostic
+    feature.
+diagnosis:
+- name: Genetic Testing
+  notes: Identifies mutations in PITX2, FOXC1 or other associated genes.
+- name: Slit-lamp Examination
+  notes: Used to observe anterior segment anomalies such as posterior embryotoxon
+    and iris defects.
+- name: Intraocular Pressure Measurement
+  notes: Elevated pressure indicating glaucoma, which is common in these patients.
+genetic:
+- name: PITX2
+  association: Pathogenic Variants
+  subtype: Autosomal Dominant
+- name: FOXC1
+  association: Pathogenic Variants
+  subtype: Autosomal Dominant
+variants:
+- name: p.Val136Leu
+  gene: PITX2
+  clinical_significance: PATHOGENIC
+  type: single_nucleotide_variant
+  sequence_length: 1
+  synonyms:
+    - V45L
+  identifiers:
+    - OMIM:601542.0010
+    - dbSNP:rs121909249
+  functional_effects:
+    - function: DNA binding
+      description: tenfold reduction
+      type: loss-of-function
+    - function: DNA-binding transcription factor activity
+      description: increases 200%
+environmental:
+- name: Not Applicable
+  notes: There are no significant environmental factors specifically associated with
+    the onset of Axenfeld-Rieger syndrome.
+treatments:
+- name: Glaucoma Management
+  description: Includes medications, laser therapy, and surgical interventions to
+    control intraocular pressure.
+- name: Dental Management
+  description: Orthodontic and dental treatments to address dental anomalies.
+- name: Regular Ophthalmic Monitoring
+  description: Frequent eye exams to monitor and manage glaucoma and other ocular
+    issues.
+review_notes: Axenfeld-Rieger syndrome is a rare genetic disorder characterized by
+  both ocular and systemic manifestations. The primary concerns are related to the
+  increased risk of glaucoma and vision impairment, as well as craniofacial and dental
+  anomalies. Early diagnosis and regular monitoring are essential for managing the
+  condition effectively.
+
 
