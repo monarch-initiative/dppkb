@@ -17305,3 +17305,330 @@ treatments:
   - name: Regular Ophthalmic Monitoring
     description: Frequent eye exams to monitor and manage glaucoma and other ocular issues.
 review_notes: Axenfeld-Rieger syndrome is a rare genetic disorder characterized by both ocular and systemic manifestations. The primary concerns are related to the increased risk of glaucoma and vision impairment, as well as craniofacial and dental anomalies. Early diagnosis and regular monitoring are essential for managing the condition effectively.
+---
+name: Alhzeimer_Disease
+category: Neurodegenerative Disorder
+parents:
+  - Dementia
+has_subtypes:
+  - name: Early-Onset Alzheimer's Disease
+    description: Type of Alzheimer's that occurs in individuals younger than 65 and is often associated with genetic factors.
+  - name: Late-Onset Alzheimer's Disease
+    description: The most common form of Alzheimer's, occurring in those aged 65 and older.
+prevalence:
+  - population: Global
+    percentage: 5.8
+pathophysiology:
+  - name: Amyloid Plaque Formation
+    description: Accumulation of amyloid-beta proteins in the brain, forming extracellular plaques that disrupt cell function and communication between neurons.
+    cell_types:
+      - Neurons
+      - Microglia
+      - Astrocytes
+    biological_processes:
+      - Protein misfolding
+      - Aggregation
+      - Neuroinflammation
+    locations:
+      - Cerebral Cortex
+      - Hippocampus
+      - Subcortical Regions
+    chemical_entities:
+      - Amyloid-beta peptides (Aβ40, Aβ42)
+    genes:
+      - APP
+      - PSEN1
+      - PSEN2
+    pathways:
+      - Amyloid precursor protein processing
+    mechanisms:
+      - Beta-secretase (BACE1) cleavage of APP
+      - Gamma-secretase cleavage of APP C-terminal fragment
+    consequences:
+      - Synaptic Dysfunction
+      - Neuroinflammation
+  - name: Neurofibrillary Tangle Formation
+    description: Intracellular accumulation of hyperphosphorylated tau protein, forming twisted fibers that disrupt cellular transport and eventually lead to neuronal death.
+    cell_types:
+      - Neurons
+    biological_processes:
+      - Protein hyperphosphorylation
+      - Microtubule destabilization
+    locations:
+      - Entorhinal Cortex
+      - Hippocampus
+      - Neocortex
+    chemical_entities:
+      - Tau protein
+    genes:
+      - MAPT
+    pathways:
+      - Tau phosphorylation cascade
+    mechanisms:
+      - Hyperphosphorylation of tau by various kinases
+      - Aggregation of hyperphosphorylated tau
+    consequence: Synaptic Dysfunction
+  - name: Synaptic Dysfunction
+    description: Progressive loss of synapses and impaired neurotransmitter signaling, leading to disrupted neuronal communication and cognitive decline.
+    cell_types:
+      - Neurons
+    biological_processes:
+      - Neurotransmitter release
+      - Synaptic plasticity
+    locations:
+      - Synapses
+      - Neuronal dendrites
+    chemical_entities:
+      - Acetylcholine
+      - Glutamate
+      - GABA
+    pathways:
+      - Synaptic vesicle recycling
+      - Neurotransmitter receptor signaling
+    consequence: Oxidative Stress
+  - name: Neuroinflammation
+    description: Chronic activation of immune responses in the brain, contributing to neuronal damage and disease progression.
+    cell_types:
+      - Microglia
+      - Astrocytes
+    biological_processes:
+      - Immune activation
+      - Cytokine production
+      - Phagocytosis
+    chemical_entities:
+      - Cytokines
+      - Chemokines
+      - Complement proteins
+    pathways:
+      - NF-κB signaling
+      - NLRP3 inflammasome activation
+    consequences:
+      - Oxidative Stress
+      - Vascular Dysfunction
+  - name: Oxidative Stress
+    description: Imbalance between the production of reactive oxygen species and the brain's ability to detoxify them, leading to cellular damage.
+    biological_processes:
+      - Free radical production
+      - Antioxidant defense
+    cellular_components:
+      - Mitochondria
+      - Cell membranes
+    chemical_entities:
+      - Reactive oxygen species (ROS)
+      - Reactive nitrogen species (RNS)
+    pathways:
+      - Mitochondrial electron transport chain
+      - NADPH oxidase activation
+    consequences:
+      - Amyloid Plaque Formation
+      - Neurofibrillary Tangle Formation
+  - name: Vascular Dysfunction
+    description: Alterations in cerebral blood flow and blood-brain barrier integrity, contributing to neuronal dysfunction and amyloid accumulation.
+    cell_types:
+      - Endothelial cells
+      - Pericytes
+    biological_processes:
+      - Blood-brain barrier regulation
+      - Cerebral blood flow
+    locations:
+      - Cerebral blood vessels
+      - Blood-brain barrier
+    pathways:
+      - Neurovascular coupling
+      - Perivascular drainage
+    consequences:
+      - Amyloid Plaque Formation
+      - Oxidative Stress
+phenotypes:
+  - category: Cognitive
+    name: Memory Loss
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    notes: The earliest and most prominent symptom.
+  - category: Cognitive
+    name: Executive Dysfunction
+    frequency: VERY_FREQUENT
+    notes: Difficulty in planning, decision-making, and judgment.
+  - category: Psychiatric
+    name: Behavioral Changes
+    frequency: FREQUENT
+    notes: Includes irritability, depression, and apathy.
+  - category: Neurologic
+    name: Aphasia
+    frequency: FREQUENT
+    notes: Difficulty with speech and understanding language.
+  - category: Neurologic
+    name: Apraxia
+    frequency: OCCASIONAL
+    notes: Difficulty with motor tasks despite intact motor function.
+  - category: Neurologic
+    name: Agnosia
+    frequency: OCCASIONAL
+    notes: Inability to recognize objects or people.
+biochemical:
+  - name: "Amyloid Beta (Aβ42)"
+    presence: Elevated
+    context: Found in cerebrospinal fluid and brain tissue.
+genetic:
+  - name: APP
+    association: Genetic Mutation
+    subtype: Mendelian (Early-Onset)
+  - name: PSEN1
+    association: Genetic Mutation
+    subtype: Mendelian (Early-Onset)
+  - name: PSEN2
+    association: Genetic Mutation
+    subtype: Mendelian (Early-Onset)
+diagnosis:
+  - name: Neuropsychological Tests
+    notes: Assess cognitive function including memory, language, and problem-solving.
+  - name: Brain Imaging
+    notes: MRI and PET scans to detect brain changes such as shrinkage and amyloid plaques.
+  - name: Cerebrospinal Fluid Analysis
+    notes: Measurement of amyloid-beta, total tau, and phosphorylated tau levels.
+treatments:
+  - name: Cholinesterase Inhibitors
+    description: Medications that slow the breakdown of acetylcholine to help with memory and cognitive function (e.g., donepezil, rivastigmine).
+  - name: NMDA Receptor Antagonist
+    description: Medication that regulates glutamate activity to improve symptoms (e.g., memantine).
+  - name: Cognitive Therapy
+    description: Non-pharmacological interventions to maintain cognitive function.
+  - name: Supportive Care
+    description: Includes occupational therapy, speech therapy, and caregiver support.
+  - name: Lifestyle Modifications
+    description: Physical exercise, mental stimulation, and healthy diet to potentially slow disease progression.
+---
+name: Primary_Tonsillar_Lymphoma
+category: Hematologic Malignancy
+parents:
+  - Lymphoma
+prevalence:
+  - population: General Population
+    percentage: Rare
+progression:
+  - phase: Onset
+    age_range: Mid-adult to elderly
+    notes: Typically presents with a rapidly enlarging tonsillar mass.
+  - phase: Localized Stage
+    notes: May involve the tonsils, oropharynx, and nearby lymph nodes.
+  - phase: Advanced Stage
+    notes: Potential for systemic spread to distant lymph nodes and organs.
+pathophysiology:
+  - name: Malignant B-cell or T-cell Proliferation
+    description: Abnormal growth and accumulation of malignant lymphocytes in the tonsils.
+    cell_types:
+      - B-cell Lymphocyte
+      - T-cell Lymphocyte
+stages:
+  - name: Stage I
+    description: Cancer is found in a single region of lymph nodes or a single extralymphatic organ.
+    substages:
+      - name: Stage IA
+        description: A single lymph node region is involved, without B symptoms.
+      - name: Stage IB
+        description: A single lymph node region is involved, with B symptoms.
+      - name: Stage IE
+        description: A single extralymphatic organ is involved (e.g., the tonsil).
+    pathophysiology:
+      - name: Localized Lymphocyte Proliferation
+        description: Abnormal growth and accumulation of malignant lymphocytes confined to a single site.
+        cell_types:
+          - B-cell Lymphocyte
+          - T-cell Lymphocyte
+      - name: Minimal Tissue Disruption
+        description: Limited alteration of surrounding tissue architecture due to localized nature of the disease.
+      - name: Systemic Effects in IB
+        description: Presence of B symptoms in IB indicates more aggressive disease biology with systemic effects.
+  - name: Stage II
+    description: Cancer is found in two or more lymph regions on the same side of the diaphragm, or the cancer has spread from one lymph node region to a nearby organ.
+    substages:
+      - name: Stage IIA
+        description: Two or more lymph node regions on the same side of the diaphragm are involved, without B symptoms.
+      - name: Stage IIB
+        description: Two or more lymph node regions on the same side of the diaphragm are involved, with B symptoms.
+      - name: Stage IIE
+        description: Cancer is found in one or more lymph node regions on the same side of the diaphragm and in one area or organ outside the lymph system on the same side of the diaphragm.
+    pathophysiology:
+      - name: Regional Lymphatic Spread
+        description: Malignant lymphocytes have spread to multiple lymph nodes or nearby extralymphatic tissues.
+        cell_types:
+          - B-cell Lymphocyte
+          - T-cell Lymphocyte
+      - name: Localized Extranodal Involvement
+        description: In stage IIE, infiltration of malignant cells into non-lymphatic tissue adjacent to involved lymph nodes.
+      - name: Systemic Effects in IIB
+        description: Presence of B symptoms in IIB suggests more widespread effects of the lymphoma, potentially involving cytokine release.
+  - name: Stage III
+    description: Cancer is found in lymph node regions or organs on both sides of the diaphragm.
+    pathophysiology:
+      - name: Widespread Lymphatic Involvement
+        description: Extensive proliferation and spread of malignant lymphocytes throughout the lymphatic system.
+        cell_types:
+          - B-cell Lymphocyte
+          - T-cell Lymphocyte
+      - name: Systemic Symptom Induction
+        description: Increased likelihood of B symptoms due to widespread disease and potential cytokine release.
+      - name: Hematogenous Spread
+        description: Potential for malignant cells to enter the bloodstream, facilitating distant spread.
+  - name: Stage IV
+    description: Cancer has spread throughout one or more organs outside the lymph system or to the liver, bone marrow, or lungs.
+    pathophysiology:
+      - name: Extensive Systemic Involvement
+        description: Widespread dissemination of malignant lymphocytes throughout multiple organ systems.
+        cell_types:
+          - B-cell Lymphocyte
+          - T-cell Lymphocyte
+      - name: Organ Function Disruption
+        description: Infiltration of malignant cells into vital organs, potentially compromising their normal function.
+      - name: Bone Marrow Involvement
+        description: Infiltration of malignant lymphocytes into bone marrow, potentially affecting hematopoiesis.
+      - name: Paraneoplastic Syndrome Development
+        description: Potential for the development of paraneoplastic syndromes due to antibody production or cytokine release by tumor cells.
+phenotypes:
+  - category: ENT
+    name: Enlarged Tonsil
+    frequency: VERY_FREQUENT
+    diagnostic: true
+    notes: Often unilateral and can cause difficulty swallowing or a sensation of a lump in the throat.
+  - category: Systemic
+    name: Fever
+    frequency: FREQUENT
+  - category: Systemic
+    name: Night Sweats
+    frequency: FREQUENT
+  - category: Systemic
+    name: Weight Loss
+    frequency: FREQUENT
+  - category: Hematologic
+    name: Lymphadenopathy
+    frequency: FREQUENT
+    notes: Swelling of lymph nodes, typically in the neck but can be in other regions as well.
+  - category: ENT
+    name: Sore Throat
+    frequency: FREQUENT
+  - category: ENT
+    name: Dysphagia
+    frequency: FREQUENT
+    notes: Difficulty swallowing.
+biochemical:
+  - name: Lactate Dehydrogenase (LDH)
+    presence: Elevated
+    context: Indicator of tumor burden and cell turnover.
+diagnosis:
+  - name: Tonsillar Biopsy
+    presence: Positive for malignant lymphocytes
+    notes: Essential for confirming the presence of lymphoma.
+  - name: Imaging Studies
+    notes: CT, MRI, or PET scans to evaluate the extent of disease and involvement of surrounding structures and distant sites.
+  - name: Blood Tests
+    notes: CBC, LDH levels, and other markers for evaluating overall health and disease involvement.
+treatments:
+  - name: Chemotherapy
+    description: Systemic treatment aimed at eradicating lymphoma cells, often using CHOP regimen (Cyclophosphamide, Doxorubicin, Vincristine, Prednisone).
+  - name: Radiation Therapy
+    description: Targeted radiation to the tonsil and surrounding structures to control local disease.
+  - name: Targeted Therapy
+    description: Use of drugs like rituximab for B-cell lymphomas.
+  - name: Stem Cell Transplant
+    description: Considered in certain cases where high-dose chemotherapy is followed by infusion of healthy stem cells to restore bone marrow function.
+notes: Primary Tonsillar Lymphoma is a rare subtype of lymphoma that occurs in the tonsils and can spread to nearby and distant lymph nodes. Early symptoms often mimic other ENT conditions but require biopsy and imaging for accurate diagnosis. Treatment usually involves a combination of chemotherapy, radiation, and potentially targeted therapies to manage the disease and prevent recurrence.
