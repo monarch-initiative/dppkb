@@ -55,6 +55,7 @@ message Disease
  repeated  phenotype phenotypes = 0
  repeated  biochemical biochemical = 0
  repeated  genetic genetic = 0
+ repeated  variant variants = 0
  repeated  environmental environmental = 0
  repeated  treatment treatments = 0
  repeated  string categories = 0
@@ -104,6 +105,12 @@ message EvidenceItem
   evidenceItemSupportEnum supports = 0
   string snippet = 0
   string explanation = 0
+ }
+message FunctionalEffect
+ {
+  string function = 0
+  string description = 0
+  string type = 0
  }
 message Genetic
  {
@@ -156,6 +163,7 @@ message Pathophysiology
   string role = 0
  repeated  string synonyms = 0
   string consequence = 0
+ repeated  string consequences = 0
   geneTerm gene = 0
  repeated  biologicalProcessTerm pathways = 0
  repeated  string downstream = 0
@@ -167,12 +175,14 @@ message Pathophysiology
  repeated  assayTerm assays = 0
  repeated  string mechanisms = 0
   string notes = 0
+  any frequency = 0
  }
 message Phenotype
  {
   string category = 0
   string name = 0
   any frequency = 0
+  string description = 0
   boolean diagnostic = 0
  repeated  string sequelae = 0
  repeated  evidenceItem evidence = 0
@@ -230,9 +240,18 @@ message Treatment
   string reviewNotes = 0
   string role = 0
  repeated  mechanism mechanism = 0
+ repeated  string examples = 0
  }
 message Variant
  {
   string name = 0
   string description = 0
+  geneTerm gene = 0
+ repeated  evidenceItem evidence = 0
+ repeated  functionalEffect functionalEffects = 0
+ repeated  string synonyms = 0
+ repeated  uriorcurie identifiers = 0
+  integer sequenceLength = 0
+  clinicalSignificanceEnum clinicalSignificance = 0
+  string type = 0
  }

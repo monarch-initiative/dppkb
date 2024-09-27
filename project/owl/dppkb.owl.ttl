@@ -11,23 +11,23 @@ dppkb:Assay a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Assay" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ] ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:DiseaseCollection a owl:Class,
@@ -67,77 +67,102 @@ HP:0040284 a owl:Class,
     rdfs:label "VERY_RARE" ;
     rdfs:subClassOf dppkb:FrequencyEnum .
 
+HP:0040285 a owl:Class,
+        dppkb:ClinicalSignificanceEnum ;
+    rdfs:label "PATHOGENIC" ;
+    rdfs:subClassOf dppkb:ClinicalSignificanceEnum .
+
+HP:0040286 a owl:Class,
+        dppkb:ClinicalSignificanceEnum ;
+    rdfs:label "LIKELY_PATHOGENIC" ;
+    rdfs:subClassOf dppkb:ClinicalSignificanceEnum .
+
+HP:0040287 a owl:Class,
+        dppkb:ClinicalSignificanceEnum ;
+    rdfs:label "BENIGN" ;
+    rdfs:subClassOf dppkb:ClinicalSignificanceEnum .
+
+HP:0040288 a owl:Class,
+        dppkb:ClinicalSignificanceEnum ;
+    rdfs:label "LIKELY_BENIGN" ;
+    rdfs:subClassOf dppkb:ClinicalSignificanceEnum .
+
+HP:0040289 a owl:Class,
+        dppkb:ClinicalSignificanceEnum ;
+    rdfs:label "UNCERTAIN_SIGNIFICANCE" ;
+    rdfs:subClassOf dppkb:ClinicalSignificanceEnum .
+
 dppkb:AnimalModel a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "AnimalModel" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:category ],
-        [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:background ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:genotype ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:genotype ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:background ],
-        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:category ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:alleles ],
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:background ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:category ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:background ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:species ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:background ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty dppkb:alleles ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:genes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:associated_phenotypes ],
+            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:genotype ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:associated_phenotypes ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:category ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:GeneTerm ;
             owl:onProperty dppkb:genes ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:species ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:alleles ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:category ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty dppkb:associated_phenotypes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:genotype ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:background ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:associated_phenotypes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:genes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:description ],
+            owl:onProperty dppkb:genotype ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty dppkb:species ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
@@ -145,93 +170,93 @@ dppkb:Biochemical a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Biochemical" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:presence ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:presence ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:subtype ],
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:synonyms ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:frequency ],
+            owl:onProperty dppkb:subtype ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:context ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:presence ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:AssayTerm ;
-            owl:onProperty dppkb:assays ],
+            owl:onProperty dppkb:specificity ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:notes ],
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:assays ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:subtype ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:specificity ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:subtype ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ owl:intersectionOf ( [ a rdfs:Datatype ;
                                 owl:unionOf ( dppkb:FrequencyEnum dppkb:FrequencyQuantity ) ] dppkb:Any ) ] ;
             owl:onProperty dppkb:frequency ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:cell_types ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:context ],
-        [ a owl:Restriction ;
             owl:allValuesFrom dppkb:CellTypeTerm ;
             owl:onProperty dppkb:cell_types ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:specificity ],
+            owl:allValuesFrom dppkb:AssayTerm ;
+            owl:onProperty dppkb:assays ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:context ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:frequency ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:synonyms ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:specificity ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:subtype ],
+            owl:onProperty dppkb:presence ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:context ],
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:presence ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:synonyms ],
+            owl:onProperty dppkb:context ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:specificity ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:assays ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:subtype ],
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:presence ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:frequency ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:frequency ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:specificity ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:cell_types ],
+        [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:synonyms ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:notes ] ;
+            owl:onProperty dppkb:evidence ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:CellularComponentTerm a owl:Class,
@@ -244,52 +269,25 @@ dppkb:Diagnosis a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Diagnosis" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:markers ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:EvidenceItem ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:presence ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:results ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty dppkb:presence ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:presence ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:markers ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:presence ],
+            owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:results ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
@@ -298,338 +296,371 @@ dppkb:Diagnosis a owl:Class,
             owl:minCardinality 1 ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:presence ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:markers ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:markers ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:results ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:markers ] ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:markers ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:EvidenceItem ;
+            owl:onProperty dppkb:evidence ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:Disease a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Disease" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:phenotypes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:AnimalModel ;
-            owl:onProperty dppkb:animal_models ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:transmission ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Diagnosis ;
-            owl:onProperty dppkb:diagnosis ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:InfectiousAgent ;
-            owl:onProperty dppkb:infectious_agent ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:categories ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:synonyms ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:animal_models ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:diagnosis ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:ModelingConsideration ;
-            owl:onProperty dppkb:modeling_considerations ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:modeling_considerations ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:categories ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:category ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Phenotype ;
-            owl:onProperty dppkb:phenotypes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:inheritance ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:parents ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:environmental ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Prevalence ;
-            owl:onProperty dppkb:prevalence ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:category ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Biochemical ;
-            owl:onProperty dppkb:biochemical ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:ProgressionInfo ;
-            owl:onProperty dppkb:progression ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:parents ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Environmental ;
-            owl:onProperty dppkb:environmental ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Subtype ;
-            owl:onProperty dppkb:has_subtypes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:has_subtypes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Treatment ;
-            owl:onProperty dppkb:treatments ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:treatments ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Inheritance ;
-            owl:onProperty dppkb:inheritance ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:prevalence ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:infectious_agent ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Genetic ;
-            owl:onProperty dppkb:genetic ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:category ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EpidemiologyInfo ;
             owl:onProperty dppkb:epidemiology ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:synonyms ],
+            owl:onProperty dppkb:variants ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:pathophysiology ],
+            owl:onProperty dppkb:has_subtypes ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:review_notes ],
+            owl:onProperty dppkb:infectious_agent ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom dppkb:Genetic ;
             owl:onProperty dppkb:genetic ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:Variant ;
+            owl:onProperty dppkb:variants ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:treatments ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:modeling_considerations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:Treatment ;
+            owl:onProperty dppkb:treatments ],
+        [ a owl:Restriction ;
             owl:allValuesFrom dppkb:Pathophysiology ;
             owl:onProperty dppkb:pathophysiology ],
         [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Transmission ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:transmission ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:epidemiology ],
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:Subtype ;
+            owl:onProperty dppkb:has_subtypes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:environmental ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:ProgressionInfo ;
+            owl:onProperty dppkb:progression ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:notes ],
+            owl:onProperty dppkb:category ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:ModelingConsideration ;
+            owl:onProperty dppkb:modeling_considerations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:Prevalence ;
+            owl:onProperty dppkb:prevalence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:inheritance ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:progression ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:Inheritance ;
+            owl:onProperty dppkb:inheritance ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:genetic ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:biochemical ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:Phenotype ;
+            owl:onProperty dppkb:phenotypes ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:progression ] ;
+            owl:onProperty dppkb:parents ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:Transmission ;
+            owl:onProperty dppkb:transmission ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:category ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:epidemiology ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:Diagnosis ;
+            owl:onProperty dppkb:diagnosis ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:InfectiousAgent ;
+            owl:onProperty dppkb:infectious_agent ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:pathophysiology ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:categories ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:prevalence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:phenotypes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:categories ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:Environmental ;
+            owl:onProperty dppkb:environmental ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:category ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:Biochemical ;
+            owl:onProperty dppkb:biochemical ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:AnimalModel ;
+            owl:onProperty dppkb:animal_models ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:animal_models ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:synonyms ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:parents ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:synonyms ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:Environmental a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Environmental" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:chemicals ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:synonyms ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:synonyms ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:notes ],
+            owl:onProperty dppkb:effect ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:examples ],
+            owl:onProperty dppkb:review_notes ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:presence ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:effect ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:presence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:presence ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:examples ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:effect ],
+            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:chemicals ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:review_notes ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:notes ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:effect ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:review_notes ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:examples ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty dppkb:presence ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:effect ] ;
+            owl:onProperty dppkb:chemicals ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:synonyms ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:examples ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:presence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:evidence ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:EpidemiologyInfo a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "EpidemiologyInfo" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:mean_range ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:mean_range ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:factors ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:EvidenceItem ;
+            owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty dppkb:minimum_value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:minimum_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:unit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:maximum_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:maximum_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:factors ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty dppkb:name ],
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:mean_range ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:maximum_value ],
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:unit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:minimum_value ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:factors ],
+            owl:minCardinality 1 ;
+            owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:mean_range ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:minimum_value ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:unit ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Float ;
-            owl:onProperty dppkb:minimum_value ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:unit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:maximum_value ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:unit ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Float ;
             owl:onProperty dppkb:maximum_value ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:factors ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:EvidenceItem ;
-            owl:onProperty dppkb:evidence ] ;
+            owl:onProperty dppkb:description ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 <https://w3id.org/dppkb/EvidenceItemSupportEnum#NO_EVIDENCE> a owl:Class,
@@ -662,106 +693,138 @@ dppkb:EpidemiologyInfo a owl:Class,
     rdfs:label "OCCASIONAL" ;
     rdfs:subClassOf dppkb:FrequencyEnum .
 
+dppkb:FunctionalEffect a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "FunctionalEffect" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:function ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:function ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:function ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:description ] ;
+    skos:inScheme <https://w3id.org/dppkb> .
+
 dppkb:Genetic a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Genetic" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:features ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:association ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:features ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:frequency ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:variants ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:examples ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:examples ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty dppkb:association ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:features ],
+            owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom dppkb:Inheritance ;
             owl:onProperty dppkb:inheritance ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:features ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:frequency ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:subtype ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:presence ],
+            owl:onProperty dppkb:features ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:subtype ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:presence ],
         [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:Inheritance ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:frequency ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:association ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:inheritance ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:examples ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:presence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:frequency ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:examples ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ owl:intersectionOf ( [ a rdfs:Datatype ;
                                 owl:unionOf ( dppkb:FrequencyEnum dppkb:FrequencyQuantity ) ] dppkb:Any ) ] ;
             owl:onProperty dppkb:frequency ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:subtype ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:presence ],
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:subtype ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:Variant ;
             owl:onProperty dppkb:variants ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:features ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:association ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:subtype ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:association ] ;
+            owl:onProperty dppkb:variants ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:presence ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty dppkb:name ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:GeographyTerm a owl:Class,
@@ -771,17 +834,17 @@ dppkb:InfectiousAgent a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "InfectiousAgent" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:EvidenceItem ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:Subtype ;
             owl:onProperty dppkb:has_subtypes ],
@@ -789,39 +852,39 @@ dppkb:InfectiousAgent a owl:Class,
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:has_subtypes ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty dppkb:name ] ;
+            owl:allValuesFrom dppkb:EvidenceItem ;
+            owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:Mechanism a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Mechanism" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
+            owl:maxCardinality 1 ;
             owl:onProperty dppkb:name ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
@@ -830,28 +893,28 @@ dppkb:ModelingConsideration a owl:Class,
     rdfs:label "ModelingConsideration" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
             owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ] ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:description ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:PMID a owl:Class,
@@ -862,149 +925,165 @@ dppkb:Pathophysiology a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Pathophysiology" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:EvidenceItem ;
+            owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:role ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:mechanisms ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:downstream ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:cellular_components ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:CellTypeTerm ;
             owl:onProperty dppkb:cell_types ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:biological_processes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:chemical_entities ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:consequence ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:synonyms ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:gene ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:locations ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:genes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:AssayTerm ;
-            owl:onProperty dppkb:assays ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:examples ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:assays ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:subtypes ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:consequence ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:CellularComponentTerm ;
-            owl:onProperty dppkb:cellular_components ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:examples ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:cell_types ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:TriggerTerm ;
-            owl:onProperty dppkb:triggers ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:role ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:mechanisms ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
+            owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:EvidenceItem ;
+            owl:allValuesFrom dppkb:BiologicalProcessTerm ;
+            owl:onProperty dppkb:biological_processes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:GeneTerm ;
+            owl:onProperty dppkb:genes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ owl:intersectionOf ( [ a rdfs:Datatype ;
+                                owl:unionOf ( dppkb:FrequencyEnum dppkb:FrequencyQuantity ) ] dppkb:Any ) ] ;
+            owl:onProperty dppkb:frequency ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:subtypes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:examples ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:GeneTerm ;
+            owl:onProperty dppkb:gene ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:consequence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:frequency ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:examples ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:pathways ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:synonyms ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:ChemicalEntityTerm ;
+            owl:onProperty dppkb:chemical_entities ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:downstream ],
+            owl:onProperty dppkb:biological_processes ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:role ],
+            owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:role ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:subtypes ],
+            owl:onProperty dppkb:downstream ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:BiologicalProcessTerm ;
             owl:onProperty dppkb:pathways ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:gene ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:AnatomicalEntityTerm ;
-            owl:onProperty dppkb:locations ],
+            owl:onProperty dppkb:cellular_components ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:triggers ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:GeneTerm ;
-            owl:onProperty dppkb:genes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:synonyms ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:GeneTerm ;
-            owl:onProperty dppkb:gene ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:BiologicalProcessTerm ;
-            owl:onProperty dppkb:biological_processes ],
+            owl:onProperty dppkb:locations ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:pathways ],
+            owl:onProperty dppkb:role ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:AnatomicalEntityTerm ;
+            owl:onProperty dppkb:locations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:AssayTerm ;
+            owl:onProperty dppkb:assays ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:mechanisms ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:role ],
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:CellularComponentTerm ;
+            owl:onProperty dppkb:cellular_components ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:assays ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:TriggerTerm ;
+            owl:onProperty dppkb:triggers ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:consequences ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:chemical_entities ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:frequency ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:CellTypeTerm ;
+            owl:onProperty dppkb:cell_types ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:gene ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:consequence ],
         [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:ChemicalEntityTerm ;
-            owl:onProperty dppkb:chemical_entities ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:consequences ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:consequence ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:downstream ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:synonyms ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:gene ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:genes ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ] ;
+            owl:onProperty dppkb:notes ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:PhaseTerm a owl:Class,
@@ -1014,252 +1093,270 @@ dppkb:Phenotype a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Phenotype" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:subtype ],
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:context ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty dppkb:diagnostic ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:diagnostic ],
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:subtype ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:sequelae ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:diagnostic ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:subtype ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:frequency ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:subtype ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:category ],
+            owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:sequelae ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:category ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:context ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:severity ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:subtype ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:category ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:frequency ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:severity ],
+            owl:onProperty dppkb:diagnostic ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:category ],
+            owl:onProperty dppkb:review_notes ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:category ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:notes ],
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:severity ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:frequency ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty dppkb:diagnostic ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:context ],
+            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty dppkb:severity ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:context ],
+            owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:category ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:frequency ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ owl:intersectionOf ( [ a rdfs:Datatype ;
                                 owl:unionOf ( dppkb:FrequencyEnum dppkb:FrequencyQuantity ) ] dppkb:Any ) ] ;
             owl:onProperty dppkb:frequency ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ] ;
+            owl:onProperty dppkb:subtype ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:context ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:diagnostic ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:Prevalence a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Prevalence" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty dppkb:population ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:percentage ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:subtype ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:percentage ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:subtype ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:subtype ],
+            owl:onProperty dppkb:population ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ owl:intersectionOf ( [ a rdfs:Datatype ;
                                 owl:unionOf ( linkml:Float linkml:Integer linkml:String ) ] dppkb:Any ) ] ;
             owl:onProperty dppkb:percentage ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:population ],
+            owl:onProperty dppkb:subtype ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:population ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:subtype ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:percentage ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:population ] ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:subtype ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:ProgressionInfo a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "ProgressionInfo" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:PhaseTerm ;
-            owl:onProperty dppkb:phase ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:duration_days ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:incubation_years ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:subtype ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:duration_days ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:phase ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:incubation_days ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:duration ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:notes ],
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:phase ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:age_range ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:review_notes ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:duration_days ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:age_range ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:incubation_days ],
+            owl:onProperty dppkb:duration ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:PhaseTerm ;
+            owl:onProperty dppkb:phase ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:review_notes ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:notes ],
+            owl:onProperty dppkb:subtype ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty dppkb:duration_days ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:age_range ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:incubation_days ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:subtype ],
+            owl:onProperty dppkb:phase ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:age_range ],
+            owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:duration ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:phase ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:incubation_years ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:incubation_days ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:subtype ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:incubation_years ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:review_notes ],
+            owl:onProperty dppkb:incubation_days ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:subtype ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:incubation_years ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:duration_days ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:age_range ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:duration ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:incubation_years ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:age_range ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:subtype ] ;
+            owl:onProperty dppkb:evidence ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:Transmission a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Transmission" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:effect ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
+            owl:onProperty dppkb:effect ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
@@ -1267,30 +1364,21 @@ dppkb:Transmission a owl:Class,
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:effect ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:effect ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:effect ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty dppkb:effect ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:name ] ;
@@ -1300,98 +1388,81 @@ dppkb:Treatment a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Treatment" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:context ],
         [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:context ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:context ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:mechanism ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:review_notes ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:notes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:role ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:review_notes ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:role ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:role ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:examples ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ],
+            owl:onProperty dppkb:role ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:notes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:examples ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:notes ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:role ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:context ],
-        [ a owl:Restriction ;
             owl:allValuesFrom dppkb:Mechanism ;
             owl:onProperty dppkb:mechanism ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:evidence ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:context ],
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:mechanism ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty dppkb:name ] ;
+            owl:onProperty dppkb:description ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:TriggerTerm a owl:Class,
         linkml:EnumDefinition .
-
-dppkb:Variant a owl:Class,
-        linkml:ClassDefinition ;
-    rdfs:label "Variant" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ] ;
-    skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:alleles a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -1447,6 +1518,12 @@ dppkb:chemicals a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:inScheme <https://w3id.org/dppkb> .
 
+dppkb:consequences a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "consequences" ;
+    rdfs:range linkml:String ;
+    skos:inScheme <https://w3id.org/dppkb> .
+
 dppkb:diagnosis a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "diagnosis" ;
@@ -1483,6 +1560,12 @@ dppkb:factors a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:inScheme <https://w3id.org/dppkb> .
 
+dppkb:functional_effects a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "functional_effects" ;
+    rdfs:range dppkb:FunctionalEffect ;
+    skos:inScheme <https://w3id.org/dppkb> .
+
 dppkb:genetic a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "genetic" ;
@@ -1493,6 +1576,12 @@ dppkb:geography a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "geography" ;
     rdfs:range dppkb:GeographyTerm ;
+    skos:inScheme <https://w3id.org/dppkb> .
+
+dppkb:identifiers a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "identifiers" ;
+    rdfs:range linkml:Uriorcurie ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:infectious_agent a owl:ObjectProperty,
@@ -1585,12 +1674,6 @@ dppkb:triggers a owl:ObjectProperty,
     rdfs:range dppkb:TriggerTerm ;
     skos:inScheme <https://w3id.org/dppkb> .
 
-dppkb:variants a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "variants" ;
-    rdfs:range dppkb:Variant ;
-    skos:inScheme <https://w3id.org/dppkb> .
-
 dppkb:AnatomicalEntityTerm a owl:Class,
         linkml:EnumDefinition .
 
@@ -1604,29 +1687,29 @@ dppkb:Inheritance a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Inheritance" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty dppkb:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ] ;
+            owl:onProperty dppkb:name ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:Subtype a owl:Class,
@@ -1637,46 +1720,129 @@ dppkb:Subtype a owl:Class,
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:description ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty dppkb:review_notes ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
-            owl:allValuesFrom dppkb:AnatomicalEntityTerm ;
-            owl:onProperty dppkb:locations ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dppkb:evidence ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:review_notes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:locations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:AnatomicalEntityTerm ;
+            owl:onProperty dppkb:locations ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:review_notes ],
+            owl:allValuesFrom dppkb:EvidenceItem ;
+            owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:description ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:GeographyTerm ;
             owl:onProperty dppkb:geography ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:geography ],
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:geography ] ;
+    skos:inScheme <https://w3id.org/dppkb> .
+
+dppkb:Variant a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Variant" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Integer ;
+            owl:onProperty dppkb:sequence_length ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:GeneTerm ;
+            owl:onProperty dppkb:gene ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:sequence_length ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:sequence_length ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:synonyms ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:identifiers ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:clinical_significance ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:gene ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty dppkb:name ],
         [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:FunctionalEffect ;
+            owl:onProperty dppkb:functional_effects ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:review_notes ],
+            owl:onProperty dppkb:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItem ;
             owl:onProperty dppkb:evidence ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:description ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dppkb:locations ] ;
+            owl:onProperty dppkb:clinical_significance ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:functional_effects ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:synonyms ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dppkb:ClinicalSignificanceEnum ;
+            owl:onProperty dppkb:clinical_significance ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:gene ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty dppkb:identifiers ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:age_range a owl:ObjectProperty,
@@ -1695,6 +1861,12 @@ dppkb:background a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "background" ;
     rdfs:range linkml:String ;
+    skos:inScheme <https://w3id.org/dppkb> .
+
+dppkb:clinical_significance a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "clinical_significance" ;
+    rdfs:range dppkb:ClinicalSignificanceEnum ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:consequence a owl:ObjectProperty,
@@ -1733,10 +1905,10 @@ dppkb:features a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:inScheme <https://w3id.org/dppkb> .
 
-dppkb:gene a owl:ObjectProperty,
+dppkb:function a owl:ObjectProperty,
         linkml:SlotDefinition ;
-    rdfs:label "gene" ;
-    rdfs:range dppkb:GeneTerm ;
+    rdfs:label "function" ;
+    rdfs:range linkml:String ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:genotype a owl:ObjectProperty,
@@ -1812,6 +1984,12 @@ dppkb:results a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:inScheme <https://w3id.org/dppkb> .
 
+dppkb:sequence_length a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "sequence_length" ;
+    rdfs:range linkml:Integer ;
+    skos:inScheme <https://w3id.org/dppkb> .
+
 dppkb:severity a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "severity" ;
@@ -1851,10 +2029,6 @@ dppkb:unit a owl:ObjectProperty,
 dppkb:BiologicalProcessTerm a owl:Class,
         linkml:EnumDefinition .
 
-dppkb:FrequencyQuantity a owl:Class,
-        linkml:TypeDefinition ;
-    rdfs:subClassOf linkml:String .
-
 dppkb:assays a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "assays" ;
@@ -1891,14 +2065,19 @@ dppkb:locations a owl:ObjectProperty,
     rdfs:range dppkb:AnatomicalEntityTerm ;
     skos:inScheme <https://w3id.org/dppkb> .
 
+dppkb:variants a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "variants" ;
+    rdfs:range dppkb:Variant ;
+    skos:inScheme <https://w3id.org/dppkb> ;
+    skos:note "can currently be used at gene or disease level, TODO - decide the best level" .
+
+dppkb:FrequencyQuantity a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:subClassOf linkml:String .
+
 dppkb:GeneTerm a owl:Class,
         linkml:EnumDefinition .
-
-dppkb:Any a owl:Class,
-        linkml:ClassDefinition ;
-    rdfs:label "Any" ;
-    skos:exactMatch linkml:Any ;
-    skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:effect a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -1906,10 +2085,10 @@ dppkb:effect a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:inScheme <https://w3id.org/dppkb> .
 
-dppkb:examples a owl:ObjectProperty,
+dppkb:gene a owl:ObjectProperty,
         linkml:SlotDefinition ;
-    rdfs:label "examples" ;
-    rdfs:range linkml:String ;
+    rdfs:label "gene" ;
+    rdfs:range dppkb:GeneTerm ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:role a owl:ObjectProperty,
@@ -1918,9 +2097,21 @@ dppkb:role a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:inScheme <https://w3id.org/dppkb> .
 
-dppkb:synonyms a owl:ObjectProperty,
+dppkb:type a owl:ObjectProperty,
         linkml:SlotDefinition ;
-    rdfs:label "synonyms" ;
+    rdfs:label "type" ;
+    rdfs:range linkml:String ;
+    skos:inScheme <https://w3id.org/dppkb> .
+
+dppkb:Any a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Any" ;
+    skos:exactMatch linkml:Any ;
+    skos:inScheme <https://w3id.org/dppkb> .
+
+dppkb:examples a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "examples" ;
     rdfs:range linkml:String ;
     skos:inScheme <https://w3id.org/dppkb> .
 
@@ -1936,12 +2127,20 @@ dppkb:context a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:inScheme <https://w3id.org/dppkb> .
 
-dppkb:frequency a owl:ObjectProperty,
+dppkb:synonyms a owl:ObjectProperty,
         linkml:SlotDefinition ;
-    rdfs:label "frequency" ;
-    rdfs:range [ owl:intersectionOf ( [ a rdfs:Datatype ;
-                        owl:unionOf ( dppkb:FrequencyEnum dppkb:FrequencyQuantity ) ] dppkb:Any ) ] ;
+    rdfs:label "synonyms" ;
+    rdfs:range linkml:String ;
     skos:inScheme <https://w3id.org/dppkb> .
+
+dppkb:ClinicalSignificanceEnum a owl:Class,
+        linkml:EnumDefinition ;
+    owl:unionOf ( HP:0040285 HP:0040286 HP:0040287 HP:0040288 HP:0040289 ) ;
+    linkml:permissible_values HP:0040285,
+        HP:0040286,
+        HP:0040287,
+        HP:0040288,
+        HP:0040289 .
 
 dppkb:EvidenceItemSupportEnum a owl:Class,
         linkml:EnumDefinition ;
@@ -1951,6 +2150,13 @@ dppkb:EvidenceItemSupportEnum a owl:Class,
         <https://w3id.org/dppkb/EvidenceItemSupportEnum#REFUTE>,
         <https://w3id.org/dppkb/EvidenceItemSupportEnum#SUPPORT>,
         <https://w3id.org/dppkb/EvidenceItemSupportEnum#WRONG_STATEMENT> .
+
+dppkb:frequency a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "frequency" ;
+    rdfs:range [ owl:intersectionOf ( [ a rdfs:Datatype ;
+                        owl:unionOf ( dppkb:FrequencyEnum dppkb:FrequencyQuantity ) ] dppkb:Any ) ] ;
+    skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:presence a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -1980,38 +2186,38 @@ dppkb:EvidenceItem a owl:Class,
             owl:minCardinality 0 ;
             owl:onProperty dppkb:supports ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:reference ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:snippet ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:reference ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty dppkb:explanation ],
+        [ a owl:Restriction ;
             owl:allValuesFrom dppkb:PMID ;
             owl:onProperty dppkb:reference ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dppkb:explanation ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dppkb:snippet ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:snippet ],
+            owl:maxCardinality 1 ;
+            owl:onProperty dppkb:supports ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
+            owl:minCardinality 0 ;
             owl:onProperty dppkb:snippet ],
         [ a owl:Restriction ;
             owl:allValuesFrom dppkb:EvidenceItemSupportEnum ;
             owl:onProperty dppkb:supports ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:reference ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty dppkb:explanation ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dppkb:explanation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:supports ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dppkb:explanation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dppkb:reference ] ;
+            owl:onProperty dppkb:explanation ] ;
     skos:inScheme <https://w3id.org/dppkb> .
 
 dppkb:review_notes a owl:ObjectProperty,

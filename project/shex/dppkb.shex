@@ -113,6 +113,7 @@ linkml:Sparqlpath xsd:string
           <phenotypes> @<Phenotype> * ;
           <biochemical> @<Biochemical> * ;
           <genetic> @<Genetic> * ;
+          <variants> @<Variant> * ;
           <environmental> @<Environmental> * ;
           <treatments> @<Treatment> * ;
           <categories> @linkml:String * ;
@@ -179,6 +180,15 @@ linkml:Sparqlpath xsd:string
     )
 }
 
+<FunctionalEffect> CLOSED {
+    (  $<FunctionalEffect_tes> (  <function> @linkml:String ? ;
+          <description> @linkml:String ? ;
+          <type> @linkml:String ?
+       ) ;
+       rdf:type [ <FunctionalEffect> ] ?
+    )
+}
+
 <Genetic> CLOSED {
     (  $<Genetic_tes> (  <presence> @linkml:String ? ;
           <evidence> @<EvidenceItem> * ;
@@ -237,6 +247,7 @@ linkml:Sparqlpath xsd:string
           <role> @linkml:String ? ;
           <synonyms> @linkml:String * ;
           <consequence> @linkml:String ? ;
+          <consequences> @linkml:String * ;
           <gene> . ? ;
           <pathways> . * ;
           <downstream> @linkml:String * ;
@@ -247,7 +258,8 @@ linkml:Sparqlpath xsd:string
           <triggers> . * ;
           <assays> . * ;
           <mechanisms> @linkml:String * ;
-          <notes> @linkml:String ?
+          <notes> @linkml:String ? ;
+          <frequency> @<Any> ?
        ) ;
        rdf:type [ <Pathophysiology> ]
     )
@@ -256,6 +268,7 @@ linkml:Sparqlpath xsd:string
 <Phenotype> CLOSED {
     (  $<Phenotype_tes> (  <category> @linkml:String ? ;
           <frequency> @<Any> ? ;
+          <description> @linkml:String ? ;
           <diagnostic> @linkml:Boolean ? ;
           <sequelae> @linkml:String * ;
           <evidence> @<EvidenceItem> * ;
@@ -324,14 +337,26 @@ linkml:Sparqlpath xsd:string
           <context> @linkml:String ? ;
           <review_notes> @linkml:String ? ;
           <role> @linkml:String ? ;
-          <mechanism> @<Mechanism> *
+          <mechanism> @<Mechanism> * ;
+          <examples> @linkml:String *
        ) ;
        rdf:type [ <Treatment> ]
     )
 }
 
 <Variant> CLOSED {
-    (  $<Variant_tes> <description> @linkml:String ? ;
+    (  $<Variant_tes> (  <description> @linkml:String ? ;
+          <gene> . ? ;
+          <evidence> @<EvidenceItem> * ;
+          <functional_effects> @<FunctionalEffect> * ;
+          <synonyms> @linkml:String * ;
+          <identifiers> @linkml:Uriorcurie * ;
+          <sequence_length> @linkml:Integer ? ;
+          <clinical_significance> [ <http://purl.obolibrary.org/obo/HP_0040285> <http://purl.obolibrary.org/obo/HP_0040286>
+             <http://purl.obolibrary.org/obo/HP_0040287> <http://purl.obolibrary.org/obo/HP_0040288>
+             <http://purl.obolibrary.org/obo/HP_0040289> ] ? ;
+          <type> @linkml:String ?
+       ) ;
        rdf:type [ <Variant> ]
     )
 }

@@ -61,6 +61,7 @@ type Disease
     phenotypes: [Phenotype]
     biochemical: [Biochemical]
     genetic: [Genetic]
+    variants: [Variant]
     environmental: [Environmental]
     treatments: [Treatment]
     categories: [String]
@@ -114,6 +115,13 @@ type EvidenceItem
     supports: EvidenceItemSupportEnum
     snippet: String
     explanation: String
+  }
+
+type FunctionalEffect
+  {
+    function: String
+    description: String
+    type: String
   }
 
 type Genetic
@@ -172,6 +180,7 @@ type Pathophysiology
     role: String
     synonyms: [String]
     consequence: String
+    consequences: [String]
     gene: GeneTerm
     pathways: [BiologicalProcessTerm]
     downstream: [String]
@@ -183,6 +192,7 @@ type Pathophysiology
     assays: [AssayTerm]
     mechanisms: [String]
     notes: String
+    frequency: Any
   }
 
 type Phenotype
@@ -190,6 +200,7 @@ type Phenotype
     category: String
     name: String!
     frequency: Any
+    description: String
     diagnostic: Boolean
     sequelae: [String]
     evidence: [EvidenceItem]
@@ -252,11 +263,20 @@ type Treatment
     reviewNotes: String
     role: String
     mechanism: [Mechanism]
+    examples: [String]
   }
 
 type Variant
   {
     name: String!
     description: String
+    gene: GeneTerm
+    evidence: [EvidenceItem]
+    functionalEffects: [FunctionalEffect]
+    synonyms: [String]
+    identifiers: [Uriorcurie]
+    sequenceLength: Integer
+    clinicalSignificance: ClinicalSignificanceEnum
+    type: String
   }
 

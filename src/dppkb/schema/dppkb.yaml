@@ -256,6 +256,11 @@ slots:
     examples:
       - value: Leads to abnormal sexual development and bone maturation.
     range: string
+  consequences:
+    range: string
+    multivalued: true
+    todos:
+      - unify consequences and consequence
   gene:
     examples:
       - value: MEFV
@@ -401,6 +406,14 @@ slots:
     multivalued: true
     inlined_as_list: true
     range: Pathophysiology
+  stages:
+    multivalued: true
+    inlined_as_list: true
+    range: Stage
+  substages:
+    multivalued: true
+    inlined_as_list: true
+    range: Stage
   phenotypes:
     multivalued: true
     inlined_as_list: true
@@ -560,6 +573,7 @@ classes:
       - role
       - synonyms
       - consequence
+      - consequences
       - gene
       - pathways
       - downstream
@@ -637,6 +651,7 @@ classes:
       - pathophysiology
       - phenotypes
       - biochemical
+      - stages
       - genetic
       - variants
       - environmental
@@ -652,6 +667,18 @@ classes:
       - animal_models
       - notes
       - review_notes
+  Stage:
+    slots:
+      - name
+      - description
+      - evidence
+      - notes
+      - context
+      - review_notes
+      - role
+      - examples
+      - pathophysiology
+      - substages
   AnimalModel:
     slots:
       - species

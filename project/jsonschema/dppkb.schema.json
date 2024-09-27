@@ -170,6 +170,18 @@
             "title": "ChemicalEntityTerm",
             "type": "string"
         },
+        "ClinicalSignificanceEnum": {
+            "description": "The clinical significance of a finding",
+            "enum": [
+                "PATHOGENIC",
+                "LIKELY_PATHOGENIC",
+                "BENIGN",
+                "LIKELY_BENIGN",
+                "UNCERTAIN_SIGNIFICANCE"
+            ],
+            "title": "ClinicalSignificanceEnum",
+            "type": "string"
+        },
         "Diagnosis": {
             "additionalProperties": false,
             "description": "",
@@ -335,6 +347,12 @@
                 "treatments": {
                     "items": {
                         "$ref": "#/$defs/Treatment"
+                    },
+                    "type": "array"
+                },
+                "variants": {
+                    "items": {
+                        "$ref": "#/$defs/Variant"
                     },
                     "type": "array"
                 }
@@ -504,6 +522,23 @@
             ],
             "title": "FrequencyEnum",
             "type": "string"
+        },
+        "FunctionalEffect": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "function": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "title": "FunctionalEffect",
+            "type": "object"
         },
         "GeneTerm": {
             "description": "A gene",
@@ -711,6 +746,12 @@
                 "consequence": {
                     "type": "string"
                 },
+                "consequences": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "description": {
                     "type": "string"
                 },
@@ -731,6 +772,17 @@
                         "type": "string"
                     },
                     "type": "array"
+                },
+                "frequency": {
+                    "$ref": "#/$defs/Any",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/FrequencyEnum"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
                 },
                 "gene": {
                     "$ref": "#/$defs/GeneTerm"
@@ -806,6 +858,9 @@
                     "type": "string"
                 },
                 "context": {
+                    "type": "string"
+                },
+                "description": {
                     "type": "string"
                 },
                 "diagnostic": {
@@ -1023,6 +1078,12 @@
                     },
                     "type": "array"
                 },
+                "examples": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "mechanism": {
                     "items": {
                         "$ref": "#/$defs/Mechanism"
@@ -1057,10 +1118,46 @@
             "additionalProperties": false,
             "description": "",
             "properties": {
+                "clinical_significance": {
+                    "$ref": "#/$defs/ClinicalSignificanceEnum"
+                },
                 "description": {
                     "type": "string"
                 },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceItem"
+                    },
+                    "type": "array"
+                },
+                "functional_effects": {
+                    "items": {
+                        "$ref": "#/$defs/FunctionalEffect"
+                    },
+                    "type": "array"
+                },
+                "gene": {
+                    "$ref": "#/$defs/GeneTerm"
+                },
+                "identifiers": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
                 "name": {
+                    "type": "string"
+                },
+                "sequence_length": {
+                    "type": "integer"
+                },
+                "synonyms": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "type": {
                     "type": "string"
                 }
             },

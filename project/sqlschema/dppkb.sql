@@ -27,6 +27,7 @@
 --     * Slot: Transmission_name Description: Autocreated FK slot
 --     * Slot: Diagnosis_name Description: Autocreated FK slot
 --     * Slot: Inheritance_name Description: Autocreated FK slot
+--     * Slot: Variant_name Description: Autocreated FK slot
 --     * Slot: ModelingConsideration_name Description: Autocreated FK slot
 -- # Class: "Prevalence" Description: ""
 --     * Slot: id Description: 
@@ -64,9 +65,11 @@
 --     * Slot: gene Description: 
 --     * Slot: notes Description: 
 --     * Slot: Disease_name Description: Autocreated FK slot
+--     * Slot: frequency_id Description: 
 -- # Class: "Phenotype" Description: ""
 --     * Slot: category Description: 
 --     * Slot: name Description: 
+--     * Slot: description Description: 
 --     * Slot: diagnostic Description: 
 --     * Slot: context Description: 
 --     * Slot: review_notes Description: 
@@ -154,7 +157,18 @@
 -- # Class: "Variant" Description: ""
 --     * Slot: name Description: 
 --     * Slot: description Description: 
+--     * Slot: gene Description: 
+--     * Slot: sequence_length Description: 
+--     * Slot: clinical_significance Description: 
+--     * Slot: type Description: 
 --     * Slot: Genetic_name Description: Autocreated FK slot
+--     * Slot: Disease_name Description: Autocreated FK slot
+-- # Class: "FunctionalEffect" Description: ""
+--     * Slot: id Description: 
+--     * Slot: function Description: 
+--     * Slot: description Description: 
+--     * Slot: type Description: 
+--     * Slot: Variant_name Description: Autocreated FK slot
 -- # Class: "Mechanism" Description: ""
 --     * Slot: name Description: 
 --     * Slot: description Description: 
@@ -189,6 +203,9 @@
 -- # Class: "Pathophysiology_synonyms" Description: ""
 --     * Slot: Pathophysiology_name Description: Autocreated FK slot
 --     * Slot: synonyms Description: 
+-- # Class: "Pathophysiology_consequences" Description: ""
+--     * Slot: Pathophysiology_name Description: Autocreated FK slot
+--     * Slot: consequences Description: 
 -- # Class: "Pathophysiology_pathways" Description: ""
 --     * Slot: Pathophysiology_name Description: Autocreated FK slot
 --     * Slot: pathways Description: 
@@ -258,6 +275,15 @@
 -- # Class: "AnimalModel_associated_phenotypes" Description: ""
 --     * Slot: AnimalModel_id Description: Autocreated FK slot
 --     * Slot: associated_phenotypes Description: 
+-- # Class: "Treatment_examples" Description: ""
+--     * Slot: Treatment_name Description: Autocreated FK slot
+--     * Slot: examples Description: 
+-- # Class: "Variant_synonyms" Description: ""
+--     * Slot: Variant_name Description: Autocreated FK slot
+--     * Slot: synonyms Description: 
+-- # Class: "Variant_identifiers" Description: ""
+--     * Slot: Variant_name Description: Autocreated FK slot
+--     * Slot: identifiers Description: 
 
 CREATE TABLE "Any" (
 	id INTEGER NOT NULL, 
@@ -328,12 +354,15 @@ CREATE TABLE "Pathophysiology" (
 	gene VARCHAR, 
 	notes TEXT, 
 	"Disease_name" TEXT, 
+	frequency_id INTEGER, 
 	PRIMARY KEY (name), 
-	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
+	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name), 
+	FOREIGN KEY(frequency_id) REFERENCES "Any" (id)
 );
 CREATE TABLE "Phenotype" (
 	category TEXT, 
 	name TEXT NOT NULL, 
+	description TEXT, 
 	diagnostic BOOLEAN, 
 	context TEXT, 
 	review_notes TEXT, 
@@ -480,9 +509,15 @@ CREATE TABLE "Inheritance" (
 CREATE TABLE "Variant" (
 	name TEXT NOT NULL, 
 	description TEXT, 
+	gene VARCHAR, 
+	sequence_length INTEGER, 
+	clinical_significance VARCHAR(22), 
+	type TEXT, 
 	"Genetic_name" TEXT, 
+	"Disease_name" TEXT, 
 	PRIMARY KEY (name), 
-	FOREIGN KEY("Genetic_name") REFERENCES "Genetic" (name)
+	FOREIGN KEY("Genetic_name") REFERENCES "Genetic" (name), 
+	FOREIGN KEY("Disease_name") REFERENCES "Disease" (name)
 );
 CREATE TABLE "Mechanism" (
 	name TEXT NOT NULL, 
@@ -525,6 +560,12 @@ CREATE TABLE "Pathophysiology_synonyms" (
 	"Pathophysiology_name" TEXT, 
 	synonyms TEXT, 
 	PRIMARY KEY ("Pathophysiology_name", synonyms), 
+	FOREIGN KEY("Pathophysiology_name") REFERENCES "Pathophysiology" (name)
+);
+CREATE TABLE "Pathophysiology_consequences" (
+	"Pathophysiology_name" TEXT, 
+	consequences TEXT, 
+	PRIMARY KEY ("Pathophysiology_name", consequences), 
 	FOREIGN KEY("Pathophysiology_name") REFERENCES "Pathophysiology" (name)
 );
 CREATE TABLE "Pathophysiology_pathways" (
@@ -647,6 +688,12 @@ CREATE TABLE "AnimalModel_associated_phenotypes" (
 	PRIMARY KEY ("AnimalModel_id", associated_phenotypes), 
 	FOREIGN KEY("AnimalModel_id") REFERENCES "AnimalModel" (id)
 );
+CREATE TABLE "Treatment_examples" (
+	"Treatment_name" TEXT, 
+	examples TEXT, 
+	PRIMARY KEY ("Treatment_name", examples), 
+	FOREIGN KEY("Treatment_name") REFERENCES "Treatment" (name)
+);
 CREATE TABLE "EvidenceItem" (
 	id INTEGER NOT NULL, 
 	reference TEXT, 
@@ -668,6 +715,7 @@ CREATE TABLE "EvidenceItem" (
 	"Transmission_name" TEXT, 
 	"Diagnosis_name" TEXT, 
 	"Inheritance_name" TEXT, 
+	"Variant_name" TEXT, 
 	"ModelingConsideration_name" TEXT, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY("Subtype_name") REFERENCES "Subtype" (name), 
@@ -685,7 +733,17 @@ CREATE TABLE "EvidenceItem" (
 	FOREIGN KEY("Transmission_name") REFERENCES "Transmission" (name), 
 	FOREIGN KEY("Diagnosis_name") REFERENCES "Diagnosis" (name), 
 	FOREIGN KEY("Inheritance_name") REFERENCES "Inheritance" (name), 
+	FOREIGN KEY("Variant_name") REFERENCES "Variant" (name), 
 	FOREIGN KEY("ModelingConsideration_name") REFERENCES "ModelingConsideration" (name)
+);
+CREATE TABLE "FunctionalEffect" (
+	id INTEGER NOT NULL, 
+	function TEXT, 
+	description TEXT, 
+	type TEXT, 
+	"Variant_name" TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY("Variant_name") REFERENCES "Variant" (name)
 );
 CREATE TABLE "Subtype_locations" (
 	"Subtype_name" TEXT, 
@@ -698,4 +756,16 @@ CREATE TABLE "Subtype_geography" (
 	geography VARCHAR, 
 	PRIMARY KEY ("Subtype_name", geography), 
 	FOREIGN KEY("Subtype_name") REFERENCES "Subtype" (name)
+);
+CREATE TABLE "Variant_synonyms" (
+	"Variant_name" TEXT, 
+	synonyms TEXT, 
+	PRIMARY KEY ("Variant_name", synonyms), 
+	FOREIGN KEY("Variant_name") REFERENCES "Variant" (name)
+);
+CREATE TABLE "Variant_identifiers" (
+	"Variant_name" TEXT, 
+	identifiers TEXT, 
+	PRIMARY KEY ("Variant_name", identifiers), 
+	FOREIGN KEY("Variant_name") REFERENCES "Variant" (name)
 );
